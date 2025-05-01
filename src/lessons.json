@@ -7,16 +7,16 @@
           "type": "short-response",
           "direction": "new-native",
           "sentence": {
-            "native": "a woman",
-            "new": "é kolien"
+            "native": "be",
+            "new": "han"
           }
         },
         {
           "type": "short-response",
           "direction": "native-new",
           "sentence": {
-            "native": "a man",
-            "new": "é keffén"
+            "native": "be",
+            "new": "han"
           }
         }
       ]

@@ -1,10 +1,5 @@
 {
-  "in": {
-    "é": ["a"],
-    "én": ["a"],
-    "keffén":  ["man", "male"],
-    "kefnes":  ["men", "males"],
-    "kolien":  ["woman", "female"],
-    "koliens": ["women", "females"]
+  "smb": {
+    "han": ["to be"]
   }
 }
