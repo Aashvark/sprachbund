@@ -14,59 +14,6 @@ handlebars.registerHelper('ifEquals', function(arg1, arg2, options) { return (ar
 handlebars.registerHelper('link', function(arg, options) { return fma(arg); });
 handlebars.registerHelper("json", function(a, options) { return JSON.stringify(a); });
 
-function format(iter) {
-  var string = "";
-  var captureType = '';
-  var save = false;
-  var inSuspend = false;
-  var citing = '';
-  var doStore = false;
-  var store = "";
-
-  for (var c of iter.toString()) {
-    if (save) {
-      save = false;
-      string += c;
-    } else if (c === "\\") { save = true; } 
-    else if (inSuspend) {
-      if (c === "'") {
-        if (doStore) {
-          string += "<a class=\"external\" href=\"" + store + "\">";
-          store = ""
-        }
-        doStore = !doStore;
-      } else if (c === '>') {
-        inSuspend = !inSuspend;
-        string += store + "</a>";
-        store = "";
-      } else { store += c; }
-    } else if (citing != '') {
-      if (c === ']' && citing === '[') {
-        string += "<sup id=\"cite-ref-" + current + "\"><a href=\"#cite-"+ current +"\" onclick=\"openSection('notes')\">[" + current + "]</a></sup>";
-        notes.push(store);
-        current = nextChar(current);
-        store = "";
-        citing = !citing;
-      } else if (c === '}' && citing === '{') {
-        string += "<sup id=\"cite-ref-" + currNum + "\"><a href=\"#cite-"+ currNum +"\" onclick=\"openSection('references')\">[" + currNum + "]</a></sup>";
-        references.push(store);
-        currNum++;
-        store = "";
-        citing = !citing;
-      } else { store += c; }
-    } else if (c === '<') { inSuspend = !inSuspend; } 
-    else if (c === '[' || c === '{') { citing = c; }
-    else if (c === '*') {
-      string += captureType !== '*' ? "<span class=\"bold\">" : "</span>";
-      captureType = captureType !== '*' ? '*' : '';
-    } else if (c === '#') {
-      string += captureType !== '#' ? "<span class=\"small\">" : "</span>";
-      captureType = captureType !== '#' ? '#' : '';
-    } else { string += c; }
-  }
-  return string;
-}
-
 function fma(name) { return name.replaceAll(" ", "_"); }
 
 handlebars.registerHelper('hover-translate', function(arg, lang, options) {
