@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Introduction",
+    "unit": [
+      [
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "sentence": {
+            "native": "a woman",
+            "new": "é kolien"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "sentence": {
+            "native": "a man",
+            "new": "é keffén"
+          }
+        }
+      ]
+    ]
+  }
+]

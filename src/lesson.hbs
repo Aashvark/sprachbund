@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sprachbund</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="icon" href="{{seo.img}}">
+    <link rel="apple-touch-icon" href="{{seo.img}}">
+    
+    <meta name="description" content="{{page.top}}" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Learn Ińlesh" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="{{seo.theme-color}}">
+    <meta name="canonical" content="{{seo.url}}">
+    
+    <meta name="hreflang" content="en-US">
+    
+    <meta name="msapplication-TileColor" content="{{seo.theme-color}}">
+    <meta name="msapplication-TileImage" content="{{seo.img}}">
+    <meta name="msapplication-tooltip" content="{{seo.name}}"> 
+  
+    <meta property="og:title" content="{{seo.name}}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{seo.img}}">
+    <meta property="og:url" content="{{seo.url}}">
+    <meta property="og:description" content="{{seo.description}}">
+    <meta property="og:site_name" content="{{seo.name}}">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{seo.name}}">
+    <meta name="twitter:description" content="{{seo.description}}">
+    <meta name="twitter:image" content="{{seo.img}}">
+    
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    
+    <script src="/js/w3-modified.js" defer></script>
+  </head>
+  <body onload="nextLesson()">
+    <header>
+      <div class="language-flag">
+        <svg><image href="/svg/simple_flag.svg" xlink:href="/svg/simple_flag.svg"></image></svg>
+      </div>
+      <div class="progress-bar"><div class="progress-inside" id="progress"></div></div>
+    </header>
+    <main>
+    {{#each lessons as |lesson|}}
+      <div class="section">
+      {{#ifEquals lesson.type "short-response"}}
+        <p class="heading">Write this!</p>
+        <div class="prompt">
+          {{#ifEquals lesson.direction "native-new"}}{{hover-translate lesson.sentence.native "en"}}{{else}}{{hover-translate lesson.sentence.new "in"}}{{/ifEquals}}
+        </div>
+        <div class="response">
+          <textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Ińlesh{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}} spellcheck="false"{{/ifEquals}}></textarea>
+        </div>
+        <div class="insert-buttons">
+          <a class="button" onclick="caseshift()" id="shift-case">⬆</a>
+          <a class="button c" onclick="insert('é')">é</a>
+          <a class="button c" onclick="insert('ń')">ń</a>
+          <a class="button c" onclick="insert('ó')">ó</a>
+          <a class="button c" onclick="insert('þ')">þ</a>
+        </div>
+      {{/ifEquals}}
+      </div>
+    {{/each}}
+    <div class="alert" id="alert">
+      <div class="text">
+        <p class="heading">CORRECT</p>
+        <p class="description">You did it!</p>
+      </div>
+      <a class="button" onclick="nextLesson()">Continue</a>
+    </div>
+    </main>
+    <footer>
+      <a class="button" href="/sprachbund">Exit</a>
+      <a class="button" id="next" onclick="checkAnswer()">Check</a>
+    </footer>
+  </body>
+  <script>
+    let index = 0;
+    let isUpper = false;
+    
+    let lessons = JSON.parse('{{{json lessons}}}');
+    let lesson = lessons[index];
+    let len = lessons.length;
+    
+    let sections = document.getElementsByClassName("section");
+    
+    function caseshift() {
+      document.getElementById("shift-case").innerHTML = isUpper ? "⬆" : "⬇";
+      isUpper = !isUpper;
+      
+      for (var c of document.getElementsByClassName("c")) {c.classList.toggle("upper"); }
+    }
+    
+    function insert(character) { document.getElementById("response-" + index).innerHTML += isUpper ? character.toUpperCase() : character; }
+    
+    function checkAnswer() {
+      document.getElementById("alert").classList.add("block");
+      
+      index += 1;
+      document.getElementById("progress").style.width = `${100 * index / len}%`;
+    }
+    
+    function nextLesson() {
+      if (index >= len) {
+        window.location = "https://creativewritingguild.glitch.me/sprachbund";
+        return;
+      }
+      
+      document.getElementById("alert").classList.remove("block");
+      
+      lesson = lessons[index];
+      document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
+      
+      for (var o = 0; o < sections.length; o++) { sections[o].style.display = o === index ? "block" : "none"; }
+    }
+  </script>
+</html>

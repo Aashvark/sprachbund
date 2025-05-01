@@ -1,47 +1,119 @@
 const path = require("path");
+const handlebars = require("handlebars");
+const fastify = require("fastify")({ logger: false });
 
-// Require the fastify framework and instantiate it
-const fastify = require("fastify")({
-  // set this to true for detailed logging:
-  logger: false,
-});
-
-// Setup our static files
 fastify.register(require("@fastify/static"), {
   root: path.join(__dirname, "public"),
-  prefix: "/", // optional: default '/'
+  prefix: "/",
 });
 
-// fastify-formbody lets us parse incoming forms
 fastify.register(require("@fastify/formbody"));
+fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
 
-// point-of-view is a templating manager for fastify
-fastify.register(require("@fastify/view"), {
-  engine: {
-    handlebars: require("handlebars"),
-  },
+handlebars.registerHelper('ifEquals', function(arg1, arg2, options) { return (arg1 == arg2) ? options.fn(this) : options.inverse(this); });
+handlebars.registerHelper('link', function(arg, options) { return fma(arg); });
+handlebars.registerHelper("json", function(a, options) { return JSON.stringify(a); });
+
+function format(iter) {
+  var string = "";
+  var captureType = '';
+  var save = false;
+  var inSuspend = false;
+  var citing = '';
+  var doStore = false;
+  var store = "";
+
+  for (var c of iter.toString()) {
+    if (save) {
+      save = false;
+      string += c;
+    } else if (c === "\\") { save = true; } 
+    else if (inSuspend) {
+      if (c === "'") {
+        if (doStore) {
+          string += "<a class=\"external\" href=\"" + store + "\">";
+          store = ""
+        }
+        doStore = !doStore;
+      } else if (c === '>') {
+        inSuspend = !inSuspend;
+        string += store + "</a>";
+        store = "";
+      } else { store += c; }
+    } else if (citing != '') {
+      if (c === ']' && citing === '[') {
+        string += "<sup id=\"cite-ref-" + current + "\"><a href=\"#cite-"+ current +"\" onclick=\"openSection('notes')\">[" + current + "]</a></sup>";
+        notes.push(store);
+        current = nextChar(current);
+        store = "";
+        citing = !citing;
+      } else if (c === '}' && citing === '{') {
+        string += "<sup id=\"cite-ref-" + currNum + "\"><a href=\"#cite-"+ currNum +"\" onclick=\"openSection('references')\">[" + currNum + "]</a></sup>";
+        references.push(store);
+        currNum++;
+        store = "";
+        citing = !citing;
+      } else { store += c; }
+    } else if (c === '<') { inSuspend = !inSuspend; } 
+    else if (c === '[' || c === '{') { citing = c; }
+    else if (c === '*') {
+      string += captureType !== '*' ? "<span class=\"bold\">" : "</span>";
+      captureType = captureType !== '*' ? '*' : '';
+    } else if (c === '#') {
+      string += captureType !== '#' ? "<span class=\"small\">" : "</span>";
+      captureType = captureType !== '#' ? '#' : '';
+    } else { string += c; }
+  }
+  return string;
+}
+
+function fma(name) { return name.replaceAll(" ", "_"); }
+
+handlebars.registerHelper('hover-translate', function(arg, lang, options) {
+  let string = "";
+  let save = "";
+  
+  for (let i = 0; i < arg.length; i++) {
+    let c = arg.charAt(i);
+    save += c;
+    if (c === " " || i == arg.length - 1) { 
+      let keys = [];
+      if (lang == "en") { keys = Object.keys(dictionary.in).filter(key => dictionary.in[key].includes(save.trimEnd())); }
+      else if (lang == "in" && save.trimEnd() in dictionary.in) { keys = dictionary.in[save.trimEnd()]; }
+      
+      let construction = `<div class="hint"><span>${save}</span><div class="hints">`;
+      for (var key of keys) { construction += `<div class="row"><p>${key}</p></div>`; }
+      construction += "</div></div>"
+      
+      string += construction;
+      save = "";
+    }
+  }
+  
+  return new handlebars.SafeString(string.trimEnd());
 });
 
-// Our main GET home page route, pulls from src/pages/index.hbs
-fastify.get("/", function (request, reply) {
-  // params is an object we'll pass to our handlebars template
-  let params = {
-    greeting: "Hello Node!",
-  };
-  // request.query.paramName <-- a querystring example
-  return reply.view("/src/pages/index.hbs", params);
+const seo = require("./src/seo.json");
+
+const lessons = require("./src/lessons.json");
+const dictionary = require("./src/dictionary.json");
+
+fastify.get("/", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index }); });
+fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
+
+fastify.get("/learn", function (request, reply) {
+  return reply.view('/src/pages/learn/learn.hbs', {seo: seo.meliora, lessons: lessons});
 });
 
-// A POST route to handle form submissions
-fastify.post("/", function (request, reply) {
-  let params = {
-    greeting: "Hello Form!",
-  };
-  // request.body.paramName <-- a form post example
-  return reply.view("/src/pages/index.hbs", params);
+fastify.get("/lesson", function (request, reply) {
+  return reply.view('/src/lesson.hbs', {seo: seo.sprachbund, lessons: lessons[0].unit[0]});
+  //return reply.redirect('/learn');
 });
 
-// Run the server and report out to the logs
+fastify.post("/learn/lesson", function (request, reply) {
+  return reply.view('/src/pages/learn/lesson.hbs', {seo: seo.meliora, lessons: lessons[request.body.lesson].lessons});
+});
+
 fastify.listen(
   { port: process.env.PORT, host: "0.0.0.0" },
   function (err, address) {
