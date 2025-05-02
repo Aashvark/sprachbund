@@ -20,13 +20,35 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let string = "";
   let save = "";
   
+  let tokens = arg.split(" ");
+  let keys = [];
+  let submeaning = [];
+  
+  for (let i = 0; i < tokens.length; i++) {
+    save += tokens[i] + " ";
+    if (lang === "en") { keys.push(Object.keys(dictionary.smb).filter(key => dictionary.smb[key].includes(save.trimEnd()))); }
+    else if (lang == "smb" && save.trimEnd() in dictionary.smb) { 
+      keys = dictionary.smb[save.trimEnd()];
+      if (save.trimEnd().includes(" ")) {
+        for (var sub of save.trimEnd().split(" ")) {
+          if (sub in dictionary.smb) submeaning.push(dictionary.smb[sub]);
+          else submeaning.push([]);
+        }
+      }
+    }
+  }
+  
+  console.log(keys);
+  console.log(submeaning);
+  
   for (let i = 0; i < arg.length; i++) {
     let c = arg.charAt(i);
     save += c;
     
+    keys = [];
+    submeaning = [];
+    
     if (c === " " || i == arg.length - 1) { 
-      let keys = [];
-      let submeaning = [];
       if (lang == "en") { keys = Object.keys(dictionary.smb).filter(key => dictionary.smb[key].includes(save.trimEnd())); }
       else if (lang == "smb" && save.trimEnd() in dictionary.smb) { 
         keys = dictionary.smb[save.trimEnd()];
