@@ -287,9 +287,6 @@ footer .button {
   
   main { padding: 0 5%; }
   
-  main .response {
-    height: 47vh;
-  }
-  
+  main .response .textbox { height: 39vh; }
   main .alert #alert-description { font-size: 16px; }
 }
