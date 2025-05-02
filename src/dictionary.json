@@ -1,8 +1,9 @@
 {
   "smb": {
+    "ciná": ["person"],
     "ċo": ["we"],
     
-    "han":   ["be", "am"],
+    "han":        ["be", "am"],
     "hottá": ["not", "not be"],
     "sy han":   ["will be"],
     "sy hottá": ["will not be"],
@@ -18,14 +19,15 @@
     "ne": ["(plur.)"],
     "nyllá": ["I", "me"],
     
-    "vé han":   ["have"],
-    "vé hottá": ["have not"],
-    "véje han":   ["had"],
-    "véje hottá": ["had not"],
-    "vés han":   ["will have"],
-    "vés hottá": ["will not have"],
+    "vé han":      ["have"],
+    "vé hottá":    ["have not"],
+    "véje han":    ["had"],
+    "véje hottá":  ["had not"],
+    "vés han":     ["will have"],
+    "vés hottá":   ["will not have"],
     "vécui han":   ["would have"],
     "vécui hottá": ["would not have"],
-    "vun":   ["you (plur.)"]
+    
+    "vun": ["you (plur.)"]
   }
 }
