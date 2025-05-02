@@ -108,7 +108,7 @@
         right = document.getElementById("response-" + index).value;
       }
       
-      if (formatAnswer(checkFor) == formatAnswer(right)) {
+      if (formatAnswer(checkFor) === formatAnswer(right)) {
         correct = true;
         index += 1;
         document.getElementById("progress").style.width = `${100 * index / len}%`; 
