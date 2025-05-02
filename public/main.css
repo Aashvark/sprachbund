@@ -159,12 +159,17 @@ main .prompt .hint .hints::before {
   border-color: transparent transparent var(--light-cont) transparent;
 }
 
+main .prompt .hint .hints .row {
+  font-size: 0;
+}
 
 main .prompt .hint .hints .row p {
   padding: 10px 20px;
   
   border: 2px solid var(--light-cont);
   border-bottom: 0;
+  
+  font-size: 20px;
 }
 
 main .prompt .hint .hints .row .row-whole {
