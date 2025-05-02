@@ -4,10 +4,12 @@
     
     "han":   ["be", "am"],
     "hottá": ["not", "not be"],
-    "han jére":   ["was", "were"],
-    "hottá jére": ["was not"],
-    "han sy":   ["will be"],
-    "hottá sy": ["will not be"],
+    "sy han":   ["will be"],
+    "sy hottá": ["will not be"],
+    "jera han":   ["was", "were"],
+    "jera hottá": ["was not"],
+    "cui han": ["would be"],
+    "cui hottá": ["would not be"],
     
     "ké": ["you (sing.)"],
     
@@ -20,6 +22,8 @@
     "véje hottá": ["had not"],
     "vés han":   ["will have"],
     "vés hottá": ["will not have"],
+    "vécui han":   ["would have"],
+    "vécui hottá": ["would not have"],
     "vun":   ["you (plur.)"]
   }
 }
