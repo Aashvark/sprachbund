@@ -3,13 +3,14 @@
     "ċo": ["we"],
     
     "han":   ["be", "am"],
-    "hottá": ["(neg.)", "not be"],
+    "hottá": ["(neg.)", "not be", "not"],
     
     "ké": ["you (sing.)"],
     
     "ne": ["(plur.)"],
     "nyllá": ["I", "me"],
     
+    "vé":   ["have"],
     "vé han":   ["have"],
     "vé hottá": ["have not", "don't have"],
     "vun":   ["you (plur.)"]
