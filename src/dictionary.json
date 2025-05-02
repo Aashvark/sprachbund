@@ -4,9 +4,10 @@
     
     "han":   ["be", "am"],
     "hottá": ["not", "not be"],
-    
     "han jére":   ["was", "were"],
     "hottá jére": ["was not"],
+    "han sy":   ["will be"],
+    "hottá sy": ["will not be"],
     
     "ké": ["you (sing.)"],
     
@@ -17,6 +18,8 @@
     "vé hottá": ["have not"],
     "vé han jére":   ["had"],
     "vé hottá jére": ["had not"],
+    "vé han sy":   ["will have"],
+    "vé hottá sy": ["will not have"],
     "vun":   ["you (plur.)"]
   }
 }
