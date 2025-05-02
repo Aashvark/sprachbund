@@ -99,6 +99,10 @@
     function insert(character) { document.getElementById("response-" + index).innerHTML += (isUpper ? character.toUpperCase() : character); }
     
     function checkAnswer() {
+      if (document.getElementById("response-" + index).value.) {
+        
+      }
+      
       index += 1;
       document.getElementById("progress").style.width = `${100 * index / len}%`;
       document.getElementById("alert").classList.add("block");
