@@ -66,13 +66,14 @@
       {{/ifEquals}}
       </div>
     {{/each}}
-    <div class="alert" id="alert">
-      <div class="text">
-        <p class="heading" id="alert-heading"></p>
-        <p class="description" id="alert-description"></p>
+      <div class="alert" id="alert">
+        <div class="text">
+          <p class="heading" id="alert-heading"></p>
+          <p class="description" id="alert-description"></p>
+        </div>
+        <a class="button" onclick="nextLesson()">Continue</a>
       </div>
-      <a class="button" onclick="nextLesson()">Continue</a>
-    </div>
+      <div id="test"></div>
     </main>
     <footer>
       <a class="button" href="/sprachbund">Exit</a>
@@ -95,7 +96,7 @@
       for (var c of document.getElementsByClassName("c")) { c.classList.toggle("upper"); }
     }
     
-    function insert(character) { document.getElementById("response-" + index).innerHTML += (isUpper ? character.toUpperCase() : character); }
+    function insert(character) { document.getElementById("response-" + index).value += (isUpper ? character.toUpperCase() : character); }
     
     function checkAnswer() {
       let checkFor;
@@ -121,13 +122,15 @@
     
     function nextLesson() {
       if (index >= lessons.length) { 
-        localStorage.setItem("myCat", "Tom");
+        localStorage.setItem("completed", true);
         window.location = "https://glottis.glitch.me/sprachbund"; return;
       }
       
       lesson = lessons[index];
       document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
       document.getElementById("alert").classList.remove("block");
+      
+      document.getElementById("test").value = localStorage.getItem("completed");
       
       document.getElementsByClassName("section")[index].style.display = "block";
       if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
