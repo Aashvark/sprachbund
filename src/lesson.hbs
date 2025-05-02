@@ -68,8 +68,8 @@
     {{/each}}
     <div class="alert" id="alert">
       <div class="text">
-        <p class="heading" id="alert-heading">CORRECT</p>
-        <p class="description" id="alert-description">You did it!</p>
+        <p class="heading" id="alert-heading"></p>
+        <p class="description" id="alert-description"></p>
       </div>
       <a class="button" onclick="nextLesson()">Continue</a>
     </div>
@@ -111,10 +111,12 @@
       if (formatAnswer(checkFor) === formatAnswer(right)) {
         correct = true;
         index += 1;
-        document.getElementById("progress").style.width = `${100 * index / len}%`; 
+        document.getElementById("progress").style.width = `${100 * index / len}%`;
+        document.getElementById("alert-heading").innerHTML = "Correct!";
+        document.getElementById("alert-description").innerHTML = "You did it!";
       } else {
         correct = false;
-        document.getElementById("alert-heading").innerHTML = "Oops! Try again!";
+        document.getElementById("alert-heading").innerHTML = "Try again!";
         document.getElementById("alert-description").innerHTML = "Hover over words you don't know if you need to.";
       }
       document.getElementById("alert").classList.add("block");
