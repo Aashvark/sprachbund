@@ -91,6 +91,8 @@ main {
   font-size: 20px;
 }
 
+main .section { display: none; }
+
 main .heading, main .prompt, main .response, main .buttons {
   display: inline-block;
   width: 100%;

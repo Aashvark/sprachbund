@@ -4,13 +4,13 @@
     "ċo": ["we"],
     
     "han":        ["be", "am"],
-    "hottá": ["not", "not be"],
-    "sy han":   ["will be"],
-    "sy hottá": ["will not be"],
+    "hottá":      ["not", "not be"],
+    "sy han":     ["will be"],
+    "sy hottá":   ["will not be"],
     "jera han":   ["was", "were"],
     "jera hottá": ["was not"],
-    "cui han": ["would be"],
-    "cui hottá": ["would not be"],
+    "cui han":    ["would be"],
+    "cui hottá":  ["would not be"],
     
     "tá": ["not"],
     
@@ -18,16 +18,15 @@
     
     "ne": ["(plur.)"],
     "nyllá": ["I", "me"],
+    "vun": ["you (plur.)"],
     
     "vé han":      ["have"],
-    "vé hottá":    ["have not"],
+    "vé hottá":    ["have not", "don't have"],
     "véje han":    ["had"],
-    "véje hottá":  ["had not"],
+    "véje hottá":  ["had not", "hadn't"],
     "vés han":     ["will have"],
-    "vés hottá":   ["will not have"],
+    "vés hottá":   ["will not have", "won't have"],
     "vécui han":   ["would have"],
-    "vécui hottá": ["would not have"],
-    
-    "vun": ["you (plur.)"]
+    "vécui hottá": ["would not have", "wouldn't have"]
   }
 }

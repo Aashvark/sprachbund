@@ -85,9 +85,6 @@
     
     let lessons = JSON.parse('{{{json lessons}}}');
     let lesson = lessons[index];
-    let len = lessons.length;
-    
-    let sections = document.getElementsByClassName("section");
     
     let correct = true;
     
@@ -109,9 +106,9 @@
       }
       
       if (formatAnswer(checkFor) === formatAnswer(right)) {
-        correct = true;
         index += 1;
-        document.getElementById("progress").style.width = `${100 * index / len}%`;
+        correct = true;
+        document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
         document.getElementById("alert-heading").innerHTML = "Correct!";
         document.getElementById("alert-description").innerHTML = "You did it!";
       } else {
@@ -123,13 +120,14 @@
     }
     
     function nextLesson() {
-      if (index >= len) { window.location = "https://glottis.glitch.me/sprachbund"; return; }
+      if (index >= lessons.length) { window.location = "https://glottis.glitch.me/sprachbund"; return; }
       
       lesson = lessons[index];
       document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
       document.getElementById("alert").classList.remove("block");
       
-      for (var o = 0; o < sections.length; o++) { sections[o].style.display = o === index ? "block" : "none"; }
+      document.getElementsByClassName("section")[index].style.display = "block";
+      if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
     }
     
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g," ").trimEnd(); }
