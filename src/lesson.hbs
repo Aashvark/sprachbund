@@ -120,7 +120,10 @@
     }
     
     function nextLesson() {
-      if (index >= lessons.length) { window.location = "https://glottis.glitch.me/sprachbund"; return; }
+      if (index >= lessons.length) { 
+        localStorage.setItem("myCat", "Tom");
+        window.location = "https://glottis.glitch.me/sprachbund"; return;
+      }
       
       lesson = lessons[index];
       document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
