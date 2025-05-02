@@ -1,8 +1,11 @@
 {
   "smb": {
     "han": ["be", "am"],
-    "hani": ["be", "am"],
+    "hottá": ["not be", "isn't"],
+    
     "nyllá": ["I", "me"],
-    "vé han": ["have"]
+    
+    "vé han": ["have"],
+    "vé hottá": ["havn't"]
   }
 }

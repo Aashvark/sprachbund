@@ -36,8 +36,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
             else submeaning.push([])
           }
         }
-      }
-      else continue;
+      } else continue;
       
       let construction = `<div class="hint"><span>${save}</span><table><tbody>`;
       for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning !== [] ? submeaning.length : 1}">${key}</td></tr>`; }
