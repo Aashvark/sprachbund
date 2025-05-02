@@ -1,11 +1,17 @@
 {
   "smb": {
-    "han": ["be", "am"],
+    "ċo": ["we"],
+    
+    "han":   ["be", "am"],
     "hottá": ["(neg.)", "is not"],
     
+    "ké": ["you (sing.)"],
+    
+    "ne": ["(plur.)"],
     "nyllá": ["I", "me"],
     
-    "vé han": ["have"],
-    "vé hottá": ["havn't"]
+    "vé han":   ["have"],
+    "vé hottá": ["havn't"],
+    "vun":   ["you (plur.)"]
   }
 }

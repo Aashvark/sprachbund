@@ -55,15 +55,13 @@
         <div class="prompt">
           {{#ifEquals lesson.direction "native-new"}}{{hover-translate lesson.sentence.native "en"}}{{else}}{{hover-translate lesson.sentence.new "smb"}}{{/ifEquals}}
         </div>
-        <div class="response">
-          <textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Ińlesh{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}} spellcheck="false"{{/ifEquals}}></textarea>
-        </div>
+        <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Ińlesh{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}} spellcheck="false"{{/ifEquals}}></textarea></div>
         <div class="insert-buttons">
           <a class="button" onclick="caseshift()" id="shift-case">⬆</a>
+          <a class="button c" onclick="insert('á')">á</a>
+          <a class="button c" onclick="insert('ċ')">ċ</a>
           <a class="button c" onclick="insert('é')">é</a>
-          <a class="button c" onclick="insert('ń')">ń</a>
           <a class="button c" onclick="insert('ó')">ó</a>
-          <a class="button c" onclick="insert('þ')">þ</a>
         </div>
       {{/ifEquals}}
       </div>
@@ -95,28 +93,23 @@
       document.getElementById("shift-case").innerHTML = isUpper ? "⬆" : "⬇";
       isUpper = !isUpper;
       
-      for (var c of document.getElementsByClassName("c")) {c.classList.toggle("upper"); }
+      for (var c of document.getElementsByClassName("c")) { c.classList.toggle("upper"); }
     }
     
-    function insert(character) { document.getElementById("response-" + index).innerHTML += isUpper ? character.toUpperCase() : character; }
+    function insert(character) { document.getElementById("response-" + index).innerHTML += (isUpper ? character.toUpperCase() : character); }
     
     function checkAnswer() {
-      document.getElementById("alert").classList.add("block");
-      
       index += 1;
       document.getElementById("progress").style.width = `${100 * index / len}%`;
+      document.getElementById("alert").classList.add("block");
     }
     
     function nextLesson() {
-      if (index >= len) {
-        window.location = "https://creativewritingguild.glitch.me/sprachbund";
-        return;
-      }
-      
-      document.getElementById("alert").classList.remove("block");
+      if (index >= len) { window.location = "https://glottis.glitch.me/sprachbund"; return; }
       
       lesson = lessons[index];
       document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
+      document.getElementById("alert").classList.remove("block");
       
       for (var o = 0; o < sections.length; o++) { sections[o].style.display = o === index ? "block" : "none"; }
     }

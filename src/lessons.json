@@ -8,14 +8,14 @@
           "direction": "new-native",
           "sentence": {
             "native": "I have",
-            "new": "nyllá vé hottá"
+            "new": "ċo vé hottá ne"
           }
         },
         {
           "type": "short-response",
           "direction": "native-new",
           "sentence": {
-            "native": "be",
+            "native": "have",
             "new": "han"
           }
         }
