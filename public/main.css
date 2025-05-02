@@ -159,12 +159,26 @@ main .prompt .hint .hints::before {
   border-color: transparent transparent var(--light-cont) transparent;
 }
 
+
 main .prompt .hint .hints .row p {
-  display: table-cell;
   padding: 10px 20px;
   
   border: 2px solid var(--light-cont);
   border-bottom: 0;
+}
+
+main .prompt .hint .hints .row .row-whole {
+  display: table-cell;
+}
+
+main .prompt .hint .hints .row .row-split {
+  table-layout: auto;
+  display: inline;
+  
+  width: 49%;
+  
+  vertical-align: middle;
+  border-right: 0;
 }
 
 main .prompt .hint .hints .row:first-child p {
