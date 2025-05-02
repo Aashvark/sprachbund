@@ -23,13 +23,28 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   for (let i = 0; i < arg.length; i++) {
     let c = arg.charAt(i);
     save += c;
+    
     if (c === " " || i == arg.length - 1) { 
       let keys = [];
+      let submeaning = [];
       if (lang == "en") { keys = Object.keys(dictionary.smb).filter(key => dictionary.smb[key].includes(save.trimEnd())); }
-      else if (lang == "smb" && save.trimEnd() in dictionary.smb) { keys = dictionary.smb[save.trimEnd()]; }
+      else if (lang == "smb" && save.trimEnd() in dictionary.smb) { 
+        keys = dictionary.smb[save.trimEnd()];
+        if (save.trimEnd().includes(" ")) {
+          for (var sub of save.trimEnd().split(" ")) {
+            if (sub in dictionary.smb) submeaning.push(dictionary.smb[sub]);
+            else submeaning.push(" ")
+          }
+        }
+      }
+      else { continue; }
       
       let construction = `<div class="hint"><span>${save}</span><div class="hints">`;
       for (var key of keys) { construction += `<div class="row"><p>${key}</p></div>`; }
+      if (submeaning !== []) {
+        construction += ""
+        for (var sub of submeaning) { construction += `<div class="split-row"><p>${sub}</p></div>`; } 
+      }
       construction += "</div></div>"
       
       string += construction;
