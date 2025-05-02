@@ -138,6 +138,10 @@ main .prompt .hint table {
   transform: translateX(-50%);
   
   border-collapse: collapse;
+  border-spacing: 0;
+  
+  border: 2px solid var(--light-cont);
+  border-radius: 5px;
 }
 
 main .prompt .hint:hover table, main .prompt .hint table:hover { display: block; }
@@ -161,29 +165,13 @@ main .prompt .hint table::before {
 }
 
 main .prompt .hint table tr { 
-  background: var(--contrast);
   font-size: 0;
 }
 
 main .prompt .hint table tr td {
   padding: 10px 20px;
   
-  border: 2px solid var(--light-cont);
-  border-bottom: 0;
-  
   font-size: 20px;
-}
-
-main .prompt .hint table tr:first-child td {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-main .prompt .hint table tr:last-child td {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  
-  border: 2px solid var(--light-cont);
 }
 
 main .response { padding: 10px 0; }

@@ -42,10 +42,9 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
       let construction = `<div class="hint"><span>${save}</span><table class="hints"><tbody>`;
       for (var key of keys) { construction += `<tr class="row"><td class="row-whole" colspan="${submeaning !== [] ? submeaning.length : 1}">${key}</td></tr>`; }
       if (submeaning !== []) {
-        console.log(sortNestedListByLength(submeaning));
-        for (let i = 0; i < sortNestedListByLength(submeaning).length; i++) {
+        for (let i = 0; i < getLongestList(submeaning).length; i++) {
           construction += `<tr>`;
-          for (var sub of submeaning) { construction += `<td>${sub[i]}</td>`; } 
+          for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
           construction += `</tr>`;
         }
       }
@@ -59,8 +58,12 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   return new handlebars.SafeString(string.trimEnd());
 });
 
-function sortNestedListByLength(nestedList) {
-  return nestedList.max(Number.MIN_SAFE_INTEGER, nestedList);
+function getLongestList(nestedList) {
+  let largest = [];
+  nestedList.forEach(element => {
+    if (element.length > largest.length) largest = element;
+  });
+  return largest;
 }
 
 const seo = require("./src/seo.json");
