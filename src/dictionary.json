@@ -5,6 +5,9 @@
     "han":   ["be", "am"],
     "hottá": ["not", "not be"],
     
+    "han jére":   ["was", "were"],
+    "hottá jére": ["was not"],
+    
     "ké": ["you (sing.)"],
     
     "ne": ["(plur.)"],
@@ -12,6 +15,8 @@
     
     "vé han":   ["have"],
     "vé hottá": ["have not"],
+    "vé han jére":   ["had"],
+    "vé hottá jére": ["had not"],
     "vun":   ["you (plur.)"]
   }
 }
