@@ -25,8 +25,8 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
     save += c;
     if (c === " " || i == arg.length - 1) { 
       let keys = [];
-      if (lang == "en") { keys = Object.keys(dictionary.in).filter(key => dictionary.in[key].includes(save.trimEnd())); }
-      else if (lang == "in" && save.trimEnd() in dictionary.in) { keys = dictionary.in[save.trimEnd()]; }
+      if (lang == "en") { keys = Object.keys(dictionary.smb).filter(key => dictionary.smb[key].includes(save.trimEnd())); }
+      else if (lang == "smb" && save.trimEnd() in dictionary.smb) { keys = dictionary.smb[save.trimEnd()]; }
       
       let construction = `<div class="hint"><span>${save}</span><div class="hints">`;
       for (var key of keys) { construction += `<div class="row"><p>${key}</p></div>`; }
@@ -49,16 +49,16 @@ fastify.get("/", function (request, reply) { return reply.view("/src/index.hbs",
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
 
 fastify.get("/learn", function (request, reply) {
-  return reply.view('/src/pages/learn/learn.hbs', {seo: seo.meliora, lessons: lessons});
+  return reply.view('/src/pages/learn/learn.hbs', {seo: seo, lessons: lessons});
 });
 
 fastify.get("/lesson", function (request, reply) {
-  return reply.view('/src/lesson.hbs', {seo: seo.sprachbund, lessons: lessons[0].unit[0]});
+  return reply.view('/src/lesson.hbs', {seo: seo, lessons: lessons[0].unit[0]});
   //return reply.redirect('/learn');
 });
 
 fastify.post("/learn/lesson", function (request, reply) {
-  return reply.view('/src/pages/learn/lesson.hbs', {seo: seo.meliora, lessons: lessons[request.body.lesson].lessons});
+  return reply.view('/src/pages/learn/lesson.hbs', {seo: seo, lessons: lessons[request.body.lesson].lessons});
 });
 
 fastify.listen(

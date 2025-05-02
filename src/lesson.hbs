@@ -53,7 +53,7 @@
       {{#ifEquals lesson.type "short-response"}}
         <p class="heading">Write this!</p>
         <div class="prompt">
-          {{#ifEquals lesson.direction "native-new"}}{{hover-translate lesson.sentence.native "en"}}{{else}}{{hover-translate lesson.sentence.new "in"}}{{/ifEquals}}
+          {{#ifEquals lesson.direction "native-new"}}{{hover-translate lesson.sentence.native "en"}}{{else}}{{hover-translate lesson.sentence.new "smb"}}{{/ifEquals}}
         </div>
         <div class="response">
           <textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Ińlesh{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}} spellcheck="false"{{/ifEquals}}></textarea>
