@@ -144,6 +144,8 @@ main .prompt .hint table {
   
   border: 2px solid var(--light-cont);
   border-radius: 5px;
+  
+  font-size: 18px;
 }
 
 main .prompt .hint:hover table, main .prompt .hint table:hover { display: block; }
