@@ -1,6 +1,8 @@
 {
   "smb": {
-    "vé han": ["have"],
-    "han": ["be", "am"]
+    "han": ["be", "am"],
+    "hani": ["be", "am"],
+    "nyllá": ["I", "me"],
+    "vé han": ["have"]
   }
 }
