@@ -21,59 +21,41 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let save = "";
   
   let tokens = arg.split(" ");
+  let hints = [];
   let keys = [];
   let submeaning = [];
   
+  let testing = ["name", ["keys"], ["groups"]]
+  
   for (let i = 0; i < tokens.length; i++) {
     save += tokens[i] + " ";
-    if (lang === "en") { keys.push(Object.keys(dictionary.smb).filter(key => dictionary.smb[key].includes(save.trimEnd()))); }
-    else if (lang == "smb" && save.trimEnd() in dictionary.smb) { 
+    console.log(save);
+    if (lang === "en") { keys = Object.keys(dictionary.smb).filter(key => dictionary.smb[key].includes(save.trimEnd()));}
+    else if (lang == "smb" && save.trimEnd() in dictionary.smb) {
       keys = dictionary.smb[save.trimEnd()];
       if (save.trimEnd().includes(" ")) {
-        for (var sub of save.trimEnd().split(" ")) {
-          if (sub in dictionary.smb) submeaning.push(dictionary.smb[sub]);
-          else submeaning.push([]);
-        }
+        submeaning = save.trimEnd().split(" ").map((key) => {
+          if (key in dictionary.smb) return dictionary.smb[key];
+          return [];
+        });
+      }
+    } else continue;
+    
+    let construction = `<div class="hint"><span>${save}</span><table><tbody>`;
+    for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning !== [] ? submeaning.length : 1}">${key}</td></tr>`; }
+    if (submeaning !== []) {
+      for (let i = 0; i < getLongestList(submeaning).length; i++) {
+        construction += `<tr>`;
+        for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
+        construction += `</tr>`;
       }
     }
-  }
-  
-  console.log(keys);
-  console.log(submeaning);
-  
-  for (let i = 0; i < arg.length; i++) {
-    let c = arg.charAt(i);
-    save += c;
-    
+    construction += `</tbody></table></div>`;
+      
+    string += construction;
+    save = "";
     keys = [];
     submeaning = [];
-    
-    if (c === " " || i == arg.length - 1) { 
-      if (lang == "en") { keys = Object.keys(dictionary.smb).filter(key => dictionary.smb[key].includes(save.trimEnd())); }
-      else if (lang == "smb" && save.trimEnd() in dictionary.smb) { 
-        keys = dictionary.smb[save.trimEnd()];
-        if (save.trimEnd().includes(" ")) {
-          for (var sub of save.trimEnd().split(" ")) {
-            if (sub in dictionary.smb) submeaning.push(dictionary.smb[sub]);
-            else submeaning.push([])
-          }
-        }
-      } else continue;
-      
-      let construction = `<div class="hint"><span>${save}</span><table><tbody>`;
-      for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning !== [] ? submeaning.length : 1}">${key}</td></tr>`; }
-      if (submeaning !== []) {
-        for (let i = 0; i < getLongestList(submeaning).length; i++) {
-          construction += `<tr>`;
-          for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
-          construction += `</tr>`;
-        }
-      }
-      construction += `</tbody></table></div>`;
-      
-      string += construction;
-      save = "";
-    }
   }
   
   return new handlebars.SafeString(string.trimEnd());
