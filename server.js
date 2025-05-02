@@ -33,7 +33,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
         if (save.trimEnd().includes(" ")) {
           for (var sub of save.trimEnd().split(" ")) {
             if (sub in dictionary.smb) submeaning.push(dictionary.smb[sub]);
-            else submeaning.push(" ")
+            else submeaning.push([])
           }
         }
       }
@@ -42,15 +42,14 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
       let construction = `<div class="hint"><span>${save}</span><table class="hints"><tbody>`;
       for (var key of keys) { construction += `<tr class="row"><td class="row-whole" colspan="${submeaning !== [] ? submeaning.length : 1}">${key}</td></tr>`; }
       if (submeaning !== []) {
-        construction += `<tr>`;
-        for (var sub of submeaning) { construction += `<td>${sub}</td>`; } 
-        construction += `</tr>`;
+        console.log(sortNestedListByLength(submeaning));
+        for (let i = 0; i < sortNestedListByLength(submeaning).length; i++) {
+          construction += `<tr>`;
+          for (var sub of submeaning) { construction += `<td>${sub[i]}</td>`; } 
+          construction += `</tr>`;
+        }
       }
       construction += `</tbody></table></div>`;
-      
-      //let construction = `<div class="hint"><span>${save}</span><div class="hints">`;
-      //for (var key of keys) { construction += `<div class="row"><p class="row-whole">${key}</p></div>`; }
-      //construction += "</div></div>"
       
       string += construction;
       save = "";
@@ -59,6 +58,10 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   
   return new handlebars.SafeString(string.trimEnd());
 });
+
+function sortNestedListByLength(nestedList) {
+  return nestedList.max(Number.MIN_SAFE_INTEGER, nestedList);
+}
 
 const seo = require("./src/seo.json");
 
