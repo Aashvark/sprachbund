@@ -39,15 +39,17 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
       }
       else continue;
       
-      let construction = `<div class="hint"><span>${save}</span><table><tbody></tbody></table></div>`;
+      let construction = `<div class="hint"><span>${save}</span><table class="hints"><tbody>`;
+      for (var key of keys) { construction += `<tr class="row"><td class="row-whole" colspan="${submeaning !== [] ? submeaning.length : 1}">${key}</td></tr>`; }
+      if (submeaning !== []) {
+        construction += `<tr>`;
+        for (var sub of submeaning) { construction += `<td>${sub}</td>`; } 
+        construction += `</tr>`;
+      }
+      construction += `</tbody></table></div>`;
       
       //let construction = `<div class="hint"><span>${save}</span><div class="hints">`;
       //for (var key of keys) { construction += `<div class="row"><p class="row-whole">${key}</p></div>`; }
-      //if (submeaning !== []) {
-      //  construction += `<div class="row">`;
-      //  for (var sub of submeaning) { construction += `<p class="row-split">${sub}</p>`; } 
-      //  construction += `</div>`;
-      //}
       //construction += "</div></div>"
       
       string += construction;
