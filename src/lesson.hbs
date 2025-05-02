@@ -103,7 +103,7 @@
     function checkAnswer() {
       let checkFor;
       let right;
-      if (lesson.type == "challenge") {
+      if (lesson.type == "short-response") {
         checkFor = lesson.direction === "native-new" ? lesson.sentence.new : lesson.sentence.native;
         right = document.getElementById("response-" + index).value;
       }
