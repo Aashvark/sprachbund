@@ -52,7 +52,7 @@ header, footer {
   padding: 15px 8%;
 }
 
-header .language-flag, header .progress-bar {
+header .language-flag, header .progress-bar, header .progress-count {
   display: inline-block;
   vertical-align: middle;
 }
@@ -81,6 +81,10 @@ header .progress-inside {
   
   border-radius: 20px;
   transition: width 1000ms;
+}
+
+header .progress-count {
+  width: 
 }
 
 main {
