@@ -11,10 +11,7 @@ fastify.register(require("@fastify/formbody"));
 fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
 
 handlebars.registerHelper('ifEquals', function(arg1, arg2, options) { return (arg1 == arg2) ? options.fn(this) : options.inverse(this); });
-handlebars.registerHelper('length', function(arg, options) { return arg.length; });
 handlebars.registerHelper("json", function(a, options) { return JSON.stringify(a); });
-
-function fma(name) { return name.replaceAll(" ", "_"); }
 
 handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let string = "";

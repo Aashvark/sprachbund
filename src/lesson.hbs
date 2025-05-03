@@ -46,7 +46,7 @@
         <svg><image href="/svg/simple_flag.svg" xlink:href="/svg/simple_flag.svg"></image></svg>
       </div>
       <div class="progress-bar"><div class="progress-inside" id="progress"></div></div>
-      <p class="progress-count">0/{{length lessons}}</p>
+      <div class="progress-count"><p id="progress-count"></p></div>
     </header>
     <main>
     {{#each lessons as |lesson|}}
@@ -128,6 +128,7 @@
       }
       
       lesson = lessons[index];
+      document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
       document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
       document.getElementById("alert").classList.remove("block");
       

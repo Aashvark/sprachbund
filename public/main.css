@@ -64,7 +64,7 @@ header .progress-bar {
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
   border: 1px solid var(--light-cont);
   
-  width: calc(100% - 94px);
+  width: calc(95% - 94px);
   height: 30px;
   padding: 3.5px;
   
@@ -83,8 +83,12 @@ header .progress-inside {
   transition: width 1000ms;
 }
 
-header .progress-count {
-  width: 
+header .progress-count { width: 5%; }
+
+header .progress-count p { 
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--white);
 }
 
 main {
@@ -292,6 +296,8 @@ footer .button {
 
 @media screen and (max-width: 600px) {
   header, footer { padding: 15px 4%; }
+  
+  header .progress-count { width: 14%; }
   
   main { padding: 0 5%; }
   
