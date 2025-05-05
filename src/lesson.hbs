@@ -55,18 +55,8 @@
         <p class="heading">New Word Incoming!</p>
         <div class="description">
           <p class="root">{{lesson.root}}</p>
-          <p class="pos context">{{lesson.pos}}</p>
-          <p class="definition">{{lesson.meaning}}</p>
-        </div>
-        <div class="semantics">
-          {{#if lesson.translations}}
-          <div class="translations">
-            {{#each lesson.translations}}
-            <p class="left">{{word}} <span class="ipa">/{{ipa}}/</span> {{#if context}}<span class="context">({{context}})</span>{{/if}}</p>
-            <p class="right">&quot;{{meaning}}&quot;</p>
-            {{/each}}
-          </div>
-          {{/if}}
+          <p class="pos context">{{get-attribute lesson.root "pos"}}</p>
+          <p class="definition">{{get-attribute lesson.root "definition"}}</p>
         </div>
       {{/ifEquals}}
       {{#ifEquals lesson.type "short-response"}}

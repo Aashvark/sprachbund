@@ -5,23 +5,7 @@
       [
         {
           "type": "vocabulary",
-          "root": "symi",
-          "pos": "noun",
-          "meaning": "Refers to males over or at the age of adulthood. When applied to children, it may signify their maturity.",
-          "translations": [
-            {
-              "word": "symi",
-              "meaning": "man",
-              "ipa": "ˈsyˌmi",
-              "context": "singular"
-            },
-            {
-              "word": "symi ne",
-              "meaning": "women",
-              "ipa": "ˈsyˌmi ne",
-              "context": "plural"
-            }
-          ]
+          "root": "symi"
         },
         {
           "type": "short-response",

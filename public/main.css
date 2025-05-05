@@ -118,7 +118,11 @@ main .heading {
 }
 
 main .description {
-  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 60%;
   padding: 15px 25px 20px;
   
   text-align: center;
@@ -131,11 +135,12 @@ main .description {
 }
 
 main .description .root {
-  width: min-content;
   position: relative;
-  padding: 0 15px 5px;
   left: 50%;
   transform: translateX(-50%);
+  
+  padding: 0 15px 5px;
+  width: min-content;
   
   border-bottom: 3px solid var(--contrast);
   
@@ -387,6 +392,8 @@ footer .button {
   header .progress-count { width: 14%; }
   
   main { padding: 0 5%; }
+  
+  main .description { width: 100%; }
   
   main .response .textbox { height: 39vh; }
   main .alert #alert-description { font-size: 16px; }

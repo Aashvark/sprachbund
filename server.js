@@ -13,6 +13,8 @@ fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } 
 handlebars.registerHelper('ifEquals', function(arg1, arg2, options) { return (arg1 == arg2) ? options.fn(this) : options.inverse(this); });
 handlebars.registerHelper("json", function(a, options) { return JSON.stringify(a); });
 
+handlebars.registerHelper('get-attribute', function(word, attribute, options) { return dictionary.smb[word.trimEnd()][attribute]; });
+
 handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let string = "";
   let save = "";
@@ -25,11 +27,11 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
     save += tokens[i] + " ";
     
     if (lang === "en" && Object.keys(dictionary.smb).filter(key => dictionary.smb[key].includes(save + tokens[i + 1])).length === 0) {
-      keys = Object.keys(dictionary.smb).filter(key => dictionary.smb[key].includes(save.trimEnd()));
-      if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((v) => { return Object.keys(dictionary.smb).filter(key => dictionary.smb[key].includes(v)); }); }
+      keys = Object.keys(dictionary.smb).filter(key => dictionary.smb[key].simple.includes(save.trimEnd()));
+      if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((v) => { return Object.keys(dictionary.smb).filter(key => dictionary.smb[key].simple.includes(v)); }); }
     } else if (lang == "smb" && save.trimEnd() in dictionary.smb && !(save + tokens[i + 1] in dictionary.smb)) {
-      keys = dictionary.smb[save.trimEnd()];
-      if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((key) => { return key in dictionary.smb ? dictionary.smb[key] : []; }); }
+      keys = dictionary.smb[save.trimEnd()].simple;
+      if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((key) => { return key in dictionary.smb ? dictionary.smb[key].simple : []; }); }
     } else continue;
     
     let construction = `<div class="hint"><span>${save}</span><table><tbody>`;
