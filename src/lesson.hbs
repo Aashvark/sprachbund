@@ -107,7 +107,7 @@
         right = document.getElementById("response-" + index).value;
       }
       
-      if (formatAnswer(checkFor) === formatAnswer(right)) {
+      if (checkFor.map(key => ) === formatAnswer(right)) {
         index += 1;
         correct = true;
         document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;

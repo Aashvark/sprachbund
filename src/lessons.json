@@ -7,16 +7,8 @@
           "type": "short-response",
           "direction": "new-native",
           "sentence": {
-            "native": "I am a person",
-            "new": "nyllá han ciná"
-          }
-        },
-        {
-          "type": "short-response",
-          "direction": "native-new",
-          "sentence": {
-            "native": "I do not have",
-            "new": "nyllá vé hottá"
+            "new": "symi",
+            "native": ["a man", "man"]
           }
         }
       ]
