@@ -54,8 +54,9 @@
       {{#ifEquals lesson.type "vocabulary"}}
         <p class="heading">New Word Incoming!</p>
         <div class="semantics">
-          <div class="descriptions">
-            <p class="subheading">{{lesson.root}} <span class="context">({{lesson.pos}})</span>{{#if lesson.meaning}}<br>&quot;{{lesson.meaning}}&quot;{{/if}}</p>
+          <div class="description">
+            <p class="root">{{lesson.root}}</p>
+            <p class="subheading">{{lesson.root}} <br><span class="context">({{lesson.pos}})</span>{{#if lesson.meaning}} &quot;{{lesson.meaning}}&quot;{{/if}}</p>
             <p>{{lesson.description}}</p>
           </div>
           {{#if lesson.translations}}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Parkinsans:wght@300..800&display=swap');
 
 * {
   margin: 0;
@@ -124,6 +124,27 @@ main .semantics {
   user-select: none;
 }
 
+main .description {
+  width: 100%;
+  padding: 10px 20px;
+  
+  text-align: center;
+  
+  font-size: 20px;
+  color: var(--white);
+  
+  border: 3px solid var(--contrast);
+  border-radius: 10px;
+}
+
+main .description .root {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 30px;
+}
+
 .translations { 
   padding: 20px 10px;
   text-align: right;
@@ -167,15 +188,7 @@ main .semantics {
   font-size: 15px;
 }
 
-.descriptions {  
-  padding: 10px 20px;
-  border: 3px solid var(--contrast);
-  border-radius: 10px;
-}
-
-.descriptions .subheading {
-  border-bottom: 2px dashed var(--accent);
-}
+.descriptions .subheading { border-bottom: 2px dashed var(--light-cont); }
 
 .descriptions p { padding: 15px 0; }
 
