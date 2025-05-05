@@ -119,7 +119,7 @@ main .heading {
 
 main .description {
   width: 100%;
-  padding: 10px 20px;
+  padding: 15px 25px 20px;
   
   text-align: center;
   
@@ -128,12 +128,14 @@ main .description {
   
   border: 3px solid var(--contrast);
   border-radius: 10px;
-  
-  user-select: none;
 }
 
 main .description .root {
-  padding: 0 0 5px;
+  width: min-content;
+  position: relative;
+  padding: 0 15px 5px;
+  left: 50%;
+  transform: translateX(-50%);
   
   border-bottom: 3px solid var(--contrast);
   
@@ -144,13 +146,7 @@ main .description .root {
   font-size: 30px;
 }
 
-main .description .pos {
-  width: min-content;
-  position: relative;
-  padding: 5px 15px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+main .description .pos { padding: 5px 15px; }
 
 main .description .context {
   color: var(--accent);

@@ -1,6 +1,5 @@
 {
   "smb": {
-    
     "han": ["to be", "be", "yes"],
     "hotá": ["to not be", "not", "no"],
     
@@ -10,7 +9,9 @@
     "ny": ["I", "me"],
     "ké": ["you"],
     
-    "symi": ["a man", "man"],
+    "symi": {
+      ["a man", "man"]
+    },
     "cévo": ["a woman", "woman"],
     
     "náu": ["large", "tall"],

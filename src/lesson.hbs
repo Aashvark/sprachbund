@@ -56,10 +56,7 @@
         <div class="description">
           <p class="root">{{lesson.root}}</p>
           <p class="pos context">{{lesson.pos}}</p>
-          <br>
-          <br>
-          <p class="subheading">{{lesson.root}} <br><span class="context">({{lesson.pos}})</span>{{#if lesson.meaning}} &quot;{{lesson.meaning}}&quot;{{/if}}</p>
-          <p>{{lesson.description}}</p>
+          <p class="definition">{{lesson.meaning}}</p>
         </div>
         <div class="semantics">
           {{#if lesson.translations}}
