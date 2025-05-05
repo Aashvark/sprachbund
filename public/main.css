@@ -117,13 +117,6 @@ main .heading {
   user-select: none;
 }
 
-main .semantics {
-  padding: 10px;
-  font-size: 0;
-  
-  user-select: none;
-}
-
 main .description {
   width: 100%;
   padding: 10px 20px;
@@ -135,14 +128,36 @@ main .description {
   
   border: 3px solid var(--contrast);
   border-radius: 10px;
+  
+  user-select: none;
 }
 
 main .description .root {
+  padding: 0 0 5px;
+  
+  border-bottom: 3px solid var(--contrast);
+  
   font-family: "Merienda", cursive;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   font-size: 30px;
+}
+
+main .description .pos {
+  width: min-content;
+  position: relative;
+  padding: 5px 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main .description .context {
+  color: var(--accent);
+  
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .translations { 
@@ -191,16 +206,6 @@ main .description .root {
 .descriptions .subheading { border-bottom: 2px dashed var(--light-cont); }
 
 .descriptions p { padding: 15px 0; }
-
-.context {
-  color: var(--accent);
-  
-  font-size: 18px;
-  
-  font-weight: bold;
-  font-style: oblique;
-  font-variant: small-caps;
-}
 
 main .prompt {
   padding: 10px;

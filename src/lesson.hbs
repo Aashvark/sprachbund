@@ -53,12 +53,15 @@
       <div class="section">
       {{#ifEquals lesson.type "vocabulary"}}
         <p class="heading">New Word Incoming!</p>
+        <div class="description">
+          <p class="root">{{lesson.root}}</p>
+          <p class="pos context">{{lesson.pos}}</p>
+          <br>
+          <br>
+          <p class="subheading">{{lesson.root}} <br><span class="context">({{lesson.pos}})</span>{{#if lesson.meaning}} &quot;{{lesson.meaning}}&quot;{{/if}}</p>
+          <p>{{lesson.description}}</p>
+        </div>
         <div class="semantics">
-          <div class="description">
-            <p class="root">{{lesson.root}}</p>
-            <p class="subheading">{{lesson.root}} <br><span class="context">({{lesson.pos}})</span>{{#if lesson.meaning}} &quot;{{lesson.meaning}}&quot;{{/if}}</p>
-            <p>{{lesson.description}}</p>
-          </div>
           {{#if lesson.translations}}
           <div class="translations">
             {{#each lesson.translations}}
