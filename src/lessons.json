@@ -10,6 +10,46 @@
             "new": "symi",
             "native": ["a man", "man"]
           }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "sentence": {
+            "new": "cévo",
+            "native": ["a woman", "woman"]
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "sentence": {
+            "new": "náu symi",
+            "native": ["a tall man", "tall man"]
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "sentence": {
+            "new": "náu cévo",
+            "native": ["a tall woman", "tall woman"]
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "sentence": {
+            "new": "mikol symi",
+            "native": ["a short man", "short man"]
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "sentence": {
+            "new": "mikol cévo",
+            "native": ["a short woman", "short woman"]
+          }
         }
       ]
     ]

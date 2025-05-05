@@ -102,17 +102,12 @@
     function checkAnswer() {
       let checkFor;
       let right;
-      let isCorrect;
       if (lesson.type == "short-response") {
         checkFor = lesson.direction === "native-new" ? lesson.sentence.new : lesson.sentence.native;
         right = document.getElementById("response-" + index).value;
-        if (lesson.direction === "new-native") {
-          isCorrect = checkFor.find(chance => formatAnswer(chance) === formatAnswer(right)).length > 0;
-          document.getElementById("response-" + index).value = formatAnswer(right);
-        }
       }
       
-      if (isCorrect) {
+      if (checkFor.find(chance => formatAnswer(chance) === formatAnswer(right)).length > 0) {
         index += 1;
         correct = true;
         document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
