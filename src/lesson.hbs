@@ -51,6 +51,23 @@
     <main>
     {{#each lessons as |lesson|}}
       <div class="section">
+      {{#ifEquals lesson.type "vocabulary"}}
+        <p class="heading">New Word Incoming!</p>
+        <div class="semantics">
+          <div class="descriptions">
+            <p class="subheading">{{lesson.root}} <span class="context">({{lesson.pos}})</span>{{#if lesson.meaning}}<br>&quot;{{lesson.meaning}}&quot;{{/if}}</p>
+            <p>{{lesson.description}}</p>
+          </div>
+          {{#if lesson.translations}}
+          <div class="translations">
+            {{#each lesson.translations}}
+            <p class="left">{{word}} <span class="ipa">/{{ipa}}/</span> {{#if context}}<span class="context highlight">({{context}})</span>{{/if}}</p>
+            <p class="right">&quot;{{meaning}}&quot;</p>
+            {{/each}}
+          </div>
+          {{/if}}
+        </div>
+      {{/ifEquals}}
       {{#ifEquals lesson.type "short-response"}}
         <p class="heading">Write this!</p>
         <div class="prompt">

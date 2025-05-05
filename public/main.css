@@ -117,6 +117,43 @@ main .heading {
   user-select: none;
 }
 
+.semantics {
+  padding: 10px;
+  font-size: 0;
+  
+  user-select: none;
+}
+
+.descriptions, .conjugations, .translations {
+  display: inline-block;
+  vertical-align: middle;
+  
+  width: 100%;
+  
+  font-size: 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+.ipa {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.descriptions {  
+  padding: 10px 20px;
+  border: 3px solid var(--constrast);
+  border-radius: 10px;
+}
+
+.descriptions .subheading {
+  border-bottom: 2px dashed var(--progress-color);
+}
+
+.descriptions p {
+  padding: 15px 0;
+}
+
 main .prompt {
   padding: 10px;
   border: 3px solid var(--contrast);
