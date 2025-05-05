@@ -90,6 +90,14 @@
     
     let correct = true;
     
+    document.getElementById("response-" + index).addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') { event.preventDefault(); checkAnswer(); }
+    });
+    
+    document.getElementById("alert").addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') { event.preventDefault(); nextLesson(); }
+    });
+    
     function caseshift() {
       document.getElementById("shift-case").innerHTML = isUpper ? "⬆" : "⬇";
       isUpper = !isUpper;

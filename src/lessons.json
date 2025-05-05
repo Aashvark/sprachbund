@@ -50,6 +50,14 @@
             "new": "mikol cévo",
             "native": ["a short woman", "short woman"]
           }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "sentence": {
+            "new": "náu cévo su mikol symi",
+            "native": ["a tall woman and a short man"]
+          }
         }
       ]
     ]
