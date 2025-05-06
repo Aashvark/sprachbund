@@ -40,7 +40,7 @@
     
     <script src="/js/w3-modified.js" defer></script>
   </head>
-  <body onload="nextLesson()">
+  <body onload="nextLesson()" onkeypress="keyPress()">
     <header>
       <div class="language-flag">
         <svg><image href="/svg/simple_flag.svg" xlink:href="/svg/simple_flag.svg"></image></svg>
@@ -49,9 +49,9 @@
       <div class="progress-count"><p id="progress-count"></p></div>
     </header>
     <main>
-    {{#each lessons as |lesson|}}
+      {{#each lessons as |lesson|}}
       <div class="section">
-      {{#ifEquals lesson.type "vocabulary"}}
+        {{#ifEquals lesson.type "vocabulary"}}
         <p class="heading">New Word Incoming!</p>
         <div class="definition">
           <p class="root">{{lesson.word}}</p>
@@ -72,8 +72,8 @@
           <p class="translation"><span class="highlight">"</span>{{example.translation}}<span class="highlight">"</span></p>
         </div>
         {{/if}}
-      {{/ifEquals}}
-      {{#ifEquals lesson.type "short-response"}}
+        {{/ifEquals}}
+        {{#ifEquals lesson.type "short-response"}}
         <p class="heading">Write this!</p>
         <div class="prompt">
           {{#ifEquals lesson.direction "native-new"}}{{hover-translate lesson.sentence.native "en"}}{{else}}{{hover-translate lesson.sentence.new "smb"}}{{/ifEquals}}
@@ -86,9 +86,9 @@
           <a class="button c" onclick="insert('é')">é</a>
           <a class="button c" onclick="insert('ó')">ó</a>
         </div>
-      {{/ifEquals}}
+        {{/ifEquals}}
       </div>
-    {{/each}}
+      {{/each}}
       <div class="alert" id="alert">
         <div class="text">
           <p class="heading" id="alert-heading"></p>
@@ -96,7 +96,6 @@
         </div>
         <a class="button" onclick="nextLesson()">Continue</a>
       </div>
-      <div id="test"></div>
     </main>
     <footer>
       <a class="button" href="/sprachbund">Exit</a>
@@ -116,9 +115,18 @@
       if (event.key === 'Enter') { event.preventDefault(); checkAnswer(); }
     });
     
-    document.getElementById("alert").addEventListener('keypress', function(event) {
-      if (event.key === 'Enter') { event.preventDefault(); nextLesson(); }
-    });
+    function keypress() {
+      var key = window.event.keyCode;
+
+      if (key === 13) {
+          
+          document.getElementById("txtArea").value = document.getElementById("txtArea").value + "\n*";
+          return false;
+      }
+      else {
+          return true;
+      }
+    }
     
     function caseshift() {
       document.getElementById("shift-case").innerHTML = isUpper ? "⬆" : "⬇";
@@ -168,8 +176,6 @@
       document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
       document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
       document.getElementById("alert").classList.remove("block");
-      
-      document.getElementById("test").value = localStorage.getItem("completed");
       
       document.getElementsByClassName("section")[index].style.display = "block";
       if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
