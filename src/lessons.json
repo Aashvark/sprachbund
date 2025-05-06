@@ -40,8 +40,33 @@
           "type": "short-response",
           "direction": "new-native",
           "sentence": {
+            "new": "han symi",
+            "native": ["he is a man"]
+          }
+        },
+        {
+          "type": "vocabulary",
+          "word": "cévo",
+          "example": {
+              "sentence": "han cévo",
+              "translation": "She is a woman"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "sentence": {
             "new": "cévo",
             "native": ["a woman", "woman"]
+          }
+        },
+        {
+          "type": "vocabulary",
+          "word": "náu",
+          "tip": "Adjectives come before nouns",
+          "example": {
+              "sentence": "han náu cévo",
+              "translation": "She is a tall woman"
           }
         },
         {
@@ -58,6 +83,14 @@
           "sentence": {
             "new": "náu cévo",
             "native": ["a tall woman", "tall woman"]
+          }
+        },
+        {
+          "type": "vocabulary",
+          "word": "mikol",
+          "example": {
+              "sentence": "han mikol symi",
+              "translation": "He is a short man"
           }
         },
         {

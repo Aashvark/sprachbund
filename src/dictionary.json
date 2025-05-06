@@ -16,25 +16,25 @@
       "ipa": "ˈsyˌmi",
       "pos": "noun",
       "simple": ["a man", "man"],
-      "definition": "Refers to males over or at the age of adulthood. When applied to children, it may signify their maturity."
+      "definition": "Males attaining the age of adulthood. When applied to children, it may signify their maturity."
     },
     "cévo": {
-      "ipa": "ˈt͡seˌʋo",
+      "ipa": "ˈt͡se˦ˌʋo",
       "pos": "noun",
       "simple": ["a woman", "man"],
-      "definition": "Refers to males over or at the age of adulthood. When applied to children, it may signify their maturity."
+      "definition": "Males attaining the age of adulthood. When applied to children, it may signify their maturity."
     },
     "náu": {
       "ipa": "ˈna˦ˌu",
-      "pos": "noun",
+      "pos": "adjective",
       "simple": ["tall", "large", "big"],
-      "definition": "large"
+      "definition": "Appearing tall or big in reference to the speaker"
     },
     "mikol": {
       "ipa": "ˈmiˌkol",
-      "pos": "noun",
+      "pos": "adjective",
       "simple": ["short", "small"],
-      "definition": "short"
+      "definition": "Appearing short or small in reference to the speaker"
     }
   },
   "smba": {
