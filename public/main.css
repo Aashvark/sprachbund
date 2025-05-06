@@ -127,13 +127,12 @@ main .unit .left {
 
 main .unit .middle {
   width: 70%;
+  padding: 0 15px;
   text-align: left;
 }
 
-main .unit .middle .name {
-  width: 70%;
-  text-align: left;
-}
+main .unit .middle .name { font-size: 20px; }
+main .unit .middle .description { font-size: 18px; }
 
 main .unit .right {
   width: 20%;
