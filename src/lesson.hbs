@@ -78,7 +78,7 @@
         <div class="prompt">
           {{#ifEquals lesson.direction "native-new"}}{{hover-translate lesson.sentence.native "en"}}{{else}}{{hover-translate lesson.sentence.new "smb"}}{{/ifEquals}}
         </div>
-        <div class="response"><input class="textbox" type="textarea" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Ińlesh{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}}></div>
+        <div class="response"><textarea class="textbox" id="response-{{@index}}" keypress="keypress()" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Ińlesh{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}}></textarea></div>
         <div class="insert-buttons">
           <a class="button" onclick="caseshift()" id="shift-case">⬆</a>
           <a class="button c" onclick="insert('á')">á</a>
@@ -111,17 +111,9 @@
     
     let correct = true;
     
-    document.getElementById("response-" + index).addEventListener('keypress', function(event) {
+    function keypress (event) {
       if (event.key === 'Enter') { event.preventDefault(); checkAnswer(); }
     });
-    
-    function keypress() {
-      if (window.event.key === "Enter") {
-          checkAnswer();
-          return false;
-      }
-      else return true;
-    }
     
     function caseshift() {
       document.getElementById("shift-case").innerHTML = isUpper ? "⬆" : "⬇";
