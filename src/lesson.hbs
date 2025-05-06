@@ -40,7 +40,7 @@
     
     <script src="/js/w3-modified.js" defer></script>
   </head>
-  <body onload="nextLesson()" onkeypress="keyPress()">
+  <body onload="nextLesson()">
     <header>
       <div class="language-flag">
         <svg><image href="/svg/simple_flag.svg" xlink:href="/svg/simple_flag.svg"></image></svg>
@@ -78,7 +78,7 @@
         <div class="prompt">
           {{#ifEquals lesson.direction "native-new"}}{{hover-translate lesson.sentence.native "en"}}{{else}}{{hover-translate lesson.sentence.new "smb"}}{{/ifEquals}}
         </div>
-        <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Ińlesh{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}} spellcheck="false"{{/ifEquals}}></textarea></div>
+        <div class="response"><input class="textbox" type="textarea" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Ińlesh{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}}></div>
         <div class="insert-buttons">
           <a class="button" onclick="caseshift()" id="shift-case">⬆</a>
           <a class="button c" onclick="insert('á')">á</a>
@@ -116,16 +116,11 @@
     });
     
     function keypress() {
-      var key = window.event.keyCode;
-
-      if (key === 13) {
-          
-          document.getElementById("txtArea").value = document.getElementById("txtArea").value + "\n*";
+      if (window.event.key === "Enter") {
+          checkAnswer();
           return false;
       }
-      else {
-          return true;
-      }
+      else return true;
     }
     
     function caseshift() {
