@@ -101,10 +101,14 @@ main {
 
 main .section { display: none; }
 
-main .heading, main .description, main .example, main .prompt, main .response, main .buttons {
+main .heading, main .prompt, main .response, main .buttons {
   display: inline-block;
   width: 100%;
-  font-size: auto;
+}
+
+main .subheading, main .description, main .example {
+  display: inline-block;
+  width: 70%;
 }
 
 main .heading {
@@ -117,12 +121,19 @@ main .heading {
   user-select: none;
 }
 
-main .description {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+main .subheading {
+  padding: 10px 20px;
+  color: var(--white);
   
-  width: 70%;
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: bold;
+  
+  user-select: none;
+}
+
+main .description {
   padding: 15px 25px 20px;
   
   text-align: center;
@@ -155,11 +166,11 @@ main .description .root {
 
 main .description .ipa {
   padding: 10px 0;
-  font-style: italic;
   font-size: 15px;
+  font-style: italic;
 }
 
-main .description .pos { padding: 5px 15px; }
+main .description .pos { padding: 5px 0; }
 
 main .description .context {
   color: var(--accent);
@@ -170,7 +181,6 @@ main .description .context {
 }
 
 main .example {
-  margin: 3% 0;
   padding: 15px 25px;
   
   text-align: center;
@@ -369,7 +379,7 @@ footer .button {
   
   main { padding: 0 5%; }
   
-  main .description { width: 100%; }
+  main .subheading, main .description, main .example { width: 100%; }
   
   main .response .textbox { height: 39vh; }
   main .alert #alert-description { font-size: 16px; }
