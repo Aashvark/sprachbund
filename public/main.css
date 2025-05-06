@@ -106,10 +106,37 @@ main .unit {
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
   
   width: 100%;
-  padding: 20px;
+  padding: 10px 0;
   
   border: 2px solid var(--light-cont);
   border-radius: 15px;
+  
+  font-size: 0;
+}
+
+main .unit .left, main .unit .middle, main .unit .right {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+main .unit .left {
+  text-align: center;
+  font-size: 35px;
+}
+
+main .unit .middle {
+  width: 70%;
+  text-align: left;
+}
+
+main .unit .middle .name {
+  width: 70%;
+  text-align: left;
+}
+
+main .unit .right {
+  width: 20%;
 }
 
 @media screen and (max-width: 600px) {

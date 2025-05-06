@@ -50,8 +50,14 @@
         {{#each units as |unit|}}
         <div class="unit">
           <input name="unit" hidden>
-          <p class="name"><i class="fas fa-{{unit.icon}}"></i> {{unit.name}}</p>
-          <button class="continue" name="lesson" value="{{@index}}">Continue</button>
+          <i class="left fas fa-{{unit.icon}}"></i>
+          <div class="middle">
+            <p class="name">{{unit.name}}</p>
+            <p>{{unit.description}}</p>
+          </div>
+          <div class="right">
+            <button class="continue" name="lesson" value="{{@index}}">Continue</button>
+          </div>
         </div>
         <button class="pad-c" name="lesson" value="{{@index}}">
           <input name="unit" hidden>
