@@ -49,7 +49,9 @@
       <form method="post" action="/lesson">
         {{#each units as |unit|}}
         <div class="unit">
-          <p class="name">{{unit.name}}</p>
+          <input name="unit" hidden>
+          <p class="name"><i class="fas fa-{{unit.icon}}"></i> {{unit.name}}</p>
+          <button class="continue" name="lesson" value="{{@index}}">Continue</button>
         </div>
         <button class="pad-c" name="lesson" value="{{@index}}">
           <input name="unit" hidden>
