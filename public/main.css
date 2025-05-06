@@ -93,6 +93,7 @@ header .progress-count p {
 }
 
 main {
+  position: relative;
   height: 76%;
   padding: 0 20%;
   
