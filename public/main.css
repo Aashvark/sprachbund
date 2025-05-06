@@ -85,10 +85,11 @@ header .progress-inside {
 
 header .progress-count { width: 7%; }
 
-header .progress-count p { 
+header .progress-count p {
+  color: var(--white);
+  
   font-size: 20px;
   font-weight: bold;
-  color: var(--white);
 }
 
 main {
@@ -123,7 +124,7 @@ main .heading {
 }
 
 main .subheading {
-  padding: 10px 20px;
+  padding: 15px 0;
   color: var(--white);
   
   text-align: left;
@@ -179,12 +180,6 @@ main .definition .context {
   font-variant: small-caps;
   font-weight: bold;
   font-size: 20px;
-}
-
-main .examples {
-  position: relative;
-  
-  bottom: 0;
 }
 
 main .example {
