@@ -37,8 +37,6 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
-    
-    <script src="/js/w3-modified.js" defer></script>
   </head>
   <body onload="nextLesson()">
     <header>
@@ -78,7 +76,7 @@
         <div class="prompt">
           {{#ifEquals lesson.direction "native-new"}}{{hover-translate lesson.sentence.native "en"}}{{else}}{{hover-translate lesson.sentence.new "smb"}}{{/ifEquals}}
         </div>
-        <div class="response"><textarea class="textbox" id="response-{{@index}}" keypress="keypress()" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Ińlesh{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}}></textarea></div>
+        <div class="response"><textarea class="textbox" id="response-{{@index}}" onkeydown="keypress()" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Ińlesh{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}}></textarea></div>
         <div class="insert-buttons">
           <a class="button" onclick="caseshift()" id="shift-case">⬆</a>
           <a class="button c" onclick="insert('á')">á</a>
@@ -111,10 +109,6 @@
     
     let correct = true;
     
-    function keypress (event) {
-      if (event.key === 'Enter') { event.preventDefault(); checkAnswer(); }
-    });
-    
     function caseshift() {
       document.getElementById("shift-case").innerHTML = isUpper ? "⬆" : "⬇";
       isUpper = !isUpper;
@@ -127,7 +121,7 @@
     function checkAnswer() {
       let checkFor;
       let right;
-      if (lesson.type == "short-response") {
+      if (lesson.type === "short-response") {
         checkFor = lesson.direction === "native-new" ? lesson.sentence.new : lesson.sentence.native;
         right = document.getElementById("response-" + index).value;
       } else if (lesson.type == "vocabulary") {
@@ -154,9 +148,9 @@
     }
     
     function nextLesson() {
-      if (index >= lessons.length) { 
-        localStorage.setItem("completed", true);
-        window.location = "https://glottis.glitch.me/sprachbund"; return;
+      if (index >= lessons.length) {
+        window.location = "https://glottis.glitch.me/sprachbund";
+        return;
       }
       
       lesson = lessons[index];
@@ -166,6 +160,12 @@
       
       document.getElementsByClassName("section")[index].style.display = "block";
       if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
+      
+      if (lesson.type === "short-response") {
+        document.getElementById("response-" + index).addEventListener("keypress", function (event) {
+          if (event.key == "Enter") { event.preventDefault(); checkAnswer(); }
+        });
+      }
     }
     
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g," ").trimEnd(); }
