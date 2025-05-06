@@ -23,22 +23,26 @@
       "pos": "noun",
       "simple": ["a woman", "man"],
       "definition": "Refers to males over or at the age of adulthood. When applied to children, it may signify their maturity."
+    },
+    "náu": {
+      "ipa": "ˈna˦ˌu",
+      "pos": "noun",
+      "simple": ["tall", "large", "big"],
+      "definition": "large"
+    },
+    "mikol": {
+      "ipa": "ˈmiˌkol",
+      "pos": "noun",
+      "simple": ["short", "small"],
+      "definition": "short"
     }
   },
   "smba": {
-    "han": ["to be", "be", "yes"],
-    "hotá": ["to not be", "not", "no"],
     
     "vé han": ["to have", "have"],
     "vé hotá": ["to have not", "have not"],
     
     "ny": ["I", "me"],
-    "ké": ["you"],
-    
-    "symi": ["a man", "man"],
-    "cévo": ["a woman", "woman"],
-    
-    "náu": ["large", "tall"],
-    "mikol": ["small", "short"]
+    "ké": ["you"]
   }
 }

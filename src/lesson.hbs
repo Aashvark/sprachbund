@@ -63,7 +63,7 @@
           <p class="subheading">Example</p>
           {{#each lesson.examples as |example|}}
           <div class="example">
-            <p>{{example.sentence}}</p>
+            <p><span class="highlight">"</span>{{example.sentence}}<span class="highlight">"</span></p>
             <p>{{example.translation}}</p>
           </div>
           {{/each}}

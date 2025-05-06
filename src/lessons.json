@@ -5,11 +5,29 @@
       [
         {
           "type": "vocabulary",
+          "word": "han",
+          "examples": [
+            {
+              "sentence": "han",
+              "translation": "he/she/it is"
+            }
+          ]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "sentence": {
+            "new": "han",
+            "native": ["he is", "she is", "it is"]
+          }
+        },
+        {
+          "type": "vocabulary",
           "word": "symi",
           "examples": [
             {
-              "sentence": "nyllá han symi",
-              "translation": "I am a man"
+              "sentence": "han symi",
+              "translation": "He is a man"
             }
           ]
         },
