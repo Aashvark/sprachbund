@@ -65,7 +65,7 @@ const seo = require("./src/seo.json");
 const lessons = require("./src/lessons.json");
 const dictionary = require("./src/dictionary.json");
 
-fastify.get("/", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index }); });
+fastify.get("/", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
 
 fastify.get("/learn", function (request, reply) {
@@ -74,11 +74,10 @@ fastify.get("/learn", function (request, reply) {
 
 fastify.get("/lesson", function (request, reply) {
   return reply.view('/src/lesson.hbs', {seo: seo, lessons: lessons[0].unit[0]});
-  //return reply.redirect('/learn');
 });
 
-fastify.post("/learn/lesson", function (request, reply) {
-  return reply.view('/src/pages/learn/lesson.hbs', {seo: seo, lessons: lessons[request.body.lesson].lessons});
+fastify.post("/lesson", function (request, reply) {
+  return reply.view('/src/lesson.hbs', {seo: seo, lessons: lessons[request.body.lesson].unit[request.body.unit]});
 });
 
 fastify.listen(

@@ -1,1 +1,64 @@
-Nothing yet.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sprachbund</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="icon" href="{{seo.img}}">
+    <link rel="apple-touch-icon" href="{{seo.img}}">
+    
+    <meta name="description" content="{{page.top}}" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Learn Ińlesh" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="{{seo.theme-color}}">
+    <meta name="canonical" content="{{seo.url}}">
+    
+    <meta name="hreflang" content="en-US">
+    
+    <meta name="msapplication-TileColor" content="{{seo.theme-color}}">
+    <meta name="msapplication-TileImage" content="{{seo.img}}">
+    <meta name="msapplication-tooltip" content="{{seo.name}}"> 
+  
+    <meta property="og:title" content="{{seo.name}}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{seo.img}}">
+    <meta property="og:url" content="{{seo.url}}">
+    <meta property="og:description" content="{{seo.description}}">
+    <meta property="og:site_name" content="{{seo.name}}">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{seo.name}}">
+    <meta name="twitter:description" content="{{seo.description}}">
+    <meta name="twitter:image" content="{{seo.img}}">
+    
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+  </head>
+  <body onload="nextLesson()">
+    <header>
+      <div class="language-flag">
+        <svg><image href="/svg/simple_flag.svg" xlink:href="/svg/simple_flag.svg"></image></svg>
+      </div>
+      <div class="progress-bar"><div class="progress-inside" id="progress"></div></div>
+    </header>
+    <main>
+      <form method="post" action="/lesson">
+        {{#each units as |unit|}}
+        <button class="pad-c" name="lesson" value="{{@index}}">
+          <input name="unit" hidden>
+          <div class="pad"><i class="fas fa-{{unit.icon}}"></i></div>
+          <p class="name">{{unit.name}}</p>
+        </button>
+        {{/each}}
+      </form>
+    </main>
+  </body>
+  <script>
+    document.getElementsByName("unit")[0].value = localStorage.getItem('unit', 0);
+    localStorage.setItem('unit', 0);
+  </script>
+</html>
