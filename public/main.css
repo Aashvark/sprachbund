@@ -106,7 +106,7 @@ main .heading, main .prompt, main .response, main .buttons {
   width: 100%;
 }
 
-main .subheading, main .description, main .example {
+main .subheading, main .definition, main .example {
   display: inline-block;
   width: 70%;
 }
@@ -138,7 +138,7 @@ main .subheading {
   user-select: none;
 }
 
-main .description {
+main .definition {
   padding: 15px 25px 20px;
   
   text-align: center;
@@ -152,7 +152,7 @@ main .description {
   user-select: none;
 }
 
-main .description .root {
+main .definition .root {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -169,15 +169,15 @@ main .description .root {
   font-size: 30px;
 }
 
-main .description .ipa {
+main .definition .ipa {
   padding: 10px 0;
   font-size: 15px;
   font-style: italic;
 }
 
-main .description .pos { padding: 5px 0; }
+main .definition .pos { padding: 5px 0; }
 
-main .description .context {
+main .definition .context {
   color: var(--accent);
   
   font-variant: small-caps;
@@ -384,7 +384,7 @@ footer .button {
   
   main { padding: 0 5%; }
   
-  main .subheading, main .description, main .example { width: 100%; }
+  main .subheading, main .definition, main .example { width: 100%; }
   
   main .response .textbox { height: 39vh; }
   main .alert #alert-description { font-size: 16px; }

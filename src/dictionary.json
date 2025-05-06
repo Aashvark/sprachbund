@@ -1,7 +1,25 @@
 {
   "smb": {
+    "han": {
+      "ipa": "ˈxan",
+      "pos": "verb",
+      "simple": ["be", "exist", "yes"],
+      "definition": "Refers to the subjects existance and relation to the object."
+    },
+    "hotá": {
+      "ipa": "ˈxoˌta˦",
+      "pos": "verb",
+      "simple": ["not be", "not", "no"],
+      "definition": "Refers to the subjects non-existance and irrelation to the object."
+    },
     "symi": {
       "ipa": "ˈsyˌmi",
+      "pos": "noun",
+      "simple": ["a man", "man"],
+      "definition": "Refers to males over or at the age of adulthood. When applied to children, it may signify their maturity."
+    },
+    "cévo": {
+      "ipa": "ˈt͡seˌʋo",
       "pos": "noun",
       "simple": ["a man", "man"],
       "definition": "Refers to males over or at the age of adulthood. When applied to children, it may signify their maturity."
