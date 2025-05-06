@@ -124,7 +124,7 @@ main .heading {
 }
 
 main .subheading {
-  padding: 15px 0;
+  padding: 10px 0;
   color: var(--white);
   
   text-align: left;
@@ -160,16 +160,15 @@ main .definition .root {
 }
 
 main .definition .ipa {
-  font-size: 15px;
-  font-style: italic;
-  
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   
+  width: max-content;
   padding: 0 30px 5px;
   
-  width: max-content;
+  font-size: 15px;
+  font-style: italic;
   
   border-bottom: 3px solid var(--contrast);
 }
@@ -202,6 +201,12 @@ main .highlight {
   font-weight: bold;
 }
 
+main .container .tip {
+  padding: 10px 20px;
+  
+  text-align: left;
+  font-size: 18px;
+}
 main .container .translation { font-size: 18px; }
 
 main .icon { 

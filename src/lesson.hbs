@@ -59,16 +59,19 @@
           <p class="context">{{get-attribute lesson.word "pos"}}</p>
           <p class="meaning">{{get-attribute lesson.word "definition"}}</p>
         </div>
+        {{#if lesson.tip}}
         <p class="subheading"><i class="icon fa-solid fa-lightbulb"></i> Tip</p>
         <div class="container">
-          <p>{{example.sentence}}</p>
-          <p class="translation"><span class="highlight">"</span>{{example.translation}}<span class="highlight">"</span></p>
+          <p class="tip">{{lesson.tip}}</p>
         </div>
+        {{/if}}
+        {{#if lesson.example}}
         <p class="subheading"><i class="icon fa-solid fa-message"></i> Example</p>
         <div class="container">
           <p>{{example.sentence}}</p>
           <p class="translation"><span class="highlight">"</span>{{example.translation}}<span class="highlight">"</span></p>
         </div>
+        {{/if}}
       {{/ifEquals}}
       {{#ifEquals lesson.type "short-response"}}
         <p class="heading">Write this!</p>
