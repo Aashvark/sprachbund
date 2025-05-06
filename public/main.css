@@ -64,7 +64,7 @@ header .progress-bar {
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
   border: 1px solid var(--light-cont);
   
-  width: calc(95% - 94px);
+  width: calc(93% - 94px);
   height: 30px;
   padding: 3.5px;
   
@@ -83,7 +83,7 @@ header .progress-inside {
   transition: width 1000ms;
 }
 
-header .progress-count { width: 5%; }
+header .progress-count { width: 7%; }
 
 header .progress-count p { 
   font-size: 20px;
@@ -92,6 +92,7 @@ header .progress-count p {
 }
 
 main {
+  position: relative;
   height: 76%;
   padding: 0 20%;
   
@@ -134,7 +135,7 @@ main .subheading {
 }
 
 main .definition {
-  padding: 15px 25px 20px;
+  padding: 10px 25px 15px;
   
   text-align: center;
   
@@ -172,8 +173,6 @@ main .definition .ipa {
   border-bottom: 3px solid var(--contrast);
 }
 
-main .definition .pos { padding: 5px 0; }
-
 main .definition .context {
   color: var(--accent);
   
@@ -183,6 +182,8 @@ main .definition .context {
 }
 
 main .examples {
+  position: absolute;
+  left: 0;
   bottom: 0;
 }
 
@@ -206,9 +207,7 @@ main .highlight {
   font-weight: bold;
 }
 
-main .translation {
-  font-size: 18px;
-}
+main .translation { font-size: 18px; }
 
 main .prompt {
   padding: 10px;
@@ -340,8 +339,6 @@ main .block { display: block; }
 
 footer { border-top: 2px solid var(--contrast); }
 
-#test { font-size: 100px; color: white; }
-
 .button {
   display: inline-flex;
   justify-content: center;
@@ -390,8 +387,8 @@ footer .button {
 @media screen and (max-width: 600px) {
   header, footer { padding: 15px 4%; }
   
-  header .progress-bar { width: calc(86% - 94px); }
-  header .progress-count { width: 14%; }
+  header .progress-bar { width: calc(78% - 94px); }
+  header .progress-count { width: 22%; }
   
   main { padding: 0 5%; }
   
