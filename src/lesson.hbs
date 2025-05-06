@@ -59,13 +59,15 @@
           <p class="ipa">/{{get-attribute lesson.word "ipa"}}/</p>
           <p class="definition">{{get-attribute lesson.word "definition"}}</p>
         </div>
-        <p class="subheading">Example</p>
-        {{#each lesson.examples as |example|}}
-        <div class="example">
-          <p>{{example.sentence}}</p>
-          <p>{{example.translation}}</p>
+        <div class="examples">
+          <p class="subheading">Example</p>
+          {{#each lesson.examples as |example|}}
+          <div class="example">
+            <p>{{example.sentence}}</p>
+            <p>{{example.translation}}</p>
+          </div>
+          {{/each}}
         </div>
-        {{/each}}
       {{/ifEquals}}
       {{#ifEquals lesson.type "short-response"}}
         <p class="heading">Write this!</p>

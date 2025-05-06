@@ -111,6 +111,11 @@ main .subheading, main .description, main .example {
   width: 70%;
 }
 
+.examples {
+  position: relative;
+  bottom: 0;
+}
+
 main .heading {
   padding: 5px 0 10px;
   color: var(--white);
