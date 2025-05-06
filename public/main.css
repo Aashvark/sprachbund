@@ -182,8 +182,8 @@ main .definition .context {
 }
 
 main .examples {
-  position: absolute;
-  left: 0;
+  position: relative;
+  
   bottom: 0;
 }
 
