@@ -132,6 +132,8 @@ main .description {
   
   border: 3px solid var(--contrast);
   border-radius: 10px;
+  
+  user-select: none;
 }
 
 main .description .root {
@@ -149,6 +151,11 @@ main .description .root {
   font-weight: 300;
   font-style: normal;
   font-size: 30px;
+}
+
+main .ipa {
+  font-style: italic;
+  font-size: 15px;
 }
 
 main .description .pos { padding: 5px 15px; }
@@ -197,11 +204,6 @@ main .description .context {
   font-size: 20px;
   text-align: center;
   color: var(--white);
-}
-
-.ipa {
-  font-style: italic;
-  font-size: 15px;
 }
 
 .descriptions .subheading { border-bottom: 2px dashed var(--light-cont); }
