@@ -76,7 +76,7 @@
         <div class="prompt">
           {{#ifEquals lesson.direction "native-new"}}{{hover-translate lesson.sentence.native "en"}}{{else}}{{hover-translate lesson.sentence.new "smb"}}{{/ifEquals}}
         </div>
-        <div class="response"><textarea class="textbox" id="response-{{@index}}" onkeydown="keypress()" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Ińlesh{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}}></textarea></div>
+        <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Ińlesh{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}}></textarea></div>
         <div class="insert-buttons">
           <a class="button" onclick="caseshift()" id="shift-case">⬆</a>
           <a class="button c" onclick="insert('á')">á</a>
@@ -124,25 +124,24 @@
       if (lesson.type === "short-response") {
         checkFor = lesson.direction === "native-new" ? lesson.sentence.new : lesson.sentence.native;
         right = document.getElementById("response-" + index).value;
+        
+        if (checkFor.find(chance => formatAnswer(chance) === formatAnswer(right)).length > 0) {
+          index += 1;
+          correct = true;
+          document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
+          document.getElementById("alert-heading").innerHTML = "Correct!";
+          document.getElementById("alert-description").innerHTML = "You did it!";
+        } else {
+          correct = false;   
+          document.getElementById("alert-heading").innerHTML = "Try again!";
+          document.getElementById("alert-description").innerHTML = "Hover over words you don't know if you need to.";
+        }
       } else if (lesson.type == "vocabulary") {
         index += 1;
         correct = true;
         document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
-        document.getElementById("alert").classList.add("block");
         document.getElementById("alert-heading").innerHTML = "Good job!";
         document.getElementById("alert-description").innerHTML = "Let's see this word in action!";
-      }
-      
-      if (checkFor.find(chance => formatAnswer(chance) === formatAnswer(right)).length > 0) {
-        index += 1;
-        correct = true;
-        document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
-        document.getElementById("alert-heading").innerHTML = "Correct!";
-        document.getElementById("alert-description").innerHTML = "You did it!";
-      } else {
-        correct = false;
-        document.getElementById("alert-heading").innerHTML = "Try again!";
-        document.getElementById("alert-description").innerHTML = "Hover over words you don't know if you need to.";
       }
       document.getElementById("alert").classList.add("block");
     }
@@ -163,7 +162,7 @@
       
       if (lesson.type === "short-response") {
         document.getElementById("response-" + index).addEventListener("keypress", function (event) {
-          if (event.key == "Enter") { event.preventDefault(); checkAnswer(); }
+          if (event.key === "Enter") { event.preventDefault(); checkAnswer(); }
         });
       }
     }
