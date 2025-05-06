@@ -54,11 +54,18 @@
       {{#ifEquals lesson.type "vocabulary"}}
         <p class="heading">New Word Incoming!</p>
         <div class="description">
-          <p class="root">{{lesson.root}}</p>
-          <p class="pos context">{{get-attribute lesson.root "pos"}}</p>
-          <p class="ipa">/{{get-attribute lesson.root "ipa"}}/</p>
-          <p class="definition">{{get-attribute lesson.root "definition"}}</p>
+          <p class="root">{{lesson.word}}</p>
+          <p class="pos context">{{get-attribute lesson.word "pos"}}</p>
+          <p class="ipa">/{{get-attribute lesson.word "ipa"}}/</p>
+          <p class="definition">{{get-attribute lesson.word "definition"}}</p>
         </div>
+        <p class="heading">Example!</p>
+        {{#each lesson.examples as |example|}}
+        <div class="example">
+          <p>{{example.sentence}}</p>
+          <p>{{example.translation}}</p>
+        </div>
+        {{/each}}
       {{/ifEquals}}
       {{#ifEquals lesson.type "short-response"}}
         <p class="heading">Write this!</p>

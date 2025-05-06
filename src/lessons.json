@@ -5,7 +5,13 @@
       [
         {
           "type": "vocabulary",
-          "root": "symi"
+          "word": "symi",
+          "examples": [
+            {
+              "sentence": "nyllá han symi",
+              "translation": "I am a man"
+            }
+          ]
         },
         {
           "type": "short-response",
