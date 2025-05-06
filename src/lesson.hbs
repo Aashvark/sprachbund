@@ -59,14 +59,15 @@
           <p class="context">{{get-attribute lesson.word "pos"}}</p>
           <p class="meaning">{{get-attribute lesson.word "definition"}}</p>
         </div>
-        <div class="examples">
-          <p class="subheading">Example</p>
-          {{#each lesson.examples as |example|}}
-          <div class="example">
-            <p>{{example.sentence}}</p>
-            <p class="translation"><span class="highlight">"</span>{{example.translation}}<span class="highlight">"</span></p>
-          </div>
-          {{/each}}
+        <p class="subheading"><i class="icon fa-solid fa-lightbulb"></i> Tip</p>
+        <div class="container">
+          <p>{{example.sentence}}</p>
+          <p class="translation"><span class="highlight">"</span>{{example.translation}}<span class="highlight">"</span></p>
+        </div>
+        <p class="subheading"><i class="icon fa-solid fa-message"></i> Example</p>
+        <div class="container">
+          <p>{{example.sentence}}</p>
+          <p class="translation"><span class="highlight">"</span>{{example.translation}}<span class="highlight">"</span></p>
         </div>
       {{/ifEquals}}
       {{#ifEquals lesson.type "short-response"}}

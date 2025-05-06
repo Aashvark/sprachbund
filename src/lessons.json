@@ -6,12 +6,11 @@
         {
           "type": "vocabulary",
           "word": "han",
-          "examples": [
-            {
-              "sentence": "han",
-              "translation": "he/she/it is"
-            }
-          ]
+          "tip": "if no subject is given, \"he/she/it\" is the subject.",
+          "example": {
+            "sentence": "han",
+            "translation": "he/she/it is"
+          }
         },
         {
           "type": "short-response",

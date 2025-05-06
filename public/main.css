@@ -108,7 +108,7 @@ main .heading, main .prompt, main .response, main .buttons {
   width: 100%;
 }
 
-main .subheading, main .definition, main .examples {
+main .subheading, main .definition, main .container {
   display: inline-block;
   width: 70%;
 }
@@ -182,7 +182,7 @@ main .definition .context {
   font-size: 20px;
 }
 
-main .example {
+main .container {
   padding: 5px 0;
   
   text-align: center;
@@ -202,7 +202,12 @@ main .highlight {
   font-weight: bold;
 }
 
-main .translation { font-size: 18px; }
+main .container .translation { font-size: 18px; }
+
+main .icon { 
+  padding: 0px 10px;
+  color: var(--light-cont);
+}
 
 main .prompt {
   padding: 10px;
@@ -387,7 +392,7 @@ footer .button {
   
   main { padding: 0 5%; }
   
-  main .subheading, main .definition, main .examples { width: 100%; }
+  main .subheading, main .definition, main .container { width: 100%; }
   
   main .response .textbox { height: 39vh; }
   main .alert #alert-description { font-size: 16px; }
