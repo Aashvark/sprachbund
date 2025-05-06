@@ -1,6 +1,8 @@
 [
   {
     "name": "Introduction",
+    "icon": "book",
+    "description": "Learn basic grammar and vocabulary",
     "unit": [
       [
         {
@@ -107,6 +109,14 @@
           "sentence": {
             "new": "mikol cévo",
             "native": ["a short woman", "short woman"]
+          }
+        },
+        {
+          "type": "vocabulary",
+          "word": "su",
+          "example": {
+              "sentence": "cévo su symi",
+              "translation": "a woman and a man"
           }
         },
         {

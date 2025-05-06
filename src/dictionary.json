@@ -35,6 +35,12 @@
       "pos": "adjective",
       "simple": ["short", "small"],
       "definition": "Appearing short or small in reference to the speaker"
+    },
+    "su": {
+      "ipa": "ˈsu",
+      "pos": "conjunction",
+      "simple": ["and"],
+      "definition": "used to connect words of the same part of speech, clauses, or sentences, that are to be taken jointly."
     }
   },
   "smba": {
