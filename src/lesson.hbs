@@ -55,16 +55,16 @@
         <p class="heading">New Word Incoming!</p>
         <div class="definition">
           <p class="root">{{lesson.word}}</p>
-          <p class="pos context">{{get-attribute lesson.word "pos"}}</p>
           <p class="ipa">/{{get-attribute lesson.word "ipa"}}/</p>
+          <p class="pos context">{{get-attribute lesson.word "pos"}}</p>
           <p class="meaning">{{get-attribute lesson.word "definition"}}</p>
         </div>
         <div class="examples">
           <p class="subheading">Example</p>
           {{#each lesson.examples as |example|}}
           <div class="example">
-            <p><span class="highlight">"</span>{{example.sentence}}<span class="highlight">"</span></p>
-            <p>{{example.translation}}</p>
+            <p>{{example.sentence}}</p>
+            <p class="translation"><span class="highlight">"</span>{{example.translation}}<span class="highlight">"</span></p>
           </div>
           {{/each}}
         </div>

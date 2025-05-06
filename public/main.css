@@ -106,14 +106,9 @@ main .heading, main .prompt, main .response, main .buttons {
   width: 100%;
 }
 
-main .subheading, main .definition, main .example {
+main .subheading, main .definition, main .examples {
   display: inline-block;
   width: 70%;
-}
-
-main .examples {
-  position: relative;
-  bottom: 0;
 }
 
 main .heading {
@@ -153,14 +148,7 @@ main .definition {
 }
 
 main .definition .root {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  
-  padding: 0 15px 5px;
-  width: min-content;
-  
-  border-bottom: 3px solid var(--contrast);
+  padding: 0 15px;
   
   font-family: "Merienda", cursive;
   font-optical-sizing: auto;
@@ -170,9 +158,18 @@ main .definition .root {
 }
 
 main .definition .ipa {
-  padding: 10px 0;
   font-size: 15px;
   font-style: italic;
+  
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  padding: 0 30px 5px;
+  
+  width: max-content;
+  
+  border-bottom: 3px solid var(--contrast);
 }
 
 main .definition .pos { padding: 5px 0; }
@@ -185,8 +182,12 @@ main .definition .context {
   font-size: 20px;
 }
 
+main .examples {
+  bottom: 0;
+}
+
 main .example {
-  padding: 15px 25px;
+  padding: 5px 0;
   
   text-align: center;
   
@@ -197,6 +198,16 @@ main .example {
   border-radius: 10px;
   
   user-select: none;
+}
+
+main .highlight {
+  color: var(--accent);
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+main .translation {
+  font-size: 18px;
 }
 
 main .prompt {
@@ -384,7 +395,7 @@ footer .button {
   
   main { padding: 0 5%; }
   
-  main .subheading, main .definition, main .example { width: 100%; }
+  main .subheading, main .definition, main .examples { width: 100%; }
   
   main .response .textbox { height: 39vh; }
   main .alert #alert-description { font-size: 16px; }
