@@ -38,7 +38,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
   </head>
-  <body onload="nextLesson()">
+  <body>
     <header>
       <div class="language-flag">
         <svg><image href="/svg/simple_flag.svg" xlink:href="/svg/simple_flag.svg"></image></svg>
@@ -48,6 +48,9 @@
     <main>
       <form method="post" action="/lesson">
         {{#each units as |unit|}}
+        <div class="unit">
+          <p class="name">{{unit.name}}</p>
+        </div>
         <button class="pad-c" name="lesson" value="{{@index}}">
           <input name="unit" hidden>
           <div class="pad"><i class="fas fa-{{unit.icon}}"></i></div>
@@ -58,7 +61,7 @@
     </main>
   </body>
   <script>
-    document.getElementsByName("unit")[0].value = localStorage.getItem('unit', 0);
-    localStorage.setItem('unit', 0);
+    if (!(localStorage.getItem('unit') > 0)) localStorage.setItem('unit', 0);
+    document.getElementsByName("unit")[0].value = localStorage.getItem('unit');
   </script>
 </html>

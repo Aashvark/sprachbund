@@ -390,7 +390,9 @@ footer .button {
 
 @media screen and (max-width: 600px) {
   header, footer { padding: 15px 4%; }
-  header .progress-bar { width: calc(100% - 94px); }
+  
+  header .progress-bar { width: calc(78% - 94px); }
+  header .progress-count { width: 22%; }
   
   main { padding: 0 5%; }
   
