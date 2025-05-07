@@ -124,36 +124,12 @@
           "type": "short-response",
           "direction": "native-new",
           "sentence": {
-            "native": "",
-            "new": ["a short man", "short man"]
+            "native": "it is small",
+            "new": ["han mikol"]
           }
         }
       ],
       [
-        {
-          "type": "vocabulary",
-          "word": "mikol",
-          "example": {
-            "sentence": "han mikol symi",
-            "translation": "He is a short man"
-          }
-        },
-        {
-          "type": "short-response",
-          "direction": "new-native",
-          "sentence": {
-            "new": "mikol symi",
-            "native": ["a short man", "short man"]
-          }
-        },
-        {
-          "type": "short-response",
-          "direction": "new-native",
-          "sentence": {
-            "new": "mikol cévo",
-            "native": ["a short woman", "short woman"]
-          }
-        },
         {
           "type": "vocabulary",
           "word": "su",
@@ -170,11 +146,7 @@
             "native": ["a tall woman and a short man"]
           }
         }
-      ],
-      [],
-      [],
-      [],
-      []
+      ]
     ]
   },
   {
@@ -183,17 +155,9 @@
     "difficulty": "CEFR A1",
     "description": "Learn basic grammar and vocabulary",
     "unit": [
-      [
-        {
-          "type": "vocabulary",
-          "word": "han",
-          "tip": "if no subject is given, he/she/it is the subject.",
-          "example": {
-            "sentence": "han",
-            "translation": "he/she/it is"
-          }
-        }
-      ],
+      [],
+      [],
+      [],
       []
     ]
   }

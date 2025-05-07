@@ -33,14 +33,14 @@
       "pos": "adjective",
       "simple": ["tall", "large", "big"],
       "complex": ["tall", "large", "big"],
-      "definition": "Appearing tall or big in reference to the speaker"
+      "definition": "Tall or big, especially in comparison to the subject."
     },
     "mikol": {
       "ipa": "ˈmiˌkol",
       "pos": "adjective",
       "simple": ["short", "small"],
       "complex": ["short", "small"],
-      "definition": "Appearing short or small in reference to the speaker"
+      "definition": "Short or small, especially in comparison to the subject"
     },
     "su": {
       "ipa": "ˈsu",
