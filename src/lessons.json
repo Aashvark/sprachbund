@@ -1,6 +1,6 @@
 [
   {
-    "name": "Introductions",
+    "name": "Introduction",
     "icon": "book",
     "description": "Learn basic grammar and vocabulary",
     "unit": [
@@ -127,7 +127,8 @@
             "native": ["a tall woman and a short man"]
           }
         }
-      ]
+      ],
+      []
     ]
   }
 ]

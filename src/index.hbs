@@ -47,13 +47,18 @@
     </header>
     <main>
       <form method="post" action="/lesson">
-        {{#each units as |unit|}}
+        {{#each units}}
         <button class="unit" name="lesson" value="{{@index}}">
           <input name="unit" hidden>
-          <i class="left fas fa-{{unit.icon}}"></i>
+          <i class="left fas fa-{{icon}}"></i>
           <div class="right">
-            <p class="name">{{unit.name}}</p>
-            <p class="description">{{unit.description}}</p>
+            <p class="name">{{name}}</p>
+            <p class="description">{{description}}</p>
+          </div>
+          <div class="progress">
+            {{#each unit}}
+            <div class="indicator"></div>
+            {{/each}}
           </div>
         </button>
         {{/each}}
