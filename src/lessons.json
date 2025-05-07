@@ -70,32 +70,14 @@
             "native": "a woman",
             "new": ["cévo"]
           }
-        }
-      ],
-      [
-        {
-          "type": "vocabulary",
-          "word": "cévo",
-          "example": {
-            "sentence": "han cévo",
-            "translation": "She is a woman"
-          }
-        },
-        {
-          "type": "short-response",
-          "direction": "new-native",
-          "sentence": {
-            "new": "cévo",
-            "native": ["a woman", "woman"]
-          }
         },
         {
           "type": "vocabulary",
           "word": "náu",
-          "tip": "Adjectives come before nouns",
+          "tip": "Adjectives will always come before nouns",
           "example": {
-            "sentence": "han náu cévo",
-            "translation": "She is a tall woman"
+            "sentence": "náu cévo",
+            "translation": "A tall woman"
           }
         },
         {
@@ -103,17 +85,51 @@
           "direction": "new-native",
           "sentence": {
             "new": "náu symi",
-            "native": ["a tall man", "tall man"]
+            "native": ["a tall man", "tall man", "a big man", "big man"]
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "sentence": {
+            "native": "She is tall",
+            "new": ["han náu"]
           }
         },
         {
           "type": "short-response",
           "direction": "new-native",
           "sentence": {
-            "new": "náu cévo",
-            "native": ["a tall woman", "tall woman"]
+            "new": "han náu symi",
+            "native": ["He is a tall man"]
           }
         },
+        {
+          "type": "vocabulary",
+          "word": "mikol",
+          "example": {
+            "sentence": "han mikol symi",
+            "translation": "He is a short man"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "sentence": {
+            "new": "mikol symi",
+            "native": ["a short man", "short man"]
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "sentence": {
+            "native": "",
+            "new": ["a short man", "short man"]
+          }
+        }
+      ],
+      [
         {
           "type": "vocabulary",
           "word": "mikol",
