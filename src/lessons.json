@@ -3,7 +3,7 @@
     "name": "Introduction",
     "icon": "book",
     "description": "Learn basic grammar and vocabulary",
-    "lessons": [
+    "unit": [
       [
         {
           "type": "vocabulary",

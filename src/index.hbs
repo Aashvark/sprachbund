@@ -47,9 +47,9 @@
     </header>
     <main>
       <form method="post" action="/lesson">
+        <input name="unit" hidden>
         {{#each units}}
-        <button class="unit" name="unit" value="{{@index}}">
-          <input name="lesson" id="u{{@index}}-lesson" hidden>
+        <button class="unit" name="lesson" value="{{@index}}" id="unit-{{@index}}">
           <i class="left fas fa-{{icon}}"></i>
           <div class="right">
             <p class="name">{{name}}</p>
@@ -66,10 +66,11 @@
     </main>
   </body>
   <script>
-    for (var lesson in document.getElementByName("lesson")) {
-      let name = `u${lesson}-lesson`;
-      if (!(localStorage.getItem(name) > 0)) localStorage.setItem(name, 0);
-      document.getElementsById(name).value = localStorage.getItem(name);
-    }
+    let lessons = JSON.parse('{{{json units}}}');
+    
+    if (!(localStorage.getItem('unit') > 0)) localStorage.setItem('unit', 0);
+    document.getElementsByName("unit")[0].value = localStorage.getItem('unit');
+    if (!(localStorage.getItem('lesson') > 0)) localStorage.setItem('lesson', 0);
+    document.getElementsByName("lesson")[0].value = localStorage.getItem('lesson');
   </script>
 </html>
