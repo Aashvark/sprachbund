@@ -41,6 +41,9 @@
       "pos": "conjunction",
       "simple": ["and"],
       "definition": "used to connect words of the same part of speech, clauses, or sentences, that are to be taken jointly."
+    },
+    "vé han": {
+      "simple": ["to have", "have"]
     }
   },
   "smba": {
