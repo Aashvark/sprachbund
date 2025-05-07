@@ -72,7 +72,7 @@
         {{/if}}
         {{/ifEquals}}
         {{#ifEquals lesson.type "short-response"}}
-        <p class="heading">Try this!</p>
+        <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
         <div class="prompt">
           {{hover-translate lesson.prompt (ternaryEq lesson.direction "native-new" "en" "smb")}}
         </div>
@@ -102,27 +102,16 @@
   </body>
   <script>
     let index = 0;
-    let isUpper = false;
     
     let lessons = JSON.parse('{{{json lessons}}}');
     let lesson = lessons[index];
     
-    let inAlert = false;
-    
     document.onkeydown = (event) => {
       if (event.key === "Enter") {
         event.preventDefault();
-        if (!inAlert) checkAnswer();
-        else nextLesson();
-        inAlert = !inAlert;
+        if (document.getElementById("alert").classList.contains("block")) nextLesson();
+        else checkAnswer();
       }
-    }
-    
-    function caseshift() {
-      document.getElementById("shift-case").innerHTML = isUpper ? "⬆" : "⬇";
-      isUpper = !isUpper;
-      
-      for (var c of document.getElementsByClassName("c")) { c.classList.toggle("upper"); }
     }
     
     function checkAnswer() {
@@ -151,7 +140,12 @@
     }
     
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
-    function insert(character) { document.getElementById("response-" + index).value += isUpper ? character.toUpperCase() : character; }
+    function insert(character) { document.getElementById("response-" + index).value += document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character; }
+    
+    function caseshift() {
+      document.getElementById("shift-case").innerHTML = document.getElementById("shift-case").innerHTML == "⬇" ? "⬆" : "⬇";
+      for (var c of document.getElementsByClassName("c")) { c.classList.toggle("upper"); }
+    }
     
     function setAlert(heading, description) {
       document.getElementById("alert-heading").innerHTML = heading;
