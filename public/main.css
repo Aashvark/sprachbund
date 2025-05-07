@@ -85,20 +85,10 @@ header .progress-inside {
 
 main {
   height: 76%;
-  padding: 0 20%;
+  padding: 10px 20%;
   
   color: var(--white);
   font-size: 20px;
-}
-
-main .heading {
-  padding: 5px 0 10px;
-  color: var(--white);
-  
-  font-size: 28px;
-  font-weight: bold;
-  
-  user-select: none;
 }
 
 main .unit {
@@ -112,49 +102,43 @@ main .unit {
   border-radius: 15px;
   
   font-size: 0;
+  color: var(--white);
 }
 
-main .unit .left, main .unit .middle, main .unit .right {
+main .unit .left, main .unit .right {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
 }
 
 main .unit .left {
-  width: 10%;
+  width: 15%;
   padding: 20px;
   text-align: center;
   font-size: 35px;
 }
 
-main .unit .middle {
-  width: 70%;
+main .unit .right {
+  width: 85%;
   text-align: left;
+  
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
-main .unit .middle .name { font-size: 20px; }
-main .unit .middle .description { font-size: 18px; }
-
-main .unit .right { width: 20%; }
-
-main .unit button {
-  padding: 10px;
-  
-  
-  
-  background: var(--contrast);
-  border: 3px solid var(--light-cont);
-  border-bottom: 6px solid var(--light-cont);
-  border-radius: 10px;
-  
-  outline: 0;
-}
+main .unit .right .name { font-size: 25px; }
+main .unit .right .description { font-size: 20px; }
 
 @media screen and (max-width: 600px) {
   header { padding: 15px 4%; }
   header .progress-bar { width: calc(100% - 94px); }
   
-  main { padding: 0 5%; }
-  main .unit .left { width: 20%; }
-  main .unit .middle { width: 60%; }
+  main { padding: 10px 5%; }
+  main .unit .left { width: 25%; }
+  main .unit .right { width: 75%; }
+  
+  main .unit .right .name { font-size: 22px; }
+  main .unit .right .description { font-size: 16px; }
 }
