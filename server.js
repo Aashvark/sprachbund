@@ -62,7 +62,7 @@ function getLongestList(nestedList) {
 
 const seo = require("./src/seo.json");
 
-const units = require("./src/lessons.json");
+const units = require("./src/units.json");
 const dictionary = require("./src/dictionary.json");
 
 fastify.get("/", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: units }); });
