@@ -74,7 +74,7 @@
         {{#ifEquals lesson.type "short-response"}}
         <p class="heading">Write this!</p>
         <div class="prompt">
-          {{#ifEquals lesson.direction "native-new"}}{{hover-translate lesson.sentence.native "en"}}{{else}}{{hover-translate lesson.sentence.new "smb"}}{{/ifEquals}}
+          {{#ifEquals lesson.direction "native-new"}}{{hover-translate lesson.prompt "en"}}{{else}}{{hover-translate lesson.sentence.new "smb"}}{{/ifEquals}}
         </div>
         <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Nóibón{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}}></textarea></div>
         <div class="insert-buttons">
@@ -126,14 +126,9 @@
     }
     
     function checkAnswer() {
-      if (lesson.type === "short-response") {
-        let checkFor = lesson.direction === "native-new" ? lesson.sentence.new : lesson.sentence.native;
-        if (checkFor.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) setAlert("Correct!", "You did it!");
-        else {
-          setAlert("Try again!", "Hover over words you don't know if you need to.");
-          return;
-        }
-      } else if (lesson.type == "vocabulary") setAlert("Good job!", "Let's see this word in action!");
+      if (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) setAlert("Correct!", "You did it!");
+      else if (lesson.type == "vocabulary") setAlert("Good job!", "Let's see this word in action!");
+      else { setAlert("Try again!", "Hover over words you don't know if you need to."); return; }
       
       index += 1;
       document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
