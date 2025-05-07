@@ -135,19 +135,22 @@ main .unit .right .name { font-size: 25px; }
 main .unit .right .description { font-size: 20px; }
 
 main .progress {
-  display: inline-flex;
+  width: 100%;
+  padding: 5px 10px;
   font-size: 0;
 }
 
 main .progress .indicator {
-  content: " ";
-  display: inline-table;
+  display: inline-block;
+  
   border-radius: 10px;
   padding: 5px;
+  margin: 0 1%;
   font-size: 10px;
   background: var(--accent);
-  height: 20px;
 }
+
+main .progress .indicator:last-child { margin: 0; }
 
 @media screen and (max-width: 600px) {
   header { padding: 15px 4%; }
