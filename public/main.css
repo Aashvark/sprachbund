@@ -96,12 +96,14 @@ main .unit {
   background: var(--light-cont);
   
   width: 100%;
-  padding: 20px 0;
+  padding: 10px 15px;
   margin: 1% 0;
   
   border: 2px solid var(--light-cont);
   outline: 0;
   border-radius: 15px;
+  
+  cursor: pointer;
   
   font-size: 0;
   color: var(--white);
@@ -118,13 +120,12 @@ main .unit .left, main .unit .right {
 
 main .unit .left {
   width: 15%;
-  padding: 20px;
   text-align: center;
   font-size: 50px;
 }
 
 main .unit .right {
-  width: 75%;
+  width: 85%;
   text-align: left;
   
   font-family: "Parkinsans", sans-serif;
@@ -135,8 +136,10 @@ main .unit .right {
 
 main .unit .right .name { 
   position: relative;
+  font-weight: 550;
   font-size: 25px;
 }
+
 main .unit .right .name .difficulty {
   position: absolute;
   top: 50%;
@@ -148,8 +151,8 @@ main .unit .right .name .difficulty {
   font-size: 16px;
   font-variant: small-caps;
   font-weight: 550;
-  padding: 5px;
 }
+
 main .unit .right .description { font-size: 20px; }
 
 main .progress {
@@ -190,8 +193,11 @@ main .progress .indicator:last-child { margin: 0; }
     padding: 20px;
     font-size: 45px;
   }
+  
   main .unit .right { width: 70%; }
   
-  main .unit .right .name { font-size: 22px; }
+  main .unit .right .name {
+    font-size: 24px;
+  }
   main .unit .right .description { font-size: 16px; }
 }

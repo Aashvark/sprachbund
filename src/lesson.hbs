@@ -128,7 +128,7 @@
       
       if (index >= lessons.length) {
         localStorage.setItem('u{{unitno}}-lesson', parseInt(localStorage.getItem('u{{unitno}}-lesson')) + 1);
-        window.location = "https://glottis.glitch.me/";
+        window.location = "{{seo.learn}}";
         return;
       } else if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
       
