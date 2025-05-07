@@ -25,8 +25,8 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   for (let i = 0; i < tokens.length; i++) {
     save += tokens[i] + " ";
     
-    if (lang === "en" && Object.keys(dictionary.smb).filter(key => dictionary.smb[key].simple.includes(save + tokens[i + 1])).length === 0) {
-      keys = Object.keys(dictionary.smb).filter(key => dictionary.smb[key].simple.includes(save.trimEnd()));
+    if (lang === "en" && Object.keys(dictionary.smb).filter(key => dictionary.smb[key].complex.includes(save + tokens[i + 1])).length === 0) {
+      keys = Object.keys(dictionary.smb).filter(key => dictionary.smb[key].complex.includes(save.trimEnd()));
       if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((v) => { return Object.keys(dictionary.smb).filter(key => dictionary.smb[key].simple.includes(v)); }); }
     } else if (lang == "smb" && save.trimEnd() in dictionary.smb && !(save + tokens[i + 1] in dictionary.smb)) {
       keys = dictionary.smb[save.trimEnd()].simple;

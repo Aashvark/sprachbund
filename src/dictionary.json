@@ -3,43 +3,50 @@
     "han": {
       "ipa": "ˈxan",
       "pos": "verb",
-      "simple": ["be", "exist", "he is", "she is", "it is"],
-      "definition": "Used to describe existance or relation between nouns."
+      "simple": ["be", "exist"],
+      "complex": ["be", "exist", "he is", "she is", "it is"],
+      "definition": "Used to describe the existence or relation between nouns."
     },
     "hotá": {
       "ipa": "ˈxoˌta˦",
       "pos": "verb",
-      "simple": ["not be", "not", "no"],
-      "definition": "Refers to the subjects non-existance and irrelation to the object."
+      "simple": ["not be", "not"],
+      "complex": ["not be", "not", "he is not", "she is not", "it is not"],
+      "definition": "Used to describe the nonexistence or irrelation between nouns."
     },
     "symi": {
       "ipa": "ˈsyˌmi",
       "pos": "noun",
       "simple": ["a man", "man"],
-      "definition": "Males attaining the age of adulthood. When applied to children, it may signify their maturity."
+      "complex": ["a man", "man"],
+      "definition": "Males attaining the age of adulthood. When applied to children, it may signify their physical and/or maturity."
     },
     "cévo": {
       "ipa": "ˈt͡se˦ˌʋo",
       "pos": "noun",
-      "simple": ["a woman", "man"],
-      "definition": "Males attaining the age of adulthood. When applied to children, it may signify their maturity."
+      "simple": ["a woman", "woman"],
+      "complex": ["a woman", "woman"],
+      "definition": "Males attaining the age of adulthood. When applied to children, it may signify their physical and/or maturity."
     },
     "náu": {
       "ipa": "ˈna˦ˌu",
       "pos": "adjective",
       "simple": ["tall", "large", "big"],
+      "complex": ["tall", "large", "big"],
       "definition": "Appearing tall or big in reference to the speaker"
     },
     "mikol": {
       "ipa": "ˈmiˌkol",
       "pos": "adjective",
       "simple": ["short", "small"],
+      "complex": ["short", "small"],
       "definition": "Appearing short or small in reference to the speaker"
     },
     "su": {
       "ipa": "ˈsu",
       "pos": "conjunction",
       "simple": ["and"],
+      "complex": ["and"],
       "definition": "used to connect words of the same part of speech, clauses, or sentences, that are to be taken jointly."
     }
   },
