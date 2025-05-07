@@ -35,43 +35,8 @@
           "type": "vocabulary",
           "word": "symi",
           "example": {
-              "sentence": "han symi",
-              "translation": "He/she/it is a man"
-          }
-        },
-        {
-          "type": "short-response",
-          "direction": "native-new",
-          "sentence": {
-            "native": "He is a man",
-            "new": ["han symi"]
-          }
-        }
-      ],
-      [
-        {
-          "type": "vocabulary",
-          "word": "han",
-          "tip": "if no subject is given, he/she/it is the subject.",
-          "example": {
-            "sentence": "han",
-            "translation": "he/she/it is"
-          }
-        },
-        {
-          "type": "short-response",
-          "direction": "new-native",
-          "sentence": {
-            "new": "han",
-            "native": ["he is", "she is", "it is"]
-          }
-        },
-        {
-          "type": "vocabulary",
-          "word": "symi",
-          "example": {
-              "sentence": "han symi",
-              "translation": "He is a man"
+            "sentence": "han symi",
+            "translation": "he/she/it is a man"
           }
         },
         {
@@ -84,18 +49,36 @@
         },
         {
           "type": "short-response",
-          "direction": "new-native",
+          "direction": "native-new",
           "sentence": {
-            "new": "han symi",
-            "native": ["he is a man"]
+            "native": "He is a man",
+            "new": ["han symi"]
           }
         },
         {
           "type": "vocabulary",
           "word": "cévo",
           "example": {
-              "sentence": "han cévo",
-              "translation": "She is a woman"
+            "sentence": "han cévo",
+            "translation": "she is a woman"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "sentence": {
+            "native": "a woman",
+            "new": ["cévo"]
+          }
+        }
+      ],
+      [
+        {
+          "type": "vocabulary",
+          "word": "cévo",
+          "example": {
+            "sentence": "han cévo",
+            "translation": "She is a woman"
           }
         },
         {
@@ -111,8 +94,8 @@
           "word": "náu",
           "tip": "Adjectives come before nouns",
           "example": {
-              "sentence": "han náu cévo",
-              "translation": "She is a tall woman"
+            "sentence": "han náu cévo",
+            "translation": "She is a tall woman"
           }
         },
         {
@@ -135,8 +118,8 @@
           "type": "vocabulary",
           "word": "mikol",
           "example": {
-              "sentence": "han mikol symi",
-              "translation": "He is a short man"
+            "sentence": "han mikol symi",
+            "translation": "He is a short man"
           }
         },
         {
@@ -159,8 +142,8 @@
           "type": "vocabulary",
           "word": "su",
           "example": {
-              "sentence": "cévo su symi",
-              "translation": "a woman and a man"
+            "sentence": "cévo su symi",
+            "translation": "a woman and a man"
           }
         },
         {
