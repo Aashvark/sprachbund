@@ -148,7 +148,7 @@
     
     function nextLesson() {
       if (index >= lessons.length) {
-        localStorage.setItem('lesson', localStorage.getItem('lesson') + 1);
+        localStorage.setItem('u{{unitno}}-lesson', parseInt(localStorage.getItem('u{{unitno}}-lesson')) + 1);
         window.location = "https://glottis.glitch.me/";
         return;
       }

@@ -158,6 +158,8 @@ main .progress .indicator {
 
 main .progress .indicator:last-child { margin: 0; }
 
+.highlight { border: 2px solid red; background: var(--accent); }
+
 @media screen and (max-width: 600px) {
   header { padding: 15px 4%; }
   header .progress-bar { width: calc(100% - 94px); }

@@ -68,10 +68,9 @@
   <script>
     for (var index in [document.getElementsByName('lesson')]) {
       let name = `u${index}-lesson`;
-      if (!(localStorage.getItem(name) > 0)) localStorage.setItem(name, 0);
+      if (localStorage.getItem(name) === undefined || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
       document.getElementById(name).value = localStorage.getItem(name);
+      for (let i in document.getElementsByClassName('indicator')) { if (i < localStorage.getItem(name))document.getElementsByClassName('indicator')[i].classList.add("highlight"); }
     }
-    if (!(localStorage.getItem('lesson') > 0)) localStorage.setItem('lesson', 0);
-    document.getElementsByName('lesson')[0].value = localStorage.getItem('lesson');
   </script>
 </html>
