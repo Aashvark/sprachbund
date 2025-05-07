@@ -73,7 +73,7 @@ fastify.post("/lesson", function (request, reply) { return reply.view('/src/less
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
 
 fastify.listen(
-  { port: 10, host: "0.0.0.0" },
+  { port: process.env.PORT, host: "0.0.0.0" },
   function (err, address) {
     if (err) {
       console.error(err);
