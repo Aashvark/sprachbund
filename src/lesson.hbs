@@ -38,7 +38,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
   </head>
-  <body onload="nextLesson()" onkeydown="onEnter()">
+  <body onload="nextLesson()">
     <header>
       <div class="language-flag">
         <svg><image href="/svg/simple_flag.svg" xlink:href="/svg/simple_flag.svg"></image></svg>
@@ -110,6 +110,15 @@
     let inAlert = false;
     let correct = true;
     
+    document.onkeydown = (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        if (!inAlert) checkAnswer();
+        else nextLesson();
+        inAlert = !inAlert;
+      }
+    }
+    
     function caseshift() {
       document.getElementById("shift-case").innerHTML = isUpper ? "⬆" : "⬇";
       isUpper = !isUpper;
@@ -147,7 +156,6 @@
     }
     
     function nextLesson() {
-      document.getElementById("alert").removeEventListener("keydown", onEnterAlert);
       document.getElementById("alert").classList.remove("block");
       if (index >= lessons.length) {
         localStorage.setItem('u{{unitno}}-lesson', parseInt(localStorage.getItem('u{{unitno}}-lesson')) + 1);
