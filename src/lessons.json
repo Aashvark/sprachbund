@@ -9,10 +9,26 @@
         {
           "type": "vocabulary",
           "word": "han",
-          "tip": "if no subject is given, he/she/it is the subject.",
+          "tip": "If there is no subject, verbs are assumed to be in the third person.",
           "example": {
             "sentence": "han",
             "translation": "he/she/it is"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "sentence": {
+            "new": "han",
+            "native": ["he is", "she is", "it is"]
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "sentence": {
+            "native": "she is",
+            "new": ["han"]
           }
         }
       ],

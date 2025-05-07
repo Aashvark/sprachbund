@@ -12,7 +12,6 @@ fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } 
 
 handlebars.registerHelper('ifEquals', function(arg1, arg2, options) { return (arg1 == arg2) ? options.fn(this) : options.inverse(this); });
 handlebars.registerHelper("json", function(a, options) { return JSON.stringify(a); });
-
 handlebars.registerHelper('get-attribute', function(word, attribute, options) { return dictionary.smb[word.trimEnd()][attribute]; });
 
 handlebars.registerHelper('hover-translate', function(arg, lang, options) {
