@@ -66,8 +66,6 @@
     </main>
   </body>
   <script>
-    let lessons = JSON.parse('{{{json units}}}');
-    
     if (!(localStorage.getItem('unit') > 0)) localStorage.setItem('unit', 0);
     document.getElementsByName("unit")[0].value = localStorage.getItem('unit');
     if (!(localStorage.getItem('lesson') > 0)) localStorage.setItem('lesson', 0);
