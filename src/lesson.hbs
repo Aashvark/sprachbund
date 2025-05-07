@@ -142,12 +142,12 @@
         document.getElementById("alert-description").innerHTML = "Let's see this word in action!";
       }
       
+      document.getElementById("alert").addEventListener("keydown", alert);
       document.getElementById("alert").classList.add("block");
-      document.getElementById("alert").addEventListener("keypress", alert);
       if (correct) {
         index += 1;
         document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
-        if (lesson.type === "short-response") document.getElementById("response-" + index).removeEventListener("keypress", onEnter);
+        if (lesson.type === "short-response") document.getElementById("response-" + index).removeEventListener("keydown", onEnter);
       }
     }
     
@@ -165,7 +165,7 @@
       
       document.getElementsByClassName("section")[index].style.display = "block";
       if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
-      if (lesson.type === "short-response") document.getElementById("response-" + index).addEventListener("keypress", onEnter);
+      if (lesson.type === "short-response") document.getElementById("response-" + index).addEventListener("keydown", onEnter);
     }
     
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
@@ -173,7 +173,7 @@
     function alert(event)   {
       if (event.key === "Enter") { 
         event.preventDefault();
-        document.getElementById("alert").removeEventListener("keypress", alert);
+        document.getElementById("alert").removeEventListener("keydown", alert);
         nextLesson();
       }
     }
