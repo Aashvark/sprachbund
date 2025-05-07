@@ -47,9 +47,9 @@
     </header>
     <main>
       <form method="post" action="/lesson">
+        <input name="unit" hidden>
         {{#each units}}
-        <button class="unit" name="lesson" value="{{@index}}">
-          <input name="unit" hidden>
+        <button class="unit" name="lesson" value="{{@index}}" id="unit-{{@index}}">
           <i class="left fas fa-{{icon}}"></i>
           <div class="right">
             <p class="name">{{name}}</p>
@@ -57,7 +57,7 @@
           </div>
           <div class="progress">
             {{#each unit}}
-            <div class="indicator" style="width: calc((100%/{{../unit.length}}) - 2%);"></div>
+            <div class="indicator" style="width: calc((100%/{{../unit.length}}) - 1%);"></div>
             {{/each}}
           </div>
         </button>
@@ -66,7 +66,11 @@
     </main>
   </body>
   <script>
+    let lessons = JSON.parse('{{{json units}}}');
+    
     if (!(localStorage.getItem('unit') > 0)) localStorage.setItem('unit', 0);
     document.getElementsByName("unit")[0].value = localStorage.getItem('unit');
+    if (!(localStorage.getItem('lesson') > 0)) localStorage.setItem('lesson', 0);
+    document.getElementsByName("lesson")[0].value = localStorage.getItem('lesson');
   </script>
 </html>

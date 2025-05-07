@@ -93,12 +93,13 @@ main {
 
 main .unit {
   display: inline-block;
-  background: linear-gradient(165deg, var(--contrast), var(--light-cont));
+  background: var(--light-cont);
   
   width: 100%;
   padding: 20px 0;
   
   border: 2px solid var(--light-cont);
+  outline: 0;
   border-radius: 15px;
   
   font-size: 0;
@@ -135,8 +136,12 @@ main .unit .right .name { font-size: 25px; }
 main .unit .right .description { font-size: 20px; }
 
 main .progress {
-  width: 100%;
-  padding: 5px 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 90%;
+  padding: 10px 10px 5px;
   font-size: 0;
 }
 
@@ -145,9 +150,10 @@ main .progress .indicator {
   
   border-radius: 10px;
   padding: 5px;
-  margin: 0 1%;
+  margin: 0 0.5%;
   font-size: 10px;
-  background: var(--accent);
+  
+  background: var(--contrast);
 }
 
 main .progress .indicator:last-child { margin: 0; }
