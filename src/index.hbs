@@ -50,7 +50,7 @@
         {{#each units}}
         <button class="unit" name="unit" value="{{@index}}">
           <input name="lesson" id="u{{@index}}-lesson" hidden>
-          <i class="left fas fa-{{icon}}" id="a"></i>
+          <i class="left fas fa-{{icon}}"></i>
           <div class="right">
             <p class="name">{{name}}</p>
             <p class="description">{{description}}</p>
@@ -66,11 +66,10 @@
     </main>
   </body>
   <script>
-    for (let l in [document.getElementsByName("lesson")]) {
-      let name = `u${l}-lesson`;
-      if (localStorage.getItem(name) === undefined || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
-      document.getElementById(name).value = localStorage.getItem(name);
-      for (var indicator of [document.getElementsByClassName("indicator")].slice(0, localStorage.getItem(name))) { indicator.classList.add("highlight"); }
+    for (var lesson in document.getElementByName("lesson")) {
+      let name = `u${lesson}-lesson`;
+      if (!(localStorage.getItem(name) > 0)) localStorage.setItem(name, 0);
+      document.getElementsById(name).value = localStorage.getItem(name);
     }
   </script>
 </html>

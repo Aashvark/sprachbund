@@ -156,8 +156,6 @@ main .progress .indicator {
   background: var(--contrast);
 }
 
-.highlight { background: var(--accent); }
-
 main .progress .indicator:last-child { margin: 0; }
 
 @media screen and (max-width: 600px) {
