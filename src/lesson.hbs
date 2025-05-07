@@ -102,6 +102,7 @@
   </body>
   <script>
     let index = 0;
+    let unitno = {{unitno}};
     let isUpper = false;
     
     let lessons = JSON.parse('{{{json lessons}}}');
@@ -148,7 +149,7 @@
     
     function nextLesson() {
       if (index >= lessons.length) {
-        localStorage.setItem('unit', localStorage.getItem('unit') + 1);
+        localStorage.setItem(`u{}`, localStorage.getItem('lesson') + 1);
         window.location = "https://glottis.glitch.me/";
         return;
       }

@@ -62,19 +62,14 @@ function getLongestList(nestedList) {
 
 const seo = require("./src/seo.json");
 
-const lessons = require("./src/lessons.json");
+const units = require("./src/lessons.json");
 const dictionary = require("./src/dictionary.json");
 
-fastify.get("/", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
+fastify.get("/", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: units }); });
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
 
-fastify.get("/lesson", function (request, reply) {
-  return reply.redirect('/');
-});
-
-fastify.post("/lesson", function (request, reply) {
-  return reply.view('/src/lesson.hbs', {seo: seo, lessons: lessons[request.body.lesson].unit[request.body.unit]});
-});
+fastify.get("/lesson", function (request, reply) { return reply.redirect('/'); });
+fastify.post("/lesson", function (request, reply) { return reply.view('/src/lesson.hbs', {seo: seo, unitno: request.body.units, lessons: units[request.body.units].lessons[request.body.lesson]}); });
 
 fastify.listen(
   { port: process.env.PORT, host: "0.0.0.0" },
