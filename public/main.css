@@ -120,7 +120,7 @@ main .unit .left {
   width: 15%;
   padding: 20px;
   text-align: center;
-  font-size: 35px;
+  font-size: 50px;
 }
 
 main .unit .right {
@@ -137,12 +137,8 @@ main .unit .right .name { font-size: 25px; }
 main .unit .right .description { font-size: 20px; }
 
 main .progress {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  
   width: 90%;
-  padding: 10px 10px 5px;
+  padding: 10px 0px;
   font-size: 0;
 }
 
@@ -151,7 +147,7 @@ main .progress .indicator {
   vertical-align: middle;
   
   border-radius: 10px;
-  padding: 5px;
+  padding: 7px;
   margin: 0 0.5%;
   font-size: 10px;
   
@@ -167,7 +163,10 @@ main .progress .indicator:last-child { margin: 0; }
   header .progress-bar { width: calc(100% - 94px); }
   
   main { padding: 10px 5%; }
-  main .unit .left { width: 25%; }
+  main .unit .left { 
+    width: 25%;
+    font-size: 45px;
+  }
   main .unit .right { width: 75%; }
   
   main .unit .right .name { font-size: 22px; }
