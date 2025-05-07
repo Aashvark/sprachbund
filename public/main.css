@@ -133,7 +133,23 @@ main .unit .right {
   font-style: normal;
 }
 
-main .unit .right .name { font-size: 25px; }
+main .unit .right .name { 
+  position: relative;
+  font-size: 25px;
+}
+main .unit .right .name .difficulty {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  
+  color: var(--accent);
+  
+  font-size: 16px;
+  font-variant: small-caps;
+  font-weight: bold;
+  padding: 5px;
+}
 main .unit .right .description { font-size: 20px; }
 
 main .progress {

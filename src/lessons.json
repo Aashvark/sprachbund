@@ -2,6 +2,7 @@
   {
     "name": "Introduction",
     "icon": "book",
+    "difficulty": "CEFR A1",
     "description": "Learn basic grammar and vocabulary",
     "unit": [
       [
@@ -147,7 +148,8 @@
   },
   {
     "name": "Basics I",
-    "icon": "book",
+    "icon": "dove",
+    "difficulty": "CEFR A1",
     "description": "Learn basic grammar and vocabulary",
     "unit": [
       [
