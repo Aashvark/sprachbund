@@ -48,6 +48,7 @@
     <main>
       <form method="post" action="/lesson">
         {{#each units}}
+        {{#with @index as indy}}
         <button class="unit" name="unit" value="{{@index}}" id="unit-{{@index}}">
           <input name="{{@index}}-lesson" id="u{{@index}}-lesson">
           <i class="left fas fa-{{icon}}"></i>
@@ -57,7 +58,7 @@
           </div>
           <div class="progress">
             {{#each unit}}
-            <div class="indicator" style="width: calc((100%/{{../unit.length}}) - 1%);"></div>
+            <div class="indicator i-{{indy}}" style="width: calc((100%/{{../unit.length}}) - 1%);"></div>
             {{/each}}
           </div>
         </button>
@@ -70,7 +71,9 @@
       let name = `u${i}-lesson`;
       if (localStorage.getItem(name) === undefined || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
       document.getElementById(name).value = localStorage.getItem(name);
-      for (let k in document.getElementsByClassName('indicator')) { if (k < localStorage.getItem(name)) document.getElementsByClassName('indicator')[k].classList.add("highlight"); }
+      for (var k = 0; k < 1; k++) {
+        document.getElementsByClassName('i-' + i)[k].classList.add("highlight");
+      }
     }
   </script>
 </html>
