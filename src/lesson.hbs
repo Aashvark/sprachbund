@@ -38,7 +38,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
   </head>
-  <body onload="nextLesson()">
+  <body onload="nextLesson()" onkeydown="onEnter()">
     <header>
       <div class="language-flag">
         <svg><image href="/svg/simple_flag.svg" xlink:href="/svg/simple_flag.svg"></image></svg>
@@ -107,6 +107,7 @@
     let lessons = JSON.parse('{{{json lessons}}}');
     let lesson = lessons[index];
     
+    let inAlert = false;
     let correct = true;
     
     function caseshift() {
@@ -119,14 +120,11 @@
     function insert(character) { document.getElementById("response-" + index).value += (isUpper ? character.toUpperCase() : character); }
     
     function checkAnswer() {
-      let checkFor;
-      let right;
-      
       correct = true;
       
       if (lesson.type === "short-response") {
-        checkFor = lesson.direction === "native-new" ? lesson.sentence.new : lesson.sentence.native;
-        right = document.getElementById("response-" + index).value;
+        let checkFor = lesson.direction === "native-new" ? lesson.sentence.new : lesson.sentence.native;
+        let right = document.getElementById("response-" + index).value;
         
         if (checkFor.find(chance => formatAnswer(chance) === formatAnswer(right))) {
           document.getElementById("alert-heading").innerHTML = "Correct!";
@@ -137,21 +135,20 @@
           document.getElementById("alert-description").innerHTML = "Hover over words you don't know if you need to.";
         }
       } else if (lesson.type == "vocabulary") {
-        correct = true;
         document.getElementById("alert-heading").innerHTML = "Good job!";
         document.getElementById("alert-description").innerHTML = "Let's see this word in action!";
       }
       
-      document.getElementById("alert").addEventListener("keydown", alert);
       document.getElementById("alert").classList.add("block");
       if (correct) {
         index += 1;
         document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
-        if (lesson.type === "short-response") document.getElementById("response-" + index).removeEventListener("keydown", onEnter);
       }
     }
     
     function nextLesson() {
+      document.getElementById("alert").removeEventListener("keydown", onEnterAlert);
+      document.getElementById("alert").classList.remove("block");
       if (index >= lessons.length) {
         localStorage.setItem('u{{unitno}}-lesson', parseInt(localStorage.getItem('u{{unitno}}-lesson')) + 1);
         window.location = "https://glottis.glitch.me/";
@@ -161,21 +158,11 @@
       lesson = lessons[index];
       document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
       document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
-      document.getElementById("alert").classList.remove("block");
       
       document.getElementsByClassName("section")[index].style.display = "block";
       if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
-      if (lesson.type === "short-response") document.getElementById("response-" + index).addEventListener("keydown", onEnter);
     }
     
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
-    function onEnter(event) { if (event.key === "Enter") event.preventDefault(); checkAnswer(); }
-    function alert(event)   {
-      if (event.key === "Enter") { 
-        event.preventDefault();
-        document.getElementById("alert").removeEventListener("keydown", alert);
-        nextLesson();
-      }
-    }
   </script>
 </html>
