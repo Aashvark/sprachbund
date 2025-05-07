@@ -73,7 +73,7 @@ fastify.get("/lesson", function (request, reply) {
 });
 
 fastify.post("/lesson", function (request, reply) {
-  return reply.view('/src/lesson.hbs', {seo: seo, lessons: lessons[request.body.lesson].unit[request.body.unit]});
+  return reply.view('/src/lesson.hbs', {seo: seo, lessons: lessons[request.body.unit].unit[request.body.lesson]});
 });
 
 fastify.listen(

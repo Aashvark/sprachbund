@@ -47,9 +47,9 @@
     </header>
     <main>
       <form method="post" action="/lesson">
-        <input name="unit" hidden>
         {{#each units}}
-        <button class="unit" name="lesson" value="{{@index}}" id="unit-{{@index}}">
+        <button class="unit" name="unit" value="{{@index}}" id="unit-{{@index}}">
+          <input name="lesson" id="u{{@index}}-lesson">
           <i class="left fas fa-{{icon}}"></i>
           <div class="right">
             <p class="name">{{name}}</p>
@@ -66,9 +66,12 @@
     </main>
   </body>
   <script>
-    if (!(localStorage.getItem('unit') > 0)) localStorage.setItem('unit', 0);
-    document.getElementsByName("unit")[0].value = localStorage.getItem('unit');
+    for (var index in [document.getElementsByName('lesson')]) {
+      let name = `u${index}-lesson`;
+      if (!(localStorage.getItem(name) > 0)) localStorage.setItem(name, 0);
+      document.getElementById(name).value = localStorage.getItem(name);
+    }
     if (!(localStorage.getItem('lesson') > 0)) localStorage.setItem('lesson', 0);
-    document.getElementsByName("lesson")[0].value = localStorage.getItem('lesson');
+    document.getElementsByName('lesson')[0].value = localStorage.getItem('lesson');
   </script>
 </html>
