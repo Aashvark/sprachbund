@@ -18,7 +18,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let string = "";
   let save = "";
   
-  let tokens = arg.replaceAll("she ", "it ").replaceAll("he ", "it ").split(" ");
+  let tokens = arg.split(" ");
   let keys = [];
   let submeaning = [];
   

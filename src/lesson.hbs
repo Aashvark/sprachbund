@@ -168,9 +168,6 @@
       }
     }
     
-    function formatAnswer(text) { 
-      let a = 
-      return text.toLowerCase().replaceAll(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replaceAll(/\s{2,}/g," ").trimEnd();
-    }
+    function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
   </script>
 </html>
