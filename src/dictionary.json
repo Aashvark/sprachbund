@@ -14,8 +14,22 @@
       "complex": ["not be", "not", "he is not", "she is not", "it is not"],
       "definition": "Used to describe the nonexistence or irrelation between nouns."
     },
+    "vé han": {
+      "ipa": "ˈʋe˦ ˈxan",
+      "pos": "verb",
+      "simple": ["have"],
+      "complex": ["have", "he has", "she has", "it has"],
+      "definition": "Used to describe the existence or relation between nouns."
+    },
+    "vé hotá": {
+      "ipa": "ˈˈʋe˦ ˈxoˌta˦",
+      "pos": "verb",
+      "simple": ["not have"],
+      "complex": ["not have", "he has not", "she has not", "it has not"],
+      "definition": "Used to describe the nonexistence or irrelation between nouns."
+    },
     "symi": {
-      "ipa": "ˈsyˌmi",
+      "ipa": "ˈsəˌmi",
       "pos": "noun",
       "simple": ["a man", "man"],
       "complex": ["a man", "man"],
@@ -51,7 +65,6 @@
     }
   },
   "smba": {
-    
     "vé han": ["to have", "have"],
     "vé hotá": ["to have not", "have not"],
     
