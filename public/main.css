@@ -85,7 +85,7 @@ header .progress-inside {
 
 main {
   height: 76%;
-  padding: 10px 20%;
+  padding: 10px 15%;
   
   color: var(--white);
   font-size: 20px;
@@ -96,7 +96,6 @@ main .unit {
   background: var(--light-cont);
   
   width: 100%;
-  padding: 10px 15px;
   margin: 1% 0;
   
   border: 2px solid var(--light-cont);
@@ -128,6 +127,8 @@ main .unit .right {
   width: 85%;
   text-align: left;
   
+  padding: 20px 20px 20px 0;
+  
   font-family: "Parkinsans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -151,6 +152,7 @@ main .unit .right .name .difficulty {
   font-size: 16px;
   font-variant: small-caps;
   font-weight: 550;
+  padding: 0 5px;
 }
 
 main .unit .right .description { font-size: 20px; }
@@ -183,21 +185,16 @@ main .progress .indicator:last-child { margin: 0; }
   
   main { padding: 10px 5%; }
   
-  main .unit { 
-    text-align: left;
-    padding: 10px 0;
-  }
-  
   main .unit .left { 
-    width: 25%;
-    padding: 20px;
+    width: 22%;
     font-size: 45px;
   }
   
-  main .unit .right { width: 70%; }
-  
-  main .unit .right .name {
-    font-size: 24px;
+  main .unit .right {
+    width: 78%;
+    padding: 10px 20px 10px 0;
   }
+  
+  main .unit .right .name { font-size: 24px; }
   main .unit .right .description { font-size: 16px; }
 }
