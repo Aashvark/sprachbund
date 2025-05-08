@@ -177,7 +177,7 @@ main .progress .indicator {
 
 main .progress .indicator:last-child { margin: 0; }
 
-.highlight { background: var(--accent) !important; }
+main .highlight { background: var(--accent) !important; }
 
 @media screen and (max-width: 600px) {
   header { padding: 15px 4%; }
