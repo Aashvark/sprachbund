@@ -1,9 +1,9 @@
 main .unit {
   display: inline-block;
-  background: var(--light-cont);
+  background: linear-gradient(165deg, var(--contrast), var(--light-cont));
   
   width: 100%;
-  margin: 1% 0;
+  margin: 1.5% 0;
   
   border: 2px solid var(--light-cont);
   outline: 0;
@@ -34,7 +34,7 @@ main .unit .right {
   width: 85%;
   text-align: left;
   
-  padding: 20px 20px 20px 0;
+  padding: 15px 20px 15px 0;
   
   font-family: "Parkinsans", sans-serif;
   font-optical-sizing: auto;
@@ -62,7 +62,7 @@ main .unit .right .name .difficulty {
   padding: 0 5px;
 }
 
-main .unit .right .description { font-size: 20px; }
+main .unit .right .description { font-size: 18px; }
 
 main .progress {
   width: 100%;
