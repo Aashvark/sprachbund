@@ -104,7 +104,8 @@
   <script>
     let index = 0;
     
-    let lessons = JSON.parse('{{{json lessons}}}');
+    let lessons = fetch("/lessons");
+    // JSON.parse('{{{json lessons}}}');
     let lesson = lessons[index];
     
     document.onkeydown = (event) => {
