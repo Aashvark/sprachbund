@@ -127,7 +127,7 @@
       else { setAlert("<i class=\"fas fa-circle-xmark\"></i> Try again!", "Hover over words you don't know if you need to."); return; }
       
       index++;
-      document.getElementById("percentage").innerHTML = `${100 * lessons.length / ansCount}%`;
+      document.getElementById("percentage").innerHTML = `${(100 * lessons.length / ansCount).toFixed(2)}%`;
       document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
     }
     
