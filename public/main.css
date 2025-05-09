@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap');
 
 * {
   margin: 0;
@@ -85,7 +85,7 @@ header .progress-inside {
 
 main {
   height: 76%;
-  padding: 5px 15%;
+  padding: 0 15%;
   
   color: var(--white);
   font-size: 20px;
@@ -95,5 +95,5 @@ main {
   header { padding: 15px 4%; }
   header .progress-bar { width: calc(100% - 94px); }
   
-  main { padding: 10px 5%; }
+  main { padding: 0 5%; }
 }
