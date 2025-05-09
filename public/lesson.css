@@ -1,75 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Parkinsans:wght@300..800&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --background: #000E18;
-  --white:      #FFFFFF;
-  --contrast:   #002844;
-  --light-cont: #1F5982;
-  --textbox:    #000C14;
-  --accent:     #FF6A00;
-  
-  --standard-fs: 18px;
-}
-
-a {
-  font-weight: 400;
-  text-decoration: none;
-}
-
-html {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  background: var(--background);
-  
-  width: 100%;
-  height: 100%;
-  
-  font-family: "Parkinsans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-
-header, main, footer {
-  display: inline-block;
-  width: 100%;
-  
-  text-align: center;
-  font-size: 0;
-}
-
-header, footer { 
-  height: 12%;
-  padding: 15px 8%;
-}
-
-header .language-flag, header .progress-bar, header .progress-count {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-header .language-flag { width: 94px; }
-header .language-flag svg { aspect-ratio: 44/31; }
-
-header .progress-bar {
-  background: linear-gradient(165deg, var(--contrast), var(--light-cont));
-  border: 1px solid var(--light-cont);
-  
-  width: calc(93% - 94px);
-  height: 30px;
-  padding: 3.5px;
-  
-  border-radius: 20px;
-}
+header .progress-bar { width: calc(93% - 94px); }
 
 header .progress-inside {
   display: block;
@@ -83,21 +12,17 @@ header .progress-inside {
   transition: width 1000ms;
 }
 
-header .progress-count { width: 7%; }
+header .progress-count {
+  display: inline-block;
+  vertical-align: middle;
+  width: 7%;
+}
 
 header .progress-count p {
   color: var(--white);
   
   font-size: 20px;
   font-weight: bold;
-}
-
-main {
-  height: 76%;
-  padding: 0 20%;
-  
-  color: var(--white);
-  font-size: 20px;
 }
 
 main .section { display: none; }
@@ -113,7 +38,7 @@ main .subheading, main .definition, main .container {
 }
 
 main .heading {
-  padding: 5px 0 15px;
+  padding: 0 0 20px;
   color: var(--white);
   
   font-size: 28px;
@@ -341,7 +266,18 @@ main .alert .heading { padding: 0; }
 main .upper { text-transform: uppercase; }
 main .block { display: block; }
 
-footer { border-top: 2px solid var(--contrast); }
+footer { 
+  border-top: 2px solid var(--contrast);
+  
+  display: inline-block;
+  width: 100%;
+  
+  text-align: center;
+  font-size: 0;
+  
+  height: 12%;
+  padding: 15px 8%;
+}
 
 .button {
   display: inline-flex;
