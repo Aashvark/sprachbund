@@ -1,0 +1,102 @@
+main .unit {
+  display: inline-block;
+  background: var(--light-cont);
+  
+  width: 100%;
+  margin: 1% 0;
+  
+  border: 2px solid var(--light-cont);
+  outline: 0;
+  border-radius: 15px;
+  
+  cursor: pointer;
+  
+  font-size: 0;
+  color: var(--white);
+}
+
+main .unit:hover { border: 2px solid var(--contrast); }
+main .unit:active { border: 2px solid var(--accent); }
+
+main .unit .left, main .unit .right {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+main .unit .left {
+  width: 15%;
+  text-align: center;
+  font-size: 50px;
+}
+
+main .unit .right {
+  width: 85%;
+  text-align: left;
+  
+  padding: 20px 20px 20px 0;
+  
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+main .unit .right .name { 
+  position: relative;
+  font-weight: 550;
+  font-size: 25px;
+}
+
+main .unit .right .name .difficulty {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  
+  color: var(--accent);
+  
+  font-size: 16px;
+  font-variant: small-caps;
+  font-weight: 550;
+  padding: 0 5px;
+}
+
+main .unit .right .description { font-size: 20px; }
+
+main .progress {
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 0;
+}
+
+main .progress .indicator {
+  display: inline-block;
+  vertical-align: middle;
+  
+  border-radius: 10px;
+  padding: 7px;
+  margin: 0 0.5%;
+  font-size: 10px;
+  
+  background: var(--contrast);
+}
+
+main .progress .indicator:last-child { margin: 0; }
+
+main .highlight { background: var(--accent) !important; }
+
+@media screen and (max-width: 600px) {
+  main .unit .left { 
+    width: 22%;
+    font-size: 45px;
+  }
+  
+  main .unit .right {
+    width: 78%;
+    padding: 10px 20px 10px 0;
+  }
+  
+  main .unit .right .name { font-size: 24px; }
+  main .unit .right .description { font-size: 16px; }
+}
