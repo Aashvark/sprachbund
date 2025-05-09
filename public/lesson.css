@@ -113,7 +113,7 @@ main .subheading, main .definition, main .container {
 }
 
 main .heading {
-  padding: 5px 0 10px;
+  padding: 5px 0 15px;
   color: var(--white);
   
   font-size: 28px;
