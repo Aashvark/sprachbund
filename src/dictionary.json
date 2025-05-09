@@ -32,10 +32,10 @@
       "pos": "pronoun",
       "simple": ["I", "me"],
       "complex": ["i", "me"],
-      "definition": "Singular 1st Person Pronoun"
+      "definition": "Used by a speaker to refer to themself as the subject or object of a sentence."
     },
     "ké": {
-      "ipa": "ˈnə",
+      "ipa": "ˈke˦",
       "pos": "pronoun",
       "simple": ["you"],
       "complex": ["you"],
@@ -48,11 +48,11 @@
       "complex": ["we", "us"],
       "definition": "Plural 1st Person Pronoun"
     },
-    "ké": {
-      "ipa": "ˈnə",
+    "vun": {
+      "ipa": "ˈʋun",
       "pos": "pronoun",
       "simple": ["you"],
-      "complex": ["you"],
+      "complex": ["you", "y'all"],
       "definition": "Plural 2rd Person Pronoun"
     },
     "symi": {

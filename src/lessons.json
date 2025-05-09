@@ -19,21 +19,13 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "han",
-          "answers": ["he is", "she is", "it is"],
-          "sentence": {
-            "new": "han",
-            "native": ["he is", "she is", "it is"]
-          }
+          "answers": ["he is", "she is", "it is"]
         },
         {
           "type": "short-response",
           "direction": "native-new",
           "prompt": "she is",
-          "answers": ["han"],
-          "sentence": {
-            "native": "she is",
-            "new": ["han"]
-          }
+          "answers": ["han"]
         },
         {
           "type": "vocabulary",
@@ -47,21 +39,13 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "symi",
-          "answers": ["a man", "man"],
-          "sentence": {
-            "new": "symi",
-            "native": ["a man", "man"]
-          }
+          "answers": ["a man", "man"]
         },
         {
           "type": "short-response",
           "direction": "native-new",
           "prompt": "He is a man",
-          "answers": ["han symi"],
-          "sentence": {
-            "native": "He is a man",
-            "new": ["han symi"]
-          }
+          "answers": ["han symi"]
         },
         {
           "type": "vocabulary",
@@ -75,11 +59,7 @@
           "type": "short-response",
           "direction": "native-new",
           "prompt": "a woman",
-          "answers": ["cévo"],
-          "sentence": {
-            "native": "a woman",
-            "new": ["cévo"]
-          }
+          "answers": ["cévo"]
         },
         {
           "type": "vocabulary",
@@ -87,65 +67,55 @@
           "tip": "Adjectives will always come before nouns",
           "example": {
             "sentence": "náu cévo",
-            "translation": "A tall woman"
+            "translation": "a tall woman"
           }
         },
         {
           "type": "short-response",
           "direction": "new-native",
           "prompt": "náu symi",
-          "answers": ["a tall man", "tall man", "a big man", "big man"],
-          "sentence": {
-            "new": "náu symi",
-            "native": ["a tall man", "tall man", "a big man", "big man"]
-          }
+          "answers": ["a tall man", "tall man", "a big man", "big man"]
         },
         {
           "type": "short-response",
           "direction": "native-new",
           "prompt": "She is tall",
-          "answers": ["han náu"],
-          "sentence": {
-            "native": "She is tall",
-            "new": ["han náu"]
-          }
+          "answers": ["han náu"]
         },
         {
           "type": "short-response",
           "direction": "new-native",
           "prompt": "han náu symi",
-          "answers": ["He is a tall man"],
-          "sentence": {
-            "new": "han náu symi",
-            "native": ["He is a tall man"]
-          }
+          "answers": ["he is a tall man"]
         },
         {
           "type": "vocabulary",
           "word": "mikol",
           "example": {
             "sentence": "han mikol symi",
-            "translation": "He is a short man"
+            "translation": "he is a short man"
           }
         },
         {
           "type": "short-response",
           "direction": "new-native",
           "prompt": "mikol symi",
-          "answers": ["a short man", "short man"],
-          "sentence": {
-            "new": "mikol symi",
-            "native": ["a short man", "short man"]
-          }
+          "answers": ["a short man", "short man"]
         },
         {
           "type": "short-response",
           "direction": "native-new",
           "prompt": "it is small",
-          "answers": ["han mikol"],
-          "sentence": {
-            "native": "it is small",
-            "new": ["han mikol"]
+          "answers": ["han mikol"]
+        }
+      ],
+      [
+        {
+          "type": "vocabulary",
+          "word": "ny",
+          "example": {
+            "sentence": "ny han náu",
+            "translation": "I am tall"
           }
         }
       ]
