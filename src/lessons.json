@@ -32,7 +32,7 @@
           "word": "symi",
           "example": {
             "sentence": "han symi",
-            "translation": "he/she/it is a man"
+            "translation": "he is a man"
           }
         },
         {
@@ -116,6 +116,20 @@
           "example": {
             "sentence": "ny han náu",
             "translation": "I am tall"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "it is me",
+          "answers": ["han ny"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "ké",
+          "example": {
+            "sentence": "ké han cévo",
+            "translation": "you are a woman"
           }
         }
       ]
