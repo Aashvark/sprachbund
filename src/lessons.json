@@ -209,25 +209,8 @@
         }
       ],
       [
-        {
-          "type": "short-response",
-          "direction": "native-new",
-          "prompt": "it is me",
-          "answers": ["han ny"]
-        }
+        
       ]
-    ]
-  },
-  {
-    "name": "Basics I",
-    "icon": "dove",
-    "difficulty": "CEFR A1",
-    "description": "Learn basic grammar and vocabulary",
-    "unit": [
-      [],
-      [],
-      [],
-      []
     ]
   }
 ]
