@@ -116,9 +116,9 @@
     }
     
     function checkAnswer() {
-      if (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) setAlert("Correct!", "You did it!");
-      else if (lesson.type == "vocabulary") setAlert("Good job!", "Let's see this word in action!");
-      else { setAlert("Try again!", "Hover over words you don't know if you need to."); return; }
+      if (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!");
+      else if (lesson.type == "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
+      else { setAlert("<i class=\"fas fa-circle-xmark\"></i> Try again!", "Hover over words you don't know if you need to."); return; }
       
       index += 1;
       document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
