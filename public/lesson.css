@@ -272,7 +272,10 @@ main .upper { text-transform: uppercase; }
 main .block { display: block; }
 
 main .congrats {
-  padding: 20px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 footer { 

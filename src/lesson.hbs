@@ -142,6 +142,7 @@
       if (index < lessons.length) {
         lesson = lessons[index];
         document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
+        if (index >= lessons.length) document.getElementById("next").innerText = "Finish";
       }
       
       document.getElementsByClassName("section")[index].style.display = "block";
