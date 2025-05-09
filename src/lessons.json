@@ -86,7 +86,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "han náu symi",
-          "answers": ["he is a tall man"]
+          "answers": ["he is a tall man", "he is a big man", "it is a tall man", "it is a big man"]
         },
         {
           "type": "vocabulary",
@@ -100,7 +100,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "mikol symi",
-          "answers": ["a short man", "short man"]
+          "answers": ["a short man", "short man", "a small man", "small man"]
         },
         {
           "type": "short-response",
@@ -154,7 +154,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "ké han mikol",
-          "answers": ["you are short"]
+          "answers": ["you are short", "you are small"]
         },
         {
           "type": "short-response",
@@ -181,7 +181,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "symi han náu",
-          "answers": ["a man is tall"]
+          "answers": ["a man is tall", "a man is big"]
         },
         {
           "type": "short-response",
@@ -199,7 +199,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "ké han",
-          "answers": ["you are"]
+          "answers": ["you are", "you exist"]
         },
         {
           "type": "short-response",
@@ -209,7 +209,18 @@
         }
       ],
       [
-        
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ny han mikol",
+          "answers": ["I am short", "I am small"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "han náu",
+          "answers": ["he is tall", "she is tall", "it is tall", "he is large", "she is large", "it is tall"]
+        }
       ]
     ]
   }
