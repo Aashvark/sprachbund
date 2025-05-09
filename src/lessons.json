@@ -161,6 +161,14 @@
           "direction": "native-new",
           "prompt": "I am a woman",
           "answers": ["ny han cévo"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "téu",
+          "example": {
+            "sentence": "han téu",
+            "translation": "it is him/her"
+          }
         }
       ]
     ]

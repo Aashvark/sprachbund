@@ -4,28 +4,28 @@
       "ipa": "ˈxan",
       "pos": "verb",
       "simple": ["be", "exist"],
-      "complex": ["be", "exist", "am", "are", "he is", "she is", "it is"],
+      "complex": ["be", "exist", "am", "are", "is", "he is", "she is", "it is"],
       "definition": "Used to describe the existence or relation between nouns."
     },
     "hotá": {
       "ipa": "ˈxoˌta˦",
       "pos": "verb",
       "simple": ["not be", "not"],
-      "complex": ["not be", "not", "am not", "are not", "he is not", "she is not", "it is not"],
+      "complex": ["not be", "not", "am not", "are not", "is not", "he is not", "she is not", "it is not"],
       "definition": "Used to describe the nonexistence or irrelation between nouns."
     },
     "vé han": {
       "ipa": "ˈʋe˦ ˈxan",
       "pos": "verb",
       "simple": ["have"],
-      "complex": ["have", "he has", "she has", "it has"],
+      "complex": ["have", "has", "he has", "she has", "it has"],
       "definition": "Used to describe the possession of nouns."
     },
     "vé hotá": {
       "ipa": "ˈˈʋe˦ ˈxoˌta˦",
       "pos": "verb",
-      "simple": ["not have"],
-      "complex": ["not have", "do not have", "he has not", "she has not", "it has not", "he does not have", "she does not have", "it does not have"]
+      "simple": ["have not"],
+      "complex": ["have not", "do not have", "has not", "he has not", "she has not", "it has not", "he does not have", "she does not have", "it does not have"]
     },
     "ny": {
       "ipa": "ˈnə",
@@ -36,6 +36,13 @@
     },
     "ké": {
       "ipa": "ˈke˦",
+      "pos": "pronoun",
+      "simple": ["you"],
+      "complex": ["you"],
+      "definition": "Used to informally refer the singular person the speaker is addressing."
+    },
+    "téu": {
+      "ipa": "ˈte˦ˌu",
       "pos": "pronoun",
       "simple": ["you"],
       "complex": ["you"],
