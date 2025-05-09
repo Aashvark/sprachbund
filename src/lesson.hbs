@@ -45,7 +45,7 @@
         <svg><image href="/svg/simple_flag.svg" xlink:href="/svg/simple_flag.svg"></image></svg>
       </div>
       <div class="progress-bar"><div class="progress-inside" id="progress"></div></div>
-      <div class="progress-count"><p id="progress-count"></p></div>
+      <div class="progress-count"><p id="progress-count">0/{{lessons.length}}</p></div>
     </header>
     <main>
       {{#each lessons as |lesson|}}
@@ -121,14 +121,18 @@
     }
     
     function checkAnswer() {
+      if (index >= lessons.length) { completeLesson(); return; }
+      
       ansCount++;
+      document.getElementById("percentage").innerHTML = `${(100 * lessons.length / ansCount).toFixed(2)}%`; 
+      
       if (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!");
       else if (lesson.type == "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
       else { setAlert("<i class=\"fas fa-circle-xmark\"></i> Try again!", "Hover over words you don't know if you need to."); return; }
       
       index++;
-      document.getElementById("percentage").innerHTML = `${(100 * lessons.length / ansCount).toFixed(2)}%`;
       document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
+      document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
     }
     
     function nextLesson() {
@@ -137,7 +141,6 @@
       if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
       if (index < lessons.length) {
         lesson = lessons[index];
-        document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
         document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
       }
       
