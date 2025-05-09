@@ -88,6 +88,9 @@
         {{/ifEquals}}
       </div>
       {{/each}}
+      <div class="section congrats">
+        <p class="">You did it!</p>
+      </div>
       <div class="alert" id="alert">
         <div class="text">
           <p class="heading" id="alert-heading"></p>
@@ -103,6 +106,7 @@
   </body>
   <script>
     let index = 0;
+    let ansCount = 0;
     
     let lessons = JSON.parse('{{{json lessons}}}');
     let lesson = lessons[index];

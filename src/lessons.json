@@ -170,6 +170,42 @@
             "sentence": "han téu",
             "translation": "it is him/her"
           }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "he is him",
+          "answers": ["han téu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "symi han náu",
+          "answers": ["a man is tall"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ny han mikol",
+          "answers": ["I am short", "I am small"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "a woman is short",
+          "answers": ["cévo han mikol"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ké han",
+          "answers": ["you are"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "it is me",
+          "answers": ["han ny"]
         }
       ]
     ]
