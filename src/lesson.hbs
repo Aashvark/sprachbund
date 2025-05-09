@@ -89,7 +89,8 @@
       </div>
       {{/each}}
       <div class="section congrats">
-        <p class="">You did it!</p>
+        <p class="heading">You did it!</p>
+        <p id="percentage"></p>
       </div>
       <div class="alert" id="alert">
         <div class="text">
@@ -120,28 +121,32 @@
     }
     
     function checkAnswer() {
+      ansCount++;
       if (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!");
       else if (lesson.type == "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
       else { setAlert("<i class=\"fas fa-circle-xmark\"></i> Try again!", "Hover over words you don't know if you need to."); return; }
       
-      index += 1;
+      index++;
+      document.getElementById("percentage").innerHTML = `${100 * lessons.length / ansCount}%`;
       document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
     }
     
     function nextLesson() {
       document.getElementById("alert").classList.remove("block");
       
-      if (index >= lessons.length) {
-        localStorage.setItem('u{{unitno}}-lesson', parseInt(localStorage.getItem('u{{unitno}}-lesson')) + 1);
-        window.location = "{{seo.learn}}";
-        return;
-      } else if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
-      
-      lesson = lessons[index];
-      document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
-      document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
+      if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
+      if (index < lessons.length) {
+        lesson = lessons[index];
+        document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
+        document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
+      }
       
       document.getElementsByClassName("section")[index].style.display = "block";
+    }
+    
+    function completeLesson() {
+      localStorage.setItem('u{{unitno}}-lesson', parseInt(localStorage.getItem('u{{unitno}}-lesson')) + 1);
+      window.location = "{{seo.learn}}";
     }
     
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }

@@ -207,6 +207,14 @@
           "prompt": "it is me",
           "answers": ["han ny"]
         }
+      ],
+      [
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "it is me",
+          "answers": ["han ny"]
+        }
       ]
     ]
   },
