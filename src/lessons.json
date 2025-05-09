@@ -219,7 +219,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "han náu",
-          "answers": ["he is tall", "she is tall", "it is tall", "he is large", "she is large", "it is tall"]
+          "answers": ["he is tall", "she is tall", "it is tall", "he is big", "she is big", "it is big", "he is large", "she is large", "it is large"]
         }
       ]
     ]
