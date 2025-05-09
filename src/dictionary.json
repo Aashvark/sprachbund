@@ -42,11 +42,11 @@
       "definition": "Used to informally refer the singular person the speaker is addressing."
     },
     "téu": {
-      "ipa": "ˈte˦ˌu",
+      "ipa": "ˈteu˦˧",
       "pos": "pronoun",
-      "simple": ["you"],
-      "complex": ["you"],
-      "definition": "Used to informally refer the singular person the speaker is addressing."
+      "simple": ["him", "her", "it"],
+      "complex": ["him", "her", "it"],
+      "definition": "Used to refer a person other than the speaker or addressee as the object of a sentence."
     },
     "ċo": {
       "ipa": "ˈt͡ʃo",
@@ -77,7 +77,7 @@
       "definition": "Females attaining the age of adulthood. When applied to children, it may signify their physical and/or maturity."
     },
     "náu": {
-      "ipa": "ˈna˦ˌu",
+      "ipa": "ˈnau˦˧",
       "pos": "adjective",
       "simple": ["tall", "large", "big"],
       "complex": ["tall", "large", "big"],

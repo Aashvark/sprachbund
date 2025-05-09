@@ -165,6 +165,18 @@
         {
           "type": "vocabulary",
           "word": "téu",
+          "tip": "téu may not be used as a subject of a sentence.",
+          "example": {
+            "sentence": "han téu",
+            "translation": "it is him/her"
+          }
+        }
+      ],
+      [
+        {
+          "type": "vocabulary",
+          "word": "téu",
+          "tip": "\"téu\" may not be used as a subject of a sentence.",
           "example": {
             "sentence": "han téu",
             "translation": "it is him/her"
