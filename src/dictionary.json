@@ -19,14 +19,41 @@
       "pos": "verb",
       "simple": ["have"],
       "complex": ["have", "he has", "she has", "it has"],
-      "definition": "Used to describe the existence or relation between nouns."
+      "definition": "Used to describe the possession of nouns."
     },
     "vé hotá": {
       "ipa": "ˈˈʋe˦ ˈxoˌta˦",
       "pos": "verb",
       "simple": ["not have"],
-      "complex": ["not have", "he has not", "she has not", "it has not"],
-      "definition": "Used to describe the nonexistence or irrelation between nouns."
+      "complex": ["not have", "do not have", "he has not", "she has not", "it has not", "he does not have", "she does not have", "it does not have"]
+    },
+    "ny": {
+      "ipa": "ˈnə",
+      "pos": "pronoun",
+      "simple": ["I", "me"],
+      "complex": ["i", "me"],
+      "definition": "Singular 1st Person Pronoun"
+    },
+    "ké": {
+      "ipa": "ˈnə",
+      "pos": "pronoun",
+      "simple": ["you"],
+      "complex": ["you"],
+      "definition": "Singular 2rd Person Pronoun"
+    },
+    "ċo": {
+      "ipa": "ˈt͡ʃo",
+      "pos": "pronoun",
+      "simple": ["we", "us"],
+      "complex": ["we", "us"],
+      "definition": "Plural 1st Person Pronoun"
+    },
+    "ké": {
+      "ipa": "ˈnə",
+      "pos": "pronoun",
+      "simple": ["you"],
+      "complex": ["you"],
+      "definition": "Plural 2rd Person Pronoun"
     },
     "symi": {
       "ipa": "ˈsəˌmi",
@@ -65,9 +92,6 @@
     }
   },
   "smba": {
-    "vé han": ["to have", "have"],
-    "vé hotá": ["to have not", "have not"],
-    
     "ny": ["I", "me"],
     "ké": ["you"]
   }

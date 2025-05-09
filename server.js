@@ -2,6 +2,12 @@ const path = require("path");
 const handlebars = require("handlebars");
 const fastify = require("fastify")({ logger: false });
 
+const seo = require("./src/seo.json");
+
+const lessons = require("./src/lessons.json");
+const dictionary = require("./src/dictionary.json");
+let dict = dictionary.smb;
+
 fastify.register(require("@fastify/static"), {
   root: path.join(__dirname, "public"),
   prefix: "/",
@@ -13,7 +19,7 @@ fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } 
 handlebars.registerHelper('ifEquals', function(arg1, arg2, options) { return (arg1 === arg2) ? options.fn(this) : options.inverse(this); });
 handlebars.registerHelper('ternaryEq', function(arg1, arg2, op1, op2) { return (arg1 === arg2) ? op1 : op2; });
 handlebars.registerHelper("json", function(a, options) { return JSON.stringify(a); });
-handlebars.registerHelper('get-attribute', function(word, attribute, options) { return dictionary.smb[word.trimEnd()][attribute]; });
+handlebars.registerHelper('get-attribute', function(word, attribute, options) { return dict[word.trimEnd()][attribute]; });
 
 handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let string = "";
@@ -26,12 +32,12 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   for (let i = 0; i < tokens.length; i++) {
     save += tokens[i] + " ";
     
-    if (lang === "en" && Object.keys(dictionary.smb).filter(key => dictionary.smb[key].complex.includes(save.toLowerCase() + tokens[i + 1])).length === 0) {
-      keys = Object.keys(dictionary.smb).filter(key => dictionary.smb[key].complex.includes(save.trimEnd().toLowerCase()));
-      if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((v) => { return Object.keys(dictionary.smb).filter(key => dictionary.smb[key].simple.includes(v)); }); }
-    } else if (lang == "smb" && save.trimEnd() in dictionary.smb && !(save.toLowerCase() + tokens[i + 1] in dictionary.smb)) {
-      keys = dictionary.smb[save.trimEnd().toLowerCase()].simple;
-      if (save.trimEnd().includes(" ")) { submeaning = save.toLowerCase().trimEnd().split(" ").map((key) => { return key in dictionary.smb ? dictionary.smb[key].simple : []; }); }
+    if (lang === "en" && Object.keys(dict).filter(key => dict[key].complex.includes(save.toLowerCase() + tokens[i + 1])).length === 0) {
+      keys = Object.keys(dict).filter(key => dict[key].complex.includes(save.trimEnd().toLowerCase()));
+      if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
+    } else if (lang == "smb" && save.trimEnd() in dict && !(save.toLowerCase() + tokens[i + 1] in dict)) {
+      keys = dict[save.trimEnd().toLowerCase()].simple;
+      if (save.trimEnd().includes(" ")) { submeaning = save.toLowerCase().trimEnd().split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
     } else continue;
     
     let construction = `<div class="hint"><span>${save}</span><table><tbody>`;
@@ -59,11 +65,6 @@ function getLongestList(nestedList) {
   nestedList.forEach(element => { if (element.length > largest.length) largest = element; });
   return largest;
 }
-
-const seo = require("./src/seo.json");
-
-const lessons = require("./src/lessons.json");
-const dictionary = require("./src/dictionary.json");
 
 fastify.get("/", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
 fastify.get("/lesson", function (request, reply) { return reply.redirect('/'); });
