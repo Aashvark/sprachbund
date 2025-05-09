@@ -4,14 +4,14 @@
       "ipa": "ˈxan",
       "pos": "verb",
       "simple": ["be", "exist"],
-      "complex": ["be", "exist", "he is", "she is", "it is"],
+      "complex": ["be", "exist", "am", "are", "he is", "she is", "it is"],
       "definition": "Used to describe the existence or relation between nouns."
     },
     "hotá": {
       "ipa": "ˈxoˌta˦",
       "pos": "verb",
       "simple": ["not be", "not"],
-      "complex": ["not be", "not", "he is not", "she is not", "it is not"],
+      "complex": ["not be", "not", "am not", "are not", "he is not", "she is not", "it is not"],
       "definition": "Used to describe the nonexistence or irrelation between nouns."
     },
     "vé han": {
@@ -39,7 +39,7 @@
       "pos": "pronoun",
       "simple": ["you"],
       "complex": ["you"],
-      "definition": "Used to informally refer the person the speaker is addressing."
+      "definition": "Used to informally refer the singular person the speaker is addressing."
     },
     "ċo": {
       "ipa": "ˈt͡ʃo",

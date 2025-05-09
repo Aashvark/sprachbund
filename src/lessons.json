@@ -131,6 +131,36 @@
             "sentence": "ké han cévo",
             "translation": "you are a woman"
           }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "you are me",
+          "answers": ["ké han ny"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "I am a woman",
+          "answers": ["ny han cévo"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "han ké",
+          "answers": ["he is you", "she is you", "it is you"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ké han mikol",
+          "answers": ["you are short"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "I am a woman",
+          "answers": ["ny han cévo"]
         }
       ]
     ]
