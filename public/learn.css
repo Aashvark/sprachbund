@@ -1,3 +1,5 @@
+main { padding: 5px 20%; }
+
 main .unit {
   display: inline-block;
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
@@ -45,13 +47,13 @@ main .unit .right {
 main .unit .right .name { 
   position: relative;
   font-weight: 550;
-  font-size: 25px;
+  font-size: 24px;
 }
 
 main .unit .right .name .difficulty {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 1%;
   transform: translateY(-50%);
   
   color: var(--accent);
@@ -82,11 +84,14 @@ main .progress .indicator {
   background: var(--contrast);
 }
 
-main .progress .indicator:last-child { margin: 0; }
-
 main .highlight { background: var(--accent) !important; }
 
+@media screen and (max-width: 900px) {
+  main { padding: 0 8%; }
+}
+
 @media screen and (max-width: 600px) {
+  main { padding: 0 5%; }
   main .unit .left { 
     width: 22%;
     font-size: 45px;
@@ -96,7 +101,4 @@ main .highlight { background: var(--accent) !important; }
     width: 78%;
     padding: 10px 20px 10px 0;
   }
-  
-  main .unit .right .name { font-size: 24px; }
-  main .unit .right .description { font-size: 16px; }
 }
