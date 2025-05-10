@@ -259,7 +259,13 @@
           "type": "short-response",
           "direction": "native-new",
           "prompt": "you all are tall",
-          "answers": ["ké han ċo"]
+          "answers": ["vun han náu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "vun han mikol",
+          "answers": ["you are short"]
         }
       ]
     ]

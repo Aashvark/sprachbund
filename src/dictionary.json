@@ -39,7 +39,7 @@
       "pos": "pronoun",
       "simple": ["you"],
       "complex": ["you"],
-      "definition": "Used to informally refer the singular person the speaker is addressing."
+      "definition": "Used to informally refer to a person the speaker is addressing."
     },
     "téu": {
       "ipa": "ˈteu˦˧",
@@ -60,7 +60,7 @@
       "pos": "pronoun",
       "simple": ["you"],
       "complex": ["you", "y'all", "you guys", "you all"],
-      "definition": "Plural 2rd Person Pronoun"
+      "definition": "Used to informally refer to the people the speaker is addressing."
     },
     "symi": {
       "ipa": "ˈsəˌmi",
