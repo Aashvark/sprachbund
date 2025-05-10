@@ -265,7 +265,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "vun han mikol",
-          "answers": ["you are short"]
+          "answers": ["you are small", "you all are small", "y'all are small", "you are short", "you all are short", "y'all are short"]
         }
       ]
     ]
