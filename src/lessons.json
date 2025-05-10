@@ -258,7 +258,7 @@
         {
           "type": "short-response",
           "direction": "native-new",
-          "prompt": "you are us",
+          "prompt": "you all are tall",
           "answers": ["ké han ċo"]
         }
       ]
