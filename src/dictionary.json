@@ -53,13 +53,13 @@
       "pos": "pronoun",
       "simple": ["we", "us"],
       "complex": ["we", "us"],
-      "definition": "Plural 1st Person Pronoun"
+      "definition": "Used by a speaker to refer to themself and another person as the subject or object of a sentence."
     },
     "vun": {
       "ipa": "ˈʋun",
       "pos": "pronoun",
       "simple": ["you"],
-      "complex": ["you", "y'all"],
+      "complex": ["you", "y'all", "you guys", "you all"],
       "definition": "Plural 2rd Person Pronoun"
     },
     "symi": {

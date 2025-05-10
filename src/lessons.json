@@ -228,6 +228,38 @@
             "sentence": "ċo han",
             "translation": "we exist"
           }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ċo han náu",
+          "answers": ["we are tall", "we are big", "we are large"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "we are short",
+          "answers": ["ċo han mikol"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "you are us",
+          "answers": ["ké han ċo"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "vun",
+          "example": {
+            "sentence": "vun han",
+            "translation": "you exist"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "you are us",
+          "answers": ["ké han ċo"]
         }
       ]
     ]
