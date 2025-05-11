@@ -339,33 +339,33 @@
         },
         {
           "type": "short-response",
-          "direction": "new-native",
-          "prompt": "ny han symi",
-          "answers": ["we are nice", "we are kind"]
+          "direction": "native-new",
+          "prompt": "he is a man",
+          "answers": ["ny han symi"]
         },
         {
           "type": "short-response",
-          "direction": "new-native",
-          "prompt": "han ċo",
-          "answers": ["we are nice", "we are kind"]
+          "direction": "native-new",
+          "prompt": "it is us",
+          "answers": ["han ċo"]
         },
         {
           "type": "short-response",
           "direction": "new-native",
           "prompt": "han ké",
-          "answers": ["we are nice", "we are kind"]
+          "answers": ["it is you", "he is you", "she is you"]
         },
         {
           "type": "short-response",
           "direction": "new-native",
           "prompt": "ké han symi",
-          "answers": ["we are nice", "we are kind"]
+          "answers": ["you are man"]
         },
         {
           "type": "short-response",
-          "direction": "new-native",
-          "prompt": "vun han sojón",
-          "answers": ["we are nice", "we are kind"]
+          "direction": "native-new",
+          "prompt": "you are kind",
+          "answers": ["vun han sojón", "ké han sojón"]
         },
         {
           "type": "short-response",
