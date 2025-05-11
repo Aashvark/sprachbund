@@ -347,5 +347,5 @@ footer .button {
   main .subheading, main .definition, main .container { width: 100%; }
   
   main .response .textbox { height: 39vh; }
-  main .alert #alert-description { font-size: 16px; }
+  main .alert #alert-description { font-size: 22px; }
 }

@@ -266,6 +266,24 @@
           "direction": "new-native",
           "prompt": "vun han mikol",
           "answers": ["you are small", "you all are small", "you are short", "you all are short"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ny han téu",
+          "answers": ["I am him", "I am her", "I am it"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "it is us",
+          "answers": ["han ċo"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "we are short",
+          "answers": ["ċo han mikol"]
         }
       ]
     ]
