@@ -76,19 +76,19 @@
       "complex": ["a woman", "woman"],
       "definition": "Females attaining the age of adulthood. When applied to children, it may signify their physical and/or maturity."
     },
-    "náu": {
-      "ipa": "ˈnau˦˧",
-      "pos": "adjective",
-      "simple": ["tall", "large", "big"],
-      "complex": ["tall", "large", "big"],
-      "definition": "Tall or big, especially in comparison to the subject."
-    },
     "mikol": {
       "ipa": "ˈmiˌkol",
       "pos": "adjective",
       "simple": ["short", "small"],
       "complex": ["short", "small"],
       "definition": "Short or small, especially in comparison to the subject"
+    },
+    "náu": {
+      "ipa": "ˈnau˦˧",
+      "pos": "adjective",
+      "simple": ["tall", "large", "big"],
+      "complex": ["tall", "large", "big"],
+      "definition": "Tall or big, especially in comparison to the subject."
     },
     "sojón": {
       "ipa": "ˈsoˌjon˦",
@@ -104,9 +104,5 @@
       "complex": ["and"],
       "definition": "used to connect words of the same part of speech, clauses, or sentences, that are to be taken jointly."
     }
-  },
-  "smba": {
-    "ny": ["I", "me"],
-    "ké": ["you"]
   }
 }

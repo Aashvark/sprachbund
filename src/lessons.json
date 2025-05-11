@@ -44,7 +44,7 @@
         {
           "type": "short-response",
           "direction": "native-new",
-          "prompt": "He is a man",
+          "prompt": "he is a man",
           "answers": ["han symi"]
         },
         {
@@ -192,8 +192,8 @@
         {
           "type": "short-response",
           "direction": "native-new",
-          "prompt": "a woman is short",
-          "answers": ["cévo han mikol"]
+          "prompt": "she is short",
+          "answers": ["han mikol"]
         },
         {
           "type": "short-response",
@@ -292,6 +292,18 @@
             "sentence": "ké han sojón",
             "translation": "you are kind"
           }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "you are kind",
+          "answers": ["ké han sojón", "vun han sojón"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ċo han sojón",
+          "answers": ["we are nice", "we are kind"]
         }
       ]
     ]
