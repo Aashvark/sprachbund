@@ -395,7 +395,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "han vun",
-          "answers": ["it is you", "it si you all"]
+          "answers": ["it is you", "it is you all"]
         }
       ]
     ]
