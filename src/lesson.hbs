@@ -112,6 +112,8 @@
     let lessons = JSON.parse('{{{json lessons}}}');
     let lesson = lessons[index];
     
+    var correct = new Audio("https://cdn.glitch.global/a09638ce-8239-40b9-9a24-995569212470/correct.wav?v=1747005386606");
+    
     document.onkeydown = (event) => {
       if (event.key === "Enter") {
         event.preventDefault();
@@ -127,8 +129,7 @@
       document.getElementById("percentage").innerHTML = `${(100 * lessons.length / ansCount).toFixed(2)}%`; 
       
       if (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) {
-        var snd = new Audio("https://cdn.glitch.global/a09638ce-8239-40b9-9a24-995569212470/correct?v=1747005065559");
-        snd.play();
+        correct.play();
         setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
       }
       else if (lesson.type == "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
