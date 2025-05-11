@@ -311,28 +311,28 @@
   },
   {
     "name": "Basics I",
-    "icon": "book",
+    "icon": "bridge-circle-exclamation",
     "difficulty": "CEFR A1",
     "description": "Learn the definite article and negation",
     "unit": []
   },
   {
     "name": "Basics II",
-    "icon": "book",
+    "icon": "file-circle-question",
     "difficulty": "CEFR A1",
-    "description": "Learn question words and form",
+    "description": "Learn question words and question form",
     "unit": []
   },
   {
     "name": "Basics III",
-    "icon": "book",
+    "icon": "walkie-talkie",
     "difficulty": "CEFR A1",
     "description": "Learn everyday phrases",
     "unit": []
   },
   {
     "name": "Vocabulary I",
-    "icon": "book",
+    "icon": "clipboard-check",
     "difficulty": "CEFR A1",
     "description": "Learn more basic vocabulary",
     "unit": []

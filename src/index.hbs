@@ -57,7 +57,7 @@
             <p class="description">{{description}}</p>
             <div class="progress">
               {{#each unit}}
-              <div class="indicator i-{{@../index}}" style="width: calc(100%/{{../unit.length}});"></div>
+              <div class="indicator i-{{@../index}}" style="width: calc((100%/{{../unit.length}}) - 1%);"></div>
               {{/each}}
             </div>
           </div>
