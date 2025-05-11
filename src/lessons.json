@@ -323,7 +323,7 @@
           "type": "short-response",
           "direction": "native-new",
           "prompt": "we are nice",
-          "answers": ["ké han cévo"]
+          "answers": ["ċo han cévo"]
         },
         {
           "type": "short-response",
@@ -405,7 +405,8 @@
     "icon": "bridge-circle-exclamation",
     "difficulty": "CEFR A1",
     "description": "Learn the definite article and negation",
-    "unit": []
+    "unit": [
+    ]
   },
   {
     "name": "Basics II",
