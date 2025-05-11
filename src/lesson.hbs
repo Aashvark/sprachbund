@@ -126,7 +126,11 @@
       ansCount++;
       document.getElementById("percentage").innerHTML = `${(100 * lessons.length / ansCount).toFixed(2)}%`; 
       
-      if (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!");
+      if (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) {
+        var snd = new Audio("https://cdn.glitch.global/a09638ce-8239-40b9-9a24-995569212470/correct.mp3?v=1747003847713");
+        snd.play();
+        setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
+      }
       else if (lesson.type == "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
       else { setAlert("<i class=\"fas fa-circle-xmark\"></i> Try again!", "Hover over words you don't know if you need to."); return; }
       
@@ -154,7 +158,11 @@
     }
     
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
-    function insert(character) { document.getElementById("response-" + index).value += document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character; }
+    function insert(character) {
+      let resp = document.getElementById("response-" + index);
+      resp.value += document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character;
+      resp.focus()
+    }
     
     function caseshift() {
       document.getElementById("shift-case").innerHTML = document.getElementById("shift-case").innerHTML == "⬇" ? "⬆" : "⬇";
