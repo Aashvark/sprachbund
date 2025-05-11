@@ -317,25 +317,25 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "han mikol",
-          "answers": ["we are nice", "we are kind"]
+          "answers": ["it is short", "it is small"]
         },
         {
           "type": "short-response",
-          "direction": "new-native",
-          "prompt": "ké han cévo",
-          "answers": ["we are nice", "we are kind"]
+          "direction": "native-new",
+          "prompt": "we are nice",
+          "answers": ["ké han cévo"]
         },
         {
           "type": "short-response",
-          "direction": "new-native",
-          "prompt": "ké han téu",
-          "answers": ["we are nice", "we are kind"]
+          "direction": "native-new",
+          "prompt": "you are her",
+          "answers": ["ké han téu"]
         },
         {
           "type": "short-response",
           "direction": "new-native",
           "prompt": "han vun",
-          "answers": ["we are nice", "we are kind"]
+          "answers": ["it is you", "she is you", "he is you", "it is you all", "she is you all", "he is you all"]
         },
         {
           "type": "short-response",
