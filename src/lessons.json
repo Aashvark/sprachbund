@@ -284,6 +284,14 @@
           "direction": "native-new",
           "prompt": "we are short",
           "answers": ["ċo han mikol"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "sojón",
+          "example": {
+            "sentence": "ké han sojón",
+            "translation": "you are kind"
+          }
         }
       ]
     ]

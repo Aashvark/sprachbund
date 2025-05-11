@@ -90,6 +90,13 @@
       "complex": ["short", "small"],
       "definition": "Short or small, especially in comparison to the subject"
     },
+    "sojón": {
+      "ipa": "ˈsoˌjon˦",
+      "pos": "adjective",
+      "simple": ["kind", "nice"],
+      "complex": ["kind", "nice"],
+      "definition": "Kind"
+    },
     "su": {
       "ipa": "ˈsu",
       "pos": "conjunction",
