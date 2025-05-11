@@ -377,25 +377,25 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "han cévo",
-          "answers": ["we are nice", "we are kind"]
+          "answers": ["it is a woman"]
         },
         {
           "type": "short-response",
-          "direction": "new-native",
-          "prompt": "ké han ny",
-          "answers": ["we are nice", "we are kind"]
+          "direction": "native-new",
+          "prompt": "you are me",
+          "answers": ["ké han ny", "vun han ny"]
         },
         {
           "type": "short-response",
           "direction": "new-native",
           "prompt": "ny han náu",
-          "answers": ["we are nice", "we are kind"]
+          "answers": ["I am tall", "I am big", "I am large"]
         },
         {
           "type": "short-response",
           "direction": "new-native",
           "prompt": "han vun",
-          "answers": ["we are nice", "we are kind"]
+          "answers": ["it is you", "it si you all"]
         }
       ]
     ]
