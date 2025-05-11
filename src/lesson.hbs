@@ -143,7 +143,7 @@
         lesson = lessons[index];
         document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
       }
-      else if (index >= lessons.length) document.getElementById("footer").innerHTML = "<a class=\"button finish-button\">Good job!</a>";
+      else if (index >= lessons.length) document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
       
       document.getElementsByClassName("section")[index].style.display = "block";
     }
