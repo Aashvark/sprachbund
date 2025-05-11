@@ -113,6 +113,7 @@
     let lesson = lessons[index];
     
     var correct = new Audio("https://cdn.glitch.global/a09638ce-8239-40b9-9a24-995569212470/correct.wav?v=1747005386606");
+    var incorrect = new Audio("https://cdn.glitch.global/a09638ce-8239-40b9-9a24-995569212470/incorrect.mp3?v=1747007700972");
     
     document.onkeydown = (event) => {
       if (event.key === "Enter") {
@@ -133,7 +134,11 @@
         setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
       }
       else if (lesson.type == "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
-      else { setAlert("<i class=\"fas fa-circle-xmark\"></i> Try again!", "Hover over words you don't know if you need to."); return; }
+      else {
+        incorrect.play();
+        setAlert("<i class=\"fas fa-circle-xmark\"></i> Try again!", "Hover over words you don't know if you need to."); 
+        return; 
+      }
       
       index++;
       document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
