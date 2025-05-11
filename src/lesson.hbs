@@ -127,7 +127,7 @@
       document.getElementById("percentage").innerHTML = `${(100 * lessons.length / ansCount).toFixed(2)}%`; 
       
       if (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) {
-        var snd = new Audio("https://cdn.glitch.global/a09638ce-8239-40b9-9a24-995569212470/correct.mp3?v=1747003847713");
+        var snd = new Audio("https://cdn.glitch.global/a09638ce-8239-40b9-9a24-995569212470/correct?v=1747005065559");
         snd.play();
         setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
       }
@@ -160,8 +160,9 @@
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
     function insert(character) {
       let resp = document.getElementById("response-" + index);
-      resp.value += document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character;
-      resp.focus()
+      resp.setRangeText(document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character, resp.selectionStart, resp.selectionEnd, 'select');
+      resp.focus();
+      resp.setSelectionRange(end + 1, end + 1);
     }
     
     function caseshift() {
