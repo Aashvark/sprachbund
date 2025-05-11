@@ -244,6 +244,38 @@ main .response .textbox::placeholder {
 
 main .insert-buttons { text-align: left; }
 
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: bottom;
+  
+  user-select: none;
+  
+  border: 3px solid var(--contrast);
+  border-bottom: 6px solid var(--contrast);
+  border-radius: 10px;
+  
+  text-align: center;
+  
+  color: var(--white);
+  font-size: 20px;
+}
+
+.button:hover {
+  border: 3px solid var(--accent);
+  border-bottom: 6px solid var(--accent);
+}
+
+.button:active { border: 3px solid var(--accent); }
+
+main .insert-buttons .button {
+  aspect-ratio: 1/1;
+  width: 50px;
+  
+  font-weight: bold;
+}
+
 main .alert {
   display: none;
   
@@ -263,6 +295,11 @@ main .alert {
 main .alert .text, main .alert .button {
   display: inline-block;
   vertical-align: middle;
+}
+
+main .alert .button {
+  width: 120px;
+  padding: 7px;
 }
 
 main .alert .text { width: calc(100% - 134px); }
@@ -291,36 +328,6 @@ footer {
   padding: 15px 8%;
 }
 
-.button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: bottom;
-  
-  user-select: none;
-  
-  border: 3px solid var(--contrast);
-  border-bottom: 6px solid var(--contrast);
-  border-radius: 10px;
-  
-  text-align: center;
-  
-  color: var(--white);
-  font-size: 20px;
-}
-
-main .insert-buttons .button {
-  aspect-ratio: 1/1;
-  width: 50px;
-  
-  font-weight: bold;
-}
-
-main .alert .button {
-  width: 120px;
-  padding: 7px;
-}
-
 footer .button {
   width: 30%;
   height: 100%;
@@ -329,12 +336,7 @@ footer .button {
   margin: 0 1.5%;
 }
 
-.button:hover {
-  border: 3px solid var(--accent);
-  border-bottom: 6px solid var(--accent);
-}
-
-.button:active { border: 3px solid var(--accent); }
+footer .finish-button { width: 60%; }
 
 @media screen and (max-width: 600px) {
   header, footer { padding: 15px 4%; }

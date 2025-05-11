@@ -306,7 +306,14 @@
           "answers": ["we are nice", "we are kind"]
         }
       ],
-      []
+      [
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ċo han sojón",
+          "answers": ["we are nice", "we are kind"]
+        }
+      ]
     ]
   },
   {

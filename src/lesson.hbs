@@ -100,7 +100,7 @@
         <a class="button" onclick="nextLesson()">Continue</a>
       </div>
     </main>
-    <footer>
+    <footer id="footer">
       <a class="button" href="/">Exit</a>
       <a class="button" id="next" onclick="checkAnswer()">Check</a>
     </footer>
@@ -142,8 +142,8 @@
       if (index < lessons.length) {
         lesson = lessons[index];
         document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
-        if (index >= lessons.length) document.getElementById("next").innerText = "Finish";
       }
+      else if (index >= lessons.length) document.getElementById("footer").innerHTML = "<a class=\"button finish-button\">Good job!</a>";
       
       document.getElementsByClassName("section")[index].style.display = "block";
     }
