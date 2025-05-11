@@ -371,7 +371,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "ny han téu",
-          "answers": ["we are nice", "we are kind"]
+          "answers": ["I am him", "I am her", "I am it"]
         },
         {
           "type": "short-response",
