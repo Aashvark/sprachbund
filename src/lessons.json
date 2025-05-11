@@ -352,13 +352,43 @@
         {
           "type": "short-response",
           "direction": "new-native",
-          "prompt": "han mikol",
+          "prompt": "han ké",
           "answers": ["we are nice", "we are kind"]
         },
         {
           "type": "short-response",
           "direction": "new-native",
-          "prompt": "ké han téu",
+          "prompt": "ké han symi",
+          "answers": ["we are nice", "we are kind"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "vun han sojón",
+          "answers": ["we are nice", "we are kind"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ny han téu",
+          "answers": ["we are nice", "we are kind"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "han cévo",
+          "answers": ["we are nice", "we are kind"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ké han ny",
+          "answers": ["we are nice", "we are kind"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ny han náu",
           "answers": ["we are nice", "we are kind"]
         },
         {
@@ -366,19 +396,7 @@
           "direction": "new-native",
           "prompt": "han vun",
           "answers": ["we are nice", "we are kind"]
-        },
-        {
-          "type": "short-response",
-          "direction": "new-native",
-          "prompt": "ny han symi",
-          "answers": ["we are nice", "we are kind"]
-        },
-        {
-          "type": "short-response",
-          "direction": "new-native",
-          "prompt": "han ċo",
-          "answers": ["we are nice", "we are kind"]
-        },
+        }
       ]
     ]
   },
