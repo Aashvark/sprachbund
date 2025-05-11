@@ -307,5 +307,33 @@
         }
       ]
     ]
+  },
+  {
+    "name": "Basics I",
+    "icon": "book",
+    "difficulty": "CEFR A1",
+    "description": "Learn the definite article and negation",
+    "unit": []
+  },
+  {
+    "name": "Basics II",
+    "icon": "book",
+    "difficulty": "CEFR A1",
+    "description": "Learn question words and form",
+    "unit": []
+  },
+  {
+    "name": "Vocabulary I",
+    "icon": "book",
+    "difficulty": "CEFR A1",
+    "description": "Learn more basic vocabulary",
+    "unit": []
+  },
+  {
+    "name": "Vocabulary I",
+    "icon": "book",
+    "difficulty": "CEFR A1",
+    "description": "Learn more basic vocabulary",
+    "unit": []
   }
 ]

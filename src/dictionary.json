@@ -1,81 +1,5 @@
 {
   "smb": {
-    "han": {
-      "ipa": "ˈxan",
-      "pos": "verb",
-      "simple": ["be", "exist"],
-      "complex": ["be", "exist", "am", "are", "is", "he is", "she is", "it is"],
-      "definition": "Used to describe the existence or relation between nouns."
-    },
-    "hotá": {
-      "ipa": "ˈxoˌta˦",
-      "pos": "verb",
-      "simple": ["not be", "not"],
-      "complex": ["not be", "not", "am not", "are not", "is not", "he is not", "she is not", "it is not"],
-      "definition": "Used to describe the nonexistence or irrelation between nouns."
-    },
-    "vé han": {
-      "ipa": "ˈʋe˦ ˈxan",
-      "pos": "verb",
-      "simple": ["have"],
-      "complex": ["have", "has", "he has", "she has", "it has"],
-      "definition": "Used to describe the possession of nouns."
-    },
-    "vé hotá": {
-      "ipa": "ˈˈʋe˦ ˈxoˌta˦",
-      "pos": "verb",
-      "simple": ["have not"],
-      "complex": ["have not", "do not have", "has not", "he has not", "she has not", "it has not", "he does not have", "she does not have", "it does not have"]
-    },
-    "ny": {
-      "ipa": "ˈnə",
-      "pos": "pronoun",
-      "simple": ["I", "me"],
-      "complex": ["i", "me"],
-      "definition": "Used by a speaker to refer to themself as the subject or object of a sentence."
-    },
-    "ké": {
-      "ipa": "ˈke˦",
-      "pos": "pronoun",
-      "simple": ["you"],
-      "complex": ["you"],
-      "definition": "Used to informally refer to a person the speaker is addressing."
-    },
-    "téu": {
-      "ipa": "ˈteu˦˧",
-      "pos": "pronoun",
-      "simple": ["him", "her", "it"],
-      "complex": ["him", "her", "it"],
-      "definition": "Used to refer a person other than the speaker or addressee as the object of a sentence."
-    },
-    "ċo": {
-      "ipa": "ˈt͡ʃo",
-      "pos": "pronoun",
-      "simple": ["we", "us"],
-      "complex": ["we", "us"],
-      "definition": "Used by a speaker to refer to themself and another person as the subject or object of a sentence."
-    },
-    "vun": {
-      "ipa": "ˈʋun",
-      "pos": "pronoun",
-      "simple": ["you"],
-      "complex": ["you", "you guys", "you all"],
-      "definition": "Used to informally refer to the people the speaker is addressing."
-    },
-    "symi": {
-      "ipa": "ˈsəˌmi",
-      "pos": "noun",
-      "simple": ["a man", "man"],
-      "complex": ["a man", "man"],
-      "definition": "Males attaining the age of adulthood. When applied to children, it may signify their physical and/or maturity."
-    },
-    "cévo": {
-      "ipa": "ˈt͡se˦ˌʋo",
-      "pos": "noun",
-      "simple": ["a woman", "woman"],
-      "complex": ["a woman", "woman"],
-      "definition": "Females attaining the age of adulthood. When applied to children, it may signify their physical and/or maturity."
-    },
     "mikol": {
       "ipa": "ˈmiˌkol",
       "pos": "adjective",
@@ -103,6 +27,84 @@
       "simple": ["and"],
       "complex": ["and"],
       "definition": "used to connect words of the same part of speech, clauses, or sentences, that are to be taken jointly."
+    },
+    "cévo": {
+      "ipa": "ˈt͡se˦ˌʋo",
+      "pos": "noun",
+      "simple": ["a woman", "woman"],
+      "complex": ["a woman", "woman"],
+      "definition": "Females attaining the age of adulthood. When applied to children, it may signify their physical and/or maturity."
+    },
+    "symi": {
+      "ipa": "ˈsəˌmi",
+      "pos": "noun",
+      "simple": ["a man", "man"],
+      "complex": ["a man", "man"],
+      "definition": "Males attaining the age of adulthood. When applied to children, it may signify their physical and/or maturity."
+    },
+    "vé": {
+      "ipa": "ˈʋe˦",
+      "pos": "preverb",
+      "simple": ["have"],
+      "complex": ["have", "has", "he has", "she has", "it has"],
+      "definition": "Used to describe the possession of nouns."
+    },
+    "vé han": {
+      "simple": ["have"],
+      "complex": ["have", "has", "he has", "she has", "it has"]
+    },
+    "vé hotá": {
+      "simple": ["have not"],
+      "complex": ["have not", "do not have", "has not", "he has not", "she has not", "it has not", "he does not have", "she does not have", "it does not have"]
+    },
+    "ċo": {
+      "ipa": "ˈt͡ʃo",
+      "pos": "pronoun",
+      "simple": ["we", "us"],
+      "complex": ["we", "us"],
+      "definition": "Used by a speaker to refer to themself and another person as the subject or object of a sentence."
+    },
+    "ké": {
+      "ipa": "ˈke˦",
+      "pos": "pronoun",
+      "simple": ["you"],
+      "complex": ["you"],
+      "definition": "Used to informally refer to a person the speaker is addressing."
+    },
+    "ny": {
+      "ipa": "ˈnə",
+      "pos": "pronoun",
+      "simple": ["I", "me"],
+      "complex": ["i", "me"],
+      "definition": "Used by a speaker to refer to themself as the subject or object of a sentence."
+    },
+    "téu": {
+      "ipa": "ˈteu˦˧",
+      "pos": "pronoun",
+      "simple": ["him", "her", "it"],
+      "complex": ["him", "her", "it"],
+      "definition": "Used to refer a person other than the speaker or addressee as the object of a sentence."
+    },
+    "vun": {
+      "ipa": "ˈʋun",
+      "pos": "pronoun",
+      "simple": ["you"],
+      "complex": ["you", "you guys", "you all"],
+      "definition": "Used to informally refer to the people the speaker is addressing."
+    },
+    "han": {
+      "ipa": "ˈxan",
+      "pos": "verb",
+      "simple": ["be", "exist"],
+      "complex": ["be", "exist", "am", "are", "is", "he is", "she is", "it is"],
+      "definition": "Used to describe the existence or relation between nouns."
+    },
+    "hotá": {
+      "ipa": "ˈxoˌta˦",
+      "pos": "verb",
+      "simple": ["not be", "not"],
+      "complex": ["not be", "not", "am not", "are not", "is not", "he is not", "she is not", "it is not"],
+      "definition": "Used to describe the nonexistence or irrelation between nouns."
     }
   }
 }
