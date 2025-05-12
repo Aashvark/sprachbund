@@ -17,15 +17,15 @@
         },
         {
           "type": "short-response",
-          "direction": "new-native",
-          "prompt": "han",
-          "answers": ["to be", "to exist", "be", "he is", "she is", "it is"]
-        },
-        {
-          "type": "short-response",
           "direction": "native-new",
           "prompt": "she is",
           "answers": ["han"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "han",
+          "answers": ["to be", "to exist", "be", "he is", "she is", "it is"]
         },
         {
           "type": "vocabulary",
@@ -420,6 +420,46 @@
           "direction": "new-native",
           "prompt": "i symi",
           "answers": ["the man"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "i cévo",
+          "answers": ["the woman"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "she is the woman",
+          "answers": ["han i cévo"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ny han i symi",
+          "answers": ["I am the man"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "nes",
+          "example": {
+            "sentence": "i nes",
+            "translation": "the thing"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "new",
+          "prompt": "nes han náu",
+          "answers": ["a thing is tall", "thing is tall", "a thing is big", "thing is big", "a thing is large", "thing is large"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "vé",
+          "example": {
+            "sentence": "i cevo vé han nes",
+            "translation": "the woman has a thing"
+          }
         }
       ]
     ]
