@@ -139,7 +139,7 @@
     "han": {
       "ipa": "ˈxan",
       "pos": "verb",
-      "simple": ["be", "exist"],
+      "simple": ["be", "exist", "he/she/it is"],
       "complex": ["be", "exist", "am", "are", "is", "he is", "she is", "it is"],
       "definition": "Used to describe the existence or relation between nouns."
     },

@@ -410,7 +410,7 @@
         {
           "type": "vocabulary",
           "word": "i",
-          "tip": "[i] can turn adjectives into nouns",
+          "tip": "[i] may turn adjectives into nouns",
           "example": {
             "sentence": "i cévo han sojón",
             "translation": "the woman is kind"
@@ -425,8 +425,8 @@
         {
           "type": "short-response",
           "direction": "new-native",
-          "prompt": "i cévo",
-          "answers": ["the woman"]
+          "prompt": "i náu",
+          "answers": ["the tall thing", "the big thing", "the large thing"]
         },
         {
           "type": "short-response",

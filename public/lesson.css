@@ -110,8 +110,23 @@ main .definition .context {
   font-size: 20px;
 }
 
+main .highlight {
+  color: var(--accent);
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+main .tip-highlight {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  
+  color: var(--accent);
+}
+
 main .container {
-  padding: 5px 0;
+  padding: 10px 0;
   
   text-align: center;
   
@@ -124,19 +139,8 @@ main .container {
   user-select: none;
 }
 
-main .highlight {
-  color: var(--accent);
-  font-variant: small-caps;
-  font-weight: bold;
-}
-
-main .tip-highlight {
-  color: var(--accent);
-  font-weight: bold;
-}
-
 main .container .tip {
-  padding: 10px 20px;
+  padding: 5px 20px;
   
   text-align: left;
   font-size: 18px;
