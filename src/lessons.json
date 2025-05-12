@@ -408,6 +408,12 @@
     "unit": [
       [
         {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "the man has a short thing",
+          "answers": ["i symi vé han mikol nes"]
+        },
+        {
           "type": "vocabulary",
           "word": "i",
           "tip": "[i] may turn adjectives into nouns",
@@ -490,7 +496,7 @@
           "type": "short-response",
           "direction": "native-new",
           "prompt": "the man has a short thing",
-          "answers": ["i cévo vé han i mikol"]
+          "answers": ["i symi vé han mikol nes"]
         },
         {
           "type": "short-response",

@@ -44,7 +44,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let save = "";
   
   let tokens = arg.split(" ");
-  let keys = [];
+  let keys = undefined;
   let submeaning = [];
   
   for (let i = 0; i < tokens.length; i++) {
@@ -58,20 +58,23 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
       if (save.trimEnd().includes(" ")) { submeaning = save.toLowerCase().trimEnd().split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
     } else continue;
     
-    let construction = `<div class="hint"><span>${save}</span><table><tbody>`;
-    for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning !== [] ? submeaning.length : 1}">${key}</td></tr>`; }
-    if (submeaning !== []) {
-      for (let i = 0; i < getLongestList(submeaning).length; i++) {
-        construction += `<tr>`;
-        for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
-        construction += `</tr>`;
+    let construction;
+    if (keys.length >= 1 || keys == undefined) {
+      construction = `<div class="hint"><span>${save}</span><table><tbody>`;
+      for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning !== [] ? submeaning.length : 1}">${key}</td></tr>`; }
+      if (submeaning !== []) {
+        for (let i = 0; i < getLongestList(submeaning).length; i++) {
+          construction += `<tr>`;
+          for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
+          construction += `</tr>`;
+        }
       }
-    }
-    construction += `</tbody></table></div>`;
+      construction += `</tbody></table></div>`;
+    } else { construction = save; }
       
     string += construction;
     save = "";
-    keys = [];
+    keys = undefined;
     submeaning = [];
   }
   
