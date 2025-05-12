@@ -97,7 +97,9 @@
           <p class="heading" id="alert-heading"></p>
           <p class="description" id="alert-description"></p>
         </div>
-        <a class="button" onclick="nextLesson()">Continue</a>
+        <div class="">
+          <a class="button" onclick="nextLesson()">Continue</a>
+        </div>
       </div>
     </main>
     <footer id="footer">
@@ -146,7 +148,7 @@
     }
     
     function nextLesson() {
-      document.getElementById("alert").classList.remove("block");
+      setTimeout(() => { document.getElementById("alert").classList.remove("block") }, 200);
       
       if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
       if (index < lessons.length) {

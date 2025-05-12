@@ -25,6 +25,8 @@ header .progress-count p {
   font-weight: bold;
 }
 
+body { overflow: hidden; }
+
 main .section { display: none; }
 
 main .heading, main .prompt, main .response, main .buttons {
@@ -294,10 +296,17 @@ main .alert {
   
   position: absolute;
   left: 0;
-  bottom: -100%;
+  bottom: -150px;
   
   text-align: left;
   padding: 25px;
+  
+  transition: bottom 200ms;
+}
+
+main .block { 
+  bottom: 0;
+  transition: bottom 0;
 }
 
 main .alert .text, main .alert .button {
@@ -310,13 +319,8 @@ main .alert .button {
   padding: 7px;
 }
 
-main .alert .text { width: calc(100% - 134px); }
+main .alert .text { width: calc(100% - 150px); }
 main .alert .heading { padding: 0; }
-
-main .block {
-  display: block;
-  bottom: 0;
-}
 
 main .upper { text-transform: uppercase; }
 
