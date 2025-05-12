@@ -464,9 +464,33 @@
           "type": "vocabulary",
           "word": "vé",
           "example": {
-            "sentence": "i cevo vé han nes",
+            "sentence": "i cévo vé han nes",
             "translation": "the woman has a thing"
           }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "i symi vé han nes",
+          "answers": ["a man has a thing"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "vé han nes",
+          "answers": ["he has a thing", "she has a thing", "it has a thing"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "she has a man",
+          "answers": ["vé han symi"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "the man has a short thing",
+          "answers": ["i cévo vé han i mikol"]
         }
       ]
     ]

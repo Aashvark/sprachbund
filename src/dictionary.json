@@ -92,11 +92,11 @@
       "definition": "Used to describe the possession of nouns."
     },
     "vé han": {
-      "simple": ["have"],
+      "simple": ["have", "he/she/it has"],
       "complex": ["have", "has", "he has", "she has", "it has"]
     },
     "vé hotá": {
-      "simple": ["have not"],
+      "simple": ["have not", "he/she/it has not"],
       "complex": ["have not", "do not have", "has not", "he has not", "she has not", "it has not", "he does not have", "she does not have", "it does not have"]
     },
     
@@ -146,7 +146,7 @@
     "hotá": {
       "ipa": "ˈxoˌta˦",
       "pos": "verb",
-      "simple": ["not be", "not"],
+      "simple": ["not be", "not", "he/she/it is not"],
       "complex": ["not be", "not", "am not", "are not", "is not", "he is not", "she is not", "it is not"],
       "definition": "Used to describe the nonexistence or irrelation between nouns."
     }
