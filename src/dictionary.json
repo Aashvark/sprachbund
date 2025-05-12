@@ -21,6 +21,13 @@
       "complex": ["kind", "nice"],
       "definition": "Kind"
     },
+    "i": {
+      "ipa": "ˈi",
+      "pos": "article",
+      "simple": ["the"],
+      "complex": ["the"],
+      "definition": "denoting one or more people or things already mentioned or assumed to be common knowledge."
+    },
     "su": {
       "ipa": "ˈsu",
       "pos": "conjunction",
