@@ -21,6 +21,19 @@
       "complex": ["kind", "nice"],
       "definition": "Kind"
     },
+    "i mikol": {
+      "simple": ["the short thing", "the small thing"],
+      "complex": ["the short thing", "the small thing"]
+    },
+    "i náu": {
+      "simple": ["the tall thing", "the large thing", "the big thing"],
+      "complex": ["the tall thing", "the large thing", "the big thing"]
+    },
+    "i sojón": {
+      "simple": ["the kind thing", "the nice thing"],
+      "complex": ["the kind thing", "the nice thing"]
+    },
+    
     "i": {
       "ipa": "ˈi",
       "pos": "article",
@@ -28,6 +41,7 @@
       "complex": ["the"],
       "definition": "denoting one or more people or things already mentioned or assumed to be common knowledge."
     },
+    
     "su": {
       "ipa": "ˈsu",
       "pos": "conjunction",
@@ -35,6 +49,7 @@
       "complex": ["and"],
       "definition": "used to connect words of the same part of speech, clauses, or sentences, that are to be taken jointly."
     },
+    
     "cévo": {
       "ipa": "ˈt͡se˦ˌʋo",
       "pos": "noun",
@@ -56,6 +71,19 @@
       "complex": ["thing", "a thing"],
       "definition": "Any given thing/object"
     },
+    "i cévo": {
+      "simple": ["the woman"],
+      "complex": ["the woman"]
+    },
+    "i symi": {
+      "simple": ["the man"],
+      "complex": ["the man"]
+    },
+    "i nes": {
+      "simple": ["the thing"],
+      "complex": ["the thing"]
+    },
+    
     "vé": {
       "ipa": "ˈʋe˦",
       "pos": "preverb",
@@ -71,6 +99,7 @@
       "simple": ["have not"],
       "complex": ["have not", "do not have", "has not", "he has not", "she has not", "it has not", "he does not have", "she does not have", "it does not have"]
     },
+    
     "ċo": {
       "ipa": "ˈt͡ʃo",
       "pos": "pronoun",
@@ -106,6 +135,7 @@
       "complex": ["you", "you guys", "you all"],
       "definition": "Used to informally refer to the people the speaker is addressing."
     },
+    
     "han": {
       "ipa": "ˈxan",
       "pos": "verb",

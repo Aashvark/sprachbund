@@ -410,6 +410,7 @@
         {
           "type": "vocabulary",
           "word": "i",
+          "tip": "The definite article can turn adjectives into nouns",
           "example": {
             "sentence": "i cévo han sojón",
             "translation": "the woman is kind"
@@ -449,9 +450,15 @@
         },
         {
           "type": "short-response",
-          "direction": "new",
+          "direction": "new-native",
           "prompt": "nes han náu",
           "answers": ["a thing is tall", "thing is tall", "a thing is big", "thing is big", "a thing is large", "thing is large"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "the thing is",
+          "answers": ["i nes han"]
         },
         {
           "type": "vocabulary",
