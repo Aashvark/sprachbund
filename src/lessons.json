@@ -19,7 +19,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "han",
-          "answers": ["he is", "she is", "it is"]
+          "answers": ["to be", "to exist", "be", "he is", "she is", "it is"]
         },
         {
           "type": "short-response",
