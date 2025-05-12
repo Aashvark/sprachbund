@@ -301,7 +301,9 @@ main .alert {
   text-align: left;
   padding: 25px;
   
-  transition: bottom 200ms;
+  font-size: 0;
+  
+  transition: bottom 350ms ease-in;
 }
 
 main .block { 
@@ -309,17 +311,24 @@ main .block {
   transition: bottom 0;
 }
 
-main .alert .text, main .alert .button {
+main .alert .text, main .alert .button-ctn {
   display: inline-block;
   vertical-align: middle;
+  font-size: 20px;
 }
 
-main .alert .button {
+main .alert .text { width: 70%; }
+main .alert .button-ctn { 
+  width: 30%;
+  padding: 0 5px;
+  text-align: right;
+}
+
+main .alert .button-ctn .button {
   width: 120px;
   padding: 7px;
 }
 
-main .alert .text { width: calc(100% - 150px); }
 main .alert .heading { padding: 0; }
 
 main .upper { text-transform: uppercase; }
@@ -365,5 +374,5 @@ footer .finish-button { width: 60%; }
   main .subheading, main .definition, main .container { width: 100%; }
   
   main .response .textbox { height: 39vh; }
-  main .alert #alert-description { font-size: 22px; }
+  main .alert #alert-description { font-size: 20px; }
 }

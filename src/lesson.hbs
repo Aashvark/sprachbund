@@ -97,7 +97,7 @@
           <p class="heading" id="alert-heading"></p>
           <p class="description" id="alert-description"></p>
         </div>
-        <div class="">
+        <div class="button-ctn">
           <a class="button" onclick="nextLesson()">Continue</a>
         </div>
       </div>
@@ -114,13 +114,13 @@
     let lessons = JSON.parse('{{{json lessons}}}');
     let lesson = lessons[index];
     
-    var correct = new Audio("https://cdn.glitch.global/a09638ce-8239-40b9-9a24-995569212470/correct.wav?v=1747005386606");
+    var correct   = new Audio("https://cdn.glitch.global/a09638ce-8239-40b9-9a24-995569212470/correct.wav?v=1747005386606");
     var incorrect = new Audio("https://cdn.glitch.global/a09638ce-8239-40b9-9a24-995569212470/incorrect.mp3?v=1747007700972");
     
     document.onkeydown = (event) => {
       if (event.key === "Enter") {
         event.preventDefault();
-        if (document.getElementById("alert").classList.contains("block")) nextLesson();
+        if (document.getElementById("alert").classList.contains("block")) setTimeout(() => nextLesson(), 350);
         else checkAnswer();
       }
     }
@@ -148,7 +148,7 @@
     }
     
     function nextLesson() {
-      setTimeout(() => { document.getElementById("alert").classList.remove("block") }, 200);
+      document.getElementById("alert").classList.remove("block");
       
       if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
       if (index < lessons.length) {
