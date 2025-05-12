@@ -77,7 +77,7 @@
         <div class="prompt">
           {{hover-translate lesson.prompt (ternaryEq lesson.direction "native-new" "en" "smb")}}
         </div>
-        <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Nóibón{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}}></textarea></div>
+        <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Nóibón{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}} inputmode="search" enterkeyhint="go"></textarea></div>
         <div class="insert-buttons">
           <a class="button" onclick="caseshift()" id="shift-case">⬆</a>
           <a class="button c" onclick="insert('á')">á</a>
