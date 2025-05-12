@@ -70,7 +70,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
         }
       }
       construction += `</tbody></table></div>`;
-    } else { construction = save; }
+    } else { construction = `<div class="hint">${save}</div>`; }
       
     string += construction;
     save = "";
