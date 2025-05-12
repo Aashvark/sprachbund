@@ -426,7 +426,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "i náu",
-          "answers": ["the tall thing", "the big thing", "the large thing"]
+          "answers": ["the tall thing", "the big thing", "the large thing", "the tall one", "the big one", "the large one"]
         },
         {
           "type": "short-response",
@@ -452,7 +452,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "nes han náu",
-          "answers": ["a thing is tall", "thing is tall", "a thing is big", "thing is big", "a thing is large", "thing is large"]
+          "answers": ["a thing is tall", "thing is tall", "a thing is big", "thing is big", "a thing is large", "thing is large", "an object is tall", "object is tall", "an object is big", "object is big", "an object is large", "object is large"]
         },
         {
           "type": "short-response",
@@ -478,7 +478,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "vé han nes",
-          "answers": ["he has a thing", "she has a thing", "it has a thing"]
+          "answers": ["he has a thing", "she has a thing", "it has a thing", "he has an object", "she has an object", "it has an object"]
         },
         {
           "type": "short-response",
@@ -491,6 +491,18 @@
           "direction": "native-new",
           "prompt": "the man has a short thing",
           "answers": ["i cévo vé han i mikol"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "i sojón han ny",
+          "answers": ["the kind thing is me", "the nice thing is me", "the kind one is me", "the nice one is me"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "you are the tall one",
+          "answers": ["ké han i náu"]
         }
       ]
     ]

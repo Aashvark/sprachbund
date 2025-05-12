@@ -23,15 +23,15 @@
     },
     "i mikol": {
       "simple": ["the short thing", "the small thing"],
-      "complex": ["the short thing", "the small thing"]
+      "complex": ["the short thing", "the small thing", "the short one", "the small one"]
     },
     "i náu": {
       "simple": ["the tall thing", "the large thing", "the big thing"],
-      "complex": ["the tall thing", "the large thing", "the big thing"]
+      "complex": ["the tall thing", "the large thing", "the big thing", "the tall one", "the large one", "the big one"]
     },
     "i sojón": {
       "simple": ["the kind thing", "the nice thing"],
-      "complex": ["the kind thing", "the nice thing"]
+      "complex": ["the kind thing", "the nice thing", "the kind one", "the nice one"]
     },
     
     "i": {
@@ -53,21 +53,21 @@
     "cévo": {
       "ipa": "ˈt͡se˦ˌʋo",
       "pos": "noun",
-      "simple": ["woman", "a woman"],
+      "simple": ["(a) woman"],
       "complex": ["woman", "a woman"],
       "definition": "Females attaining the age of adulthood. When applied to children, it may signify their physical and/or mental maturity."
     },
     "symi": {
       "ipa": "ˈsəˌmi",
       "pos": "noun",
-      "simple": ["man", "a man"],
+      "simple": ["(a) man"],
       "complex": ["man", "a man"],
       "definition": "Males attaining the age of adulthood. When applied to children, it may signify their physical and/or mental maturity."
     },
     "nes": {
       "ipa": "ˈnes",
       "pos": "noun",
-      "simple": ["thing", "a thing"],
+      "simple": ["(a) thing", "(an) object"],
       "complex": ["thing", "a thing"],
       "definition": "Any given thing/object"
     },
