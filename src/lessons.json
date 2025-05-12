@@ -472,7 +472,7 @@
           "type": "short-response",
           "direction": "new-native",
           "prompt": "i symi vé han nes",
-          "answers": ["a man has a thing"]
+          "answers": ["the man has a thing"]
         },
         {
           "type": "short-response",

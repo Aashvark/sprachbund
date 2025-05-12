@@ -286,8 +286,7 @@ main .insert-buttons .button {
 }
 
 main .alert {
-  display: none;
-  
+  display: block;
   width: 100%;
   
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
@@ -295,7 +294,7 @@ main .alert {
   
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -100%;
   
   text-align: left;
   padding: 25px;
@@ -314,8 +313,12 @@ main .alert .button {
 main .alert .text { width: calc(100% - 134px); }
 main .alert .heading { padding: 0; }
 
+main .block {
+  display: block;
+  bottom: 0;
+}
+
 main .upper { text-transform: uppercase; }
-main .block { display: block; }
 
 main .congrats {
   position: relative;
