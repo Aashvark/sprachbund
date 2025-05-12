@@ -18,8 +18,26 @@ fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } 
 
 handlebars.registerHelper('ifEquals', function(arg1, arg2, options) { return (arg1 === arg2) ? options.fn(this) : options.inverse(this); });
 handlebars.registerHelper('ternaryEq', function(arg1, arg2, op1, op2) { return (arg1 === arg2) ? op1 : op2; });
-handlebars.registerHelper("json", function(a, options) { return JSON.stringify(a); });
+handlebars.registerHelper('json', function(a, options) { return JSON.stringify(a); });
 handlebars.registerHelper('get-attribute', function(word, attribute, options) { return dict[word.trimEnd()][attribute]; });
+
+handlebars.registerHelper('tip-format', function(arg) {
+  var string    = "";
+  var citing    = "";
+  var store     = "";
+  
+  for (var c of arg.toString()) {
+    if (citing != '') {
+      if (c === ']' && citing === '[') {
+        string += "<span class=\"tip-highlight\">"+ store +"</span>";
+        store = "";
+        citing = "";
+      } else { store += c; }
+    } else if (c === '[') { citing = c; }
+    else { string += c; }
+  }
+  return new handlebars.SafeString(string);
+});
 
 handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let string = "";

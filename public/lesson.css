@@ -130,6 +130,11 @@ main .highlight {
   font-weight: bold;
 }
 
+main .tip-highlight {
+  color: var(--accent);
+  font-weight: bold;
+}
+
 main .container .tip {
   padding: 10px 20px;
   
