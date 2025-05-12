@@ -38,16 +38,23 @@
     "cévo": {
       "ipa": "ˈt͡se˦ˌʋo",
       "pos": "noun",
-      "simple": ["a woman", "woman"],
-      "complex": ["a woman", "woman"],
+      "simple": ["woman", "a woman"],
+      "complex": ["woman", "a woman"],
       "definition": "Females attaining the age of adulthood. When applied to children, it may signify their physical and/or mental maturity."
     },
     "symi": {
       "ipa": "ˈsəˌmi",
       "pos": "noun",
-      "simple": ["a man", "man"],
-      "complex": ["a man", "man"],
+      "simple": ["man", "a man"],
+      "complex": ["man", "a man"],
       "definition": "Males attaining the age of adulthood. When applied to children, it may signify their physical and/or mental maturity."
+    },
+    "nes": {
+      "ipa": "ˈnes",
+      "pos": "noun",
+      "simple": ["thing", "a thing"],
+      "complex": ["thing", "a thing"],
+      "definition": "Any given thing/object"
     },
     "vé": {
       "ipa": "ˈʋe˦",
@@ -74,7 +81,7 @@
     "ké": {
       "ipa": "ˈke˦",
       "pos": "pronoun",
-      "simple": ["you"],
+      "simple": ["you (sing.)"],
       "complex": ["you"],
       "definition": "Used to informally refer to a person the speaker is addressing."
     },
@@ -95,7 +102,7 @@
     "vun": {
       "ipa": "ˈʋun",
       "pos": "pronoun",
-      "simple": ["you"],
+      "simple": ["you (pl.)"],
       "complex": ["you", "you guys", "you all"],
       "definition": "Used to informally refer to the people the speaker is addressing."
     },
