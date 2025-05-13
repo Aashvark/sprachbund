@@ -165,7 +165,7 @@
         {
           "type": "vocabulary",
           "word": "téu",
-          "tip": "It may not be used as a subject of a sentence.",
+          "tip": "[téu] may not be used as a subject of a sentence.",
           "example": {
             "sentence": "han téu",
             "translation": "it is him/her"
@@ -502,7 +502,7 @@
           "type": "short-response",
           "direction": "native-new",
           "prompt": "you are the tall one",
-          "answers": ["ké han i náu"]
+          "answers": ["ké han i náu", "vun han i náu"]
         }
       ],
       [
@@ -552,8 +552,8 @@
         },
         {
           "type": "match",
-          "new": ["miro", "cévo", "symi", "han"],
-          "native": ["bread", "woman", "man", "to be"]
+          "new": ["miro", "cévo", "symi", "han", "téu"],
+          "native": ["bread", "woman", "man", "to be", "him/her"]
         }
       ]
     ]
