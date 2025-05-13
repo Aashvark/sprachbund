@@ -511,6 +511,20 @@
           "direction": "native-new",
           "prompt": "the tall thing is tall",
           "answers": ["i náu han náu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "vé han i sojón",
+          "answers": ["he has the kind thing", "she has the kind thing", "it has the kind thing", "he has the nice thing", "she has the nice thing", "it has the nice thing"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "vé",
+          "example": {
+            "sentence": "i cévo vé han nes",
+            "translation": "the woman has a thing"
+          }
         }
       ]
     ]
