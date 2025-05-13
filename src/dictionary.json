@@ -1,17 +1,17 @@
 {
   "smb": {
-    "sói": {
-      "ipa": "ˈsoi˦˧",
+    "amif": {
+      "ipa": "ˈaˌmif",
       "pos": "adjective",
-      "simple": ["good"],
-      "complex": ["good"],
-      "definition": "Good, especially in the views of the speaker"
+      "simple": ["bad"],
+      "complex": ["bad"],
+      "definition": "Bad, especially in the views of the speaker"
     },
     "sói": {
       "ipa": "ˈsoi˦˧",
       "pos": "adjective",
       "simple": ["good"],
-      "complex": ["good"],
+      "complex": ["good", "well"],
       "definition": "Good, especially in the views of the speaker"
     },
     "mikol": {
@@ -34,6 +34,14 @@
       "simple": ["kind", "nice"],
       "complex": ["kind", "nice"],
       "definition": "Kind"
+    },
+    "i j-amif": {
+      "simple": ["the bad thing"],
+      "complex": ["the bad thing", "the bad one"]
+    },
+    "i sói": {
+      "simple": ["the good thing"],
+      "complex": ["the good thing", "the good one"]
     },
     "i mikol": {
       "simple": ["the short thing", "the small thing"],
