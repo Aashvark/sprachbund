@@ -520,11 +520,35 @@
         },
         {
           "type": "vocabulary",
-          "word": "vé",
+          "word": "miro",
           "example": {
-            "sentence": "i cévo vé han nes",
-            "translation": "the woman has a thing"
+            "sentence": "ny vé han miro",
+            "translation": "I have bread"
           }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ċo vé han miro",
+          "answers": ["we have bread", "we have a loaf of bread"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "you have the bread",
+          "answers": ["ké vé han i miro", "vun vé han i miro"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "the bread is small",
+          "answers": ["i miro han mikol"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "i nes han miro",
+          "answers": ["the thing is bread", "the thing is a loaf of bread", "the object is bread", "the object is a loaf of bread"]
         }
       ]
     ]
