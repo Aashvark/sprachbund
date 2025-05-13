@@ -51,7 +51,7 @@
       {{#each lessons as |lesson|}}
       <div class="section">
         {{#ifEquals lesson.type "match"}}
-        <div class="shuffle-board" id="{{@index}}">
+        <div class="shuffle-board" id="match-{{@index}}">
           {{#each new}}
           <a class="match-btn button" onclick="select(this)" id="new-{{@../index}}-{{@index}}">{{this}}</a>
           {{/each}}
@@ -145,8 +145,8 @@
         correct.play();
         setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
       }
-      else if (lesson.type == "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
-      else {
+      else if (lesson.type === "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
+      else if (lesson.type !== "match") {
         incorrect.play();
         setAlert("<i class=\"fas fa-circle-xmark\"></i> Try again!", "Hover over words you don't know if you need to."); 
         return; 
@@ -165,7 +165,7 @@
         lesson = lessons[index];
         document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
         if (lesson.type === "match") {
-          shuffleDivs(index.toString());
+          shuffleDivs("match-" + index.toString());
           document.getElementById("next").style.display = "none";
         }
       }
@@ -212,11 +212,8 @@
       if (selection === self) { self.classList.toggle("selected"); }
       else if (idx === self.id.split("-").slice(1).join("-")) {
         correct.play();
-        document.getElementById("new-" + idx).classList.add("match-correct");
-        document.getElementById("native-" + idx).classList.add("match-correct");
-        
-        document.getElementById("new-" + idx).classList.remove("button", "match-btn");
-        document.getElementById("native-" + idx).classList.remove("button", "match-btn");
+        document.getElementById("new-" + idx).classList.toggle("match-correct", "button", "match-btn");
+        document.getElementById("native-" + idx).classList.toggle("match-correct", "button", "match-btn");
         
         document.getElementById("new-" + idx).removeAttribute('onclick');
         document.getElementById("native-" + idx).removeAttribute('onclick');
@@ -228,6 +225,8 @@
       }
       
       selection = undefined;
+      
+      if (document.getElementById("match-" + index).getElementsByClassName("button").length === 0) { setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); checkAnswers(); }
     }
     
     function shuffleDivs(containerId) {
