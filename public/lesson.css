@@ -61,23 +61,6 @@ main .subheading {
   user-select: none;
 }
 
-main .match-btn {
-  display: inline-block;
-  
-  width: 48%;
-  height: 50px;
-  margin: 1%;
-  
-  border: 3px solid var(--contrast);
-  border-bottom: 6px solid var(--contrast);
-  border-radius: 10px;
-  
-  text-align: center;
-  
-  color: var(--white);
-  font-size: 20px;
-}
-
 main .definition {
   padding: 10px 25px 15px;
   
@@ -272,10 +255,24 @@ main .response .textbox::placeholder {
 
 main .insert-buttons { text-align: left; }
 
+main .match-btn {
+  width: 48%;
+  height: 70px;
+  margin: 1%;
+}
+
+main .match-btn:active { height: 67px; }
+main .selected {
+  border: 3px solid var(--light-cont);
+  height: 67px;
+}
+
 .button {
   display: inline-flex;
+  
   justify-content: center;
   align-items: center;
+  
   vertical-align: bottom;
   
   user-select: cursor;
@@ -291,7 +288,6 @@ main .insert-buttons { text-align: left; }
 }
 
 .button:hover {
-  height: 90%;
   border: 3px solid var(--accent);
   border-bottom: 6px solid var(--accent);
 }
@@ -324,10 +320,7 @@ main .alert {
   transition: bottom 350ms ease-in;
 }
 
-main .block { 
-  bottom: 0;
-  transition: bottom 0;
-}
+main .block { bottom: 0; }
 
 main .alert .text, main .alert .button-ctn {
   display: inline-block;
@@ -362,7 +355,6 @@ footer {
   border-top: 2px solid var(--contrast);
   
   display: inline-block;
-  justify-content: bottom;
   width: 100%;
   
   text-align: center;
