@@ -53,10 +53,10 @@
         {{#ifEquals lesson.type "match"}}
         <div class="shuffle-board">
           {{#each new}}
-          <div class="match-btn" onclick="select()" id="new-{{@index}}">{{this}}</div>
+          <div class="match-btn" onclick="select({{@index}})" id="new-{{@index}}">{{this}}</div>
           {{/each}}
           {{#each native}}
-          <div class="match-btn" onclick="select()" id="native-{{@index}}">{{this}}</div>
+          <div class="match-btn" onclick="select({{@index}})" id="native-{{@index}}">{{this}}</div>
           {{/each}}
         </div>
         {{/ifEquals}}
@@ -194,7 +194,7 @@
       document.getElementById("alert").classList.add("block");
     }
     
-    
+    let selection;
     function select() {
       
     }
