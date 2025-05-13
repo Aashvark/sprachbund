@@ -51,6 +51,7 @@
       {{#each lessons as |lesson|}}
       <div class="section">
         {{#ifEquals lesson.type "match"}}
+        <p class="heading"><i class="fa-solid fa-motorcycle"></i> Match these terms!</p>
         <div class="shuffle-board" id="match-{{@index}}">
           {{#each new}}
           <a class="match-btn button" onclick="select(this)" id="new-{{@../index}}-{{@index}}">{{this}}</a>
@@ -227,7 +228,7 @@
       }
       
       selection = undefined;
-      if (document.getElementById("match-" + index).getElementsByClassName("button").length === 0) nextLesson();
+      if (document.getElementById("match-" + index).getElementsByClassName("button").length === 0) checkAnswer();
     }
     
     function shuffleDivs(containerId) {

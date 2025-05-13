@@ -549,6 +549,11 @@
           "direction": "new-native",
           "prompt": "i nes han miro",
           "answers": ["the thing is bread", "the thing is a loaf of bread", "the object is bread", "the object is a loaf of bread"]
+        },
+        {
+          "type": "match",
+          "new": ["miro", "cévo", "symi", "han"],
+          "native": ["bread", "woman", "man", "to be"]
         }
       ]
     ]
@@ -558,15 +563,7 @@
     "icon": "file-circle-question",
     "difficulty": "CEFR A1",
     "description": "Learn question words and question form",
-    "unit": [
-      [
-        {
-          "type": "match",
-          "new": ["miro", "cévo", "symi"],
-          "native": ["bread", "woman", "man"]
-        }
-      ]
-    ]
+    "unit": []
   },
   {
     "name": "Basics III",
