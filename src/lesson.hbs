@@ -51,12 +51,12 @@
       {{#each lessons as |lesson|}}
       <div class="section">
         {{#ifEquals lesson.type "match"}}
-        <div class="shuffle-board">
+        <div class="shuffle-board" id="{{@index}}">
           {{#each new}}
-          <div class="match-btn" onclick="select({{@index}})" id="new-{{@index}}">{{this}}</div>
+          <a class="match-btn" onclick="select('{{@../index}}-{{@index}}')" id="new-{{@../index}}-{{@index}}">{{this}}</a>
           {{/each}}
           {{#each native}}
-          <div class="match-btn" onclick="select({{@index}})" id="native-{{@index}}">{{this}}</div>
+          <a class="match-btn" onclick="select('{{@../index}}-{{@index}}')" id="native-{{@../index}}-{{@index}}">{{this}}</a>
           {{/each}}
         </div>
         {{/ifEquals}}
@@ -164,6 +164,7 @@
       if (index < lessons.length) {
         lesson = lessons[index];
         document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
+        if (lesson.type === "match") shuffleDivs();
       }
       else if (index >= lessons.length) document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
       
@@ -195,8 +196,27 @@
     }
     
     let selection;
-    function select() {
+    function select(id) {
+      if (selection === undefined) { selection = id; return; }
+      if (selection === id) {
+        document.getElementById("new-" + id).style.color = "green";
+        document.getElementById("native-" + id).style.color = "green";
+      }
       
+      selection = undefined;
     }
+    
+    function shuffleDivs(containerId) {
+      if (!document.getElementById(containerId)) return;
+      const container = document.getElementById(containerId);
+      const divs = Array.from(container.children);
+
+      for (let i = divs.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [divs[i], divs[j]] = [divs[j], divs[i]];
+      }
+      divs.forEach(div => container.appendChild(div));
+    }
+
   </script>
 </html>
