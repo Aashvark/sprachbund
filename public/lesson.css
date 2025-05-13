@@ -255,23 +255,27 @@ main .response .textbox::placeholder {
 
 main .insert-buttons { text-align: left; }
 
+main .shuffle-board { padding: 0 10%; }
 main .match-btn {
   width: 48%;
-  height: 70px;
-  margin: 1%;
+  height: 100px;
+  margin: 5px 1%;
 }
 
 main .match-btn:active { height: 67px; }
+
 main .selected {
   border: 3px solid var(--light-cont);
-  height: 67px;
+  margin: 8px 1% 5px;
+  height: 97px;
 }
+
 main .match-correct {
   display: inline-flex;
   
   width: 48%;
-  height: 67px;
-  margin: 1%;
+  height: 97px;
+  margin: 8px 1% 5px;
   
   justify-content: center;
   align-items: center;
@@ -405,6 +409,8 @@ footer .finish-button { width: 60%; }
   main { padding: 0 5%; }
   
   main .subheading, main .definition, main .container { width: 100%; }
+  
+  main .shuffle-board { padding: 0; }
   
   main .response .textbox { height: 39vh; }
   main .alert #alert-description { font-size: 20px; }
