@@ -50,7 +50,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   for (let i = 0; i < tokens.length; i++) {
     save += tokens[i] + " ";
     
-    if (lang === "en" && Object.keys(dict).filter(key => dict[key].complex.includes(save.toLowerCase() + tokens[i + 1])).length === 0) {
+    if (lang === "en" && getInComplex(save.toLowerCase() + tokens[i + 1]) && getInComplex(save.toLowerCase() + tokens[i + 1])) {
       keys = Object.keys(dict).filter(key => dict[key].complex.includes(save.trimEnd().toLowerCase()));
       if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
     } else if (lang == "smb" && save.trimEnd() in dict && !(save.toLowerCase() + tokens[i + 1] in dict)) {
@@ -80,6 +80,8 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   
   return new handlebars.SafeString(string.trimEnd());
 });
+
+function getInComplex(match) { return Object.keys(dict).filter(key => dict[key].complex.includes(match)).length === 0; }
 
 function getLongestList(nestedList) {
   let largest = [];
