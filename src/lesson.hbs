@@ -53,10 +53,10 @@
         {{#ifEquals lesson.type "match"}}
         <div class="shuffle-board" id="{{@index}}">
           {{#each new}}
-          <a class="match-btn button" onclick="select('{{@../index}}-{{@index}}')" id="new-{{@../index}}-{{@index}}">{{this}}</a>
+          <a class="match-btn button" onclick="select(this)" id="new-{{@../index}}-{{@index}}">{{this}}</a>
           {{/each}}
           {{#each native}}
-          <a class="match-btn button" onclick="select('{{@../index}}-{{@index}}')" id="native-{{@../index}}-{{@index}}">{{this}}</a>
+          <a class="match-btn button" onclick="select(this)" id="native-{{@../index}}-{{@index}}">{{this}}</a>
           {{/each}}
         </div>
         {{/ifEquals}}
@@ -199,12 +199,18 @@
     }
     
     let selection;
-    function select(id) {
-      if (selection === undefined) { selection = id; return; }
-      if (selection === id) {
+    function select(self) {
+      if (selection === self) { self.classList.toggle("selected"); }
+      else if (selection === undefined) {
+        self.classList.toggle("selected");
+        selection = self;
+        return;
+      } else if (selection.id.split("-", 1)[1] === self.id.split("-", 1)[1]) {
         correct.play();
-        document.getElementById("new-" + id).style.color = "green";
-        document.getElementById("native-" + id).style.color = "green";
+        for (let a of document.getElementsByClassName("selected")) { a.classList.remove("selected"); }
+        document.getElementById("new-0-0").innerHTML = selection.id.split("-", 1)[1];
+        document.getElementById("new-" + selection.id.split("-", 1)[1]).classList.add("match-correct");
+        document.getElementById("native-" + selection.id.split("-", 1)[1]).classList.add("match-correct");
       } else {
         incorrect.play();
         setAlert("Oops!", "Try Again");

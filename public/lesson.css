@@ -266,6 +266,10 @@ main .selected {
   border: 3px solid var(--light-cont);
   height: 67px;
 }
+main .match-correct {
+  border: 3px solid green;
+  height: 67px;
+}
 
 .button {
   display: inline-flex;
