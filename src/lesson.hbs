@@ -164,7 +164,10 @@
       if (index < lessons.length) {
         lesson = lessons[index];
         document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
-        if (lesson.type === "match") shuffleDivs();
+        if (lesson.type === "match") {
+          shuffleDivs(index.toString());
+          document.getElementById("next").style.display = "none";
+        }
       }
       else if (index >= lessons.length) document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
       
@@ -199,8 +202,12 @@
     function select(id) {
       if (selection === undefined) { selection = id; return; }
       if (selection === id) {
+        correct.play();
         document.getElementById("new-" + id).style.color = "green";
         document.getElementById("native-" + id).style.color = "green";
+      } else {
+        incorrect.play();
+        setAlert("Oops!", "Try Again");
       }
       
       selection = undefined;
@@ -217,6 +224,5 @@
       }
       divs.forEach(div => container.appendChild(div));
     }
-
   </script>
 </html>
