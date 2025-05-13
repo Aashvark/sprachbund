@@ -546,7 +546,7 @@
         },
         {
           "type": "short-response",
-          "direction": "native-new",
+          "direction": "new-native",
           "prompt": "i nes han miro",
           "answers": ["the thing is bread", "the thing is a loaf of bread", "the object is bread", "the object is a loaf of bread"]
         }
