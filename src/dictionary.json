@@ -64,12 +64,33 @@
       "complex": ["man", "a man"],
       "definition": "Males attaining the age of adulthood. When applied to children, it may signify their physical and/or mental maturity."
     },
+    "miro": {
+      "ipa": "ˈmiˌro",
+      "pos": "noun",
+      "simple": ["(a loaf of) bread"],
+      "complex": ["bread", "a loaf of bread"],
+      "definition": "Refering to leavened bread"
+    },
+    "mai": {
+      "ipa": "ˈmai",
+      "pos": "noun",
+      "simple": ["(a loaf of) unleavened bread"],
+      "complex": ["unleavened bread", "a loaf of unleavened bread"],
+      "definition": "Refering to unleavened bread"
+    },
     "nes": {
       "ipa": "ˈnes",
       "pos": "noun",
       "simple": ["(a) thing", "(an) object"],
       "complex": ["thing", "a thing"],
       "definition": "Any given thing/object"
+    },
+    "lavat": {
+      "ipa": "ˈlaˌvat",
+      "pos": "noun",
+      "simple": ["(an) apple"],
+      "complex": ["apple", "an apple"],
+      "definition": "An apple"
     },
     
     "vé": {
