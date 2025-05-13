@@ -146,7 +146,8 @@
         setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
       }
       else if (lesson.type === "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
-      else if (lesson.type !== "match") {
+      else if (lesson.type === "match") { setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); }
+      else {
         incorrect.play();
         setAlert("<i class=\"fas fa-circle-xmark\"></i> Try again!", "Hover over words you don't know if you need to."); 
         return; 
@@ -212,21 +213,21 @@
       if (selection === self) { self.classList.toggle("selected"); }
       else if (idx === self.id.split("-").slice(1).join("-")) {
         correct.play();
-        document.getElementById("new-" + idx).classList.toggle("match-correct", "button", "match-btn");
-        document.getElementById("native-" + idx).classList.toggle("match-correct", "button", "match-btn");
+        document.getElementById("new-" + idx).classList.add("match-correct");
+        document.getElementById("native-" + idx).classList.add("match-correct");
+        
+        document.getElementById("new-" + idx).classList.remove("button", "match-btn");
+        document.getElementById("native-" + idx).classList.remove("button", "match-btn");
         
         document.getElementById("new-" + idx).removeAttribute('onclick');
         document.getElementById("native-" + idx).removeAttribute('onclick');
-        
-        document.activeElement = null;
       } else {
         incorrect.play();
         setAlert("Oops!", "Try Again");
       }
       
       selection = undefined;
-      
-      if (document.getElementById("match-" + index).getElementsByClassName("button").length === 0) { setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); checkAnswers(); }
+      if (document.getElementById("match-" + index).getElementsByClassName("button").length === 0) nextLesson();
     }
     
     function shuffleDivs(containerId) {
