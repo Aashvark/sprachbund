@@ -200,17 +200,28 @@
     
     let selection;
     function select(self) {
-      if (selection === self) { self.classList.toggle("selected"); }
-      else if (selection === undefined) {
+      if (selection === undefined) {
         self.classList.toggle("selected");
         selection = self;
         return;
-      } else if (selection.id.split("-", 1)[1] === self.id.split("-", 1)[1]) {
+      }
+      
+      for (let a of document.getElementsByClassName("selected")) { a.classList.remove("selected"); }
+      let idx = selection.id.split("-").slice(1).join("-");
+      
+      if (selection === self) { self.classList.toggle("selected"); }
+      else if (idx === self.id.split("-").slice(1).join("-")) {
         correct.play();
-        for (let a of document.getElementsByClassName("selected")) { a.classList.remove("selected"); }
-        document.getElementById("new-0-0").innerHTML = selection.id.split("-", 1)[1];
-        document.getElementById("new-" + selection.id.split("-", 1)[1]).classList.add("match-correct");
-        document.getElementById("native-" + selection.id.split("-", 1)[1]).classList.add("match-correct");
+        document.getElementById("new-" + idx).classList.add("match-correct");
+        document.getElementById("native-" + idx).classList.add("match-correct");
+        
+        document.getElementById("new-" + idx).classList.remove("button", "match-btn");
+        document.getElementById("native-" + idx).classList.remove("button", "match-btn");
+        
+        document.getElementById("new-" + idx).removeAttribute('onclick');
+        document.getElementById("native-" + idx).removeAttribute('onclick');
+        
+        document.activeElement = null;
       } else {
         incorrect.play();
         setAlert("Oops!", "Try Again");
