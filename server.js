@@ -50,10 +50,10 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   for (let i = 0; i < tokens.length; i++) {
     save += tokens[i] + " ";
     
-    if (lang === "en" && getInComplex(save.toLowerCase() + tokens[i + 1]) && getInComplex(save.toLowerCase() + tokens[i + 1])) {
-      keys = Object.keys(dict).filter(key => dict[key].complex.includes(save.trimEnd().toLowerCase()));
+    if (lang === "en" && getInComplexByLength(save.toLowerCase() + tokens[i + 1]) && getInComplexByLength(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2])) {
+      keys = Object.keys(dict).filter(key => getInComplex(key, save.trimEnd().toLowerCase()));
       if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
-    } else if (lang == "smb" && save.trimEnd() in dict && !(save.toLowerCase() + tokens[i + 1] in dict)) {
+    } else if (lang == "smb" && save.trimEnd() in dict && !(save.toLowerCase() + tokens[i + 1] in dict) && !(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2] in dict)) {
       keys = dict[save.trimEnd().toLowerCase()].simple;
       if (save.trimEnd().includes(" ")) { submeaning = save.toLowerCase().trimEnd().split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
     } else continue;
@@ -81,7 +81,8 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   return new handlebars.SafeString(string.trimEnd());
 });
 
-function getInComplex(match) { return Object.keys(dict).filter(key => dict[key].complex.includes(match)).length === 0; }
+function getInComplexByLength(match) { return Object.keys(dict).filter(key => getInComplex(key, match)).length === 0; }
+function getInComplex(key, match) { return dict[key].complex.includes(match); }
 
 function getLongestList(nestedList) {
   let largest = [];
