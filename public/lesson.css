@@ -61,6 +61,23 @@ main .subheading {
   user-select: none;
 }
 
+main .match-btn {
+  display: inline-block;
+  
+  width: 48%;
+  height: 50px;
+  margin: 1%;
+  
+  border: 3px solid var(--contrast);
+  border-bottom: 6px solid var(--contrast);
+  border-radius: 10px;
+  
+  text-align: center;
+  
+  color: var(--white);
+  font-size: 20px;
+}
+
 main .definition {
   padding: 10px 25px 15px;
   
@@ -261,7 +278,7 @@ main .insert-buttons { text-align: left; }
   align-items: center;
   vertical-align: bottom;
   
-  user-select: none;
+  user-select: cursor;
   
   border: 3px solid var(--contrast);
   border-bottom: 6px solid var(--contrast);
@@ -274,6 +291,7 @@ main .insert-buttons { text-align: left; }
 }
 
 .button:hover {
+  height: 90%;
   border: 3px solid var(--accent);
   border-bottom: 6px solid var(--accent);
 }
@@ -344,6 +362,7 @@ footer {
   border-top: 2px solid var(--contrast);
   
   display: inline-block;
+  justify-content: bottom;
   width: 100%;
   
   text-align: center;
