@@ -262,12 +262,15 @@ main .match-btn {
   margin: 5px 1%;
 }
 
-main .match-btn:active { height: 67px; }
+main .match-btn:active {
+  margin: 8px 1% 5px;
+  height: 97px;
+}
 
 main .selected {
   border: 3px solid var(--light-cont);
-  margin: 8px 1% 5px;
-  height: 97px;
+  margin: 5px 1%;
+  height: 100px;
 }
 
 main .match-correct {
@@ -411,6 +414,8 @@ footer .finish-button { width: 60%; }
   main .subheading, main .definition, main .container { width: 100%; }
   
   main .shuffle-board { padding: 0; }
+  main .match-btn, main .selected { height: 90px;}
+  main .match-btn:active, main .match-correct,  { height: 87px; }
   
   main .response .textbox { height: 39vh; }
   main .alert #alert-description { font-size: 20px; }
