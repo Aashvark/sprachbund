@@ -50,6 +50,30 @@
     <main>
       {{#each lessons as |lesson|}}
       <div class="section">
+        {{#ifEquals lesson.type "match"}}
+        <div class="shuffle-board">
+          {{#each new}}
+          <div class="match-btn" onclick="select()" id="new-{{@index}}">{{this}}</div>
+          {{/each}}
+          {{#each native}}
+          <div class="match-btn" onclick="select()" id="native-{{@index}}">{{this}}</div>
+          {{/each}}
+        </div>
+        {{/ifEquals}}
+        {{#ifEquals lesson.type "short-response"}}
+        <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
+        <div class="prompt">
+          {{hover-translate lesson.prompt (ternaryEq lesson.direction "native-new" "en" "smb")}}
+        </div>
+        <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Nóibón{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}} inputmode="search" enterkeyhint="go"></textarea></div>
+        <div class="insert-buttons">
+          <a class="button" onclick="caseshift()" id="shift-case">⬆</a>
+          <a class="button c" onclick="insert('á')">á</a>
+          <a class="button c" onclick="insert('ċ')">ċ</a>
+          <a class="button c" onclick="insert('é')">é</a>
+          <a class="button c" onclick="insert('ó')">ó</a>
+        </div>
+        {{/ifEquals}}
         {{#ifEquals lesson.type "vocabulary"}}
         <p class="heading"><i class="fa-solid fa-rocket"></i> New Word Incoming!</p>
         <div class="definition">
@@ -71,20 +95,6 @@
           <p class="tip">{{tip-format lesson.tip}}</p>
         </div>
         {{/if}}
-        {{/ifEquals}}
-        {{#ifEquals lesson.type "short-response"}}
-        <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
-        <div class="prompt">
-          {{hover-translate lesson.prompt (ternaryEq lesson.direction "native-new" "en" "smb")}}
-        </div>
-        <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Nóibón{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}} inputmode="search" enterkeyhint="go"></textarea></div>
-        <div class="insert-buttons">
-          <a class="button" onclick="caseshift()" id="shift-case">⬆</a>
-          <a class="button c" onclick="insert('á')">á</a>
-          <a class="button c" onclick="insert('ċ')">ċ</a>
-          <a class="button c" onclick="insert('é')">é</a>
-          <a class="button c" onclick="insert('ó')">ó</a>
-        </div>
         {{/ifEquals}}
       </div>
       {{/each}}
@@ -182,6 +192,11 @@
       document.getElementById("alert-heading").innerHTML = heading;
       document.getElementById("alert-description").innerHTML = description;
       document.getElementById("alert").classList.add("block");
+    }
+    
+    
+    function select() {
+      
     }
   </script>
 </html>
