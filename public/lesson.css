@@ -1,3 +1,4 @@
+header { height: 12%; }
 header .progress-bar { width: calc(93% - 94px); }
 
 header .progress-inside {
