@@ -24,18 +24,24 @@ main .module .grammar, main .module .lesson {
   text-align: center;
   color: var(--white);
   margin: 0;
+  padding: 0;
 }
 
 main .module .grammar {
   width: 15%;
   aspect-ratio: 1/1;
   
-  font-size: 40px;
-  border-right: 2px solid var(--light-cont);
+  font-size: 50px;
+  border-right: 3px dashed var(--light-cont);
 }
 
 main .module .lesson {
-  width: 75%;
+  width: 85%;
+}
+
+@media screen and (max-width: 600px) {
+  main .module .grammar { width: 25%; }
+  main .module .lesson  { width: 75%; }
 }
 
 
