@@ -1,8 +1,19 @@
+header { background}
+
 main { padding: 5px 20%; }
 
 main .title {
+  font-size: 30px;
+  font-weight: 550;
+  
+  vertical-align: middle;
   width: 100%;
   text-align: center;
+}
+
+main .title span {
+  font-family: sans;
+  font-stretch: 300%;
 }
 
 main .module {
