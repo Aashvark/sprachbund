@@ -90,14 +90,14 @@
       "ipa": "ˈmiˌro",
       "pos": "noun",
       "simple": ["(a loaf of) bread"],
-      "complex": ["bread", "a loaf of bread"],
+      "complex": ["bread", "loaf of bread", "a loaf of bread"],
       "definition": "Refering to bread in general, but refers to leavened bread when nessecery"
     },
     "mai": {
       "ipa": "ˈmai",
       "pos": "noun",
-      "simple": ["(a loaf of) unleavened bread"],
-      "complex": ["unleavened bread", "a loaf of unleavened bread"],
+      "simple": ["(a loaf of) unleavened bread", "(a) cracker"],
+      "complex": ["unleavened bread", "loaf of unleavened bread", "a loaf of unleavened bread", "cracker", "a cracker"],
       "definition": "Refering to unleavened bread"
     },
     "nes": {
