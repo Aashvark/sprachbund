@@ -1,23 +1,6 @@
-header {
-  background: var(--contrast);
-  z-index: 2;
-}
-
 main { padding: 5px 20%; }
 
-main .top { 
-  position: relative;
-  width: 100%;
-  padding: 5px;
-}
-
 main .title {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--background);
-
   font-size: 30px;
   font-weight: 550;
   
@@ -31,60 +14,18 @@ main .title span {
   font-stretch: 300%;
 }
 
-main .top .brace {
-  position: relative;
-  padding-bottom: 20px;
-  
-  font-size: 2em;
-  line-height: 2em;
-  
-  border: none;
-  
-  overflow: visible;
-}
-
-.brace:before, .brace:after {
-  content: "";
-  
-  position: absolute;
-  top: 20px;
-  
-  width: 50%;
-  height: 100%;
-  
-  border-top: 5px solid var(--white);
-  margin-top: -5px;
-}
-
-.brace:before {
-  border-left: 1px solid transparent; /* play with this until you like the look of it */
-  border-top-left-radius: 20% 30px;
-  left: -15px;
-}
-  
-.brace:after {
-  border-right: 1px solid transparent; /* play with this until you like the look of it */
-  border-top-right-radius: 20% 30px;
-  right: -15px;
-}
-
 main .module {
   display: inline-block;
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
   width: 100%;
   
   margin: 1.5% 0;
+  font-size: 0;
   
-  border: 3px solid var(--light-cont);
   border-radius: 15px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  
-  font-size: 0;
 }
-
-main .module:hover  { border: 3px solid var(--contrast); }
-main .module:active { border: 3px solid var(--accent); }
 
 main .module .grammar, main .module .lesson {
   display: inline-block;
@@ -104,9 +45,15 @@ main .module .grammar {
   width: 15%;
   aspect-ratio: 1/1;
   
+  border-top: 3px solid var(--light-cont);
+  border-left: 3px solid var(--light-cont);
+  border-top-left-radius: 15px;
+  
   font-size: 50px;
   border-right: 3px dashed var(--light-cont);
 }
+main .module .grammar:hover  { border-top: 3px solid var(--contrast); border-left: 3px solid var(--contrast); }
+main .module .grammar:active { border-top: 3px solid var(--accent);   border-left: 3px solid var(--accent); }
 
 main .module .lesson {
   width: 85%;
@@ -119,6 +66,9 @@ main .module .lesson {
   
   text-align: left;
   font-size: 0;
+  
+  border-top: 3px solid var(--light-cont);
+  border-right: 3px solid var(--light-cont);
 }
 
 main .module .lesson .name, main .module .lesson .level {
@@ -151,6 +101,11 @@ main .module .completion {
   
   font-size: 0;
   border-top: 3px solid var(--light-cont);
+  border-left: 3px solid var(--light-cont);
+  border-right: 3px solid var(--light-cont);
+  border-bottom: 3px solid var(--light-cont);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 main .completion .indicator {
