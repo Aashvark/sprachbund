@@ -225,7 +225,7 @@
           "type": "vocabulary",
           "word": "ċo",
           "example": {
-            "sentence": "ċo han",
+            "sentence": "[ċo] han",
             "translation": "we exist"
           }
         },
@@ -251,7 +251,7 @@
           "type": "vocabulary",
           "word": "vun",
           "example": {
-            "sentence": "vun han",
+            "sentence": "[vun] han",
             "translation": "you exist"
           }
         },
@@ -289,7 +289,7 @@
           "type": "vocabulary",
           "word": "sojón",
           "example": {
-            "sentence": "ké han sojón",
+            "sentence": "ké han [sojón]",
             "translation": "you are kind"
           }
         },
@@ -412,7 +412,7 @@
           "word": "i",
           "tip": "[i] may turn adjectives into nouns",
           "example": {
-            "sentence": "i cévo han sojón",
+            "sentence": "[i] cévo han sojón",
             "translation": "the woman is kind"
           }
         },
@@ -444,7 +444,7 @@
           "type": "vocabulary",
           "word": "nes",
           "example": {
-            "sentence": "i nes",
+            "sentence": "i [nes]",
             "translation": "the thing"
           }
         },
@@ -464,7 +464,7 @@
           "type": "vocabulary",
           "word": "vé",
           "example": {
-            "sentence": "i cévo vé han nes",
+            "sentence": "i cévo [vé] han nes",
             "translation": "the woman has a thing"
           }
         },
@@ -522,7 +522,7 @@
           "type": "vocabulary",
           "word": "miro",
           "example": {
-            "sentence": "ny vé han miro",
+            "sentence": "ny vé han [miro]",
             "translation": "I have bread"
           }
         },
@@ -571,7 +571,7 @@
           "type": "vocabulary",
           "word": "wéka",
           "example": {
-            "sentence": "wéka han miro",
+            "sentence": "[wéka] han miro",
             "translation": "he/she/it gives bread"
           }
         },
@@ -597,7 +597,18 @@
           "type": "short-response",
           "direction": "native-new",
           "prompt": "The kind woman gives the small loaf of bread",
-          "answers": ["i cévo wéka han i mikol miro"]
+          "answers": ["i sojón cévo wéka han i mikol miro"]
+        }
+      ],
+      [
+        {
+          "type": "vocabulary",
+          "word": "hotá",
+          "tip": "In the verb pattern, [hotá] replaces [han].",
+          "example": {
+            "sentence": "i cévo vé [hotá] i náu",
+            "translation": "the woman does not have the tall thing"
+          }
         }
       ]
     ]
