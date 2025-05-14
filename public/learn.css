@@ -1,5 +1,10 @@
 main { padding: 5px 20%; }
 
+main .title {
+  width: 100%;
+  text-align: center;
+}
+
 main .module {
   display: inline-block;
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));

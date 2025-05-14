@@ -46,7 +46,6 @@ header, main {
   background: var(--background);
   
   width: 100%;
-  
   text-align: center;
 }
 
@@ -57,35 +56,17 @@ header {
   padding: 15px 8%;
 }
 
-header .language-flag, header .progress-bar {
-  display: inline-block;
-  vertical-align: middle;
+header .language-flag { 
+  width: 100%;
+  text-align: center;
 }
 
-header .language-flag { width: 94px; }
-header .language-flag svg { aspect-ratio: 44/31; }
-
-header .progress-bar {
-  background: linear-gradient(165deg, var(--contrast), var(--light-cont));
-  border: 1px solid var(--light-cont);
+header .language-flag svg { 
+  width: 82px;
+  height: 66px;
   
-  width: calc(100% - 94px);
-  height: 30px;
-  padding: 3.5px;
-  
-  border-radius: 20px;
-}
-
-header .progress-inside {
-  display: block;
-  background: var(--accent);
-  z-index: -1;
-  
-  width: 0%;
-  height: 100%;
-  
-  border-radius: 20px;
-  transition: width 1000ms;
+  text-align: center;
+  aspect-ratio: 44/31;
 }
 
 main {
@@ -97,7 +78,5 @@ main {
 
 @media screen and (max-width: 600px) {
   header { padding: 15px 4%; }
-  header .progress-bar { width: calc(100% - 94px); }
-  
   main { padding: 0 5%; }
 }
