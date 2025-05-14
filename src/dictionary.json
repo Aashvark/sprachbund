@@ -143,7 +143,7 @@
     },
     "wéka hotá": {
       "simple": ["do not give", "he/she/it does not give"],
-      "complex": ["do not give", "does not give", "has not", "he has not", "she has not", "it has not", "he does not have", "she does not have", "it does not have"]
+      "complex": ["do not give", "does not give", "he does not give", "she does not give", "it does not give"]
     },
     
     "ċo": {
