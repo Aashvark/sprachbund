@@ -170,10 +170,13 @@ main .prompt p {
 main .prompt .hint {
   display: inline-block;
   position: relative;
-  padding: 0 4px;
+  padding: 0 3px;
 }
 
-main .prompt .hint span { border-bottom: 4px dotted var(--light-cont); }
+main .prompt .hint span { 
+  border-bottom: 4px dotted var(--light-cont);
+  padding: 0 1px;
+}
 
 main .prompt .hint table { 
   display: none;

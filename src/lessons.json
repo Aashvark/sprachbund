@@ -583,8 +583,21 @@
         },
         {
           "type": "new-native",
-          "direction": "",
-          "prompt": ""
+          "direction": "new-native",
+          "prompt": "han sojón mikol cévo",
+          "answers": ["he is a nice short woman", "he is a kind short woman", "he is a nice small woman", "he is a kind small woman", "she is a nice short woman", "she is a kind short woman", "she is a nice small woman", "she is a kind small woman", "it is a nice short woman", "it is a kind short woman", "it is a nice small woman", "it is a kind small woman"]
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "ny wéka han miro",
+          "answers": ["I give bread", "I give a loaf of bread"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "The kind woman gives the small loaf of bread",
+          "answers": ["i cévo wéka han mikol miro"]
         }
       ]
     ]
