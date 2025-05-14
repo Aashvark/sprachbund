@@ -29,7 +29,7 @@ main .module {
 
 main .module .grammar, main .module .lesson {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   
   background: transparent;
   border: 0;
@@ -57,7 +57,8 @@ main .module .grammar:active { border-top: 3px solid var(--accent);   border-lef
 
 main .module .lesson {
   width: 85%;
-  padding: 0 20px;
+  height: 16.1vh;
+  padding: 10px 20px;
   
   font-family: "Parkinsans", sans-serif;
   font-optical-sizing: auto;
@@ -69,7 +70,10 @@ main .module .lesson {
   
   border-top: 3px solid var(--light-cont);
   border-right: 3px solid var(--light-cont);
+  border-top-right-radius: 15px;
 }
+main .module .lesson:hover  { border-top: 3px solid var(--contrast); border-right: 3px solid var(--contrast); }
+main .module .lesson:active { border-top: 3px solid var(--accent);   border-right: 3px solid var(--accent); }
 
 main .module .lesson .name, main .module .lesson .level {
   display: inline-block;
@@ -121,24 +125,12 @@ main .completion .indicator {
 
 main .highlight { background: var(--accent) !important; }
 
-@media screen and (max-width: 600px) {
-  main .module .grammar { width: 25%; }
-  main .module .lesson  { width: 75%; }
-}
-
 @media screen and (max-width: 900px) {
   main { padding: 0 8%; }
 }
 
 @media screen and (max-width: 600px) {
   main { padding: 0 5%; }
-  main .unit .left { 
-    width: 22%;
-    font-size: 45px;
-  }
-  
-  main .unit .right {
-    width: 78%;
-    padding: 10px 20px 10px 0;
-  }
+  main .module .grammar { width: 25%; }
+  main .module .lesson  { width: 75%; }
 }
