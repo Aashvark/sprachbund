@@ -1,14 +1,29 @@
-header { background: var(--contrast); }
+header {
+  background: var(--contrast);
+  z-index: 2;
+}
 
 main { padding: 5px 20%; }
 
+main .top { 
+  position: relative;
+  width: 100%;
+  padding: 5px;
+}
+
 main .title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--background);
+
   font-size: 30px;
   font-weight: 550;
   
   vertical-align: middle;
-  width: 100%;
   text-align: center;
+  z-index: 1;
 }
 
 main .title span {
@@ -16,55 +31,42 @@ main .title span {
   font-stretch: 300%;
 }
 
-.brace {
-  width: auto;
-  min-width: 35px;
+main .top .brace {
+  position: relative;
   padding-bottom: 20px;
+  
   font-size: 2em;
   line-height: 2em;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-  margin: 0 15px 15px;
+  
   border: none;
-  background-color: transparent;
-  background-image: 
-    radial-gradient(circle at 0 0, transparent 14.5px, var(--white) 15.5px, var(--white) 19.5px, transparent 20.5px),
-    radial-gradient(circle at 35px 0, transparent 14.5px, var(--white) 15.5px, var(--white) 19.5px, transparent 20.5px);
-  background-size: 35px 20px;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  text-transform: lowercase;
-  font-style: italic;
-  color: var(--white);
-  filter: drop-shadow(0 1px 1px rgba(black,.15));
+  
   overflow: visible;
 }
 
+.brace:before, .brace:after {
+  content: "";
+  
+  position: absolute;
+  top: 20px;
+  
+  width: 50%;
+  height: 100%;
+  
+  border-top: 5px solid var(--white);
+  margin-top: -5px;
+}
+
 .brace:before {
-    width: 50%;
-    border-top: 5px solid var(--white);
-    border-left: 4px solid transparent; /* play with this until you like the look of it */
-    border-top-left-radius: 20% 30px;
-    height: 100%;
-    content: "";
-    display: absol
-    absolute: top 10px left -15px;
-    box-sizing: border-box;
-    margin-top: -5px;
-  }
+  border-left: 1px solid transparent; /* play with this until you like the look of it */
+  border-top-left-radius: 20% 30px;
+  left: -15px;
+}
   
 .brace:after {
-    width: 50%;
-    border-top: 5px solid var(--white);
-    border-right: 1px solid transparent; /* play with this until you like the look of it */
-    border-top-right-radius: 20% 30px;
-    height: 100%;
-    content: "";
-    absolute: top @height right -15px;
-    box-sizing: border-box;
-    margin-top: -5px;
-  }
+  border-right: 1px solid transparent; /* play with this until you like the look of it */
+  border-top-right-radius: 20% 30px;
+  right: -15px;
+}
 
 main .module {
   display: inline-block;
