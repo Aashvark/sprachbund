@@ -47,6 +47,15 @@
       <div class="progress-bar"><div class="progress-inside" id="progress"></div></div>
     </header>
     <main>
+      <div class="module">
+        <button class="grammar"><i class="fas fa-book"></i></button>
+        <button class="lesson">
+          <p class="name">Introduction</p>
+          <p class="level">A1</p>
+          <p class="description">{{description}}</p>
+        </button>
+      </div>
+      
       <form method="post" action="/lesson">
         {{#each units}}
         <button class="unit" name="unit" value="{{@index}}" id="unit-{{@index}}">

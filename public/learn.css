@@ -1,5 +1,26 @@
 main { padding: 5px 20%; }
 
+main .module {
+  font-size: 0;
+}
+
+main .module .grammar, main .module .lesson {
+  display: inline-block;
+  vertical-align: middle;
+  
+  margin: 0;
+  font-size: 25px;
+}
+
+main .module .grammar {
+  width: 25%;
+}
+
+main .module .lesson {
+  width: 75%;
+}
+
+
 main .unit {
   display: inline-block;
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
