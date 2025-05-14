@@ -566,6 +566,14 @@
           "direction": "native-new",
           "prompt": "the short one is the woman",
           "answers": ["i mikol han i cévo"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "wéka",
+          "example": {
+            "sentence": "wéka han miro",
+            "translation": "he/she/it gives bread"
+          }
         }
       ]
     ]
