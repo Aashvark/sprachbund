@@ -574,6 +574,12 @@
             "sentence": "wéka han miro",
             "translation": "he/she/it gives bread"
           }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "i symi wéka han miro",
+          "answers": ["the man gives bread", "the man gives a loaf of bread"]
         }
       ]
     ]

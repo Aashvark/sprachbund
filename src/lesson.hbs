@@ -169,7 +169,7 @@
         if (lesson.type === "match") {
           shuffleDivs("match-" + index.toString());
           document.getElementById("next").style.display = "none";
-        }
+        } else document.getElementById("next").style.display = "inline-flex";
       }
       else if (index >= lessons.length) document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
       
