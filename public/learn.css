@@ -7,6 +7,8 @@ main .module {
   
   border: 3px solid var(--light-cont);
   border-radius: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   
   font-size: 0;
 }
@@ -70,22 +72,23 @@ main .module .lesson .level {
 
 main .module .lesson .description { font-size: 18px; }
 
-main .completion {
+main .module .completion {
   width: 100%;
-  padding: 10px 0px;
+  padding: 10px;
+  
   font-size: 0;
+  border-top: 3px solid var(--light-cont);
 }
 
 main .completion .indicator {
   display: inline-block;
+  background: var(--contrast);
   vertical-align: middle;
   
   border-radius: 10px;
   padding: 7px;
   margin: 0 0.5%;
   font-size: 10px;
-  
-  background: var(--contrast);
 }
 
 main .highlight { background: var(--accent) !important; }
