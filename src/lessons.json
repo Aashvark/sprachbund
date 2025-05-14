@@ -580,6 +580,11 @@
           "direction": "native-new",
           "prompt": "i symi wéka han miro",
           "answers": ["the man gives bread", "the man gives a loaf of bread"]
+        },
+        {
+          "type": "new-native",
+          "direction": "",
+          "prompt": ""
         }
       ]
     ]
@@ -589,7 +594,15 @@
     "icon": "file-circle-question",
     "difficulty": "CEFR A1",
     "description": "Learn question words and question form",
-    "unit": []
+    "unit": [
+      [
+        {
+          "type": "match",
+          "new": ["miro", "cévo", "symi", "han", "téu"],
+          "native": ["bread", "woman", "man", "to be", "him/her"]
+        }
+      ]
+    ]
   },
   {
     "name": "Basics III",
