@@ -138,8 +138,8 @@
       "definition": "Used to describe the transfer of an object from the subject."
     },
     "wéka han": {
-      "simple": ["give", , "he/she/it gives"],
-      "complex": ["give", "gives", "he gives", "she gives", "it gives"],
+      "simple": ["give", "he/she/it gives"],
+      "complex": ["give", "gives", "he gives", "she gives", "it gives"]
     },
     "wéka hotá": {
       "simple": ["do not give", "he/she/it does not give"],
