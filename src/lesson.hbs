@@ -86,8 +86,8 @@
         {{#if lesson.example}}
         <p class="subheading"><i class="icon fa-solid fa-message"></i> Example</p>
         <div class="container">
-          <p>{{example.sentence}}</p>
-          <p class="translation"><span class="highlight">"</span>{{example.translation}}<span class="highlight">"</span></p>
+          <p>{{tip-format example.sentence}}</p>
+          <p class="translation"><span class="highlight">"</span>{{tip-format example.translation}}<span class="highlight">"</span></p>
         </div>
         {{/if}}
         {{#if lesson.tip}}

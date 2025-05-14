@@ -11,8 +11,8 @@
           "word": "han",
           "tip": "If there is no subject, verbs are assumed to be in the third person.",
           "example": {
-            "sentence": "han",
-            "translation": "he/she/it is"
+            "sentence": "[han]",
+            "translation": "he/she/it [is]"
           }
         },
         {
@@ -31,8 +31,8 @@
           "type": "vocabulary",
           "word": "symi",
           "example": {
-            "sentence": "han symi",
-            "translation": "he is a man"
+            "sentence": "han [symi]",
+            "translation": "he is [a man]"
           }
         },
         {
@@ -51,8 +51,8 @@
           "type": "vocabulary",
           "word": "cévo",
           "example": {
-            "sentence": "han cévo",
-            "translation": "she is a woman"
+            "sentence": "han [cévo]",
+            "translation": "she is [a woman]"
           }
         },
         {
@@ -66,8 +66,8 @@
           "word": "náu",
           "tip": "Adjectives will always come before nouns",
           "example": {
-            "sentence": "náu cévo",
-            "translation": "a tall woman"
+            "sentence": "[náu] cévo",
+            "translation": "a [tall] woman"
           }
         },
         {
@@ -92,8 +92,8 @@
           "type": "vocabulary",
           "word": "mikol",
           "example": {
-            "sentence": "han mikol symi",
-            "translation": "he is a short man"
+            "sentence": "han [mikol] symi",
+            "translation": "he is a [short] man"
           }
         },
         {
@@ -114,8 +114,8 @@
           "type": "vocabulary",
           "word": "ny",
           "example": {
-            "sentence": "ny han náu",
-            "translation": "I am tall"
+            "sentence": "[ny] han náu",
+            "translation": "[I] am tall"
           }
         },
         {
@@ -128,8 +128,8 @@
           "type": "vocabulary",
           "word": "ké",
           "example": {
-            "sentence": "ké han cévo",
-            "translation": "you are a woman"
+            "sentence": "[ké] han cévo",
+            "translation": "[you] are a woman"
           }
         },
         {
@@ -167,8 +167,8 @@
           "word": "téu",
           "tip": "[téu] may not be used as a subject of a sentence.",
           "example": {
-            "sentence": "han téu",
-            "translation": "it is him/her"
+            "sentence": "han [téu]",
+            "translation": "it is [him/her]"
           }
         },
         {
@@ -226,7 +226,7 @@
           "word": "ċo",
           "example": {
             "sentence": "[ċo] han",
-            "translation": "we exist"
+            "translation": "[we] exist"
           }
         },
         {
@@ -252,7 +252,7 @@
           "word": "vun",
           "example": {
             "sentence": "[vun] han",
-            "translation": "you exist"
+            "translation": "[you] exist"
           }
         },
         {
@@ -290,7 +290,7 @@
           "word": "sojón",
           "example": {
             "sentence": "ké han [sojón]",
-            "translation": "you are kind"
+            "translation": "you are [kind]"
           }
         },
         {
@@ -413,7 +413,7 @@
           "tip": "[i] may turn adjectives into nouns",
           "example": {
             "sentence": "[i] cévo han sojón",
-            "translation": "the woman is kind"
+            "translation": "[the] woman is kind"
           }
         },
         {
@@ -445,7 +445,7 @@
           "word": "nes",
           "example": {
             "sentence": "i [nes]",
-            "translation": "the thing"
+            "translation": "the [thing]"
           }
         },
         {
@@ -465,7 +465,7 @@
           "word": "vé",
           "example": {
             "sentence": "i cévo [vé] han nes",
-            "translation": "the woman has a thing"
+            "translation": "the woman [has] a thing"
           }
         },
         {
@@ -523,7 +523,7 @@
           "word": "miro",
           "example": {
             "sentence": "ny vé han [miro]",
-            "translation": "I have bread"
+            "translation": "I have [bread]"
           }
         },
         {
@@ -572,7 +572,7 @@
           "word": "wéka",
           "example": {
             "sentence": "[wéka] han miro",
-            "translation": "he/she/it gives bread"
+            "translation": "he/she/it [gives] bread"
           }
         },
         {
@@ -607,7 +607,7 @@
           "tip": "In the verb pattern, [hotá] replaces [han].",
           "example": {
             "sentence": "i cévo vé [hotá] i náu",
-            "translation": "the woman does not have the tall thing"
+            "translation": "the woman [does not] have the tall thing"
           }
         }
       ]
