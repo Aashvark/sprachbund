@@ -47,35 +47,22 @@
       <div class="progress-bar"><div class="progress-inside" id="progress"></div></div>
     </header>
     <main>
-      <div class="module">
-        <button class="grammar"><i class="fas fa-book"></i></button>
-        <button class="lesson">
-          <p class="name">Introduction</p>
-          <p class="level">A1</p>
-          <p class="description">Learn basic grammar and vocabulary.</p>
-        </button>
-        <div class="completion">
-          <div class="indicator" style="width: calc((100%/3) - 1%);"></div>
-          <div class="indicator" style="width: calc((100%/3) - 1%);"></div>
-          <div class="indicator" style="width: calc((100%/3) - 1%);"></div>
-        </div>
-      </div>
-      
       <form method="post" action="/lesson">
         {{#each units}}
-        <button class="unit" name="unit" value="{{@index}}" id="unit-{{@index}}">
+        <div class="module">
           <input name="{{@index}}-lesson" id="u{{@index}}-lesson" hidden>
-          <i class="left fas fa-{{icon}}"></i>
-          <div class="right">
-            <p class="name">{{name}}<span class="difficulty">{{difficulty}}</span></p>
+          <button class="grammar"><i class="fas fa-{{icon}}"></i></button>
+          <button class="lesson" name="unit" value="{{@index}}" id="unit-{{@index}}">
+            <p class="name">{{name}}</p>
+            <p class="level">{{difficulty}}</p>
             <p class="description">{{description}}</p>
-            <div class="progress">
-              {{#each unit}}
-              <div class="indicator i-{{@../index}}" style="width: calc((100%/{{../unit.length}}) - 1%);"></div>
-              {{/each}}
-            </div>
+          </button>
+          <div class="completion">
+            {{#each unit}}
+            <div class="indicator i-{{@../index}}" style="width: calc((100%/{{../unit.length}}) - 1%);"></div>
+            {{/each}}
           </div>
-        </button>
+        </div>
         {{/each}}
       </form>
     </main>

@@ -5,6 +5,8 @@ main .module {
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
   width: 100%;
   
+  margin: 1.5% 0;
+  
   border: 3px solid var(--light-cont);
   border-radius: 15px;
   border-bottom-left-radius: 10px;
