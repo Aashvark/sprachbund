@@ -609,6 +609,12 @@
             "sentence": "i cévo vé [hotá] i náu",
             "translation": "the woman [does not] have the tall thing"
           }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "wéka hotá i miro",
+          "answers": ["he does not give the bread", "she does not give the bread", "it does not give the bread", "he does not give the loaf of bread", "she does not give the loaf of bread", "it does not give the loaf of bread"]
         }
       ]
     ]
@@ -619,13 +625,7 @@
     "difficulty": "A1",
     "description": "Learn question words and question form",
     "unit": [
-      [
-        {
-          "type": "match",
-          "new": ["miro", "cévo", "symi", "han", "téu"],
-          "native": ["bread", "woman", "man", "to be", "him/her"]
-        }
-      ]
+      []
     ]
   },
   {
