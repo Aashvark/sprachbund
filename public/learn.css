@@ -1,18 +1,28 @@
-main { padding: 5px 20%; }
+header { text-align: left; }
 
-main .title {
+header .language-flag, header .title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header .language-flag { text-align: center; }
+header .language-flag svg { 
+  width: 82px;
+  height: 66px;
+  aspect-ratio: 44/31;
+}
+
+
+header .title {
+  padding: 0 10px;
+  color: var(--white);
   font-size: 30px;
   font-weight: 550;
-  
-  vertical-align: middle;
-  text-align: center;
-  z-index: 1;
 }
 
-main .title span {
-  font-family: sans;
-  font-stretch: 300%;
-}
+main { padding: 5px 20%; }
+
+main .module-num { font-size: 18px; }
 
 main .module {
   display: inline-block;
@@ -57,7 +67,6 @@ main .module .grammar:active { border-top: 3px solid var(--accent);   border-lef
 
 main .module .lesson {
   width: 85%;
-  height: 16.1vh;
   padding: 10px 20px;
   
   font-family: "Parkinsans", sans-serif;

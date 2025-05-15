@@ -44,15 +44,16 @@
       <div class="language-flag">
         <svg><image href="/svg/flag.svg" xlink:href="/svg/flag.svg"></image></svg>
       </div>
+      <p class="title">Nóibun</p>
     </header>
     <main>
-      <p class="title">Nóibun</p>
       <form method="post" action="/lesson">
         {{#each units}}
         <div class="module">
           <input name="{{@index}}-lesson" id="u{{@index}}-lesson" hidden>
           <button class="grammar"><i class="fas fa-{{icon}}"></i></button>
           <button class="lesson" name="unit" value="{{@index}}" id="unit-{{@index}}">
+            <p class="module-num">Module {{@index}}</p>
             <p class="name">{{name}}</p>
             <p class="level">{{difficulty}}</p>
             <p class="description">{{description}}</p>

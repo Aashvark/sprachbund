@@ -56,19 +56,6 @@ header {
   padding: 15px 8%;
 }
 
-header .language-flag { 
-  width: 100%;
-  text-align: center;
-}
-
-header .language-flag svg { 
-  width: 82px;
-  height: 66px;
-  
-  text-align: center;
-  aspect-ratio: 44/31;
-}
-
 main {
   padding: 0 15%;
   
