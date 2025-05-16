@@ -16,6 +16,7 @@ fastify.register(require("@fastify/static"), {
 fastify.register(require("@fastify/formbody"));
 fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
 
+handlebars.registerHelper('add', function(arg1, arg2) { return arg1 + arg2; });
 handlebars.registerHelper('ifEquals', function(arg1, arg2, options) { return (arg1 === arg2) ? options.fn(this) : options.inverse(this); });
 handlebars.registerHelper('ternaryEq', function(arg1, arg2, op1, op2) { return (arg1 === arg2) ? op1 : op2; });
 handlebars.registerHelper('json', function(a, options) { return JSON.stringify(a); });
