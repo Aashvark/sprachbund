@@ -39,7 +39,8 @@ main .module {
 
 main .module .grammar, main .module .lesson {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
+  height: 140px;
   
   background: transparent;
   border: 0;
@@ -53,7 +54,6 @@ main .module .grammar, main .module .lesson {
 
 main .module .grammar {
   width: 15%;
-  aspect-ratio: 1/1;
   
   border-top: 3px solid var(--light-cont);
   border-left: 3px solid var(--light-cont);

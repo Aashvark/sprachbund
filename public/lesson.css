@@ -7,6 +7,11 @@ header .language-flag, header .progress-bar, header .progress-count {
 
 header .language-flag { width: 94px; }
 
+header .language-flag svg { 
+  width: 82px;
+  height: 66px;
+}
+
 header .progress-bar {
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
   border: 1px solid var(--light-cont);
