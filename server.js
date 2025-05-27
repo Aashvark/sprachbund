@@ -62,8 +62,8 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
     let construction;
     if (keys.length >= 1 || keys == undefined) {
       construction = `<div class="hint"><span>${save}</span><table><tbody>`;
-      for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning !== [] ? submeaning.length : 1}">${key}</td></tr>`; }
-      if (submeaning !== []) {
+      for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
+      if (submeaning.length > 0) {
         for (let i = 0; i < getLongestList(submeaning).length; i++) {
           construction += `<tr>`;
           for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
@@ -97,7 +97,7 @@ fastify.post("/lesson", function (request, reply) { return reply.view('/src/less
 
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
 
-fastify.listen({ port: process.env.PORT, host: "0.0.0.0" },
+fastify.listen({ port: 30, host: "0.0.0.0" },
   function (err, address) {
     if (err) {
       console.error(err);
