@@ -125,8 +125,8 @@
     let lessons = JSON.parse('{{{json lessons}}}');
     let lesson = lessons[index];
     
-    var correct   = new Audio("https://cdn.glitch.global/a09638ce-8239-40b9-9a24-995569212470/correct.wav?v=1747005386606");
-    var incorrect = new Audio("https://cdn.glitch.global/a09638ce-8239-40b9-9a24-995569212470/incorrect.mp3?v=1747007700972");
+    var correct   = new Audio("/public/sfx/correct.wav");
+    var incorrect = new Audio("/public/sfx/incorrect.mp3");
     
     document.onkeydown = (event) => {
       if (event.key === "Enter") {
