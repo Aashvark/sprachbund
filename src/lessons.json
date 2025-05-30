@@ -6,15 +6,17 @@
     "description": "Learn more basic vocabulary",
     "dictionary": ["han"],
     "unit": [
-      {
-        "type": "vocabulary",
-        "word": "han",
-        "tip": "If there is no subject, verbs take he/she/it as its subject.",
-        "example": {
-          "sentence": "[han]",
-          "translation": "he/she/it [is]"
+      [
+        {
+          "type": "vocabulary",
+            "word": "han",
+            "tip": "If there is no subject, verbs take he/she/it as its subject.",
+            "example": {
+              "sentence": "[han]",
+              "translation": "he/she/it [is]"
+            }
         }
-      }
+      ]
     ]
   }
 ]
