@@ -15,6 +15,17 @@
               "sentence": "[han]",
               "translation": "he/she/it [is]"
             }
+        },
+        {
+          "type": "match",
+          "new": ["miro", "cévo", "symi", "han", "téu"],
+          "native": ["bread", "woman", "man", "to be", "him/her"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "the kind man has the bread",
+          "answers": ["i sojón symi vé han i miro"]
         }
       ]
     ]
