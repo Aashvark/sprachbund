@@ -3,6 +3,6 @@
 3. Find a good voice synth
 4. More challenge types
 - New Words
-New Grammar
-Fill in the blank
-Paragraph & Questions
+- New Grammar
+- Fill in the blank
+- Paragraph & Questions
