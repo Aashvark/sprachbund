@@ -296,12 +296,12 @@ main .response .textbox::placeholder {
 
 main .insert-buttons { text-align: left; }
 
-main .select { padding: 0 10%; }
+main .select { 
+  padding: 0 10%;
+  text-align: center;
+}
+
 main .select-btn {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  
   width: 60%;
   height: 80px;
   margin: 5px;
