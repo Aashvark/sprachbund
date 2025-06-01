@@ -8,6 +8,12 @@
     "unit": [
       [
         {
+          "type": "fill-in-the-blank",
+          "prompt": "i cévo vé ___ miro",
+          "answer": "han",
+          "choices": ["miro", "téu"]
+        },
+        {
           "type": "vocabulary",
             "word": "han",
             "tip": "If there is no subject, verbs take he/she/it as its subject.",
@@ -26,12 +32,6 @@
           "direction": "native-new",
           "prompt": "the kind man has the bread",
           "answers": ["i sojón symi vé han i miro"]
-        },
-        {
-          "type": "fill-in-the-blank",
-          "prompt": "i cévo vé ___ miro",
-          "answer": "han",
-          "choices": ["miro", "téu"]
         }
       ]
     ]

@@ -51,7 +51,14 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   for (let i = 0; i < tokens.length; i++) {
     save += tokens[i] + " ";
     
-    if (lang === "en" && getInComplexByLength(save.toLowerCase() + tokens[i + 1]) && getInComplexByLength(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2])) {
+    if (tokens[i] == "___") {
+      string += `<div class="hint">${save}</div>`;
+      save = "";
+      keys = undefined;
+      submeaning = [];
+      continue;
+    }
+    else if (lang === "en" && getInComplexByLength(save.toLowerCase() + tokens[i + 1]) && getInComplexByLength(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2])) {
       keys = Object.keys(dict).filter(key => getInComplex(key, save.trimEnd().toLowerCase()));
       if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
     } else if (lang == "smb" && save.trimEnd() in dict && !(save.toLowerCase() + tokens[i + 1] in dict) && !(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2] in dict)) {

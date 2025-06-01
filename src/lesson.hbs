@@ -50,7 +50,7 @@
     <main>
       {{#each lessons as |lesson|}}
       <div class="section">
-        {{#ifEquals lesson.type "fill-in-the-blank"}}\
+        {{#ifEquals lesson.type "fill-in-the-blank"}}
         <p class="heading"><i class="fa-solid fa-pen"></i> Fill in the blank!</p>
         <div class="prompt">{{hover-translate lesson.prompt "smb"}}</div>
         <div class="select" id="match-{{@index}}">
