@@ -205,10 +205,8 @@ main .prompt .hint {
   padding: 0 3px;
 }
 
-main .prompt .blank {
+main .prompt .hint .blank {
   width: 20px;
-  font-size: 20px;
-  text-decoration: underline;
 }
 
 main .prompt .hint span { 
