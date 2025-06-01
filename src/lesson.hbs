@@ -241,9 +241,7 @@
       if (document.getElementById("match-" + index).getElementsByClassName("button").length === 0) checkAnswer();
     }
 
-    function selectFitB(self) {
-
-    }
+    function selectFitB(self) { self.classList.toggle("selected"); }
     
     function shuffleDivs(containerId) {
       if (!document.getElementById(containerId)) return;
