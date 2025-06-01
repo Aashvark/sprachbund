@@ -56,7 +56,7 @@
         <div class="select" id="match-{{@index}}">
           <a class="select-btn button" onclick="selectFitB(this)" id="choice-{{@index}}-{{@index}}">{{answer}}</a>
           {{#each choices}}
-          <a class="select-btn button" onclick="selectFitB(this)" id="choice-{{@../index}}-{{@index + 1}}">{{this}}</a>
+          <a class="select-btn button" onclick="selectFitB(this)" id="choice-{{@../index}}-{{add @index 1}}">{{this}}</a>
           {{/each}}
         </div>
         {{/ifEquals}}
@@ -239,6 +239,10 @@
       
       selection = undefined;
       if (document.getElementById("match-" + index).getElementsByClassName("button").length === 0) checkAnswer();
+    }
+
+    function selectFitB(self) {
+
     }
     
     function shuffleDivs(containerId) {
