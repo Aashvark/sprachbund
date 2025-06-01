@@ -73,7 +73,7 @@
         {{/ifEquals}}
         {{#ifEquals lesson.type "paragraph"}}
         <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
-        <div  class="prompt">{{lesson.prompt}}</div>
+        <div  class="paragraph">{{lesson.prompt}}</div>
         <div  class="prompt">{{lesson.question}}</div>
         <div class="select" id="match-{{@index}}">
           <a class="select-btn button" onclick="selectFitB(this)" id="choice-{{@index}}-{{@index}}">{{answer}}</a>
