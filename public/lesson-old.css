@@ -1,0 +1,484 @@
+body { overflow: hidden; }
+
+header { height: 12%; }
+
+header .language-flag, header .progress-bar, header .progress-count {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header .language-flag { width: 94px; }
+
+header .language-flag svg { 
+  width: 82px;
+  height: 66px;
+}
+
+header .progress-bar {
+  background: linear-gradient(165deg, var(--contrast), var(--light-cont));
+  border: 1px solid var(--light-cont);
+  
+  width: calc(93% - 94px);
+  height: 30px;
+  padding: 3.5px;
+  
+  border-radius: 20px;
+}
+
+header .progress-inside {
+  display: block;
+  background: var(--accent);
+  z-index: -1;
+  
+  width: 0%;
+  height: 100%;
+  
+  border-radius: 20px;
+  transition: width 1000ms;
+}
+
+header .progress-inside {
+  display: block;
+  background: var(--accent);
+  z-index: -1;
+  
+  width: 0%;
+  height: 100%;
+  
+  border-radius: 20px;
+  transition: width 1000ms;
+}
+
+header .progress-count { width: 7%; }
+
+header .progress-count p {
+  color: var(--white);
+  
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main { height: 76%; }
+main .section { display: none; }
+
+main > div {
+  display: inline-block;
+  width: 70%;
+}
+
+main > div > * { width: 100%; }
+
+main .heading {
+  padding: 0 0 20px;
+  color: var(--white);
+  
+  font-size: 28px;
+  font-weight: bold;
+  
+  user-select: none;
+}
+
+main .subheading {
+  padding: 10px 0;
+  color: var(--white);
+  
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: bold;
+  
+  user-select: none;
+}
+
+main .definition {
+  padding: 10px 25px 15px;
+  
+  text-align: center;
+  
+  font-size: 20px;
+  color: var(--white);
+  
+  border: 3px solid var(--contrast);
+  border-radius: 10px;
+  
+  user-select: none;
+}
+
+main .definition .root {
+  padding: 0 15px;
+  
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 30px;
+}
+
+main .definition .ipa {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: max-content;
+  padding: 0 30px 5px;
+  
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings: "wdth" 100;
+  
+  font-size: 15px;
+  
+  border-bottom: 3px solid var(--contrast);
+}
+
+main .definition .context {
+  color: var(--accent);
+  
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+main .highlight {
+  color: var(--accent);
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+main .tip-highlight {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  
+  color: var(--accent);
+}
+
+main .container {
+  padding: 10px 0;
+  
+  text-align: center;
+  
+  font-size: 20px;
+  color: var(--white);
+  
+  border: 3px solid var(--contrast);
+  border-radius: 10px;
+  
+  user-select: none;
+}
+
+main .container .tip {
+  padding: 5px 20px;
+  
+  text-align: left;
+  font-size: 18px;
+}
+main .container .translation { font-size: 18px; }
+
+main .icon { 
+  padding: 0px 10px;
+  color: var(--light-cont);
+}
+
+main .paragraph {
+  margin: 2%;
+  padding: 10px;
+  border: 3px solid var(--contrast);
+  border-radius: 10px;
+}
+
+main .prompt {
+  padding: 10px;
+  border: 3px solid var(--contrast);
+  border-radius: 10px;
+}
+
+main .prompt p {
+  color: var(--white);
+  user-select: none;
+  font-size: 18px;
+}
+
+main .prompt .hint {
+  display: inline-block;
+  position: relative;
+  padding: 0 3px;
+}
+
+main .prompt .hint .blank {
+  position: relative;
+  top: 7px;
+  border: 1px solid var(--white);
+  width: 30px;
+}
+
+main .prompt .hint span { 
+  border-bottom: 4px dotted var(--light-cont);
+  padding: 0 1px;
+}
+
+main .prompt .hint table { 
+  display: none;
+  
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  
+  transform: translateX(-50%);
+  
+  background: var(--contrast);
+  
+  border-collapse: collapse;
+  border-spacing: 0;
+  
+  border: 2px solid var(--light-cont);
+  border-radius: 5px;
+  
+  font-size: 18px;
+}
+
+main .prompt .hint:hover table, main .prompt .hint table:hover { display: block; }
+
+main .prompt .hint table::before {
+  content: " ";
+  
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  
+  transform: translateX(-50%);
+  
+  width: 0;
+  height: 0;
+  z-index: 1;
+  
+  border: medium solid var(--light-cont);
+  border-width: 10px;
+  border-color: transparent transparent var(--light-cont) transparent;
+}
+
+main .prompt .hint table tr td {
+  padding: 10px 15px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+main .prompt .hint table tr td:not(:last-child) { border-right: 2px solid var(--light-cont); }
+main .prompt .hint table > tbody > tr:not(:last-child) > td { border-bottom: 2px solid var(--light-cont); }
+
+main .response { padding: 10px 0; }
+
+main .response .textbox {
+  background: var(--contrast);
+  padding: 12px;
+  
+  color: var(--white);
+  font-size: 20px;
+  
+  width: 100%;
+  height: 47vh;
+  
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  
+  border: 3px solid var(--light-cont);
+  border-radius: 20px;
+  outline: 0;
+  
+  resize: none;
+}
+
+main .response .textbox::placeholder {
+  user-select: none;
+  color: var(--light-cont);
+}
+
+main .insert-buttons { text-align: left; }
+
+main .select { 
+  padding: 20px 10%;
+  text-align: center;
+}
+
+main .select-btn {
+  width: 60%;
+  height: 80px;
+  margin: 5px;
+}
+
+main .select-btn:active {
+  margin: 8px 0 5px;
+  height: 77px;
+}
+
+main .shuffle-board { padding: 0 10%; }
+main .match-btn {
+  width: 48%;
+  height: 80px;
+  margin: 5px 1%;
+}
+
+main .match-btn:active {
+  margin: 8px 1% 5px;
+  height: 77px;
+}
+
+main .selected {
+  border: 3px solid var(--light-cont);
+  margin: 5px 1%;
+  height: 80px;
+}
+
+main .match-correct {
+  display: inline-flex;
+  
+  width: 48%;
+  height: 77px;
+  margin: 8px 1% 5px;
+  
+  justify-content: center;
+  align-items: center;
+  
+  vertical-align: bottom;
+  
+  user-select: cursor;
+  
+  border: 3px solid green;
+  border-radius: 10px;
+  
+  text-align: center;
+  
+  color: var(--white);
+  font-size: 20px
+}
+
+.button {
+  display: inline-flex;
+  
+  justify-content: center;
+  align-items: center;
+  
+  vertical-align: bottom;
+  
+  user-select: none;
+  cursor: pointer;
+  
+  border: 3px solid var(--contrast);
+  border-bottom: 6px solid var(--contrast);
+  border-radius: 10px;
+  
+  text-align: center;
+  
+  color: var(--white);
+  font-size: 20px;
+}
+
+.button:hover {
+  border: 3px solid var(--accent);
+  border-bottom: 6px solid var(--accent);
+}
+
+.button:active { border: 3px solid var(--accent); }
+
+main .insert-buttons .button {
+  aspect-ratio: 1/1;
+  width: 50px;
+  
+  font-weight: bold;
+}
+
+main .alert {
+  display: block;
+  width: 100%;
+  
+  background: linear-gradient(165deg, var(--contrast), var(--light-cont));
+  border-top: 5px solid var(--light-cont);
+  
+  position: absolute;
+  left: 0;
+  bottom: -250px;
+  
+  text-align: left;
+  padding: 25px;
+  
+  font-size: 0;
+  
+  transition: bottom 350ms ease-in;
+}
+
+main .block { bottom: 0; }
+
+main .alert .text, main .alert .button-ctn {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+main .alert .text { width: 70%; }
+main .alert .button-ctn { 
+  width: 30%;
+  padding: 0 5px;
+  text-align: right;
+}
+
+main .alert .button-ctn .button {
+  width: 120px;
+  padding: 7px;
+}
+
+main .alert .heading { padding: 0; }
+
+main .upper { text-transform: uppercase; }
+
+main .congrats {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer { 
+  border-top: 2px solid var(--contrast);
+  
+  display: inline-block;
+  width: 100%;
+  
+  text-align: center;
+  font-size: 0;
+  
+  height: 12%;
+  padding: 15px 8%;
+}
+
+footer .button {
+  width: 30%;
+  height: 100%;
+  
+  padding: 0 10px;
+  margin: 0 1.5%;
+}
+
+footer .finish-button { width: 60%; }
+
+@media screen and (max-width: 600px) {
+  header, footer { padding: 15px 4%; }
+  
+  header .progress-bar { width: calc(78% - 94px); }
+  header .progress-count { width: 22%; }
+  
+  main { padding: 0 5%; }
+  
+  main .subheading, main .definition, main .container { width: 100%; }
+  
+  main .shuffle-board { padding: 0; }
+  main .match-btn, main .selected { height: 90px;}
+  main .match-btn:active, main .match-correct  { height: 87px; }
+  
+  main .response .textbox { height: 39vh; }
+  main .alert #alert-description { font-size: 20px; }
+}
