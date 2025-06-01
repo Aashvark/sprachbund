@@ -213,7 +213,7 @@ main .prompt .hint .blank {
 }
 
 main .prompt .hint span { 
-  border-bottom: 3px dotted var(--light-cont);
+  border-bottom: 4px dotted var(--light-cont);
   padding: 0 1px;
 }
 
