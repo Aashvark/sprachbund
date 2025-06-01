@@ -206,8 +206,6 @@ main .prompt .hint {
 }
 
 main .prompt .blank {
-  display: inline-block;
-  position: relative;
   width: 20px;
   height: 10px;
   border-bottom: 4px solid var(--light-cont);
