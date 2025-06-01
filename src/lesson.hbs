@@ -251,7 +251,7 @@
     }
 
     function selectFitB(self) { 
-      selection.classList.toggle("selected");
+      if (selection != null) selection.classList.toggle("selected");
       selection = self;
       selection.classList.toggle("selected");
     }
