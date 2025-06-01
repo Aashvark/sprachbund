@@ -205,7 +205,7 @@ main .prompt .hint {
   padding: 0 3px;
 }
 
-main .prompt .hint {
+main .prompt .blank {
   width: 30px;
   height: 20px;
   border-bottom: 4px solid var(--light-cont);
