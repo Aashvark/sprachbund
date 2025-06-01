@@ -54,9 +54,9 @@
         <p class="heading"><i class="fa-solid fa-pen"></i> Fill in the blank!</p>
         <div class="prompt">{{hover-translate lesson.prompt "smb"}}</div>
         <div class="select" id="match-{{@index}}">
-          <a class="select-btn button" onclick="select(this)" id="choice-{{@../index}}-{{@index}}">{{answer}}</a>
+          <a class="select-btn button" onclick="selectFitB(this)" id="choice-{{@index}}-{{@index}}">{{answer}}</a>
           {{#each choices}}
-          <a class="select-btn button" onclick="select(this)" id="choice-{{@../index}}-{{@index}}">{{this}}</a>
+          <a class="select-btn button" onclick="selectFitB(this)" id="choice-{{@../index}}-{{@index + 1}}">{{this}}</a>
           {{/each}}
         </div>
         {{/ifEquals}}
