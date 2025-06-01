@@ -290,6 +290,22 @@ main .response .textbox::placeholder {
 
 main .insert-buttons { text-align: left; }
 
+main .select { padding: 0 10%; }
+main .select-btn {
+  position: relative;
+  left: 50%;
+  translate: transformX(-50%);
+  
+  width: 60%;
+  height: 80px;
+  margin: 5px 1%;
+}
+
+main .select-btn:active {
+  margin: 8px 1% 5px;
+  height: 77px;
+}
+
 main .shuffle-board { padding: 0 10%; }
 main .match-btn {
   width: 48%;
@@ -451,7 +467,7 @@ footer .finish-button { width: 60%; }
   
   main .shuffle-board { padding: 0; }
   main .match-btn, main .selected { height: 90px;}
-  main .match-btn:active, main .match-correct,  { height: 87px; }
+  main .match-btn:active, main .match-correct  { height: 87px; }
   
   main .response .textbox { height: 39vh; }
   main .alert #alert-description { font-size: 20px; }
