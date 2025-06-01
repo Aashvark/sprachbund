@@ -207,7 +207,7 @@ main .prompt .hint {
 
 main .prompt .blank {
   width: 20px;
-  border-bottom: 2px solid var(--white);
+  text-decoration: underline;
 }
 
 main .prompt .hint span { 
