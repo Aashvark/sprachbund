@@ -251,9 +251,9 @@
     }
 
     function selectFitB(self) { 
-      selection.classList.remove("selected");
+      selection.classList.toggle("selected");
       selection = self;
-      self.classList.toggle("selected");
+      selection.classList.toggle("selected");
     }
     
     function shuffleDivs(containerId) {
