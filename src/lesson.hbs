@@ -152,7 +152,7 @@
       ansCount++;
       document.getElementById("percentage").innerHTML = `${(100 * lessons.length / ansCount).toFixed(2)}%`; 
       
-      if (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) {
+      if ((lesson.type === "fill-in-the-blank" && selection.innerText === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value)))) {
         correct.play();
         setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
       }
@@ -241,7 +241,10 @@
       if (document.getElementById("match-" + index).getElementsByClassName("button").length === 0) checkAnswer();
     }
 
-    function selectFitB(self) { self.classList.toggle("selected"); }
+    function selectFitB(self) { 
+      selection = self;
+      self.classList.toggle("selected");
+    }
     
     function shuffleDivs(containerId) {
       if (!document.getElementById(containerId)) return;
