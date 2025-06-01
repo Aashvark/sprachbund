@@ -51,7 +51,7 @@
         {{#each units}}
         <div class="module">
           <input name="{{@index}}-lesson" id="u{{@index}}-lesson" hidden>
-          <a class="grammar" onclick="showReference()"><i class="fas fa-{{icon}}"></i></a>
+          <button class="grammar" onclick="showReference()"><i class="fas fa-{{icon}}"></i></button>
           <button class="lesson" name="unit" value="{{@index}}" id="unit-{{@index}}">
             <p class="module-num">Module {{add @index 1}}</p>
             <p class="name">{{name}}</p>
