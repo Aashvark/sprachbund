@@ -52,7 +52,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
     save += tokens[i] + " ";
     
     if (tokens[i] == "___") {
-      string += `<div class="hint">${save}</div>`;
+      string += `<div class="hint blank"></div>`;
       save = "";
       keys = undefined;
       submeaning = [];

@@ -205,6 +205,12 @@ main .prompt .hint {
   padding: 0 3px;
 }
 
+main .prompt .hint {
+  width: 30px;
+  height: 20px;
+  border-bottom: 4px solid var(--light-cont);
+}
+
 main .prompt .hint span { 
   border-bottom: 4px dotted var(--light-cont);
   padding: 0 1px;
@@ -298,11 +304,11 @@ main .select-btn {
   
   width: 60%;
   height: 80px;
-  margin: 5px 1%;
+  margin: 5px;
 }
 
 main .select-btn:active {
-  margin: 8px 1% 5px;
+  margin: 8px 0 5px;
   height: 77px;
 }
 
