@@ -206,6 +206,7 @@ main .prompt .hint {
 }
 
 main .prompt .hint .blank {
+  border: 1px solid var(--white);
   width: 20px;
 }
 
