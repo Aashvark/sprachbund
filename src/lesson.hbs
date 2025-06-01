@@ -152,7 +152,7 @@
       ansCount++;
       document.getElementById("percentage").innerHTML = `${(100 * lessons.length / ansCount).toFixed(2)}%`; 
       
-      if ((lesson.type === "fill-in-the-blank" && selection.innerText === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value)))) {
+      if ((lesson.type === "fill-in-the-blank" && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value)))) {
         correct.play();
         setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
       }
@@ -213,6 +213,7 @@
     let selection;
     function select(self) {
       if (selection === undefined) {
+        selection.classList.remove("selected")
         self.classList.toggle("selected");
         selection = self;
         return;
