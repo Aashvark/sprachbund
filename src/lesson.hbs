@@ -50,6 +50,16 @@
     <main>
       {{#each lessons as |lesson|}}
       <div class="section">
+        {{#ifEquals lesson.type "fill-in-the-blank"}}\
+        <p class="heading"><i class="fa-solid fa-pen"></i> Fill in the blank!</p>
+        <div class="prompt">{{hover-translate lesson.prompt "smb"}}</div>
+        <div class="select" id="match-{{@index}}">
+          <a class="select-btn button" onclick="select(this)" id="choice-{{@../index}}-{{@index}}">{{answer}}</a>
+          {{#each choices}}
+          <a class="select-btn button" onclick="select(this)" id="choice-{{@../index}}-{{@index}}">{{this}}</a>
+          {{/each}}
+        </div>
+        {{/ifEquals}}
         {{#ifEquals lesson.type "match"}}
         <p class="heading"><i class="fa-solid fa-motorcycle"></i> Match these terms!</p>
         <div class="shuffle-board" id="match-{{@index}}">
