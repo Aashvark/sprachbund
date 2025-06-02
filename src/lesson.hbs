@@ -50,6 +50,17 @@
     <main>
       {{#each lessons as |lesson|}}
       <div class="section">
+        {{#ifEquals lesson.type "comprehension"}}
+        <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
+        <div class="div-border">{{lesson.prompt}}</div>
+        <div class="div-border">{{lesson.question}}</div>
+        <div class="btn-container" id="match-{{@index}}">
+          <a class="answer-btn button" onclick="selectFitB(this)" id="choice-{{@index}}-{{@index}}">{{answer}}</a>
+          {{#each choices}}
+          <a class="select-btn button" onclick="selectFitB(this)" id="choice-{{@../index}}-{{add @index 1}}">{{this}}</a>
+          {{/each}}
+        </div>
+        {{/ifEquals}}
         {{#ifEquals lesson.type "fill-in-the-blank"}}
         <p class="heading"><i class="fa-solid fa-pen"></i> Fill in the blank!</p>
         <div class="div-border">{{hover-translate lesson.prompt "smb"}}</div>
@@ -68,17 +79,6 @@
           {{/each}}
           {{#each native}}
           <a class="match-btn button" onclick="select(this)" id="native-{{@../index}}-{{@index}}">{{this}}</a>
-          {{/each}}
-        </div>
-        {{/ifEquals}}
-        {{#ifEquals lesson.type "paragraph"}}
-        <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
-        <div class="div-border">{{lesson.prompt}}</div>
-        <div class="div-border">{{lesson.question}}</div>
-        <div class="select" id="match-{{@index}}">
-          <a class="select-btn button" onclick="selectFitB(this)" id="choice-{{@index}}-{{@index}}">{{answer}}</a>
-          {{#each choices}}
-          <a class="select-btn button" onclick="selectFitB(this)" id="choice-{{@../index}}-{{add @index 1}}">{{this}}</a>
           {{/each}}
         </div>
         {{/ifEquals}}
@@ -161,7 +161,7 @@
       ansCount++;
       document.getElementById("percentage").innerHTML = `${(100 * lessons.length / ansCount).toFixed(2)}%`; 
       
-      if (((lesson.type === "fill-in-the-blank" || lesson.type === "paragraph") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value)))) {
+      if (((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value)))) {
         correct.play();
         setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
       }

@@ -70,20 +70,36 @@ main .section {
   width: 100%;
 }
 
-main .section > * {  margin: 2% 0; }
+main .section > * {  
+  margin: 1.5% 0;
+  user-select: none;
+}
 
 main .heading {
   font-size: 28px;
   font-weight: bold;
   color: var(--white);
-  
-  user-select: none;
 }
 
 main .section .div-border {
   padding: 10px;
   border: 3px solid var(--contrast);
   border-radius: 10px;
+}
+
+main .section .btn-container {
+  padding: 0 10%;
+  text-align: center;
+}
+
+main .section .btn-container .answer-btn {
+  margin: 5px 0;
+  height: 80px;
+}
+
+main .select-btn:active {
+  margin: 8px 0 5px;
+  height: 77px;
 }
 
 .button {
