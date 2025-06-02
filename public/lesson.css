@@ -71,7 +71,6 @@ main .section {
 }
 
 main .section > * {
-  display: inline-block;
   margin: 1.5% 0;
   user-select: none;
 }
@@ -83,14 +82,19 @@ main .heading {
 }
 
 main .section .div-border {
-  vertical-align: middle;
-
+  position: relative;
   padding: 10px;
   
   min-height: 70px;
   
   border: 3px solid var(--contrast);
   border-radius: 10px;
+}
+
+main .section .div-border > p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 main .section .btn-container {
