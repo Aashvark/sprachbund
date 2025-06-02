@@ -237,8 +237,11 @@ footer .finish-button { width: 60%; }
 @media screen and (max-width: 600px) {
   header, footer { padding: 15px 4%; }
   
-  header .progress-bar { width: calc(72% - 94px); }
-  header .progress-count { width: 25%; }
+  header .progress-bar { width: calc(77% - 94px); }
+  header .progress-count { 
+    width: 20%;
+    text-align: center;
+  }
   
   main { padding: 0 5%; }
 
