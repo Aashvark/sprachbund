@@ -257,9 +257,9 @@ footer .finish-button { width: 60%; }
     margin: 10px 0 5px;
   }
   main .section .btn-container .answer-btn:first-child:active { margin: 5px 0; }
-  main .section .btn-container .answer-btn:last-child:active { margin: 10px 0 0; }
+  main .section .btn-container .answer-btn:last-child:active { margin: 10px 0 5px; }
 
-  main .section .btn-container .selected:last-child:active { margin: 10px 0 0; }
+  main .section .btn-container .selected:last-child:active { margin: 10px 0 5px; }
 
   .button { font-size: 16px; }
 }
