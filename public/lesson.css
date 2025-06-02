@@ -112,12 +112,12 @@ main .section .btn-container .answer-btn {
   vertical-align: bottom;
 
   aspect-ratio: 2/1;
-  width: 200px;
+  width: 220px;
   margin: 0 0.5%;
 }
 
 main .section .btn-container .answer-btn:active {
-  height: 95px;
+  height: 115px;
   margin: 5px 0.5% 0;
 }
 
