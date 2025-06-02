@@ -70,8 +70,14 @@ main .section {
   width: 100%;
 }
 
-main .section > div{ 
-  margin: 0 1%;
+main .section > * {  margin: 2% 0; }
+
+main .heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--white);
+  
+  user-select: none;
 }
 
 main .section .div-border {
