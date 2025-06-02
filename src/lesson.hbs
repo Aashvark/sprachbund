@@ -147,16 +147,17 @@
     function checkAnswer() {
       if (index >= lessons.length) { completeLesson(); return; }
       
+      if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === null) {
+        setAlert("<i class=\"fas fa-circle-xmark\"></i> Please answer!", "Tap or click on the correct response."); 
+        return;
+      }
+
       ansCount++;
       document.getElementById("percentage").innerHTML = `${(100 * lessons.length / ansCount).toFixed(2)}%`; 
       
       if (((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value)))) {
         correct.play();
         setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
-      }
-      else if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === null) {
-        setAlert("<i class=\"fas fa-circle-xmark\"></i> Please answer!", "Tap or click on the correct response."); 
-        return;
       }
       else if (lesson.type === "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
       else if (lesson.type === "match") { setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); }
