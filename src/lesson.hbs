@@ -55,7 +55,7 @@
         <div class="btn-container" id="comprehension-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>{{/each}}</div>
         {{/ifEquals}}
         {{#ifEquals lesson.type "fill-in-the-blank"}}
-        <p class="heading"><i class="fa-solid fa-pen"></i> Fill in the blank!</p>
+        <p class="heading"><i class="fa-solid fa-pen-to-square"></i> Fill in the blank!</p>
         <div class="div-border">{{hover-translate lesson.prompt "smb"}}</div>
         <p class="p-text">Which word completes the sentence?</p>
         <div class="btn-container" id="match-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>{{/each}}</div>

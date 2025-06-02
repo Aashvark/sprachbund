@@ -76,7 +76,6 @@ main .heading {
   font-weight: bold;
   color: var(--white);
 }
-
 main .heading .fa-solid { padding: 0 5px; }
 
 main .section .div-border {
@@ -105,8 +104,74 @@ main .section .p-text {
   color: var(--white);
 }
 
-main .section .btn-container { text-align: center; }
+main .prompt .hint {
+  display: inline-block;
+  position: relative;
+  padding: 0 3px;
+}
 
+main .prompt .hint .blank {
+  position: relative;
+  top: 7px;
+  border: 1px solid var(--white);
+  width: 30px;
+}
+
+main .prompt .hint span { 
+  border-bottom: 4px dotted var(--light-cont);
+  padding: 0 1px;
+}
+
+main .prompt .hint table { 
+  display: none;
+  
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  
+  transform: translateX(-50%);
+  
+  background: var(--contrast);
+  
+  border-collapse: collapse;
+  border-spacing: 0;
+  
+  border: 2px solid var(--light-cont);
+  border-radius: 5px;
+  
+  font-size: 18px;
+}
+
+main .prompt .hint:hover table, main .prompt .hint table:hover { display: block; }
+
+main .prompt .hint table::before {
+  content: " ";
+  
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  
+  transform: translateX(-50%);
+  
+  width: 0;
+  height: 0;
+  z-index: 1;
+  
+  border: medium solid var(--light-cont);
+  border-width: 10px;
+  border-color: transparent transparent var(--light-cont) transparent;
+}
+
+main .prompt .hint table tr td {
+  padding: 10px 15px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+main .prompt .hint table tr td:not(:last-child) { border-right: 2px solid var(--light-cont); }
+main .prompt .hint table > tbody > tr:not(:last-child) > td { border-bottom: 2px solid var(--light-cont); }
+
+main .section .btn-container { text-align: center; }
 main .section .btn-container .answer-btn, main .section .btn-container .answer-btn:hover {
   display: inline-flex;
   align-items: center;
@@ -157,6 +222,8 @@ main .insert-buttons .button {
   font-weight: bold;
 }
 
+main .block { bottom: 0; }
+
 main .alert {
   display: block;
   width: 100%;
@@ -175,8 +242,6 @@ main .alert {
   
   transition: bottom 350ms ease-in;
 }
-
-main .block { bottom: 0; }
 
 main .alert .text, main .alert .button-ctn {
   display: inline-block;
