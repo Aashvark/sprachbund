@@ -232,9 +232,11 @@ footer .finish-button { width: 60%; }
 
 @media screen and (max-width: 600px) {
   header, footer { padding: 15px 4%; }
+
+  header .language-flag, header .progress-bar, header .progress-count { margin: 0 1%; }
   
-  header .progress-bar { width: calc(77% - 94px); }
-  header .progress-count { width: 20%; }
+  header .progress-bar { width: calc(78% - 94px); }
+  header .progress-count { width: 16%; }
   
   main { padding: 0 5%; }
 
