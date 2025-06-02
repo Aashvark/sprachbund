@@ -249,9 +249,6 @@ footer .finish-button { width: 60%; }
     height: 55px;
     margin: 5px 0;
   }
-  
-  main .section .btn-container .answer-btn:first-child:hover { margin: 0 0 5px; }
-  main .section .btn-container .answer-btn:last-child:hover { margin: 5px 0; }
 
   main .section .btn-container .answer-btn:active {
     height: 50px;
