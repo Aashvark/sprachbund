@@ -253,8 +253,8 @@ footer .finish-button { width: 60%; }
     height: 55px;
     margin: 7px 0 5px;
   }
-  main .section .btn-container .answer-btn:first-child { margin: 2px 0 5px; }
-  main .section .btn-container .answer-btn:last-child { margin: 7px 0 0; }
+  main .section .btn-container .answer-btn:first-child { margin: 4px 0 5px; }
+  main .section .btn-container .answer-btn:last-child { margin: 9px 0 0; }
 
   main .section .btn-container .answer-btn:active {
     height: 50px;
