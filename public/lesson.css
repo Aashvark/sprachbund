@@ -109,14 +109,14 @@ main .section .btn-container { text-align: center; }
 main .section .btn-container .answer-btn {
   display: inline-block;
   vertical-align: bottom;
-  
+
   aspect-ratio: 1/1;
-  width: 40px;
-  height: 40px;
+  width: 200px;
+  height: 200px;
 }
 
 main .section .btn-container .answer-btn:active {
-  height: 37px;
+  height: 197px;
   margin: 3px 0 0;
 }
 
