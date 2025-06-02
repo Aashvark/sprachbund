@@ -249,8 +249,8 @@ footer .finish-button { width: 60%; }
     height: 55px;
     margin: 5px 0;
   }
-  main .section .btn-container .answer-btn:first-child:hover { margin: 1px 0 5px; }
-  main .section .btn-container .answer-btn:last-child:hover { margin: 5px 0 1px; }
+  main .section .btn-container .answer-btn:first-child:hover { margin: 0 0 5px; }
+  main .section .btn-container .answer-btn:last-child:hover { margin: 5px 0 5px; }
 
   main .section .btn-container .answer-btn:active {
     height: 50px;
@@ -258,6 +258,8 @@ footer .finish-button { width: 60%; }
   }
   main .section .btn-container .answer-btn:first-child:active { margin: 5px 0; }
   main .section .btn-container .answer-btn:last-child:active { margin: 10px 0 0; }
+
+  main .section .btn-container .selected:last-child:active { margin: 10px 0 0; }
 
   .button { font-size: 16px; }
 }
