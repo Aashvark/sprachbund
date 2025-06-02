@@ -121,7 +121,7 @@ main .section .btn-container .answer-btn {
 
 main .section .btn-container .answer-btn:hover {
   height: 110px;
-  margin: 9px 0.5% 0;
+  margin: 7px 0.5% 0;
 } 
 
 main .section .btn-container .answer-btn:active {
@@ -251,10 +251,10 @@ footer .finish-button { width: 60%; }
 
   main .section .btn-container .answer-btn:hover {
     height: 55px;
-    margin: 9px 0 5px;
+    margin: 7px 0 5px;
   }
-  main .section .btn-container .answer-btn:first-child { margin: 4px 0 5px; }
-  main .section .btn-container .answer-btn:last-child { margin: 9px 0 0; }
+  main .section .btn-container .answer-btn:first-child { margin: 2px 0 5px; }
+  main .section .btn-container .answer-btn:last-child { margin: 7px 0 0; }
 
   main .section .btn-container .answer-btn:active {
     height: 50px;
