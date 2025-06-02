@@ -108,7 +108,7 @@ main .section .p-text {
 
 main .section .btn-container { text-align: center; }
 
-main .section .btn-container .answer-btn {
+main .section .btn-container .answer-btn, main .section .btn-container .answer-btn:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -118,7 +118,7 @@ main .section .btn-container .answer-btn {
   width: 220px;
   margin: 0 0.5%;
 }
-main .section .btn-container .answer-btn:hover { height: 110px; }
+
 main .section .btn-container .answer-btn:active {
   height: 105px;
   margin: 5px 0.5% 0;
@@ -234,17 +234,15 @@ footer .finish-button { width: 60%; }
 @media screen and (max-width: 1000px) {
   main { padding: 0 10%; }
 
-  main .section .btn-container .answer-btn {
+  main .section .btn-container .answer-btn, main .section .btn-container .answer-btn:hover {
     aspect-ratio: unset;
     width: 90%;
     height: 55px;
     margin: 5px 0;
   }
   
-  main .section .btn-container .answer-btn:first-child { margin: 0 0 5px; }
-  main .section .btn-container .answer-btn:last-child { margin: 5px 0; }
-
-  main .section .btn-container .answer-btn:hover { height: 55px; }
+  main .section .btn-container .answer-btn:first-child, main .section .btn-container .answer-btn:hover { margin: 0 0 5px; }
+  main .section .btn-container .answer-btn:last-child, main .section .btn-container .answer-btn:hover { margin: 5px 0; }
 
   main .section .btn-container .answer-btn:active {
     height: 50px;
