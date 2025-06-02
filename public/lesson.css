@@ -104,6 +104,7 @@ main .section .p-text {
   color: var(--white);
 }
 
+
 main .prompt .hint {
   display: inline-block;
   position: relative;
@@ -170,6 +171,7 @@ main .prompt .hint table tr td {
 
 main .prompt .hint table tr td:not(:last-child) { border-right: 2px solid var(--light-cont); }
 main .prompt .hint table > tbody > tr:not(:last-child) > td { border-bottom: 2px solid var(--light-cont); }
+
 
 main .section .btn-container { text-align: center; }
 main .section .btn-container .answer-btn, main .section .btn-container .answer-btn:hover {
