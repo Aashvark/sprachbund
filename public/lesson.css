@@ -266,7 +266,8 @@ footer .finish-button { width: 60%; }
 @media screen and (max-width: 800px) {
   footer .button { 
     width: 45%;
-    font-size: 25px;
+    font-weight: bold;
+    font-size: 20px;
   }
 }
 
