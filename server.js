@@ -105,7 +105,7 @@ fastify.post("/lesson", function (request, reply) { return reply.view('/src/less
 
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
 
-fastify.listen({ port: 30, host: "0.0.0.0" },
+fastify.listen({ port: process.env.PORT || 4000, host: "0.0.0.0" },
   function (err, address) {
     if (err) {
       console.error(err);
