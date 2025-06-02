@@ -51,24 +51,14 @@
         {{#ifEquals lesson.type "comprehension"}}
         <p class="heading"><i class="fa-solid fa-magnifying-glass"></i> Read this carefully</p>
         <div class="div-border">{{lesson.prompt}}</div>
-        <p   class="p-text">{{lesson.question}}</p>
-        <div class="btn-container" id="comprehension-{{@index}}">
-          <a class="answer-btn button" onclick="selectFitB(this)">{{answer}}</a>
-          {{#each choices}}
-          <a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>
-          {{/each}}
-        </div>
+        <p class="p-text">{{lesson.question}}</p>
+        <div class="btn-container" id="comprehension-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>{{/each}}</div>
         {{/ifEquals}}
         {{#ifEquals lesson.type "fill-in-the-blank"}}
         <p class="heading"><i class="fa-solid fa-pen"></i> Fill in the blank!</p>
         <div class="div-border">{{hover-translate lesson.prompt "smb"}}</div>
-        <p   class="p-text">Which word completes the sentence?</p>
-        <div class="btn-container" id="match-{{@index}}">
-          <a class="answer-btn button" onclick="selectFitB(this)" id="choice-{{@index}}-{{@index}}">{{answer}}</a>
-          {{#each choices}}
-          <a class="answer-btn button" onclick="selectFitB(this)" id="choice-{{@../index}}-{{add @index 1}}">{{this}}</a>
-          {{/each}}
-        </div>
+        <p class="p-text">Which word completes the sentence?</p>
+        <div class="btn-container" id="match-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>{{/each}}</div>
         {{/ifEquals}}
         {{#ifEquals lesson.type "match"}}
         <p class="heading"><i class="fa-solid fa-motorcycle"></i> Match these terms!</p>
@@ -163,6 +153,10 @@
       if (((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value)))) {
         correct.play();
         setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
+      }
+      else if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === null) {
+        setAlert("<i class=\"fas fa-circle-xmark\"></i> Please answer!", "Tap or click on the correct response."); 
+        return;
       }
       else if (lesson.type === "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
       else if (lesson.type === "match") { setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); }
