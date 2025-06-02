@@ -107,18 +107,20 @@ main .section .p-text {
 main .section .btn-container { text-align: center; }
 
 main .section .btn-container .answer-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   vertical-align: bottom;
 
   aspect-ratio: 1/1;
   width: 200px;
   height: 200px;
-  margin: 0 1%;
+  margin: 0 0.5%;
 }
 
 main .section .btn-container .answer-btn:active {
   height: 197px;
-  margin: 3px 1% 0;
+  margin: 3px 0.5% 0;
 }
 
 .button {
