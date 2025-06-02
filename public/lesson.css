@@ -258,5 +258,7 @@ footer .finish-button { width: 60%; }
     margin: 10px 0 5px;
   }
 
+  .button { font-size: 16px; }
+
   main .alert #alert-description { font-size: 20px; }
 }
