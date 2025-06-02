@@ -247,12 +247,12 @@ footer .finish-button { width: 60%; }
   main .section .btn-container .answer-btn {
     aspect-ratio: unset;
     width: 100%;
-    height: 45px;
+    height: 55px;
     margin: 5px 0;
   }
 
   main .section .btn-container .answer-btn:active {
-    height: 40px;
+    height: 50px;
     margin: 10px 0 5px;
   }
 
