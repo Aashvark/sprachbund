@@ -58,15 +58,16 @@ header .progress-count p {
   font-weight: bold;
 }
 
-main { height: 76%; }
-main .section { display: none; }
+main { 
+  width: 100%;
+  height: 76%;
 
-main > div {
-  display: inline-block;
-  width: 70%;
+  padding: 0 15%;
 }
-
-main > div > * { width: 100%; }
+main .section { 
+  display: none;
+  width: 100%;
+}
 
 .button {
   display: inline-flex;
