@@ -107,7 +107,7 @@ main .section .p-text {
 main .section .btn-container { text-align: center; }
 
 main .section .btn-container .answer-btn {
-  width: 100%;
+  width: 90%;
   height: 70px;
   margin: 5px 0;
 }
