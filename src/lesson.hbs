@@ -143,11 +143,13 @@
         else checkAnswer();
       }
     }
+
+    let selection;
     
     function checkAnswer() {
       if (index >= lessons.length) { completeLesson(); return; }
       
-      if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === null) {
+      if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined) {
         setAlert("<i class=\"fas fa-circle-xmark\"></i> Please answer!", "Tap or click on the correct response."); 
         return;
       }
@@ -213,7 +215,6 @@
       document.getElementById("alert").classList.add("block");
     }
     
-    let selection;
     function select(self) {
       if (selection === undefined) {
         self.classList.toggle("selected");
