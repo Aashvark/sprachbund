@@ -113,11 +113,12 @@ main .section .btn-container .answer-btn {
   aspect-ratio: 1/1;
   width: 200px;
   height: 200px;
+  margin: 0 1%;
 }
 
 main .section .btn-container .answer-btn:active {
   height: 197px;
-  margin: 3px 0 0;
+  margin: 3px 1% 0;
 }
 
 .button {
