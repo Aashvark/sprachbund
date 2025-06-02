@@ -89,6 +89,15 @@ main .section .div-border {
   border-radius: 10px;
 }
 
+main .section .p-text {
+  color: var(--white);
+  
+  text-align: left;
+  
+  font-size: 20px;
+  font-weight: bold;
+}
+
 main .section .btn-container { text-align: center; }
 
 main .section .btn-container .answer-btn {

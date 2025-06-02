@@ -51,7 +51,7 @@
         {{#ifEquals lesson.type "comprehension"}}
         <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
         <div class="div-border">{{lesson.prompt}}</div>
-        <div class="div-border">{{lesson.question}}</div>
+        <p   class="p-text">{{lesson.question}}</p>
         <div class="btn-container" id="comprehension-{{@index}}">
           <a class="answer-btn button" onclick="selectFitB(this)" id="comprehension-{{@index}}-{{@index}}">{{answer}}</a>
           {{#each choices}}
