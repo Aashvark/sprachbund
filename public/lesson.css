@@ -224,8 +224,6 @@ main .insert-buttons .button {
   font-weight: bold;
 }
 
-main .block { bottom: 0; }
-
 main .alert {
   display: block;
   width: 100%;
@@ -244,6 +242,8 @@ main .alert {
   
   transition: bottom 350ms ease-in;
 }
+
+main .block { bottom: 0; }
 
 main .alert .text, main .alert .button-ctn {
   display: inline-block;
