@@ -72,6 +72,7 @@ main .section {
 
 main .section > * {  
   margin: 1.5% 0;
+  min-height: 70px;
   user-select: none;
 }
 
@@ -94,22 +95,21 @@ main .section .btn-container {
 
 main .section .btn-container .answer-btn {
   width: 100%;
-  height: 80px;
+  height: 70px;
   margin: 5px 0;
 }
 
 main .section .btn-container .answer-btn:active {
-  height: 77px;
+  height: 67px;
   margin: 8px 0 5px;
 }
 
 .button {
   display: inline-flex;
+  vertical-align: bottom;
   
   justify-content: center;
   align-items: center;
-  
-  vertical-align: bottom;
   
   user-select: none;
   cursor: pointer;
