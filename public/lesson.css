@@ -86,10 +86,7 @@ main .section .div-border {
   border-radius: 10px;
 }
 
-main .section .btn-container {
-  padding: 0 10%;
-  text-align: center;
-}
+main .section .btn-container { text-align: center; }
 
 main .section .btn-container .answer-btn {
   width: 100%;
