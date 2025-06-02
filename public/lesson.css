@@ -118,7 +118,7 @@ main .section .btn-container .answer-btn {
 }
 
 main .section .btn-container .answer-btn:active {
-  height: 195px;
+  height: 95px;
   margin: 5px 0.5% 0;
 }
 
