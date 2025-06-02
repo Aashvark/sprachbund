@@ -106,6 +106,9 @@ main .section .btn-container .answer-btn {
   margin: 5px 0;
 }
 
+main .section .btn-container .answer-btn:first-child { margin: 0 0 5px; }
+main .section .btn-container .answer-btn:last-child { margin: 5px 0 0; }
+
 main .section .btn-container .answer-btn:active {
   height: 67px;
   margin: 8px 0 5px;
@@ -117,8 +120,7 @@ main .section .btn-container .answer-btn:active {
   
   justify-content: center;
   align-items: center;
-  
-  user-select: none;
+
   cursor: pointer;
   
   border: 3px solid var(--contrast);
