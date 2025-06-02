@@ -49,7 +49,7 @@
       {{#each lessons as |lesson|}}
       <div class="section">
         {{#ifEquals lesson.type "comprehension"}}
-        <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
+        <p class="heading"><i class="fa-solid fa-magnifying-glass"></i> Read this text!</p>
         <div class="div-border">{{lesson.prompt}}</div>
         <p   class="p-text">{{lesson.question}}</p>
         <div class="btn-container" id="comprehension-{{@index}}">
