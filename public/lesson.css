@@ -107,16 +107,17 @@ main .section .p-text {
 main .section .btn-container { text-align: center; }
 
 main .section .btn-container .answer-btn {
-  width: 90%;
-  height: 70px;
-  margin: 5px 0;
+  display: inline-block;
+  vertical-align: bottom;
+  
+  aspect-ratio: 1/1;
+  width: 40px;
+  height: 40px;
 }
-main .section .btn-container .answer-btn:first-child { margin: 0 0 5px; }
-main .section .btn-container .answer-btn:last-child { margin: 5px 0 0; }
 
 main .section .btn-container .answer-btn:active {
-  height: 67px;
-  margin: 8px 0 5px;
+  height: 37px;
+  margin: 3px 0 0;
 }
 
 .button {
