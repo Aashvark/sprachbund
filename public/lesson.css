@@ -177,6 +177,10 @@ footer .button {
 
 footer .finish-button { width: 60%; }
 
+@media screen and (max-width: 800px) {
+  main { padding: 0 10%; }
+}
+
 @media screen and (max-width: 600px) {
   header, footer { padding: 15px 4%; }
   
