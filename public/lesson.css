@@ -98,19 +98,20 @@ main .section .div-border {
 main .section .div-border .hint {
   display: inline-block;
   position: relative;
-  padding: 0 3px;
+  padding: 0 4px;
+}
+
+main .section .div-border .hint span {
+  padding: 0 1px;
+  text-decoration: dotted; 
+  text-decoration-color: var(--light-cont);
 }
 
 main .section .div-border .hint .blank {
   position: relative;
-  top: 7px;
-  border: 1px solid var(--white);
+  top: 9px;
   width: 30px;
-}
-
-main .section .div-border .hint span { 
-  border-bottom: 4px dotted var(--light-cont);
-  padding: 0 1px;
+  border: 1px solid var(--light-cont);
 }
 
 main .section .div-border .hint table { 
