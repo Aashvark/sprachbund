@@ -220,6 +220,7 @@ footer {
 }
 
 footer .button {
+  aspect-ratio: 3/1;
   width: 30%;
   height: 100%;
   
@@ -263,7 +264,10 @@ footer .finish-button { width: 60%; }
 }
 
 @media screen and (max-width: 800px) {
-  footer .button { width: 45%; }
+  footer .button { 
+    width: 45%;
+    font-size: 25px;
+  }
 }
 
 @media screen and (max-width: 600px) {
