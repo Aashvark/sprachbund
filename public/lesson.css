@@ -112,15 +112,14 @@ main .section .btn-container .answer-btn {
   justify-content: center;
   vertical-align: bottom;
 
-  aspect-ratio: 1/1;
+  aspect-ratio: 2/1;
   width: 200px;
-  height: 200px;
   margin: 0 0.5%;
 }
 
 main .section .btn-container .answer-btn:active {
-  height: 197px;
-  margin: 3px 0.5% 0;
+  height: calc(100% - 5px);
+  margin: 5px 0.5% 0;
 }
 
 .button {
@@ -133,7 +132,7 @@ main .section .btn-container .answer-btn:active {
   cursor: pointer;
   
   border: 3px solid var(--contrast);
-  border-bottom: 6px solid var(--contrast);
+  border-bottom: 8px solid var(--contrast);
   border-radius: 10px;
   
   text-align: center;
@@ -144,7 +143,7 @@ main .section .btn-container .answer-btn:active {
 
 .button:hover {
   border: 3px solid var(--accent);
-  border-bottom: 6px solid var(--accent);
+  border-bottom: 8px solid var(--accent);
 }
 
 .button:active { border: 3px solid var(--accent); }
