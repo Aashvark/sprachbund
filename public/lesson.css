@@ -77,6 +77,8 @@ main .heading {
   color: var(--white);
 }
 
+main .heading .fa-solid { padding: 0 5px; }
+
 main .section .div-border {
   display: flex;
   justify-content: center;
