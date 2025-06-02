@@ -250,11 +250,16 @@ footer .finish-button { width: 60%; }
     height: 55px;
     margin: 5px 0;
   }
+  
+  main .section .btn-container .answer-btn:first-child { margin: 0 0 5px ; }
+  main .section .btn-container .answer-btn:last-child { margin: 5px 0 ; }
 
   main .section .btn-container .answer-btn:active {
     height: 50px;
     margin: 10px 0 5px;
   }
+  main .section .btn-container .answer-btn:first-child { margin: 5px 0; }
+  main .section .btn-container .answer-btn:last-child { margin: 10px 0 0; }
 
   .button { font-size: 16px; }
 
