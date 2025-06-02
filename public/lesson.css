@@ -72,6 +72,7 @@ main .section {
 
 main .section > * {  
   margin: 1.5% 0;
+  height: 70px;
   min-height: 70px;
   user-select: none;
 }
