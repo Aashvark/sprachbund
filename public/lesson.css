@@ -93,13 +93,14 @@ main .section .btn-container {
 }
 
 main .section .btn-container .answer-btn {
-  margin: 5px 0;
+  width: 100%;
   height: 80px;
+  margin: 5px 0;
 }
 
-main .select-btn:active {
-  margin: 8px 0 5px;
+main .section .btn-container .answer-btn:active {
   height: 77px;
+  margin: 8px 0 5px;
 }
 
 .button {
