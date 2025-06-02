@@ -9,7 +9,7 @@
       [
         {
           "type": "comprehension",
-          "prompt": "i symi koli han o maike. Jacekom sċetéf scewul mócewewu yré kaċitáuċet tvimi. Maté tváni una mumif hvori krojo? Skacynó jikósawehot scikauċi menalo tvakájam ry. Kawuhó muwomá skékál sċewu tvymaumu sosom! Ámukam manosi cemit srótum svuċe tvavo sramiku sċiku. Sċymok okuvik hvywin lánu mihat sveċinouwe. Scykacel sralouká syla sawum nulisy stusojóroimo.",
+          "prompt": "i symi koli han o maike. Jacekom sċetéf scewul mócewewu yré kaċitáuċet tvimi. Maté tváni una mumif hvori krojo? Skacynó jikósawehot scikauċi menalo tvakájam ry. Kawuhó muwomá skékál sċewu tvymaumu sosom! Ámukam manosi cemit srótum svuċe tvavo sramiku sċiku. Sċymok okuvik hvywin lánu.",
           "question": "Where is the man walking?",
           "answer": "On the shore",
           "choices": ["By the beach", "To his house"]
