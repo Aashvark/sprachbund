@@ -51,7 +51,7 @@ header .progress-count {
 
 main {
   width: 100%;
-  height: 76%;
+  height: 74%;
 
   padding: 0 25%;
 }
@@ -209,14 +209,14 @@ main .congrats {
 
 footer { 
   display: inline-block;
-  width: 100%;
-  height: 12%;
   padding: 15px 8%;
+  width: 100%;
+  height: 14%;
+
+  font-size: 0;
+  text-align: center;
 
   border-top: 2px solid var(--contrast);
-  
-  text-align: center;
-  font-size: 0;
 }
 
 footer .button {
@@ -260,6 +260,10 @@ footer .finish-button { width: 60%; }
   main .section .btn-container .selected:last-child:active { margin: 10px 0 5px; }
 
   .button { font-size: 16px; }
+}
+
+@media screen and (max-width: 800px) {
+  footer .button { width: 45%; }
 }
 
 @media screen and (max-width: 600px) {
