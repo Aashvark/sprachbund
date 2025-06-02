@@ -88,7 +88,8 @@ main .section .div-border {
   padding: 10px;
   
   min-height: 70px;
-  
+  height: auto;
+
   border: 3px solid var(--contrast);
   border-radius: 10px;
 }
