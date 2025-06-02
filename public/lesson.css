@@ -49,7 +49,9 @@ header .progress-count {
   color: var(--white);
 }
 
-main { 
+main {
+  display: inline-flex;
+  align-items: center;
   width: 100%;
   height: 76%;
 
