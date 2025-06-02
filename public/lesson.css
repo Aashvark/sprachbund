@@ -1,15 +1,19 @@
-body { overflow: hidden; }
-
 header { height: 12%; }
 
 header .language-flag, header .progress-bar, header .progress-count {
-  display: inline-block;
+  display: inline-flex;
   vertical-align: middle;
+  margin: 0 0.5%;
 }
 
-header .language-flag { width: 94px; }
+header .language-flag {
+  justify-content: center;
+  align-items: center;
+  width: 94px;
+}
 
-header .language-flag svg { 
+header .language-flag svg {
+  aspect-ratio: 41/33;
   width: 82px;
   height: 66px;
 }
@@ -18,14 +22,14 @@ header .progress-bar {
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
   border: 1px solid var(--light-cont);
   
-  width: calc(93% - 94px);
+  width: calc(90% - 94px);
   height: 30px;
-  padding: 3.5px;
+  padding: 3px;
   
   border-radius: 20px;
 }
 
-header .progress-inside {
+header .progress {
   display: block;
   background: var(--accent);
   z-index: -1;
@@ -37,25 +41,12 @@ header .progress-inside {
   transition: width 1000ms;
 }
 
-header .progress-inside {
-  display: block;
-  background: var(--accent);
-  z-index: -1;
-  
-  width: 0%;
-  height: 100%;
-  
-  border-radius: 20px;
-  transition: width 1000ms;
-}
-
-header .progress-count { width: 7%; }
-
-header .progress-count p {
-  color: var(--white);
+header .progress-count { 
+  width: 7%;
   
   font-size: 20px;
   font-weight: bold;
+  color: var(--white);
 }
 
 main { 
