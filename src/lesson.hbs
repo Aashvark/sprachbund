@@ -54,10 +54,10 @@
         <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
         <div class="div-border">{{lesson.prompt}}</div>
         <div class="div-border">{{lesson.question}}</div>
-        <div class="btn-container" id="match-{{@index}}">
-          <a class="answer-btn button" onclick="selectFitB(this)" id="choice-{{@index}}-{{@index}}">{{answer}}</a>
+        <div class="btn-container" id="comprehension-{{@index}}">
+          <a class="answer-btn button" onclick="selectFitB(this)" id="comprehension-{{@index}}-{{@index}}">{{answer}}</a>
           {{#each choices}}
-          <a class="select-btn button" onclick="selectFitB(this)" id="choice-{{@../index}}-{{add @index 1}}">{{this}}</a>
+          <a class="answer-btn button" onclick="selectFitB(this)" id="comprehension-{{@../index}}-{{add @index 1}}">{{this}}</a>
           {{/each}}
         </div>
         {{/ifEquals}}
