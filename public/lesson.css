@@ -50,8 +50,6 @@ header .progress-count {
 }
 
 main {
-  display: inline-flex;
-  align-items: center;
   width: 100%;
   height: 76%;
 
