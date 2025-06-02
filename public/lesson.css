@@ -234,10 +234,12 @@ footer .finish-button { width: 60%; }
 @media screen and (max-width: 600px) {
   header, footer { padding: 15px 4%; }
   
-  header .progress-bar { width: calc(78% - 94px); }
+  header .progress-bar { width: calc(75% - 94px); }
   header .progress-count { width: 22%; }
   
   main { padding: 0 5%; }
+
+  main .heading { font-size: 25px; }
 
   main .alert #alert-description { font-size: 20px; }
 }
