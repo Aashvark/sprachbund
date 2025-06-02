@@ -74,6 +74,7 @@ main .section > *:last-child  { margin: 1.5% 0 0; }
 
 main .heading {
   font-size: 35px;
+  padding: 0.5%;
   font-weight: bold;
   color: var(--white);
 }
