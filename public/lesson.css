@@ -227,6 +227,8 @@ footer .button {
 footer .finish-button { width: 60%; }
 
 @media screen and (max-width: 1000px) {
+  main { padding: 0 10%; }
+
   main .section .btn-container .answer-btn {
     aspect-ratio: unset;
     width: 100%;
@@ -245,10 +247,6 @@ footer .finish-button { width: 60%; }
   main .section .btn-container .answer-btn:last-child { margin: 10px 0 0; }
 
   .button { font-size: 16px; }
-}
-
-@media screen and (max-width: 800px) {
-  main { padding: 0 10%; }
 }
 
 @media screen and (max-width: 600px) {
