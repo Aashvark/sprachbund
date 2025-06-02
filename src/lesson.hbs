@@ -62,10 +62,10 @@
         {{#ifEquals lesson.type "fill-in-the-blank"}}
         <p class="heading"><i class="fa-solid fa-pen"></i> Fill in the blank!</p>
         <div class="div-border">{{hover-translate lesson.prompt "smb"}}</div>
-        <div class="select" id="match-{{@index}}">
-          <a class="select-btn button" onclick="selectFitB(this)" id="choice-{{@index}}-{{@index}}">{{answer}}</a>
+        <div class="btn-container" id="match-{{@index}}">
+          <a class="answer-btn button" onclick="selectFitB(this)" id="choice-{{@index}}-{{@index}}">{{answer}}</a>
           {{#each choices}}
-          <a class="select-btn button" onclick="selectFitB(this)" id="choice-{{@../index}}-{{add @index 1}}">{{this}}</a>
+          <a class="answer-btn button" onclick="selectFitB(this)" id="choice-{{@../index}}-{{add @index 1}}">{{this}}</a>
           {{/each}}
         </div>
         {{/ifEquals}}
