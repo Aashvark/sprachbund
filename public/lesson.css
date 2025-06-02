@@ -82,19 +82,15 @@ main .heading {
 }
 
 main .section .div-border {
-  position: relative;
+  display: flex;
+  align-items: center;
+
   padding: 10px;
   
   min-height: 70px;
   
   border: 3px solid var(--contrast);
   border-radius: 10px;
-}
-
-main .section .div-border > p {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 main .section .btn-container {
