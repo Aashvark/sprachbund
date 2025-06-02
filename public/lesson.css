@@ -66,6 +66,9 @@ main .section > * {
   user-select: none;
 }
 
+main .section > *:first-child { margin: 0 0 1.5%; }
+main .section > *:last-child  { margin: 1.5% 0 0; }
+
 main .heading {
   font-size: 28px;
   font-weight: bold;
