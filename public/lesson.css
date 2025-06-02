@@ -83,6 +83,7 @@ main .heading {
 
 main .section .div-border {
   display: flex;
+  justify-content: center;
   align-items: center;
 
   padding: 10px;
