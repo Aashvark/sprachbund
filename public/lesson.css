@@ -108,7 +108,7 @@ main .section .div-border .hint span {
 
 main .section .div-border .hint .blank {
   position: relative;
-  top: 9px;
+  top: 14px;
   width: 30px;
   border: 1px solid var(--light-cont);
 }
