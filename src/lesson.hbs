@@ -52,13 +52,13 @@
         <p class="heading"><i class="fa-solid fa-magnifying-glass"></i> Read this carefully</p>
         <div class="div-border">{{lesson.prompt}}</div>
         <p class="p-text">{{lesson.question}}</p>
-        <div class="btn-container" id="comprehension-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>{{/each}}</div>
+        <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>{{/each}}</div>
         {{/ifEquals}}
         {{#ifEquals lesson.type "fill-in-the-blank"}}
         <p class="heading"><i class="fa-solid fa-pen-to-square"></i> Fill in the blank!</p>
         <div class="div-border">{{hover-translate lesson.prompt "smb"}}</div>
         <p class="p-text">Which word completes the sentence?</p>
-        <div class="btn-container" id="match-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>{{/each}}</div>
+        <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>{{/each}}</div>
         {{/ifEquals}}
         {{#ifEquals lesson.type "match"}}
         <p class="heading"><i class="fa-solid fa-motorcycle"></i> Match these terms!</p>
@@ -179,8 +179,8 @@
         if (lesson.type === "match") {
           shuffleDivs("foreign-" + index.toString());
           shuffleDivs("native-" + index.toString());
-          document.getElementById("next").style.display = "none";
-        } else document.getElementById("next").style.display = "inline-flex";
+        } else if (lesson.type === "comprehension" || lesson.type === "fill-in-the-blank") shuffleDivs("buttons-" + index.toString());
+        document.getElementById("next").style.display = "inline-flex";
       }
       else if (index >= lessons.length) document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
       
