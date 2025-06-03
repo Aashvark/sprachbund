@@ -172,10 +172,6 @@ main .section .p-text {
 }
 
 main .section .btn-container { text-align: center; }
-main .section .btn-container.half {
-  display: inline-block;
-  width: 50%;
-}
 
 main .section .btn-container .answer-btn, main .section .btn-container .answer-btn:hover {
   display: inline-flex;
@@ -192,6 +188,28 @@ main .section .btn-container .answer-btn:active {
   height: 105px;
   margin: 5px 0.5% 0;
 }
+
+main .section .btn-container.half {
+  display: inline-block;
+  width: 50%;
+}
+
+main .section .btn-container.half .answer-btn, main .section .btn-container.half .answer-btn:hover {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: bottom;
+
+  aspect-ratio: 2/1;
+  width: 220px;
+  margin: 0.5% 0;
+}
+
+main .section .btn-container.half .answer-btn:active {
+  height: 105px;
+  margin: calc(0.5% - 5px) 0 0;
+}
+
 main .section .btn-container .selected { border: 3px solid var(--light-cont); }
 
 .button {
