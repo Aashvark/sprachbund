@@ -207,7 +207,7 @@ main .section .btn-container.half .answer-btn, main .section .btn-container.half
 
 main .section .btn-container.half .answer-btn:active {
   height: 95%;
-  margin: calc(1% - 5px) 0 1%;
+  margin: calc(1% + 5px) 0 1%;
 }
 
 main .section .btn-container .selected { border: 3px solid var(--light-cont); }
