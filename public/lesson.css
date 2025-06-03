@@ -191,7 +191,7 @@ main .section .btn-container .answer-btn:active {
 
 main .section .btn-container.half {
   display: inline-block;
-  width: 50%;
+  width: 49%;
 }
 
 main .section .btn-container.half .answer-btn, main .section .btn-container.half .answer-btn:hover {
