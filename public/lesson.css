@@ -200,13 +200,13 @@ main .section .btn-container.half .answer-btn, main .section .btn-container.half
   justify-content: center;
   vertical-align: bottom;
 
-  aspect-ratio: 3/1;
-  width: 330px;
+  aspect-ratio: 4/1;
+  width: 220px;
   margin: 1% 0;
 }
 
 main .section .btn-container.half .answer-btn:active {
-  height: 105px;
+  height: 50px;
   margin: calc(1% - 5px) 0 1%;
 }
 
