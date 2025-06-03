@@ -169,7 +169,7 @@
     }
     
     function nextLesson() {
-      selection.classList.remove("selected");
+      if (selection != undefined) selection.classList.remove("selected");
       selection = undefined;
       document.getElementById("alert").classList.remove("block");
       
