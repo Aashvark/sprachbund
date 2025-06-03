@@ -163,6 +163,7 @@
         return; 
       }
       
+      selection.classList.remove("selected");
       selection = undefined;
       index++;
       document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
