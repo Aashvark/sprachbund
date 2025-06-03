@@ -21,6 +21,17 @@
           "choices": ["han", "miro", "téu"]
         },
         {
+          "type": "match",
+          "foreign": ["miro", "cévo", "symi", "han", "téu"],
+          "native": ["bread", "woman", "man", "to be", "him/her"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "the kind man has the bread",
+          "answers": ["i sojón symi vé han i miro"]
+        },
+        {
           "type": "vocabulary",
             "word": "han",
             "tip": "If there is no subject, verbs take he/she/it as its subject.",
@@ -28,17 +39,6 @@
               "sentence": "[han]",
               "translation": "he/she/it [is]"
             }
-        },
-        {
-          "type": "match",
-          "new": ["miro", "cévo", "symi", "han", "téu"],
-          "native": ["bread", "woman", "man", "to be", "him/her"]
-        },
-        {
-          "type": "short-response",
-          "direction": "native-new",
-          "prompt": "the kind man has the bread",
-          "answers": ["i sojón symi vé han i miro"]
         }
       ]
     ]

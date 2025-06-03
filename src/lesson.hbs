@@ -62,19 +62,13 @@
         {{/ifEquals}}
         {{#ifEquals lesson.type "match"}}
         <p class="heading"><i class="fa-solid fa-motorcycle"></i> Match these terms!</p>
-        <div class="shuffle-board" id="match-{{@index}}">
-          {{#each new}}
-          <a class="match-btn button" onclick="select(this)" id="new-{{@../index}}-{{@index}}">{{this}}</a>
-          {{/each}}
-          {{#each native}}
-          <a class="match-btn button" onclick="select(this)" id="native-{{@../index}}-{{@index}}">{{this}}</a>
-          {{/each}}
-        </div>
+        <div class="btn-container half" id="foreign-{{@index}}">{{#each foreign}}<a class="answer-btn button" onclick="select(this)" id="foreign-{{@../index}}-{{@index}}">{{this}}</a>{{/each}}</div>
+        <div class="btn-container half" id="native-{{@index}}">{{#each native}}<a class="answer-btn button" onclick="select(this)" id="native-{{@../index}}-{{@index}}">{{this}}</a>{{/each}}</div>
         {{/ifEquals}}
         {{#ifEquals lesson.type "short-response"}}
         <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
-        <div class="prompt">{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-new" "en" "smb")}}</div>
-        <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-new"}}Nóibón{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-new"}}spellcheck="false"{{/ifEquals}} inputmode="search" enterkeyhint="go"></textarea></div>
+        <div class="div-border">{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "en" "smb")}}</div>
+        <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-foreign"}}Nóibón{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-foreign"}}spellcheck="false"{{/ifEquals}} inputmode="search" enterkeyhint="go"></textarea></div>
         <div class="insert-buttons">
           <a class="button" onclick="caseshift()" id="shift-case">⬆</a>
           <a class="button c" onclick="insert('á')">á</a>
@@ -169,6 +163,7 @@
         return; 
       }
       
+      selection = undefined;
       index++;
       document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
       document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
@@ -182,7 +177,8 @@
         lesson = lessons[index];
         document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
         if (lesson.type === "match") {
-          shuffleDivs("match-" + index.toString());
+          shuffleDivs("foreign-" + index.toString());
+          shuffleDivs("native-" + index.toString());
           document.getElementById("next").style.display = "none";
         } else document.getElementById("next").style.display = "inline-flex";
       }
@@ -228,13 +224,13 @@
       if (selection === self) { self.classList.toggle("selected"); }
       else if (idx === self.id.split("-").slice(1).join("-")) {
         correct.play();
-        document.getElementById("new-" + idx).classList.add("match-correct");
+        document.getElementById("foreign-" + idx).classList.add("match-correct");
         document.getElementById("native-" + idx).classList.add("match-correct");
         
-        document.getElementById("new-" + idx).classList.remove("button", "match-btn");
+        document.getElementById("foreign-" + idx).classList.remove("button", "match-btn");
         document.getElementById("native-" + idx).classList.remove("button", "match-btn");
         
-        document.getElementById("new-" + idx).removeAttribute('onclick');
+        document.getElementById("foreign-" + idx).removeAttribute('onclick');
         document.getElementById("native-" + idx).removeAttribute('onclick');
       } else {
         incorrect.play();
@@ -242,7 +238,7 @@
       }
       
       selection = undefined;
-      if (document.getElementById("match-" + index).getElementsByClassName("button").length === 0) checkAnswer();
+      if (document.getElementById("native-" + index).getElementsByClassName("button").length === 0) checkAnswer();
     }
 
     function selectFitB(self) { 

@@ -172,6 +172,11 @@ main .section .p-text {
 }
 
 main .section .btn-container { text-align: center; }
+main .section .btn-container.half {
+  display: inline-block;
+  width: 50%;
+}
+
 main .section .btn-container .answer-btn, main .section .btn-container .answer-btn:hover {
   display: inline-flex;
   align-items: center;
