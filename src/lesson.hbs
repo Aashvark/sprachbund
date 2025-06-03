@@ -219,14 +219,14 @@
       }
       let idx = selection.id.split("-").slice(1).join("-");
       
-      if (selection === self) { self.classList.toggle("selected"); }
+      if (selection === self) self.classList.remove("selected");
       else if (idx === self.id.split("-").slice(1).join("-")) {
         correct.play();
         document.getElementById("foreign-" + idx).classList.add("match-correct");
         document.getElementById("native-" + idx).classList.add("match-correct");
         
-        document.getElementById("foreign-" + idx).classList.remove("button", "match-btn", "selected");
-        document.getElementById("native-" + idx).classList.remove("button", "match-btn", "selected");
+        document.getElementById("foreign-" + idx).classList.remove("button", "answer-btn", "selected");
+        document.getElementById("native-" + idx).classList.remove("button", "answer-btn", "selected");
         
         document.getElementById("foreign-" + idx).removeAttribute('onclick');
         document.getElementById("native-" + idx).removeAttribute('onclick');
