@@ -163,14 +163,14 @@
         return; 
       }
       
-      selection.classList.remove("selected");
-      selection = undefined;
       index++;
       document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
       document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
     }
     
     function nextLesson() {
+      selection.classList.remove("selected");
+      selection = undefined;
       document.getElementById("alert").classList.remove("block");
       
       if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
@@ -236,6 +236,7 @@
         setAlert("Oops!", "Try Again");
       }
       
+      selection.classList.remove("selected");
       selection = undefined;
       if (document.getElementById("native-" + index).getElementsByClassName("button").length === 0) checkAnswer();
     }
