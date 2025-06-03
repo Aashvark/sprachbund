@@ -64,7 +64,7 @@
         <p class="heading"><i class="fa-solid fa-motorcycle"></i> Match these terms!</p>
         <div class="btn-container half" id="foreign-{{@index}}">{{#each foreign}}<a class="answer-btn button" onclick="select(this)" id="foreign-{{@../index}}-{{@index}}">{{this}}</a>{{/each}}</div>
         <div class="btn-container half" id="native-{{@index}}">{{#each native}}<a class="answer-btn button" onclick="select(this)" id="native-{{@../index}}-{{@index}}">{{this}}</a>{{/each}}</div>
-        {{/ifEquals}}
+        {{/ifEquals}} 
         {{#ifEquals lesson.type "short-response"}}
         <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
         <div class="div-border">{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "en" "smb")}}</div>
