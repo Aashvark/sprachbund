@@ -155,7 +155,7 @@ main .section .div-border .hint table::before {
   height: 0;
   z-index: 1;
   
-  border: 2px solid var(--light-cont);
+  border: medium solid var(--light-cont);
   border-width: 10px;
   border-color: transparent transparent var(--light-cont) transparent;
 }

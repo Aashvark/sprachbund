@@ -27,9 +27,9 @@
         },
         {
           "type": "short-response",
-          "direction": "native-foreign",
-          "prompt": "the kind man has the bread",
-          "answers": ["i sojón symi vé han i miro"]
+          "direction": "foreign-native",
+          "prompt": "vé han",
+          "answers": ["he has"]
         },
         {
           "type": "vocabulary",
