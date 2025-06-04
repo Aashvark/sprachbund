@@ -261,6 +261,35 @@ main .match-correct {
 
 .button:active { border: 3px solid var(--accent); }
 
+main .response { padding: 10px 0; }
+
+main .response .textbox {
+  background: var(--contrast);
+  padding: 12px;
+  
+  color: var(--white);
+  font-size: 20px;
+  
+  width: 100%;
+  height: 47vh;
+  
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  
+  border: 3px solid var(--light-cont);
+  border-radius: 20px;
+  outline: 0;
+  
+  resize: none;
+}
+
+main .response .textbox::placeholder {
+  user-select: none;
+  color: var(--light-cont);
+}
+
 main .insert-buttons .button {
   aspect-ratio: 1/1;
   width: 50px;
