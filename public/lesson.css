@@ -265,18 +265,15 @@ main .response { padding: 10px 0; }
 
 main .response .textbox {
   background: var(--contrast);
-  padding: 12px;
-  
-  color: var(--white);
-  font-size: 20px;
   
   width: 100%;
-  height: 47vh;
+  height: 60%;
   
-  font-family: "Parkinsans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+  padding: 12px;
+  
+  font-size: 20px;
+
+  color: var(--white);
   
   border: 3px solid var(--light-cont);
   border-radius: 20px;
