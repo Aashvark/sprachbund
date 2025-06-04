@@ -28,7 +28,7 @@
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "vé han",
+          "prompt": "miro vé han miro",
           "answers": ["he has"]
         },
         {
