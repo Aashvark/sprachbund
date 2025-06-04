@@ -109,7 +109,7 @@ main .section .div-border .hint span {
   text-decoration-style: dotted;
   text-decoration-thickness: 3px;
   text-decoration-color: var(--light-cont);
-  text-underline-offset: 10px;
+  text-underline-offset: 5px;
 }
 
 main .section .div-border .hint .blank {
