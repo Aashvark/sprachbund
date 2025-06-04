@@ -56,15 +56,14 @@ main {
   height: 74%;
 
   padding: 0 25%;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 main .section { 
   display: none;
   width: 100%;
+  
+  align-items: center;
+  justify-content: center;
 }
 
 main .section > * {
