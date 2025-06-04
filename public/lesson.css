@@ -106,6 +106,7 @@ main .section .div-border .hint {
 main .section .div-border .hint span {
   padding: 0 1px;
   text-decoration: underline;
+  text-decoration-skip-ink: none;
   text-decoration-style: dotted;
   text-decoration-thickness: 3px;
   text-decoration-color: var(--light-cont);
