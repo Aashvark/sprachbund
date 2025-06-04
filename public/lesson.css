@@ -56,6 +56,10 @@ main {
   height: 74%;
 
   padding: 0 25%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main .section { 
@@ -226,14 +230,14 @@ main .match-correct {
   
   vertical-align: bottom;
   
-  user-select: cursor;
-  
   color: var(--white);
   font-size: 20px;
   text-align: center;
 
   border: 3px solid green;
   border-radius: 10px;
+
+  user-select: cursor;
 }
 
 .button {
