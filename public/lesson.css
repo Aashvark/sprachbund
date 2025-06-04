@@ -100,11 +100,12 @@ main .section .div-border {
 main .section .div-border .hint {
   display: inline-block;
   position: relative;
-  padding: 0 2px;
+  padding: 0 1px;
 }
 
-main .section .div-border .hint span {
-  padding: 0 1px;
+main .section .div-border .hint:not(:has(span)) { padding: 0 3px; }
+main .section .div-border .hint > span {
+  padding: 0 2px;
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-thickness: 3px;
