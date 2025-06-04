@@ -105,7 +105,11 @@ main .section .div-border .hint {
 
 main .section .div-border .hint span {
   padding: 0 1px;
-  border-bottom: 2px dotted var(--light-cont);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--light-cont);
+  text-underline-offset: 10px;
 }
 
 main .section .div-border .hint .blank {
