@@ -73,6 +73,7 @@ main .section > *:first-child { margin: 0 0 1%; }
 main .section > *:last-child  { margin: 1% 0 0; }
 
 main .heading {
+  display: inline-flex;
   font-size: 35px;
   padding: 0.5% 0;
   font-weight: bold;
@@ -87,7 +88,7 @@ main .center {
 }
 
 main .section .div-border {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 
