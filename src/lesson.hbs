@@ -238,6 +238,7 @@
       
       selection.classList.remove("selected");
       selection = undefined;
+      document.getElementById("alert").classList.remove("block");
       if (document.getElementById("native-" + index).getElementsByClassName("button").length === 0) checkAnswer();
     }
 
