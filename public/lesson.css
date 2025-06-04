@@ -19,6 +19,8 @@ header .language-flag svg {
 }
 
 header .progress-bar {
+  justify-content: left;
+
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
   border: 1px solid var(--light-cont);
   
