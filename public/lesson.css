@@ -119,7 +119,7 @@ main .section .div-border .hint .blank {
   border: 0.5px solid var(--light-cont);
 }
 
-main .prompt .hint table { 
+main .section .div-border .hint table { 
   display: none;
   
   position: absolute;
@@ -139,9 +139,9 @@ main .prompt .hint table {
   font-size: 18px;
 }
 
-main .prompt .hint:hover table, main .prompt .hint table:hover { display: block; }
+main .section .div-border .hint:hover table, main .section .div-border .hint table:hover { display: block; }
 
-main .prompt .hint table::before {
+main .section .div-border .hint table::before {
   content: " ";
   
   position: absolute;
@@ -159,14 +159,14 @@ main .prompt .hint table::before {
   border-color: transparent transparent var(--light-cont) transparent;
 }
 
-main .prompt .hint table tr td {
+main .section .div-border .hint table tr td {
   padding: 10px 15px;
   white-space: nowrap;
   width: 100%;
 }
 
-main .prompt .hint table tr td:not(:last-child) { border-right: 2px solid var(--light-cont); }
-main .prompt .hint table > tbody > tr:not(:last-child) > td { border-bottom: 2px solid var(--light-cont); }
+main .section .div-border .hint table tr td:not(:last-child) { border-right: 2px solid var(--light-cont); }
+main .section .div-border .hint table > tbody > tr:not(:last-child) > td { border-bottom: 2px solid var(--light-cont); }
 
 main .section .p-text {
   padding: 10px 0;
