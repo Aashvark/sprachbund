@@ -61,9 +61,6 @@ main {
 main .section { 
   display: none;
   width: 100%;
-  
-  align-items: center;
-  justify-content: center;
 }
 
 main .section > * {
@@ -82,6 +79,12 @@ main .heading {
   color: var(--white);
 }
 main .heading .fa-solid { padding: 0 5px; }
+
+main .center {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
 
 main .section .div-border {
   display: flex;
