@@ -434,5 +434,10 @@ footer .finish-button { width: 60%; }
   main .section .div-border { font-size: 16px; }
   main .section .p-text { font-size: 20px; }
 
+  main .insert-buttons .button {
+    width: 50px;
+    font-size: 20px;
+  }
+
   main .alert #alert-description { font-size: 20px; }
 }
