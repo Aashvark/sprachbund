@@ -100,7 +100,7 @@ main .section .div-border {
 main .section .div-border .hint {
   display: inline-block;
   position: relative;
-  padding: 0 4px;
+  padding: 0 2px;
 }
 
 main .section .div-border .hint span {
