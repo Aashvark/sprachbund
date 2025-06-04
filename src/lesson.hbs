@@ -180,6 +180,7 @@
         if (lesson.type === "match") {
           shuffleDivs("foreign-" + index.toString());
           shuffleDivs("native-" + index.toString());
+          document.getElementById("next").style.display = "none";
         } else if (lesson.type === "comprehension" || lesson.type === "fill-in-the-blank") shuffleDivs("buttons-" + index.toString());
         document.getElementById("next").style.display = "inline-flex";
       }
