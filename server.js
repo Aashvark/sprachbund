@@ -69,7 +69,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
     
     let construction;
     if (keys.length >= 1 || keys == undefined) {
-      construction = `<div class="hint"><span>${save}</span><table><tbody>`;
+      construction = `<div class="hint"><span>${save.trimEnd(" ")}</span><table><tbody>`;
       for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
       if (submeaning.length > 0) {
         for (let i = 0; i < getLongestList(submeaning).length; i++) {
@@ -79,7 +79,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
         }
       }
       construction += `</tbody></table></div>`;
-    } else { construction = `<div class="hint">${save}</div>`; }
+    } else { construction = `<div class="hint">${save.trimEnd(" ")}</div>`; }
       
     string += construction;
     save = "";
