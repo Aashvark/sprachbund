@@ -203,7 +203,7 @@ main .section .div-border .divider {
 
   border-width: 1px;
   border-color: var(--accent);
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 main .section .p-text {
@@ -214,7 +214,6 @@ main .section .p-text {
 }
 
 main .section .btn-container { text-align: center; }
-
 main .section .btn-container .answer-btn, main .section .btn-container .answer-btn:hover {
   display: inline-flex;
   align-items: center;
