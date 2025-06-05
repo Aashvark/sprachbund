@@ -191,8 +191,14 @@ main .section .div-border .ipa     { font-size: 18px; }
 main .section .div-border .context { font-size: 20px; }
 
 main .section .div-border .divider {
+  position: relative;
+  left: 50%;
+  transform: translateX(50%);
+  
   width: 50%;
-  border: 2px solid var(--accent);
+
+  border: 1px solid var(--accent);
+  padding: 3px 0;
 }
 
 main .section .p-text {
