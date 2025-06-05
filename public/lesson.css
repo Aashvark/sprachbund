@@ -194,6 +194,12 @@ main .section .div-border .hint table > tbody > tr:not(:last-child) > td { borde
 }
 
 main .section .div-border .root    { font-size: 30px; }
+
+main .section .div-border:has(> .context) > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 main .section .div-border .context { font-size: 20px; }
 main .section .div-border .ipa     {
   font-size: 15px;
