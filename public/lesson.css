@@ -60,6 +60,7 @@ main {
 main .section { 
   display: none;
   width: 100%;
+  font-size: 0;
 }
 
 main .section > * {
@@ -89,11 +90,17 @@ main .section .div-border {
   min-height: 70px;
   height: auto;
 
-  font-size: 20px;
   text-align: left;
 
   border: 3px solid var(--contrast);
   border-radius: 10px;
+}
+
+main .section .div-border > p {
+  display: inline-block;
+  width: 100%;
+  font-size: 20px;
+  margin: 0;
 }
 
 main .section .div-border:has(p) { 
@@ -172,12 +179,6 @@ main .section .div-border .hint table tr td {
 
 main .section .div-border .hint table tr td:not(:last-child) { border-right: 2px solid var(--light-cont); }
 main .section .div-border .hint table > tbody > tr:not(:last-child) > td { border-bottom: 2px solid var(--light-cont); }
-
-main .section .div-border > p {
-  display: inline-block;
-  width: 100%;
-  margin: 0;
-}
 
 .accent { color: var(--accent); }
 
