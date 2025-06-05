@@ -170,6 +170,72 @@ main .section .div-border .hint table tr td {
 main .section .div-border .hint table tr td:not(:last-child) { border-right: 2px solid var(--light-cont); }
 main .section .div-border .hint table > tbody > tr:not(:last-child) > td { border-bottom: 2px solid var(--light-cont); }
 
+main .definition {
+  padding: 10px 25px 15px;
+  
+  text-align: center;
+  
+  font-size: 20px;
+  color: var(--white);
+  
+  border: 3px solid var(--contrast);
+  border-radius: 10px;
+  
+  user-select: none;
+}
+
+main .definition .root {
+  padding: 0 15px;
+  
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 30px;
+}
+
+main .definition .ipa {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: max-content;
+  padding: 0 30px 5px;
+  
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings: "wdth" 100;
+  
+  font-size: 15px;
+  
+  border-bottom: 3px solid var(--contrast);
+}
+
+main .definition .context {
+  color: var(--accent);
+  
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+main .highlight {
+  color: var(--accent);
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+main .tip-highlight {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  
+  color: var(--accent);
+}
+
 main .section .p-text {
   padding: 10px 0;
   
