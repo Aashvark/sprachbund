@@ -178,6 +178,8 @@ main .section .div-border > p {
   width: 100%;
 }
 
+.accent { color: var(--accent); }
+
 .highlight {
   font-variant: small-caps;
   font-weight: bold;
