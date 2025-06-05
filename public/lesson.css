@@ -185,6 +185,7 @@ main .definition {
 }
 
 main .definition .root {
+  width: 100%;
   padding: 0 15px;
   
   font-family: "Merienda", cursive;
@@ -195,6 +196,7 @@ main .definition .root {
 }
 
 main .definition .ipa {
+  width: 100%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -214,6 +216,7 @@ main .definition .ipa {
 }
 
 main .definition .context {
+  width: 100%;
   color: var(--accent);
   
   font-variant: small-caps;
