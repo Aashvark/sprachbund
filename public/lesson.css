@@ -186,6 +186,7 @@ main .definition {
 }
 
 main .definition .root {
+  display: inline-block;
   width: 100%;
   padding: 0 15px;
   
@@ -197,6 +198,7 @@ main .definition .root {
 }
 
 main .definition .ipa {
+  display: inline-block;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -216,6 +218,7 @@ main .definition .ipa {
 }
 
 main .definition .context {
+  display: inline-block;
   width: 100%;
   color: var(--accent);
   
