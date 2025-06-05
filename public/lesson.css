@@ -185,7 +185,7 @@ main .definition {
   user-select: none;
 }
 
-main .definition .root {
+main .div-border .root {
   display: inline-block;
   width: 100%;
   padding: 0 15px;
@@ -197,7 +197,7 @@ main .definition .root {
   font-size: 30px;
 }
 
-main .definition .ipa {
+main .div-border .ipa {
   display: inline-block;
   position: relative;
   left: 50%;
@@ -217,7 +217,7 @@ main .definition .ipa {
   border-bottom: 3px solid var(--contrast);
 }
 
-main .definition .context {
+main .div-border .context {
   display: inline-block;
   width: 100%;
   color: var(--accent);
