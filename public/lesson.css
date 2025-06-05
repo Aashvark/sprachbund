@@ -176,6 +176,7 @@ main .section .div-border .hint table > tbody > tr:not(:last-child) > td { borde
 main .section .div-border > p {
   display: inline-block;
   width: 100%;
+  margin: 0;
 }
 
 .accent { color: var(--accent); }
