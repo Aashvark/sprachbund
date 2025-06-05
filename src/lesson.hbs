@@ -81,26 +81,26 @@
         {{/ifEquals}}
         {{#ifEquals lesson.type "vocabulary"}}
         <p class="heading"><i class="fa-solid fa-champagne-glasses"></i> Toast to a new word!</p>
-        <section>
+        <div class="center">
           <div class="div-border">
             <p class="root merienda">{{lesson.word}}</p>
             <p><span class="context highlight">{{get-attribute lesson.word "pos"}}</span>	&middot; <span class="ipa">/{{get-attribute lesson.word "ipa"}}/</span></p>
             <hr class="divider">
             <p class="meaning">{{get-attribute lesson.word "definition"}}</p>
           </div>
+          {{#if lesson.example}}
+          <p class="p-text"><i class="icon fa-solid fa-message"></i> Example</p>
+          <div class="div-border">
+            <p>{{tip-format example.sentence}}</p>
+            <p class="translation"><span class="highlight">"</span>{{tip-format example.translation}}<span class="highlight">"</span></p>
+          </div>
+          {{/if}}
+          {{#if lesson.tip}}
+          <p class="p-text"><i class="icon fa-solid fa-lightbulb"></i> Tip</p>
+          <div class="div-border scale">{{tip-format lesson.tip}}</div>
+          {{/if}}
+          {{/ifEquals}}
         </section>
-        {{#if lesson.example}}
-        <p class="p-text"><i class="icon fa-solid fa-message"></i> Example</p>
-        <div class="div-border">
-          <p>{{tip-format example.sentence}}</p>
-          <p class="translation"><span class="highlight">"</span>{{tip-format example.translation}}<span class="highlight">"</span></p>
-        </div>
-        {{/if}}
-        {{#if lesson.tip}}
-        <p class="p-text"><i class="icon fa-solid fa-lightbulb"></i> Tip</p>
-        <div class="div-border scale">{{tip-format lesson.tip}}</div>
-        {{/if}}
-        {{/ifEquals}}
       </div>
       {{/each}}
       <div class="section congrats">
