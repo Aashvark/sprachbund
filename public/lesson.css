@@ -197,7 +197,8 @@ main .section .div-border .divider {
   
   width: 50%;
 
-  border: 1px solid var(--accent);
+  border-width: 1px;
+  border-color: var(--accent);
   margin: 3px 0;
 }
 
