@@ -11,7 +11,6 @@ header .language-flag, header .progress-bar, header .progress-count {
 }
 
 header .language-flag { width: 94px; }
-
 header .language-flag svg {
   aspect-ratio: 41/33;
   width: 82px;
@@ -179,31 +178,14 @@ main .section .div-border > p {
   width: 100%;
 }
 
-main .section .div-border .root {
-  padding: 0 15px;
-  
-  font-family: "Merienda", cursive;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-
-  font-size: 25px;
-}
-
-main .section .div-border .ipa { font-size: 15px; }
-
-main .section .div-border .context {
+.highlight {
   font-variant: small-caps;
   font-weight: bold;
-  font-size: 20px;
   color: var(--accent);
 }
 
-main .highlight {
-  color: var(--accent);
-  font-variant: small-caps;
-  font-weight: bold;
-}
+main .section .div-border .root { font-size: 25px; }
+main .section .div-border .ipa, main .section .div-border .context { font-size: 20px; }
 
 main .tip-highlight {
   font-family: "Merienda", cursive;

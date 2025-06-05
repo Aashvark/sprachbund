@@ -41,6 +41,13 @@ body {
   font-size: 0;
 }
 
+.merienda {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
 header, main {
   display: inline-block;
   background: var(--background);
@@ -52,7 +59,6 @@ header, main {
 header {
   position: sticky;
   top: 0;
-  
   padding: 15px 8%;
 }
 

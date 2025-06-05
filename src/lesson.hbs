@@ -80,10 +80,10 @@
         {{#ifEquals lesson.type "vocabulary"}}
         <p class="heading"><i class="fa-solid fa-rocket"></i> New Word Incoming!</p>
         <div class="div-border">
-          <p class="root">{{lesson.word}}</p>
+          <p class="root merienda">{{lesson.word}}</p>
           <p class="ipa">/{{get-attribute lesson.word "ipa"}}/</p>
           <hr>
-          <p class="context">{{get-attribute lesson.word "pos"}}</p>
+          <p class="context highlight">{{get-attribute lesson.word "pos"}}</p>
           <p class="meaning">{{get-attribute lesson.word "definition"}}</p>
         </div>
         {{#if lesson.example}}
