@@ -55,16 +55,15 @@ main {
   height: 74%;
 
   padding: 0 25%;
-  font-size: 0;
 }
 
 main .section { 
   display: none;
   width: 100%;
-  height: 100%;
+  font-size: 0;
 }
 
-main .section > *, main .center > * {
+main .section > * {
   width: 100%;
   margin: 1% 0;
   user-select: none;
@@ -78,20 +77,13 @@ main .heading {
   padding: 0.5% 0;
   font-weight: bold;
   color: var(--white);
-  height: 10%;
+  height: 15%;
 }
 main .heading .fa-solid { padding: 0 5px; }
 
 main .section .scale { 
   padding: 15px 25px;
   font-size: 20px;
-}
-
-main .center {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  height: 90%;
 }
 
 main .section .div-border {
