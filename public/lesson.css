@@ -78,7 +78,7 @@ main .heading {
   padding: 0.5% 0;
   font-weight: bold;
   color: var(--white);
-  height: 15%;
+  height: 10%;
 }
 main .heading .fa-solid { padding: 0 5px; }
 
@@ -88,9 +88,10 @@ main .section .scale {
 }
 
 main .center {
+  display: flex;
   align-items: center;
   justify-content: center;
-  height: 85%;
+  height: 90%;
 }
 
 main .section .div-border {
