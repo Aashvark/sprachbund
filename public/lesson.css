@@ -97,7 +97,10 @@ main .section .div-border {
   border-radius: 10px;
 }
 
-main .section .div-border:has(p) { display: inline-block; }
+main .section .div-border:has(p) { 
+  display: inline-block;
+  text-align: center;
+}
 
 main .section .div-border .hint {
   display: inline-block;
