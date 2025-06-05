@@ -22,7 +22,7 @@ handlebars.registerHelper('ternaryEq', function(arg1, arg2, op1, op2) { return (
 handlebars.registerHelper('json', function(a) { return JSON.stringify(a); });
 handlebars.registerHelper('get-attribute', function(word, attribute) { return dict[word.trimEnd()][attribute]; });
 handlebars.registerHelper('add', function(a, b) { return a + b; });
-handlebars.registerHelper('tip-format', function(arg) { return new handlebars.SafeString(string.replace("[", "<span class=\"highlight\">").replace("]", "</span>")); });
+handlebars.registerHelper('tip-format', function(arg) { return new handlebars.SafeString(string.replace("[", "<span class=\"highlight merienda\">").replace("]", "</span>")); });
 
 handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let string = "";
