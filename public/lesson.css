@@ -51,6 +51,7 @@ header .progress-count {
 }
 
 main {
+  background: linear-gradient(var(--background), var(--contrast));
   width: 100%;
   height: 74%;
 
