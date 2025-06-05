@@ -427,8 +427,7 @@ footer .button {
   font-weight: bold;
   font-size: 25px;
 }
-
-footer .finish-button { width: 60%; }
+footer .finish-button { width: 50%; }
 
 @media screen and (max-width: 1000px) {
   main { padding: 0 10%; }
