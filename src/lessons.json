@@ -8,6 +8,15 @@
     "unit": [
       [
         {
+          "type": "vocabulary",
+            "word": "han",
+            "tip": "If there is no subject, verbs take he/she/it as its subject.",
+            "example": {
+              "sentence": "[han]",
+              "translation": "he/she/it [is]"
+            }
+        },
+        {
           "type": "comprehension",
           "prompt": "i symi koli han o maike. Jacekom sċetéf scewul mócewewu yré kaċitáuċet tvimi. Maté tváni una mumif hvori krojo? Skacynó jikósawehot scikauċi menalo tvakájam ry. Kawuhó muwomá skékál sċewu tvymaumu sosom! Ámukam manosi cemit srótum svuċe tvavo sramiku sċiku. Sċymok okuvik hvywin lánu.",
           "question": "Where is the man walking?",
@@ -30,15 +39,6 @@
           "direction": "foreign-native",
           "prompt": "miro vé han miro",
           "answers": ["he has"]
-        },
-        {
-          "type": "vocabulary",
-            "word": "han",
-            "tip": "If there is no subject, verbs take he/she/it as its subject.",
-            "example": {
-              "sentence": "[han]",
-              "translation": "he/she/it [is]"
-            }
         }
       ]
     ]
