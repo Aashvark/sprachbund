@@ -200,11 +200,10 @@ main .section .div-border .divider {
   transform: translateX(-50%);
   
   width: 50%;
-  padding: 10px 0;
 
   border-width: 1px;
   border-color: var(--accent);
-  margin: 3px 0;
+  margin: 5px 0;
 }
 
 main .section .p-text {
