@@ -23,7 +23,7 @@ handlebars.registerHelper('json', function(a) { return JSON.stringify(a); });
 handlebars.registerHelper('get-attribute', function(word, attribute) { return dict[word.trimEnd()][attribute]; });
 handlebars.registerHelper('add', function(a, b) { return a + b; });
 handlebars.registerHelper('tip-format', function(arg) { return new handlebars.SafeString(arg.replace("[", "<span class=\"merienda accent\">").replace("]", "</span>")); });
-
+ 
 handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let string = "";
   let save = "";
