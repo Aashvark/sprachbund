@@ -191,7 +191,7 @@ main .section .div-border .root {
   font-size: 25px;
 }
 
-main .definition .ipa {
+main .section .div-border .ipa {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -210,12 +210,11 @@ main .definition .ipa {
   border-bottom: 3px solid var(--contrast);
 }
 
-main .definition .context {
-  color: var(--accent);
-  
+main .section .div-border .context {
   font-variant: small-caps;
   font-weight: bold;
   font-size: 20px;
+  color: var(--accent);
 }
 
 main .highlight {
