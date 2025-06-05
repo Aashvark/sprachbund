@@ -80,6 +80,11 @@ main .heading {
 }
 main .heading .fa-solid { padding: 0 5px; }
 
+main .section .tip-text { 
+  padding: 15px 25px;
+  font-size: 20px;
+}
+
 main .section .div-border {
   display: inline-flex;
   justify-content: center;
@@ -467,10 +472,9 @@ footer .finish-button { width: 60%; }
   main { padding: 0 5%; }
 
   main .heading { font-size: 25px; }
-  main .section .div-border {
-    padding: 10px;
-    font-size: 16px;
-  }
+  main .section .tip-text { font-size: 16px; }
+  main .section .div-border { padding: 10px; }
+  main .section .div-border > p { font-size: 16px; }
 
   main .section .p-text { font-size: 20px; }
 

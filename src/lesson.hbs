@@ -89,14 +89,14 @@
         </div>
         {{#if lesson.example}}
         <p class="p-text"><i class="icon fa-solid fa-message"></i> Example</p>
-        <div class="div-border container">
+        <div class="div-border">
           <p>{{tip-format example.sentence}}</p>
           <p class="translation"><span class="highlight">"</span>{{tip-format example.translation}}<span class="highlight">"</span></p>
         </div>
         {{/if}}
         {{#if lesson.tip}}
         <p class="p-text"><i class="icon fa-solid fa-lightbulb"></i> Tip</p>
-        <div class="div-border container">{{tip-format lesson.tip}}</div>
+        <div class="div-border tip-text">{{tip-format lesson.tip}}</div>
         {{/if}}
         {{/ifEquals}}
       </div>
