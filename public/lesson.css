@@ -207,11 +207,9 @@ main .section .div-border .divider {
 }
 
 main .section .p-text {
-  padding: 10px 0;
-  
   text-align: left;
-  font-size: 25px;
   font-weight: bold;
+  font-size: 25px;
   color: var(--white);
 }
 
