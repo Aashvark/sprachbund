@@ -137,10 +137,9 @@ main .section .div-border .hint table {
   background: var(--contrast);
   text-align: center;
   
+  border: 2px solid var(--light-cont);
   border-collapse: collapse;
   border-spacing: 0;
-  
-  border: 2px solid var(--light-cont);
   border-radius: 5px;
   
   font-size: 18px;
@@ -192,12 +191,7 @@ main .section .div-border .root {
 }
 
 main .section .div-border .ipa {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  
-  width: max-content;
-  padding: 0 30px 5px;
+  width: 100%;
   
   font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
@@ -207,7 +201,10 @@ main .section .div-border .ipa {
   
   font-size: 15px;
   
-  border-bottom: 3px solid var(--contrast);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--contrast);
+  text-underline-offset: 5px;
 }
 
 main .section .div-border .context {
