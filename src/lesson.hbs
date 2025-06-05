@@ -50,14 +50,14 @@
       <div class="section">
         {{#ifEquals lesson.type "comprehension"}}
         <p class="heading"><i class="fa-solid fa-magnifying-glass"></i> Read this carefully</p>
-        <div class="div-border">{{lesson.prompt}}</div>
+        <div class="div-border scale">{{lesson.prompt}}</div>
         <p class="p-text">{{lesson.question}}</p>
         <br>
         <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>{{/each}}</div>
         {{/ifEquals}}
         {{#ifEquals lesson.type "fill-in-the-blank"}}
         <p class="heading"><i class="fa-solid fa-pen-to-square"></i> Fill in the blank!</p>
-        <div class="div-border">{{hover-translate lesson.prompt "smb"}}</div>
+        <div class="div-border scale">{{hover-translate lesson.prompt "smb"}}</div>
         <p class="p-text">Which word completes the sentence?</p>
         <br>
         <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>{{/each}}</div>
@@ -96,7 +96,7 @@
         {{/if}}
         {{#if lesson.tip}}
         <p class="p-text"><i class="icon fa-solid fa-lightbulb"></i> Tip</p>
-        <div class="div-border tip-text">{{tip-format lesson.tip}}</div>
+        <div class="div-border scale">{{tip-format lesson.tip}}</div>
         {{/if}}
         {{/ifEquals}}
       </div>

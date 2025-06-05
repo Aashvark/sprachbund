@@ -80,7 +80,7 @@ main .heading {
 }
 main .heading .fa-solid { padding: 0 5px; }
 
-main .section .tip-text { 
+main .section .scale { 
   padding: 15px 25px;
   font-size: 20px;
 }
@@ -225,7 +225,11 @@ main .section .p-text {
   color: var(--white);
 }
 
-main .section .btn-container { text-align: center; }
+main .section .btn-container { 
+  padding: 10px;
+  text-align: center;
+}
+
 main .section .btn-container .answer-btn, main .section .btn-container .answer-btn:hover {
   display: inline-flex;
   align-items: center;
@@ -478,7 +482,7 @@ footer .finish-button { width: 60%; }
   main { padding: 0 5%; }
 
   main .heading { font-size: 25px; }
-  main .section .tip-text { font-size: 16px; }
+  main .section .scale { font-size: 16px; }
   main .section .div-border { padding: 10px; }
   main .section .div-border > p { font-size: 16px; }
 
