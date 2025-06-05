@@ -71,6 +71,8 @@ main {
   font-size: 20px;
 }
 
+hr { outline: 0; }
+
 @media screen and (max-width: 600px) {
   header { padding: 15px 4%; }
   main { padding: 0 5%; }
