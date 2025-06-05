@@ -79,24 +79,22 @@
         {{/ifEquals}}
         {{#ifEquals lesson.type "vocabulary"}}
         <p class="heading"><i class="fa-solid fa-rocket"></i> New Word Incoming!</p>
-        <div class="definition">
+        <div class="div-border definition">
           <p class="root">{{lesson.word}}</p>
           <p class="ipa">/{{get-attribute lesson.word "ipa"}}/</p>
           <p class="context">{{get-attribute lesson.word "pos"}}</p>
           <p class="meaning">{{get-attribute lesson.word "definition"}}</p>
         </div>
         {{#if lesson.example}}
-        <p class="subheading"><i class="icon fa-solid fa-message"></i> Example</p>
-        <div class="container">
+        <p class="p-text"><i class="icon fa-solid fa-message"></i> Example</p>
+        <div class="div-border container">
           <p>{{tip-format example.sentence}}</p>
           <p class="translation"><span class="highlight">"</span>{{tip-format example.translation}}<span class="highlight">"</span></p>
         </div>
         {{/if}}
         {{#if lesson.tip}}
-        <p class="subheading"><i class="icon fa-solid fa-lightbulb"></i> Tip</p>
-        <div class="container">
-          <p class="tip">{{tip-format lesson.tip}}</p>
-        </div>
+        <p class="p-text"><i class="icon fa-solid fa-lightbulb"></i> Tip</p>
+        <div class="div-border container"><p class="tip">{{tip-format lesson.tip}}</p></div>
         {{/if}}
         {{/ifEquals}}
       </div>
