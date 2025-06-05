@@ -187,7 +187,11 @@ main .section .div-border > p {
 }
 
 main .section .div-border .root    { font-size: 25px; }
-main .section .div-border .ipa     { font-size: 18px; }
+main .section .div-border .ipa     {
+  font-size: 15px;
+  font-style: italic;
+}
+
 main .section .div-border .context { font-size: 20px; }
 
 main .section .div-border .divider {
