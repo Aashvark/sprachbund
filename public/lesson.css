@@ -184,17 +184,9 @@ main .section .div-border > p {
   color: var(--accent);
 }
 
-main .section .div-border .root { font-size: 25px; }
-main .section .div-border .ipa, main .section .div-border .context { font-size: 20px; }
-
-main .tip-highlight {
-  font-family: "Merienda", cursive;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-  
-  color: var(--accent);
-}
+main .section .div-border .root    { font-size: 25px; }
+main .section .div-border .ipa     { font-size: 18px; }
+main .section .div-border .context { font-size: 20px; }
 
 main .section .p-text {
   padding: 10px 0;

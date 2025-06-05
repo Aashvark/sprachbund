@@ -31,7 +31,7 @@ handlebars.registerHelper('tip-format', function(arg) {
   for (var c of arg.toString()) {
     if (citing != '') {
       if (c === ']' && citing === '[') {
-        string += "<span class=\"tip-highlight\">"+ store +"</span>";
+        string += "<span class=\"highlight\">"+ store +"</span>";
         store = "";
         citing = "";
       } else { store += c; }
