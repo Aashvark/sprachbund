@@ -190,6 +190,11 @@ main .section .div-border .root    { font-size: 25px; }
 main .section .div-border .ipa     { font-size: 18px; }
 main .section .div-border .context { font-size: 20px; }
 
+main .section .div-border .divider {
+  width: 50%;
+  border: 2px solid var(--accent);
+}
+
 main .section .p-text {
   padding: 10px 0;
   
