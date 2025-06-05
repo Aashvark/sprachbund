@@ -46,6 +46,8 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  
+  line-height: 100%;
 }
 
 header, main {
