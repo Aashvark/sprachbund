@@ -22,24 +22,7 @@ handlebars.registerHelper('ternaryEq', function(arg1, arg2, op1, op2) { return (
 handlebars.registerHelper('json', function(a) { return JSON.stringify(a); });
 handlebars.registerHelper('get-attribute', function(word, attribute) { return dict[word.trimEnd()][attribute]; });
 handlebars.registerHelper('add', function(a, b) { return a + b; });
-
-handlebars.registerHelper('tip-format', function(arg) {
-  var string    = "";
-  var citing    = "";
-  var store     = "";
-  
-  for (var c of arg.toString()) {
-    if (citing != '') {
-      if (c === ']' && citing === '[') {
-        string += "<span class=\"highlight\">"+ store +"</span>";
-        store = "";
-        citing = "";
-      } else { store += c; }
-    } else if (c === '[') { citing = c; }
-    else { string += c; }
-  }
-  return new handlebars.SafeString(string);
-});
+handlebars.registerHelper('tip-format', function(arg) { return new handlebars.SafeString(string.replace("[", "<span class=\"highlight\">").replace("]", "</span>")); });
 
 handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let string = "";
