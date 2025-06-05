@@ -55,12 +55,13 @@ main {
   height: 74%;
 
   padding: 0 25%;
+  font-size: 0;
 }
 
 main .section { 
   display: none;
   width: 100%;
-  font-size: 0;
+  height: 100%;
 }
 
 main .section > *, main .center > * {
