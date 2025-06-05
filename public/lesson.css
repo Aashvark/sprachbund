@@ -318,7 +318,6 @@ main .match-correct {
 .button:active { border: 3px solid var(--accent); }
 
 main .response { padding: 10px 0; }
-
 main .response .textbox {
   background: var(--contrast);
   
@@ -349,11 +348,12 @@ main .response .textbox::placeholder {
 
 main .insert-buttons .button {
   aspect-ratio: 1/1;
-  width: 75px;
+  width: 70px;
 
   font-weight: bold;
   font-size: 25px;
 }
+main .insert-buttons .button + main .insert-buttons .button { margin-left: 5px; }
 
 main .alert {
   display: block;
