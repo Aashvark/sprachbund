@@ -220,7 +220,7 @@
     function selectFitB(self) {
       if (selection != null) selection.classList.remove("selected");
       selection = self === selection ? null : self;
-      if (self != null) selection.classList.add("selected");
+      if (selection != null) selection.classList.add("selected");
     }
     
     function shuffleDivs(containerId) {
