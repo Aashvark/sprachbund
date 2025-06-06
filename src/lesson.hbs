@@ -150,34 +150,6 @@
       }
     }
     
-    function checkAnswer() {
-      if (index >= lessons.length) { completeLesson(); return; }
-      
-      if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined) {
-        setAlert("<i class=\"fas fa-circle-xmark\"></i> Please answer!", "Tap or click on the correct response."); 
-        return;
-      }
-
-      ansCount++;
-      document.getElementById("percentage").innerHTML = `${(100 * lessons.length / ansCount).toFixed(2)}%`; 
-      
-      if (((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value)))) {
-        correct.play();
-        setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
-      }
-      else if (lesson.type === "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
-      else if (lesson.type === "match") { setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); }
-      else {
-        incorrect.play();
-        setAlert("<i class=\"fas fa-circle-xmark\"></i> Try again!", "Hover over words you don't know if you need to."); 
-        return; 
-      }
-      
-      index++;
-      document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
-      document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
-    }
-    
     function nextLesson() {
       if (selection != undefined) selection.classList.remove("selected");
       selection = undefined;
@@ -199,6 +171,30 @@
       } else if (lesson.type === "comprehension" || lesson.type === "fill-in-the-blank") shuffleDivs("buttons-" + index.toString());
       
       document.getElementsByClassName("section")[index].style.display = "inline-block";
+    }
+
+    function checkAnswer() {
+      if (index >= lessons.length) { completeLesson(); return; }
+      
+      if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined) {
+        setAlert("<i class=\"fas fa-circle-xmark\"></i> Please answer!", "Tap or click on the correct response."); 
+        return;
+      }
+
+      ansCount++;
+      document.getElementById("percentage").innerHTML = `${(lessons.length / ansCount * 100).toFixed(2)}%`; 
+      
+      if (((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value)))) {
+        correct.play();
+        setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
+      }
+      else if (lesson.type === "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
+      else if (lesson.type === "match") { setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); }
+      else { incorrectAnswer("<i class=\"fas fa-circle-xmark\"></i> Try again!", "Hover over words you don't know if you need to."); return; }
+      
+      index++;
+      document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
+      document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
     }
     
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
@@ -239,10 +235,7 @@
         
         document.getElementById("foreign-" + idx).removeAttribute('onclick');
         document.getElementById("native-" + idx).removeAttribute('onclick');
-      } else {
-        incorrect.play();
-        setAlert("Oops!", "Try Again");
-      }
+      } else incorrectAnswer("Oops!", "Try Again");
       
       selection.classList.remove("selected");
       selection = undefined;
@@ -286,5 +279,10 @@
 
     function startTimer() { timerInterval = setInterval(function() { seconds++; console.log(seconds); }, 1000); }
     function stopTimer()  { clearInterval(timerInterval); }
+
+    function incorrectAnswer(heading, caption) {
+      incorrect.play();
+      setAlert(heading, caption);
+    }
   </script>
 </html>
