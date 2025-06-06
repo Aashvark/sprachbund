@@ -154,13 +154,6 @@
       document.getElementById("alert").classList.remove("block");
       if (lessons[index] !== lesson) nextLesson();
     }
-
-    document.getElementsByClassName("letter").onclick = () => {
-      let resp = document.getElementById("response-" + index);
-      resp.setRangeText(document.getElementById("shift-case").innerText == "⬇" ? this.innerText.toUpperCase() : this.innerText, resp.selectionStart, resp.selectionEnd, 'select');
-      resp.focus();
-      resp.setSelectionRange(end + 1, end + 1);
-    }
     
     function nextLesson() {
       document.getElementsByClassName("section")[index - 1].style.display = "none";
@@ -266,12 +259,12 @@
       for (var letter of document.getElementsByClassName("letter")) { letter.classList.toggle("upper"); }
     }
 
-    //function insert(character) {
-    //  let resp = document.getElementById("response-" + index);
-    //  resp.setRangeText(document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character, resp.selectionStart, resp.selectionEnd, 'select');
-    //  resp.focus();
-    //  resp.setSelectionRange(end + 1, end + 1);
-    //}
+    function insert(character) {
+      let resp = document.getElementById("response-" + index);
+      resp.setRangeText(document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character, resp.selectionStart, resp.selectionEnd, 'select');
+      resp.focus();
+      resp.setSelectionRange(end + 1, end + 1);
+    }
     
     function setAlert(heading, caption) {
       document.getElementById("alert-heading").innerHTML = heading;
