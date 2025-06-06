@@ -32,7 +32,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let submeaning = [];
   
   for (let i = 0; i < tokens.length; i++) {
-    save += tokens[i] + " ";
+    save += tokens[i].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); + " ";
     
     if (tokens[i] == "___") {
       string += `<div class="hint"><hr class="blank"></div>`;

@@ -79,7 +79,7 @@
           "word": "ele",
           "example": {
             "sentence": "cévo [ele] symi",
-            "translation": "a woman and a man"
+            "translation": "a woman [and] a man"
           }
         },
         {
@@ -97,7 +97,7 @@
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "han cévo. han symi",
+          "prompt": "han cévo han symi",
           "answers": ["he is a woman he is a man", "she is a woman he is a man", "it is a woman he is a man", "he is a woman she is a man", "she is a woman she is a man", "it is a woman she is a man", "he is a woman it is a man", "she is a woman it is a man", "it is a woman it is a man"]
         }
       ]
