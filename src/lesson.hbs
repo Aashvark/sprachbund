@@ -142,7 +142,17 @@
     var correct   = new Audio("/sfx/correct.wav");
     var incorrect = new Audio("/sfx/incorrect.mp3");
     
-    window.onload = function() => {
+    window.onload = () => {
+      startTimer();
+      nextLesson();
+    }
+
+    document.onload = () => {
+      startTimer();
+      nextLesson();
+    }
+
+    body.onload = () => {
       startTimer();
       nextLesson();
     }
