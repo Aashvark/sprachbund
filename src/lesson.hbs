@@ -283,7 +283,10 @@
       divs.forEach(div => container.appendChild(div));
     }
 
-    function startTimer() { timerInterval = setInterval(function() { seconds++; }, 1000); }
+    function startTimer() { timerInterval = setInterval(function() {
+      seconds++;
+      console.log(seconds);
+    }, 1000); }
     function stopTimer() { clearInterval(timerInterval); }
   </script>
 </html>
