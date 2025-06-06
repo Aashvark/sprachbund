@@ -174,15 +174,10 @@
     }
 
     function checkAnswer() {
-      if (index >= lessons.length) { completeLesson(); return; }
-      
       if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined) {
         setAlert("<i class=\"fas fa-circle-xmark\"></i> Please answer!", "Tap or click on the correct response."); 
         return;
-      }
-
-      ansCount++;
-      document.getElementById("percentage").innerHTML = `${(lessons.length / ansCount * 100).toFixed(2)}%`; 
+      } 
       
       if (((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value)))) {
         correct.play();
@@ -268,6 +263,7 @@
     function endLesson() {
       stopTimer();
       document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
+      document.getElementById("percentage").innerHTML = `${(lessons.length / index + ansCount * 100).toFixed(2)}%`;
       document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60)}`
       document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
     }
@@ -281,6 +277,7 @@
     function stopTimer()  { clearInterval(timerInterval); }
 
     function incorrectAnswer(heading, caption) {
+      ansCount++;
       incorrect.play();
       setAlert(heading, caption);
     }
