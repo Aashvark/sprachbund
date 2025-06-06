@@ -154,7 +154,55 @@
       document.getElementById("alert").classList.remove("block");
       if (lessons[index] !== lesson) nextLesson();
     }
+
+    function startLesson() {
+      startTimer();
+      document.getElementsByClassName("section")[index].style.display = "inline-block";
+    }
+
+    function endLesson() {
+      stopTimer();
+      document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
+      document.getElementById("percentage").innerHTML = `${(lessons.length / (index + wrong) * 100).toFixed(2)}%`;
+      document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60)}`
+      document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
+      document.getElementsByClassName("section")[index].style.display = "inline-block";
+    }
+
+    function completeLesson() {
+      localStorage.setItem('u{{unitno}}-lesson', parseInt(localStorage.getItem('u{{unitno}}-lesson')) + 1);
+      window.location = "{{seo.learn}}";
+    }
+
+    function startTimer() { timerInterval = setInterval(function() { seconds++; console.log(seconds); }, 1000); }
+    function stopTimer()  { clearInterval(timerInterval); }
+
+    function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
     
+    function caseshift() {
+      document.getElementById("shift-case").innerHTML = document.getElementById("shift-case").innerHTML == "⬇" ? "⬆" : "⬇";
+      for (var letter of document.getElementsByClassName("letter")) { letter.classList.toggle("upper"); }
+    }
+
+    function insert(character) {
+      let resp = document.getElementById("response-" + index);
+      resp.setRangeText(document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character, resp.selectionStart, resp.selectionEnd, 'select');
+      resp.focus();
+      resp.selectionStart = resp.selectionEnd;
+    }
+    
+    function setAlert(heading, caption) {
+      document.getElementById("alert-heading").innerHTML = heading;
+      document.getElementById("alert-description").innerHTML = caption;
+      document.getElementById("alert").classList.add("block");
+    }
+    
+    function incorrectAnswer(heading, caption) {
+      wrong++;
+      incorrect.play();
+      setAlert(heading, caption);
+    }
+
     function nextLesson() {
       document.getElementsByClassName("section")[index - 1].style.display = "none";
       if (index >= lessons.length) { endLesson(); return; }
@@ -166,7 +214,6 @@
       if (lesson.type === "match") {
         shuffleDivs("foreign-" + index.toString());
         shuffleDivs("native-" + index.toString());
-        document.getElementById("next").style.display = "none";
       } else if (lesson.type === "comprehension" || lesson.type === "fill-in-the-blank") shuffleDivs("buttons-" + index.toString());
       
       document.getElementsByClassName("section")[index].style.display = "inline-block";
@@ -226,56 +273,6 @@
         [divs[i], divs[j]] = [divs[j], divs[i]];
       }
       divs.forEach(div => container.appendChild(div));
-    }
-
-    // ---------------------------
-
-    function startLesson() {
-      startTimer();
-      document.getElementsByClassName("section")[index].style.display = "inline-block";
-    }
-
-    function endLesson() {
-      stopTimer();
-      document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
-      document.getElementById("percentage").innerHTML = `${(lessons.length / (index + wrong) * 100).toFixed(2)}%`;
-      document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60)}`
-      document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
-      document.getElementsByClassName("section")[index].style.display = "inline-block";
-    }
-
-    function completeLesson() {
-      localStorage.setItem('u{{unitno}}-lesson', parseInt(localStorage.getItem('u{{unitno}}-lesson')) + 1);
-      window.location = "{{seo.learn}}";
-    }
-
-    function startTimer() { timerInterval = setInterval(function() { seconds++; console.log(seconds); }, 1000); }
-    function stopTimer()  { clearInterval(timerInterval); }
-
-    function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
-    
-    function caseshift() {
-      document.getElementById("shift-case").innerHTML = document.getElementById("shift-case").innerHTML == "⬇" ? "⬆" : "⬇";
-      for (var letter of document.getElementsByClassName("letter")) { letter.classList.toggle("upper"); }
-    }
-
-    function insert(character) {
-      let resp = document.getElementById("response-" + index);
-      resp.setRangeText(document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character, resp.selectionStart, resp.selectionEnd, 'select');
-      resp.focus();
-      resp.selectionStart = resp.selectionEnd = resp.selectionEnd;
-    }
-    
-    function setAlert(heading, caption) {
-      document.getElementById("alert-heading").innerHTML = heading;
-      document.getElementById("alert-description").innerHTML = caption;
-      document.getElementById("alert").classList.add("block");
-    }
-    
-    function incorrectAnswer(heading, caption) {
-      wrong++;
-      incorrect.play();
-      setAlert(heading, caption);
     }
   </script>
 </html>

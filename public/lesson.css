@@ -374,20 +374,20 @@ main .alert {
   transition: bottom 350ms ease-in;
 }
 
-main .alert .text, main .alert .button-ctn {
+main .alert .text, main .alert .btn-container {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
 }
 
 main .alert .text { width: 70%; }
-main .alert .button-ctn { 
+main .alert .btn-container { 
   width: 30%;
   padding: 0 5px;
   text-align: right;
 }
 
-main .alert .button-ctn .button {
+main .alert .btn-container .button {
   width: 120px;
   padding: 7px;
 }
