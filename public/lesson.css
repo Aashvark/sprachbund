@@ -401,6 +401,7 @@ main .upper { text-transform: uppercase; }
 main .congrats { text-align: center; }
 main .congrats .statistic {
   aspect-ratio: 1/1;
+  display: inline-block;
   padding: 30px;
   width: 30%;
   border: 3px solid var(--white);
