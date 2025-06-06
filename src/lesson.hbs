@@ -118,9 +118,7 @@
           <p class="heading" id="alert-heading"></p>
           <p class="description" id="alert-description"></p>
         </div>
-        <div class="button-ctn">
-          <a class="button" onclick="nextLesson()">Continue</a>
-        </div>
+        <div class="btn-container"><a class="button" onclick="nextLesson()">Continue</a></div>
       </div>
     </main>
     <footer id="footer">
@@ -159,10 +157,8 @@
       if (index >= lessons.length) { endLesson(); return; }
 
       lesson = lessons[index];
-      if (lesson.type != "match") {
-        document.getElementById("next").style.display = "inline-flex";
-        document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
-      }
+      document.getElementById("next").style.display = lesson.type != "match" ? "inline-flex" : "none";
+      document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
 
       if (lesson.type === "match") {
         shuffleDivs("foreign-" + index.toString());
@@ -175,7 +171,7 @@
 
     function checkAnswer() {
       if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined) {
-        setAlert("<i class=\"fas fa-circle-xmark\"></i> Please answer!", "Tap or click on the correct response."); 
+        setAlert("<i class=\"fas fa-circle-times\"></i> Please answer!", "Tap or click on the correct response."); 
         return;
       } 
       
@@ -185,7 +181,7 @@
       }
       else if (lesson.type === "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
       else if (lesson.type === "match") { setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); }
-      else { incorrectAnswer("<i class=\"fas fa-circle-xmark\"></i> Try again!", "Hover over words you don't know if you need to."); return; }
+      else { incorrectAnswer("<i class=\"fas fa-circle-times\"></i> Try again!", "Hover over words you don't know if you need to."); return; }
       
       index++;
       document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
@@ -205,7 +201,7 @@
         document.getElementById("native-" + idx).classList.add("match-correct");
         document.getElementById("native-" + idx).classList.remove("button", "answer-btn", "selected");
         document.getElementById("native-" + idx).removeAttribute('onclick');
-      } else incorrectAnswer("Oops!", "Try Again");
+      } else incorrectAnswer("<i class=\"fas fa-circle-times\"></i> Oops!", "Try Again");
       
       selectFitB(selection);
       if (document.getElementById("native-" + index).getElementsByClassName("button").length === 0) checkAnswer();
