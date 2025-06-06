@@ -144,12 +144,14 @@
     document.onkeydown = (event) => {
       if (event.key === "Enter") {
         event.preventDefault();
-        if (document.getElementById("alert").classList.contains("block")) setTimeout(() => nextLesson(), 350);
+        if (document.getElementById("alert").classList.contains("block")) setTimeout(() => { alert(); }, 350);
         else checkAnswer();
       }
     }
 
-    document.getElementById("alert").onclick = () => {
+    document.getElementById("alert").onclick = () => { alert(); }
+
+    function alert() {
       selectBtn(selection);
       document.getElementById("alert").classList.remove("block");
       if (lessons[index] !== lesson) nextLesson();
