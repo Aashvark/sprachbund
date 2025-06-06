@@ -411,20 +411,25 @@ main .congrats .p-text { text-align: center; }
 main .congrats .statistic {
   display: inline-block;
   background: var(--light-cont);
+  aspect-ratio: 5/3;
+  width: 40%;
+
   margin: 0 1%;
   padding: 5px;
-  width: 40%;
-  aspect-ratio: 5/3;
+  
   border: 3px solid var(--white);
   border-radius: 30px;
 }
 
 main .congrats .statistic .inner {
-  background: var(--background);
-  padding: 30px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  background: var(--background);
+  aspect-ratio: 5/3;
+  width: 100%;
+  padding: 30px;
   border-radius: 15px;
 }
 
