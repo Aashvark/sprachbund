@@ -27,12 +27,21 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   let string = "";
   let save = "";
   
-  let tokens = arg.split(" ");
+  let tokens = [];
+  for (let i = 0; i < arg.length; i++) {
+    if (arg[i].match(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g) || arg[i] === " ") { 
+      tokens.push(save);
+      save = "";
+    } 
+    if (arg[i] != " ") save += arg[i];
+  }
+  save = "";
+
   let keys = undefined;
   let submeaning = [];
   
   for (let i = 0; i < tokens.length; i++) {
-    save += tokens[i].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); + " ";
+    save += tokens[i] + " ";
     
     if (tokens[i] == "___") {
       string += `<div class="hint"><hr class="blank"></div>`;

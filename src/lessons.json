@@ -8,6 +8,12 @@
     "unit": [
       [
         {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han cévo. han symi.",
+          "answers": ["he is a woman he is a man", "she is a woman he is a man", "it is a woman he is a man", "he is a woman she is a man", "she is a woman she is a man", "it is a woman she is a man", "he is a woman it is a man", "she is a woman it is a man", "it is a woman it is a man"]
+        },
+        {
           "type": "vocabulary",
             "word": "han",
             "tip": "If there is no subject, verbs take he/she/it as its subject. Depending on if the object is plural, they is the implied subject.",
@@ -93,12 +99,6 @@
           "direction": "native-foreign",
           "prompt": "they are a man and a woman",
           "answers": ["han symi ele cévo"]
-        },
-        {
-          "type": "short-response",
-          "direction": "foreign-native",
-          "prompt": "han cévo han symi",
-          "answers": ["he is a woman he is a man", "she is a woman he is a man", "it is a woman he is a man", "he is a woman she is a man", "she is a woman she is a man", "it is a woman she is a man", "he is a woman it is a man", "she is a woman it is a man", "it is a woman it is a man"]
         }
       ]
     ]
