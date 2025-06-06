@@ -145,7 +145,7 @@
       if (event.key === "Enter") {
         event.preventDefault();
         if (document.getElementById("alert").classList.contains("block")) setTimeout(() => { alert(); }, 350);
-        else checkAnswer();
+        else if (lesson.type != "match") checkAnswer();
       }
     }
 
