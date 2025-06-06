@@ -156,7 +156,7 @@
       document.getElementById("alert").classList.remove("block");
       
       document.getElementsByClassName("section")[index - 1].style.display = "none";
-      if (index === lessons.length) { endLesson(); return; }
+      if (index >= lessons.length) { endLesson(); return; }
 
       lesson = lessons[index];
       if (lesson.type != "match") {
@@ -266,6 +266,7 @@
       document.getElementById("percentage").innerHTML = `${(lessons.length / index + ansCount * 100).toFixed(2)}%`;
       document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60)}`
       document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
+      document.getElementsByClassName("section")[index].style.display = "inline-block";
     }
 
     function completeLesson() {
