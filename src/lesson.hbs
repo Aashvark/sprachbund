@@ -57,7 +57,7 @@
         {{/ifEquals}}
         {{#ifEquals lesson.type "fill-in-the-blank"}}
         <p class="heading"><i class="fa-solid fa-pen-to-square"></i> Fill in the blank!</p>
-        <div class="div-border scale">{{hover-translate lesson.prompt "smb"}}</div>
+        <div class="div-border scale">{{hover-translate lesson.prompt "foreign"}}</div>
         <p class="p-text">Which word completes the sentence?</p>
         <br>
         <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectBtn(this)">{{this}}</a>{{/each}}</div>
@@ -69,8 +69,8 @@
         {{/ifEquals}} 
         {{#ifEquals lesson.type "short-response"}}
         <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
-        <div class="div-border scale">{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "en" "smb")}}</div>
-        <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-foreign"}}Nóibón{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-foreign"}}spellcheck="false"{{/ifEquals}} inputmode="search" enterkeyhint="go"></textarea></div>
+        <div class="div-border scale">{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "native" "foreign")}}</div>
+        <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-foreign"}}Nórem{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-foreign"}}spellcheck="false"{{/ifEquals}} inputmode="search" enterkeyhint="go"></textarea></div>
         <div class="insert-buttons">
           <a class="button" onclick="caseshift()" id="shift-case">⬆</a>
           <a class="button letter" onclick="insert('á')">á</a>
@@ -159,7 +159,7 @@
       stopTimer();
       let percentage = (lessons.length / (index + wrong) * 100).toFixed(2);
       document.getElementById("percentage").innerHTML = `${percentage}%`;
-      document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60)}`
+      document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60).toString().padStart(2, '0')}`
       document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
       if (percentage >= 90) document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
       else if (percentage >= 70) document.getElementById("final-text").innerHTML = "Such a valiant effort!";

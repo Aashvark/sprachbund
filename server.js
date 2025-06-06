@@ -16,12 +16,11 @@ fastify.register(require("@fastify/static"), {
 fastify.register(require("@fastify/formbody"));
 fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
 
-handlebars.registerHelper('add', function(arg1, arg2) { return arg1 + arg2; });
+handlebars.registerHelper('add', function(a, b) { return a + b; });
 handlebars.registerHelper('ifEquals', function(arg1, arg2, options) { return (arg1 === arg2) ? options.fn(this) : options.inverse(this); });
 handlebars.registerHelper('ternaryEq', function(arg1, arg2, op1, op2) { return (arg1 === arg2) ? op1 : op2; });
 handlebars.registerHelper('json', function(a) { return JSON.stringify(a); });
 handlebars.registerHelper('get-attribute', function(word, attribute) { return dict[word.trimEnd()][attribute]; });
-handlebars.registerHelper('add', function(a, b) { return a + b; });
 handlebars.registerHelper('tip-format', function(arg) { return new handlebars.SafeString(arg.replace("[", "<span class=\"merienda accent\">").replace("]", "</span>")); });
  
 handlebars.registerHelper('hover-translate', function(arg, lang, options) {
@@ -42,10 +41,10 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
       submeaning = [];
       continue;
     }
-    else if (lang === "en" && getInComplexByLength(save.toLowerCase() + tokens[i + 1]) && getInComplexByLength(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2])) {
+    else if (lang === "native" && getInComplexByLength(save.toLowerCase() + tokens[i + 1]) && getInComplexByLength(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2])) {
       keys = Object.keys(dict).filter(key => getInComplex(key, save.trimEnd().toLowerCase()));
       if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
-    } else if (lang == "smb" && save.trimEnd() in dict && !(save.toLowerCase() + tokens[i + 1] in dict) && !(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2] in dict)) {
+    } else if (lang == "nórem" && save.trimEnd() in dict && !(save.toLowerCase() + tokens[i + 1] in dict) && !(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2] in dict)) {
       keys = dict[save.trimEnd().toLowerCase()].simple;
       if (save.trimEnd().includes(" ")) { submeaning = save.toLowerCase().trimEnd().split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
     } else continue;

@@ -192,6 +192,7 @@ main .section .div-border .hint table > tbody > tr:not(:last-child) > td { borde
   color: var(--accent);
 }
 
+main .section .div-border:has(> .root) { padding: 5px; }
 main .section .div-border .root { font-size: 35px; }
 
 main .section .div-border:has(> .context) > * {
@@ -204,6 +205,7 @@ main .section .div-border .ipa     {
   font-size: 15px;
   font-style: italic;
 }
+main .section .div-border .meaning { padding: 5px 0; }
 
 main .section .div-border .divider {
   position: relative;

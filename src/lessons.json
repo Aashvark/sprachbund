@@ -10,7 +10,7 @@
         {
           "type": "vocabulary",
             "word": "han",
-            "tip": "If there is no subject, verbs take he/she/it as its subject.",
+            "tip": "If there is no subject, verbs take he/she/it as its subject. Depending on if the object is plural, \"they\" is the implied subject.",
             "example": {
               "sentence": "[han]",
               "translation": "he/she/it [is]"
@@ -61,6 +61,44 @@
           "direction": "native-foreign",
           "prompt": "a woman",
           "answers": ["cévo"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "han cévo",
+          "answers": ["he is a woman", "she is a woman", "it is a woman"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "she is a woman",
+          "answers": ["han cévo"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "ele",
+          "example": {
+            "sentence": "cévo [ele] symi",
+            "translation": "a woman and a man"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "a man and a woman",
+          "answers": ["symi ele cévo"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "they are a man and a woman",
+          "answers": ["han symi ele cévo"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han cévo. han symi",
+          "answers": ["he is a woman he is a man", "she is a woman he is a man", "it is a woman he is a man", "he is a woman she is a man", "she is a woman she is a man", "it is a woman she is a man", "he is a woman it is a man", "she is a woman it is a man", "it is a woman it is a man"]
         }
       ]
     ]
