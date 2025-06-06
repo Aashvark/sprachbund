@@ -73,10 +73,10 @@
         <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-foreign"}}Nóibón{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "native-foreign"}}spellcheck="false"{{/ifEquals}} inputmode="search" enterkeyhint="go"></textarea></div>
         <div class="insert-buttons">
           <a class="button" onclick="caseshift()" id="shift-case">⬆</a>
-          <a class="button c" onclick="insert('á')">á</a>
-          <a class="button c" onclick="insert('ć')">ć</a>
-          <a class="button c" onclick="insert('é')">é</a>
-          <a class="button c" onclick="insert('ó')">ó</a>
+          <a class="button letter" onclick="insert('á')">á</a>
+          <a class="button letter" onclick="insert('ć')">ć</a>
+          <a class="button letter" onclick="insert('é')">é</a>
+          <a class="button letter" onclick="insert('ó')">ó</a>
         </div>
         {{/ifEquals}}
         {{#ifEquals lesson.type "vocabulary"}}
@@ -153,6 +153,13 @@
       selectBtn(selection);
       document.getElementById("alert").classList.remove("block");
       if (lessons[index] !== lesson) nextLesson();
+    }
+
+    document.getElementsByClassName("letter").onclick = () => {
+      let resp = document.getElementById("response-" + index);
+      resp.setRangeText(document.getElementById("shift-case").innerText == "⬇" ? this.innerText.toUpperCase() : this.innerText, resp.selectionStart, resp.selectionEnd, 'select');
+      resp.focus();
+      resp.setSelectionRange(end + 1, end + 1);
     }
     
     function nextLesson() {
@@ -256,15 +263,15 @@
     
     function caseshift() {
       document.getElementById("shift-case").innerHTML = document.getElementById("shift-case").innerHTML == "⬇" ? "⬆" : "⬇";
-      for (var c of document.getElementsByClassName("c")) { c.classList.toggle("upper"); }
+      for (var letter of document.getElementsByClassName("letter")) { letter.classList.toggle("upper"); }
     }
 
-    function insert(character) {
-      let resp = document.getElementById("response-" + index);
-      resp.setRangeText(document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character, resp.selectionStart, resp.selectionEnd, 'select');
-      resp.focus();
-      resp.setSelectionRange(end + 1, end + 1);
-    }
+    //function insert(character) {
+    //  let resp = document.getElementById("response-" + index);
+    //  resp.setRangeText(document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character, resp.selectionStart, resp.selectionEnd, 'select');
+    //  resp.focus();
+    //  resp.setSelectionRange(end + 1, end + 1);
+    //}
     
     function setAlert(heading, caption) {
       document.getElementById("alert-heading").innerHTML = heading;
