@@ -8,12 +8,6 @@
     "unit": [
       [
         {
-          "type": "short-response",
-          "direction": "foreign-native",
-          "prompt": "miro vé han miro",
-          "answers": ["he has"]
-        },
-        {
           "type": "vocabulary",
             "word": "han",
             "tip": "If there is no subject, verbs take he/she/it as its subject.",
@@ -23,22 +17,97 @@
             }
         },
         {
-          "type": "comprehension",
-          "prompt": "i symi koli han o maike. Jacekom sċetéf scewul mócewewu yré kaċitáuċet tvimi. Maté tváni una mumif hvori krojo? Skacynó jikósawehot scikauċi menalo tvakájam ry. Kawuhó muwomá skékál sċewu tvymaumu sosom! Ámukam manosi cemit srótum svuċe tvavo sramiku sċiku. Sċymok okuvik hvywin lánu.",
-          "question": "Where is the man walking?",
-          "answer": "On the shore",
-          "choices": ["On the shore", "By the beach", "To his house"]
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "she is",
+          "answers": ["han"]
         },
         {
-          "type": "fill-in-the-blank",
-          "prompt": "i cévo vé ___ miro",
-          "answer": "han",
-          "choices": ["han", "miro", "téu"]
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han",
+          "answers": ["to be", "to exist", "be", "he is", "she is", "it is"]
         },
         {
-          "type": "match",
-          "foreign": ["miro", "cévo", "symi", "han", "téu"],
-          "native": ["bread", "woman", "man", "to be", "him/her"]
+          "type": "vocabulary",
+          "word": "symi",
+          "example": {
+            "sentence": "han [symi]",
+            "translation": "he is [a man]"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "symi",
+          "answers": ["a man", "man"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "he is a man",
+          "answers": ["han symi"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "cévo",
+          "example": {
+            "sentence": "han [cévo]",
+            "translation": "she is [a woman]"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "a woman",
+          "answers": ["cévo"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "náu",
+          "tip": "Adjectives will always come before nouns",
+          "example": {
+            "sentence": "[náu] cévo",
+            "translation": "a [tall] woman"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "náu symi",
+          "answers": ["a tall man", "tall man", "a big man", "big man"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "She is tall",
+          "answers": ["han náu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han náu symi",
+          "answers": ["he is a tall man", "he is a big man", "it is a tall man", "it is a big man"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "mikol",
+          "example": {
+            "sentence": "han [mikol] symi",
+            "translation": "he is a [short] man"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "mikol symi",
+          "answers": ["a short man", "short man", "a small man", "small man"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "it is small",
+          "answers": ["han mikol"]
         }
       ]
     ]

@@ -6,7 +6,7 @@ const seo = require("./src/seo.json");
 
 const lessons = require("./src/lessons.json");
 const dictionary = require("./src/dictionary.json");
-let dict = dictionary.smb;
+let dict = dictionary.nórem;
 
 fastify.register(require("@fastify/static"), {
   root: path.join(__dirname, "public"),
