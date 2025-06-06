@@ -53,14 +53,14 @@
         <div class="div-border scale">{{lesson.prompt}}</div>
         <p class="p-text">{{lesson.question}}</p>
         <br>
-        <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>{{/each}}</div>
+        <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectBtn(this)">{{this}}</a>{{/each}}</div>
         {{/ifEquals}}
         {{#ifEquals lesson.type "fill-in-the-blank"}}
         <p class="heading"><i class="fa-solid fa-pen-to-square"></i> Fill in the blank!</p>
         <div class="div-border scale">{{hover-translate lesson.prompt "smb"}}</div>
         <p class="p-text">Which word completes the sentence?</p>
         <br>
-        <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectFitB(this)">{{this}}</a>{{/each}}</div>
+        <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectBtn(this)">{{this}}</a>{{/each}}</div>
         {{/ifEquals}}
         {{#ifEquals lesson.type "match"}}
         <p class="heading"><i class="fa-solid fa-motorcycle"></i> Match these terms!</p>
@@ -128,10 +128,11 @@
   </body>
   <script>
     let index = 0;
-    let ansCount = 0;
+
+    let wrong = 0;
     let seconds = 0;
 
-    let selection;
+    let selection = undefined;
     let timerInterval;
     
     let lessons = JSON.parse('{{{json lessons}}}');
@@ -153,6 +154,8 @@
       selection = undefined;
       document.getElementById("alert").classList.remove("block");
       
+      if (lessons[index] === lesson) return;
+
       document.getElementsByClassName("section")[index - 1].style.display = "none";
       if (index >= lessons.length) { endLesson(); return; }
 
@@ -189,9 +192,9 @@
     }
     
     function select(self) {
-      if (selection === undefined || selection === self) { selectFitB(self); return; }
+      if (selection === undefined || selection === self) { selectBtn(self); return; }
+      
       let idx = selection.id.split("-").slice(1).join("-");
-
       if (idx === self.id.split("-").slice(1).join("-")) {
         correct.play();
         document.getElementById("foreign-" + idx).classList.add("match-correct");
@@ -203,11 +206,11 @@
         document.getElementById("native-" + idx).removeAttribute('onclick');
       } else incorrectAnswer("<i class=\"fas fa-circle-times\"></i> Oops!", "Try Again");
       
-      selectFitB(selection);
+      selectBtn(selection);
       if (document.getElementById("native-" + index).getElementsByClassName("button").length === 0) checkAnswer();
     }
 
-    function selectFitB(self) {
+    function selectBtn(self) {
       if (selection != undefined) selection.classList.remove("selected");
       selection = self === selection ? undefined : self;
       if (selection != undefined) selection.classList.add("selected");
@@ -235,7 +238,7 @@
     function endLesson() {
       stopTimer();
       document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
-      document.getElementById("percentage").innerHTML = `${(lessons.length / (index + ansCount) * 100).toFixed(2)}%`;
+      document.getElementById("percentage").innerHTML = `${(lessons.length / (index + wrong) * 100).toFixed(2)}%`;
       document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60)}`
       document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
       document.getElementsByClassName("section")[index].style.display = "inline-block";
@@ -270,7 +273,7 @@
     }
     
     function incorrectAnswer(heading, caption) {
-      ansCount++;
+      wrong++;
       incorrect.play();
       setAlert(heading, caption);
     }
