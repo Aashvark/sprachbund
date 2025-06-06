@@ -262,5 +262,17 @@
       }
       divs.forEach(div => container.appendChild(div));
     }
+
+    let timerInterval;
+    let seconds = 0;
+
+    function startTimer() {
+      timerInterval = setInterval(function() {
+        seconds++;
+        console.log("Seconds:", seconds);
+      }, 1000); // Update every 1000 ms (1 second)
+    }
+
+    function stopTimer() { clearInterval(timerInterval); }
   </script>
 </html>
