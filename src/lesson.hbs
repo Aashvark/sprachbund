@@ -263,7 +263,7 @@
     function endLesson() {
       stopTimer();
       document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
-      document.getElementById("percentage").innerHTML = `${(lessons.length / index + ansCount * 100).toFixed(2)}%`;
+      document.getElementById("percentage").innerHTML = `${(lessons.length / (index + ansCount) * 100).toFixed(2)}%`;
       document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60)}`
       document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
       document.getElementsByClassName("section")[index].style.display = "inline-block";
