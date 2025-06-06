@@ -139,10 +139,8 @@
     let lessons = JSON.parse('{{{json lessons}}}');
     let lesson = lessons[index];
     
-    var correct   = new Audio("/sfx/correct.wav");
-    var incorrect = new Audio("/sfx/incorrect.mp3");
-
-    var case = document.getElementById("shift-case");
+    let correct   = new Audio("/sfx/correct.wav");
+    let incorrect = new Audio("/sfx/incorrect.mp3");
 
     document.onkeydown = (event) => {
       if (event.key === "Enter") {
@@ -264,13 +262,13 @@
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
     
     function caseshift() {
-      case.innerHTML = case.innerHTML == "⬇" ? "⬆" : "⬇";
+      document.getElementById("shift-case").innerHTML = document.getElementById("shift-case").innerHTML == "⬇" ? "⬆" : "⬇";
       for (var c of document.getElementsByClassName("c")) { c.classList.toggle("upper"); }
     }
 
     function insert(character) {
       let resp = document.getElementById("response-" + index);
-      resp.setRangeText(case.innerHTML == "⬇" ? character.toUpperCase() : character, resp.selectionStart, resp.selectionEnd, 'select');
+      resp.setRangeText(document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character, resp.selectionStart, resp.selectionEnd, 'select');
       resp.focus();
       resp.setSelectionRange(end + 1, end + 1);
     }
