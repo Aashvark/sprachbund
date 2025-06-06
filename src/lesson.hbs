@@ -148,14 +148,7 @@
         else if (lesson.type != "match") checkAnswer();
       }
     }
-
     document.getElementById("alert").onclick = () => { alert(); }
-
-    function alert() {
-      selectBtn(selection);
-      document.getElementById("alert").classList.remove("block");
-      if (lessons[index] !== lesson) nextLesson();
-    }
 
     function startLesson() {
       startTimer();
@@ -192,6 +185,12 @@
       resp.focus();
       resp.selectionStart = resp.selectionEnd;
     }
+
+    function alert() {
+      selectBtn(selection);
+      document.getElementById("alert").classList.remove("block");
+      if (lessons[index] !== lesson) nextLesson();
+    }
     
     function setAlert(heading, caption) {
       document.getElementById("alert-heading").innerHTML = heading;
@@ -222,18 +221,17 @@
     }
 
     function checkAnswer() {
-      if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined) {
-        setAlert("<i class=\"fas fa-circle-times\"></i> Please answer!", "Tap or click on the correct response."); 
-        return;
-      } 
-      
-      if (((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value)))) {
+      if (((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) || lesson.type === "match") {
         correct.play();
         setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
+      } else if (lesson.type === "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
+      else if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined) {
+        setAlert("<i class=\"fas fa-circle-times\"></i> Please answer!", "Tap or click on the correct response.");
+        return;
+      } else { 
+        incorrectAnswer("<i class=\"fas fa-circle-times\"></i> Try again!", "Hover over words you don't know if you need to.");
+        return;
       }
-      else if (lesson.type === "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
-      else if (lesson.type === "match") { setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); }
-      else { incorrectAnswer("<i class=\"fas fa-circle-times\"></i> Try again!", "Hover over words you don't know if you need to."); return; }
       
       index++;
       document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
