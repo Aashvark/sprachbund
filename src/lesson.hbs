@@ -183,33 +183,22 @@
       selection = undefined;
       document.getElementById("alert").classList.remove("block");
       
-      if (index > 0) document.getElementsByClassName("section")[index - 1].style.display = "none";
-      if (index < lessons.length) {
-        lesson = lessons[index];
-        if (lesson.type != "match") {
-          document.getElementById("next").style.display = "inline-flex";
-          document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
-        }
+      document.getElementsByClassName("section")[index - 1].style.display = "none";
+      if (index === lessons.length) { endLesson(); return; }
 
-        if (lesson.type === "match") {
-          shuffleDivs("foreign-" + index.toString());
-          shuffleDivs("native-" + index.toString());
-          document.getElementById("next").style.display = "none";
-        } else if (lesson.type === "comprehension" || lesson.type === "fill-in-the-blank") shuffleDivs("buttons-" + index.toString());
+      lesson = lessons[index];
+      if (lesson.type != "match") {
+        document.getElementById("next").style.display = "inline-flex";
+        document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
       }
-      else if (index >= lessons.length) {
-        stopTimer();
-        document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
-        document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60)}`
-        document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
-      }
+
+      if (lesson.type === "match") {
+        shuffleDivs("foreign-" + index.toString());
+        shuffleDivs("native-" + index.toString());
+        document.getElementById("next").style.display = "none";
+      } else if (lesson.type === "comprehension" || lesson.type === "fill-in-the-blank") shuffleDivs("buttons-" + index.toString());
       
       document.getElementsByClassName("section")[index].style.display = "inline-block";
-    }
-    
-    function completeLesson() {
-      localStorage.setItem('u{{unitno}}-lesson', parseInt(localStorage.getItem('u{{unitno}}-lesson')) + 1);
-      window.location = "{{seo.learn}}";
     }
     
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
@@ -281,6 +270,18 @@
     function startLesson() {
       startTimer();
       document.getElementsByClassName("section")[index].style.display = "inline-block";
+    }
+
+    function endLesson() {
+      stopTimer();
+      document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
+      document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60)}`
+      document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
+    }
+
+    function completeLesson() {
+      localStorage.setItem('u{{unitno}}-lesson', parseInt(localStorage.getItem('u{{unitno}}-lesson')) + 1);
+      window.location = "{{seo.learn}}";
     }
 
     function startTimer() { timerInterval = setInterval(function() { seconds++; console.log(seconds); }, 1000); }
