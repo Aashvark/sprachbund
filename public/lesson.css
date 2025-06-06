@@ -402,14 +402,19 @@ main .congrats { text-align: center; }
 main .congrats .p-text { text-align: center; }
 main .congrats .statistic {
   aspect-ratio: 1/1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  background: var(--light-cont);
   padding: 30px;
   width: 20%;
   margin: 0 1%;
   border: 3px solid var(--white);
   border-radius: 5px;
+}
+
+main .congrats .statistic {
+  background: var(--background);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer { 
