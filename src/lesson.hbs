@@ -263,7 +263,7 @@
       let resp = document.getElementById("response-" + index);
       resp.setRangeText(document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character, resp.selectionStart, resp.selectionEnd, 'select');
       resp.focus();
-      resp.setSelectionRange(resp.selectionEnd + 1, resp.selectionEnd + 1, "forward");
+      resp.selectionStart = resp.selectionEnd = resp.selectionEnd;
     }
     
     function setAlert(heading, caption) {
