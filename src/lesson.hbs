@@ -142,6 +142,8 @@
     var correct   = new Audio("/sfx/correct.wav");
     var incorrect = new Audio("/sfx/incorrect.mp3");
 
+    var case = document.getElementById("shift-case");
+
     document.onkeydown = (event) => {
       if (event.key === "Enter") {
         event.preventDefault();
@@ -192,25 +194,6 @@
       document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
     }
     
-    function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
-    function insert(character) {
-      let resp = document.getElementById("response-" + index);
-      resp.setRangeText(document.getElementById("shift-case").innerHTML == "⬇" ? character.toUpperCase() : character, resp.selectionStart, resp.selectionEnd, 'select');
-      resp.focus();
-      resp.setSelectionRange(end + 1, end + 1);
-    }
-    
-    function caseshift() {
-      document.getElementById("shift-case").innerHTML = document.getElementById("shift-case").innerHTML == "⬇" ? "⬆" : "⬇";
-      for (var c of document.getElementsByClassName("c")) { c.classList.toggle("upper"); }
-    }
-    
-    function setAlert(heading, description) {
-      document.getElementById("alert-heading").innerHTML = heading;
-      document.getElementById("alert-description").innerHTML = description;
-      document.getElementById("alert").classList.add("block");
-    }
-    
     function select(self) {
       if (selection === undefined) {
         self.classList.add("selected");
@@ -219,7 +202,7 @@
       }
       let idx = selection.id.split("-").slice(1).join("-");
       
-      if (selection === self) self.classList.remove("selected");
+      if (selection === self) selectFitB(null);
       else if (idx === self.id.split("-").slice(1).join("-")) {
         correct.play();
         document.getElementById("foreign-" + idx).classList.add("match-correct");
@@ -232,15 +215,14 @@
         document.getElementById("native-" + idx).removeAttribute('onclick');
       } else incorrectAnswer("Oops!", "Try Again");
       
-      selection.classList.remove("selected");
-      selection = undefined;
+      selectFitB(null);
       if (document.getElementById("native-" + index).getElementsByClassName("button").length === 0) checkAnswer();
     }
 
     function selectFitB(self) { 
-      if (selection != null) selection.classList.toggle("selected");
-      selection = self == selection ? null : self;
-      selection.classList.toggle("selected");
+      if (selection != null) selection.classList.remove("selected");
+      selection = self === selection ? null : self;
+      selection.classList.add("selected");
     }
     
     function shuffleDivs(containerId) {
@@ -254,6 +236,8 @@
       }
       divs.forEach(div => container.appendChild(div));
     }
+
+    // ---------------------------
 
     function startLesson() {
       startTimer();
@@ -277,6 +261,26 @@
     function startTimer() { timerInterval = setInterval(function() { seconds++; console.log(seconds); }, 1000); }
     function stopTimer()  { clearInterval(timerInterval); }
 
+    function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
+    
+    function caseshift() {
+      case.innerHTML = case.innerHTML == "⬇" ? "⬆" : "⬇";
+      for (var c of document.getElementsByClassName("c")) { c.classList.toggle("upper"); }
+    }
+
+    function insert(character) {
+      let resp = document.getElementById("response-" + index);
+      resp.setRangeText(case.innerHTML == "⬇" ? character.toUpperCase() : character, resp.selectionStart, resp.selectionEnd, 'select');
+      resp.focus();
+      resp.setSelectionRange(end + 1, end + 1);
+    }
+    
+    function setAlert(heading, caption) {
+      document.getElementById("alert-heading").innerHTML = heading;
+      document.getElementById("alert-description").innerHTML = caption;
+      document.getElementById("alert").classList.add("block");
+    }
+    
     function incorrectAnswer(heading, caption) {
       ansCount++;
       incorrect.play();
