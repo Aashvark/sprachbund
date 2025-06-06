@@ -193,34 +193,28 @@
     }
     
     function select(self) {
-      if (selection === undefined) {
-        self.classList.add("selected");
-        selection = self;
-        return;
-      }
+      if (selection === undefined || selection === self) { selectFitB(self); return; }
       let idx = selection.id.split("-").slice(1).join("-");
-      
-      if (selection === self) selectFitB(null);
-      else if (idx === self.id.split("-").slice(1).join("-")) {
+
+      if (idx === self.id.split("-").slice(1).join("-")) {
         correct.play();
         document.getElementById("foreign-" + idx).classList.add("match-correct");
-        document.getElementById("native-" + idx).classList.add("match-correct");
-        
         document.getElementById("foreign-" + idx).classList.remove("button", "answer-btn", "selected");
-        document.getElementById("native-" + idx).classList.remove("button", "answer-btn", "selected");
-        
         document.getElementById("foreign-" + idx).removeAttribute('onclick');
+
+        document.getElementById("native-" + idx).classList.add("match-correct");
+        document.getElementById("native-" + idx).classList.remove("button", "answer-btn", "selected");
         document.getElementById("native-" + idx).removeAttribute('onclick');
       } else incorrectAnswer("Oops!", "Try Again");
       
-      selection.classList.remove("selected");
+      selectFitB(selection);
       if (document.getElementById("native-" + index).getElementsByClassName("button").length === 0) checkAnswer();
     }
 
     function selectFitB(self) {
-      if (selection != null) selection.classList.remove("selected");
-      selection = self === selection ? null : self;
-      if (selection != null) selection.classList.add("selected");
+      if (selection != undefined) selection.classList.remove("selected");
+      selection = self === selection ? undefined : self;
+      if (selection != undefined) selection.classList.add("selected");
     }
     
     function shuffleDivs(containerId) {
