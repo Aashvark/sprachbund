@@ -205,7 +205,7 @@
       else if (index >= lessons.length) {
         stopTimer();
         document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
-        document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}`
+        document.getElementById("timer").innerHTML = `${seconds}`
         document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
       }
       
