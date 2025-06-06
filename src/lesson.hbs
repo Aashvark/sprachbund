@@ -157,10 +157,13 @@
 
     function endLesson() {
       stopTimer();
-      document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
-      document.getElementById("percentage").innerHTML = `${(lessons.length / (index + wrong) * 100).toFixed(2)}%`;
+      let percentage = (lessons.length / (index + wrong) * 100).toFixed(2);
+      document.getElementById("percentage").innerHTML = `${percentage}%`;
       document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60)}`
       document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
+      if (percentage >= 90) document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
+      else if (percentage >= 70) document.getElementById("final-text").innerHTML = "Such a valiant effort!";
+      else document.getElementById("final-text").innerHTML = "You'll get it next time!";
       document.getElementsByClassName("section")[index].style.display = "inline-block";
     }
 
