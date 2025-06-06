@@ -103,14 +103,14 @@
       {{/each}}
       <div class="section congrats">
         <p class="heading">You did it!</p>
-        <p class="p-text">Some Cheesy Tagline on how you're so good</p>
+        <p class="p-text" id="final-text"></p>
         <div class="statistic">
           <p class="scale">Score</p>
-          <p class="inner scale" id="percentage">89%</p>
+          <p class="inner scale" id="percentage"></p>
         </div>
         <div class="statistic">
           <p class="scale">Time</p>
-          <p class="inner scale" id="percentage">3:00</p>
+          <p class="inner scale" id="time"></p>
         </div>
       </div>
       <div class="alert" id="alert">
@@ -138,6 +138,10 @@
     var correct   = new Audio("/sfx/correct.wav");
     var incorrect = new Audio("/sfx/incorrect.mp3");
     
+    document.onload = () => {
+      startTimer();
+    }
+
     document.onkeydown = (event) => {
       if (event.key === "Enter") {
         event.preventDefault();
@@ -195,7 +199,11 @@
           document.getElementById("next").style.display = "none";
         } else if (lesson.type === "comprehension" || lesson.type === "fill-in-the-blank") shuffleDivs("buttons-" + index.toString());
       }
-      else if (index >= lessons.length) document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
+      else if (index >= lessons.length) {
+        document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
+        document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60)}`
+        document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
+      }
       
       document.getElementsByClassName("section")[index].style.display = "inline-block";
     }
@@ -271,16 +279,7 @@
       divs.forEach(div => container.appendChild(div));
     }
 
-    let timerInterval;
-    let seconds = 0;
-
-    function startTimer() {
-      timerInterval = setInterval(function() {
-        seconds++;
-        console.log("Seconds:", seconds);
-      }, 1000); // Update every 1000 ms (1 second)
-    }
-
+    function startTimer() { timerInterval = setInterval(function() { seconds++; }, 1000); }
     function stopTimer() { clearInterval(timerInterval); }
   </script>
 </html>
