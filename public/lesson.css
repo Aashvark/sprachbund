@@ -404,6 +404,7 @@ main .congrats .statistic {
   display: inline-block;
   padding: 30px;
   width: 30%;
+  margin: 0 1%;
   border: 3px solid var(--white);
   border-radius: 5px;
 }
