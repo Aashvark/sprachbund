@@ -10,7 +10,7 @@
         {
           "type": "vocabulary",
             "word": "han",
-            "tip": "If there is no subject, verbs take he/she/it as its subject. Depending on if the object is plural, \\"they\\" is the implied subject.",
+            "tip": "If there is no subject, verbs take he/she/it as its subject. Depending on if the object is plural, they is the implied subject.",
             "example": {
               "sentence": "[han]",
               "translation": "he/she/it [is]"
