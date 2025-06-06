@@ -380,9 +380,9 @@ main .alert .text, main .alert .btn-container {
   font-size: 20px;
 }
 
-main .alert .text { width: 90%; }
+main .alert .text { width: 85%; }
 main .alert .btn-container { 
-  width: 10%;
+  width: 15%;
   padding: 0 5px;
   text-align: right;
 }
