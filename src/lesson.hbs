@@ -200,6 +200,7 @@
         } else if (lesson.type === "comprehension" || lesson.type === "fill-in-the-blank") shuffleDivs("buttons-" + index.toString());
       }
       else if (index >= lessons.length) {
+        stopTimer();
         document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
         document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60)}`
         document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
