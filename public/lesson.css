@@ -398,11 +398,10 @@ main .block { bottom: 0; }
 
 main .upper { text-transform: uppercase; }
 
-main .congrats {
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+main .congrats { text-align: center; }
+main .congrats .statistic {
+  padding: 30px;
+  border: 3px solid var(--white);
 }
 
 footer { 
