@@ -131,6 +131,11 @@
   <script>
     let index = 0;
     let ansCount = 0;
+
+    let selection;
+    let timerInterval;
+
+    let seconds = 0;
     
     let lessons = JSON.parse('{{{json lessons}}}');
     let lesson = lessons[index];
@@ -149,8 +154,6 @@
         else checkAnswer();
       }
     }
-
-    let selection;
     
     function checkAnswer() {
       if (index >= lessons.length) { completeLesson(); return; }
