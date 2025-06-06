@@ -132,9 +132,9 @@ main .section .div-border .hint > span {
 
 main .section .div-border .hint .blank {
   position: relative;
-  top: 12px;
+  top: 13px;
   width: 30px;
-  border: 0.5px solid var(--light-cont);
+  border: 2px solid var(--light-cont);
 }
 
 main .section .div-border .hint table { 
@@ -186,7 +186,6 @@ main .section .div-border .hint table tr td:not(:last-child) { border-right: 2px
 main .section .div-border .hint table > tbody > tr:not(:last-child) > td { border-bottom: 2px solid var(--light-cont); }
 
 .accent { color: var(--accent); }
-
 .highlight {
   font-variant: small-caps;
   font-weight: bold;
@@ -285,7 +284,7 @@ main .match-correct {
   font-size: 20px;
   text-align: center;
 
-  border: 3px solid green;
+  border: 3px solid var(--green);
   border-radius: 10px;
 
   user-select: cursor;
