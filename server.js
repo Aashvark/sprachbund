@@ -44,7 +44,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
     else if (lang === "native" && getInComplexByLength(save.toLowerCase() + tokens[i + 1]) && getInComplexByLength(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2])) {
       keys = Object.keys(dict).filter(key => getInComplex(key, save.trimEnd().toLowerCase()));
       if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
-    } else if (lang == "nórem" && save.trimEnd() in dict && !(save.toLowerCase() + tokens[i + 1] in dict) && !(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2] in dict)) {
+    } else if (lang == "foreign" && save.trimEnd() in dict && !(save.toLowerCase() + tokens[i + 1] in dict) && !(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2] in dict)) {
       keys = dict[save.trimEnd().toLowerCase()].simple;
       if (save.trimEnd().includes(" ")) { submeaning = save.toLowerCase().trimEnd().split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
     } else continue;
