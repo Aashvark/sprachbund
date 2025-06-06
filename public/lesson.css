@@ -409,7 +409,7 @@ main .congrats {
 main .congrats .p-text { text-align: center; }
 main .congrats .statistic {
   display: inline-block;
-  aspect-ratio: 1/1;
+  aspect-ratio: 5/3;
   background: var(--light-cont);
   width: 20%;
   margin: 0 1%;
