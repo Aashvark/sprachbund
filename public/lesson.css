@@ -349,6 +349,7 @@ main .response .textbox::placeholder {
 main .insert-buttons .button {
   aspect-ratio: 1/1;
   width: 70px;
+  margin: 0 1%;
 
   font-weight: bold;
   font-size: 25px;
