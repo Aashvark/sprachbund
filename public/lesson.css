@@ -398,7 +398,14 @@ main .block { bottom: 0; }
 
 main .upper { text-transform: uppercase; }
 
-main .congrats { text-align: center; }
+main .congrats { 
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  text-align: center;
+}
+
 main .congrats .p-text { text-align: center; }
 main .congrats .statistic {
   display: inline-block;
@@ -407,7 +414,7 @@ main .congrats .statistic {
   width: 20%;
   margin: 0 1%;
   border: 3px solid var(--white);
-  border-radius: 5px;
+  border-radius: 30px;
 }
 
 main .congrats .statistic .inner {
