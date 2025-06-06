@@ -118,7 +118,7 @@
           <p class="heading" id="alert-heading"></p>
           <p class="description" id="alert-description"></p>
         </div>
-        <div class="btn-container"><a class="button" onclick="nextLesson()">Continue</a></div>
+        <div class="btn-container"><a class="button">Continue</a></div>
       </div>
     </main>
     <footer id="footer">
@@ -148,14 +148,14 @@
         else checkAnswer();
       }
     }
+
+    document.getElementById("alert").onclick = () => {
+      selectBtn(selection);
+      document.getElementById("alert").classList.remove("block");
+      if (lessons[index] !== lesson) nextLesson();
+    }
     
     function nextLesson() {
-      if (selection != undefined) selection.classList.remove("selected");
-      selection = undefined;
-      document.getElementById("alert").classList.remove("block");
-      
-      if (lessons[index] === lesson) return;
-
       document.getElementsByClassName("section")[index - 1].style.display = "none";
       if (index >= lessons.length) { endLesson(); return; }
 
