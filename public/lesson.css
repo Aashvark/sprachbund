@@ -422,6 +422,7 @@ main .congrats .statistic {
 }
 
 main .congrats .statistic .scale {
+  padding: 15px 0;
   font-weight: bold;
   font-size: 25px;
   color: var(--white);
