@@ -136,7 +136,7 @@
     let timerInterval;
     
     let lessons = JSON.parse('{{{json lessons}}}');
-    let lesson = lessons[index];
+    let lesson;
     
     let correct   = new Audio("/sfx/correct.wav");
     let incorrect = new Audio("/sfx/incorrect.mp3");
@@ -152,6 +152,7 @@
 
     function startLesson() {
       startTimer();
+      lesson = lessons[index];
       document.getElementsByClassName("section")[index].style.display = "inline-block";
     }
 
