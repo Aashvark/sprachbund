@@ -410,7 +410,7 @@ main .congrats .statistic {
   border-radius: 5px;
 }
 
-main .congrats .statistic {
+main .congrats .statistic .inner {
   background: var(--background);
   display: inline-flex;
   align-items: center;
