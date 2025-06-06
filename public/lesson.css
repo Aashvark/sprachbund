@@ -420,7 +420,7 @@ main .congrats .statistic {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
-  color: var(--background);
+  color: var(--white);
   
   border-radius: 30px;
 }
