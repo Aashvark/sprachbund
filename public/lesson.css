@@ -416,8 +416,12 @@ main .congrats .statistic {
 
   margin: 0 1%;
   padding: 5px;
+
+  text-align: left;
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--background);
   
-  border: 3px solid var(--white);
   border-radius: 30px;
 }
 
@@ -428,8 +432,9 @@ main .congrats .statistic .inner {
 
   background: var(--background);
   aspect-ratio: 5/3;
-  width: 100%;
+  width: 85%;
   padding: 30px;
+
   border-radius: 15px;
 }
 
