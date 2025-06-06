@@ -39,7 +39,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
   </head>
-  <body onload="nextLesson()">
+  <body>
     <header>
       <div class="language-flag"><svg><image href="/svg/flag.svg" xlink:href="/svg/flag.svg"></image></svg></div>
       <div class="progress-bar"><div class="progress" id="progress"></div></div>
@@ -131,11 +131,10 @@
   <script>
     let index = 0;
     let ansCount = 0;
+    let seconds = 0;
 
     let selection;
     let timerInterval;
-
-    let seconds = 0;
     
     let lessons = JSON.parse('{{{json lessons}}}');
     let lesson = lessons[index];
@@ -145,6 +144,7 @@
     
     document.onload = () => {
       startTimer();
+      nextLesson();
     }
 
     document.onkeydown = (event) => {
