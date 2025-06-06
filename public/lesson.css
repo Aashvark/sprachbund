@@ -420,11 +420,11 @@ main .congrats .statistic {
 
 main .congrats .statistic .inner {
   background: var(--background);
-  border-radius: 5px;
   padding: 30px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: 15px;
 }
 
 footer { 
