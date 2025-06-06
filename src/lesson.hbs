@@ -213,14 +213,14 @@
         document.getElementById("native-" + idx).removeAttribute('onclick');
       } else incorrectAnswer("Oops!", "Try Again");
       
-      selectFitB(null);
+      selection.classList.remove("selected");
       if (document.getElementById("native-" + index).getElementsByClassName("button").length === 0) checkAnswer();
     }
 
-    function selectFitB(self) { 
+    function selectFitB(self) {
       if (selection != null) selection.classList.remove("selected");
       selection = self === selection ? null : self;
-      selection.classList.add("selected");
+      if (self != null) selection.classList.add("selected");
     }
     
     function shuffleDivs(containerId) {
