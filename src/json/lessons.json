@@ -9,7 +9,7 @@
       [
         {
           "type": "short-response",
-          "direction": "native-foreign",
+          "direction": "foreign-native",
           "prompt": "She is.",
           "answers": ["han"]
         }

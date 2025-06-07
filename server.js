@@ -21,21 +21,28 @@ handlebars.registerHelper('get-attribute', function(word, attribute) { return di
 handlebars.registerHelper('tip-format', function(arg) { return new handlebars.SafeString(arg.replace("[", "<span class=\"merienda accent\">").replace("]", "</span>")); });
 
 handlebars.registerHelper('hover-translate', function(prompt, lang) {
-  // Sylvia is a person. => [["Sylvia"], ["is"], ["a"], ["person", "."]]
+  // han i mikol. => [["han"], ["i"], ["mikol", "."]]
   let tokens = [];
   for (var word of prompt.split(" ")) {
     let section = "";
     for (var letter of word) {
-      if (letter === ".") section += " ";
+      if (/[^A-Za-z0-9]/.test(letter)) section += " ";
       section += letter;
     }
     tokens.push(section.split(" "));
   }
-  console.log(tokens);
-
-  if (lang === "native") { return "native"; }
+  if (lang === "native") return hoverNative(tokens);
   else { return "foreign";}
 });
+
+function hoverNative(tokens) {
+  let string = "";
+  for (var index in tokens) {
+    let token = tokens[index];
+    string += token;
+  }
+  return string;
+}
 
 function formHints(word, key, submeaning) {
   let construction;
