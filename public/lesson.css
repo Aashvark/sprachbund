@@ -138,6 +138,7 @@ main .section .div-border .hint .blank {
 }
 
 main .section .div-border .hint ~ .punctuation { padding-right: 0; }
+main .section .div-border .hint ~ .punctuation > span { padding-right: 0; }
 
 main .section .div-border .punctuation {
   display: inline-block;
