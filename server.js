@@ -26,7 +26,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang) {
   
   let tokens = [];
   for (let i = 0; i < arg.length; i++) {
-    if (arg[i] === "." || arg[i] === " " || i === arg.length - 1) { 
+    if (arg[i] === "." || arg[i] === " " || i === arg.length) { 
       tokens.push(save);
       save = "";
     }
