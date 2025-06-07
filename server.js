@@ -41,10 +41,10 @@ function hoverForeign(tokens) {
     let token = tokens[index];
     let keys, submeaning;
 
-    if (!(token in dict)) string += formHints(token, undefined, undefined);
+    if (!(token[0] in dict)) string += formHints(token, undefined, undefined);
     else string += token;
   }
-  return string;
+  return new handlebars.SafeString(string);
 }
 
 function formHints(word, keys, submeaning) {
