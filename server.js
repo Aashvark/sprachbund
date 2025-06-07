@@ -2,16 +2,13 @@ const path = require("path");
 const handlebars = require("handlebars");
 const fastify = require("fastify")({ logger: false });
 
-const seo = require("./src/seo.json");
+const seo = require("./src/json/seo.json");
 
-const lessons = require("./src/lessons.json");
-const dictionary = require("./src/dictionary.json");
+const lessons = require("./src/json/lessons.json");
+const dictionary = require("./src/json/dictionary.json");
 let dict = dictionary.nórem;
 
-fastify.register(require("@fastify/static"), {
-  root: path.join(__dirname, "public"),
-  prefix: "/",
-});
+fastify.register(require("@fastify/static"), { root: path.join(__dirname, "public"), prefix: "/" });
 
 fastify.register(require("@fastify/formbody"));
 fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
