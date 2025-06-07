@@ -120,6 +120,9 @@ main .section .div-border .hint {
   padding: 0 1px;
 }
 
+.period { padding: 0; }
+.hint + .period { padding: 0;}
+
 main .section .div-border .hint:not(:has(span)) { padding: 0 3px; }
 main .section .div-border .hint > span {
   padding: 0 2px;

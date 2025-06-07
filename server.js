@@ -33,7 +33,6 @@ handlebars.registerHelper('hover-translate', function(arg, lang) {
     if (arg[i] != " ") save += arg[i];
   }
   if (save !== "") tokens.push(save);
-  console.log(tokens);
   save = "";
 
   let keys = undefined;
@@ -49,7 +48,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang) {
       submeaning = [];
       continue;
     } else if (tokens[i] === ".") {
-      string += `<div class="hint">${tokens[i]}</div>`;
+      string += `<div class="hint period">${tokens[i]}</div>`;
       save = "";
       keys = undefined;
       submeaning = [];
