@@ -23,18 +23,19 @@ handlebars.registerHelper('json', function(a) { return JSON.stringify(a); });
 handlebars.registerHelper('get-attribute', function(word, attribute) { return dict[word.trimEnd()][attribute]; });
 handlebars.registerHelper('tip-format', function(arg) { return new handlebars.SafeString(arg.replace("[", "<span class=\"merienda accent\">").replace("]", "</span>")); });
  
-handlebars.registerHelper('hover-translate', function(arg, lang, options) {
+handlebars.registerHelper('hover-translate', function(arg, lang) {
   let string = "";
   let save = "";
   
   let tokens = [];
   for (let i = 0; i < arg.length; i++) {
-    if (arg[i] === "." || arg[i] === " ") { 
+    if (arg[i] === "." || arg[i] === " " || i === arg.length - 1) { 
       tokens.push(save);
       save = "";
-    } 
+    }
     if (arg[i] != " ") save += arg[i];
   }
+  console.log(tokens);
   save = "";
 
   let keys = undefined;
