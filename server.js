@@ -29,7 +29,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang, options) {
   
   let tokens = [];
   for (let i = 0; i < arg.length; i++) {
-    if (arg[i].match(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g) || arg[i] === " ") { 
+    if (arg[i] in ["[", ".", ",", "\\", "/", "#", "!", "$", "%", "^", "&", "*", ";", ":", "{", "}", "=", "-", "_", "`", "~", "(", ")", "]"] || arg[i] === " ") { 
       tokens.push(save);
       save = "";
     } 
