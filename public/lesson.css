@@ -137,8 +137,7 @@ main .section .div-border .hint .blank {
   border: 1px solid var(--light-cont);
 }
 
-main .section .div-border .period { padding: 0 3px 0 0 ; }
-main .section .div-border .hint + main .section .div-border .period { padding: 0 3px 0 0;}
+main .section .div-border .period { padding: 0 3px 0 0 important; }
 
 main .section .div-border .hint table { 
   display: none;
