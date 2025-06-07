@@ -43,7 +43,7 @@ function hoverForeign(tokens) {
     for (var str of token) {
       let keys, submeaning;
       if (!(str in dict)) string += formHints(str, undefined, undefined);
-      else string += str;
+      else string += formHints(str, dict[save.trimEnd().toLowerCase()].simple, undefined);
     }
   }
   return new handlebars.SafeString(string);
@@ -52,6 +52,11 @@ function hoverForeign(tokens) {
 function formHints(word, keys, submeaning) {
   let construction = "";
   if (keys === undefined) construction = `<div class="hint">${word}</div>`;
+  else {
+    construction = `<div class="hint"><span>${word}</span><table><tbody>`;
+    for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
+    construction += `</tbody></table></div>`;
+  }
   // if (keys != undefined || keys.length >= 1) {
   //   construction = `<div class="hint"><span>${word.trimEnd(" ")}</span><table><tbody>`;
   //   for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
