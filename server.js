@@ -39,7 +39,7 @@ function hoverNative(tokens) {
   let string = "";
   for (var index in tokens) {
     let token = tokens[index];
-    string += token;
+    string += token[0];
   }
   return string;
 }
