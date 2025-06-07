@@ -10,8 +10,8 @@
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "She is.",
-          "answers": ["han"]
+          "prompt": "Sylvie han i mikol.",
+          "answers": ["Sylvie is the short one"]
         }
       ]
     ]

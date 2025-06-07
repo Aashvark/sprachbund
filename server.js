@@ -39,25 +39,29 @@ function hoverForeign(tokens) {
   let string = "";
   for (var index in tokens) {
     let token = tokens[index];
-    string += token[0];
+    let keys, submeaning;
+
+    if (!(token in dict)) string += formHints(token, undefined, undefined);
+    else string += token;
   }
   return string;
 }
 
-function formHints(word, key, submeaning) {
-  let construction;
-  if (keys != undefined || keys.length >= 1) {
-    construction = `<div class="hint"><span>${word.trimEnd(" ")}</span><table><tbody>`;
-    for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
-    if (submeaning.length > 0) {
-      for (let i = 0; i < getLongestList(submeaning).length; i++) {
-        construction += `<tr>`;
-        for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
-        construction += `</tr>`;
-      }
-    }
-    construction += `</tbody></table></div>`;
-  } else { construction = `<div class="hint">${word.trimEnd(" ")}</div>`; }
+function formHints(word, keys, submeaning) {
+  let construction = "";
+  if (keys === undefined) construction = `<div class="hint">${word}</div>`;
+  // if (keys != undefined || keys.length >= 1) {
+  //   construction = `<div class="hint"><span>${word.trimEnd(" ")}</span><table><tbody>`;
+  //   for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
+  //   if (submeaning.length > 0) {
+  //     for (let i = 0; i < getLongestList(submeaning).length; i++) {
+  //       construction += `<tr>`;
+  //       for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
+  //       construction += `</tr>`;
+  //     }
+  //   }
+  //   construction += `</tbody></table></div>`;
+  // } else { construction = `<div class="hint">${word.trimEnd(" ")}</div>`; }
   return construction;
 }
 
