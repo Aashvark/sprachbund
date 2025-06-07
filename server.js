@@ -44,17 +44,22 @@ handlebars.registerHelper('hover-translate', function(arg, lang) {
   for (let i = 0; i < tokens.length; i++) {
     save += tokens[i] + " ";
     
-    if (tokens[i] == "___") {
+    if (tokens[i] === "___") {
       string += `<div class="hint"><hr class="blank"></div>`;
       save = "";
       keys = undefined;
       submeaning = [];
       continue;
-    }
-    else if (lang === "native" && getInComplexByLength(save.toLowerCase() + tokens[i + 1]) && getInComplexByLength(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2])) {
+    } else if (tokens[i] === ".") {
+      string += `<div class="hint">${tokens[i]}</div>`;
+      save = "";
+      keys = undefined;
+      submeaning = [];
+      continue;
+    } else if (lang === "native" && getInComplexByLength(save.toLowerCase() + tokens[i + 1]) && getInComplexByLength(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2])) {
       keys = Object.keys(dict).filter(key => getInComplex(key, save.trimEnd().toLowerCase()));
       if (save.trimEnd().includes(" ")) { submeaning = save.trimEnd().split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
-    } else if (lang == "foreign" && save.trimEnd() in dict && !(save.toLowerCase() + tokens[i + 1] in dict) && !(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2] in dict)) {
+    } else if (lang === "foreign" && save.trimEnd() in dict && !(save.toLowerCase() + tokens[i + 1] in dict) && !(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2] in dict)) {
       keys = dict[save.trimEnd().toLowerCase()].simple;
       if (save.trimEnd().includes(" ")) { submeaning = save.toLowerCase().trimEnd().split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
     } else continue;
