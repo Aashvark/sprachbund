@@ -137,8 +137,8 @@ main .section .div-border .hint .blank {
   border: 1px solid var(--light-cont);
 }
 
-main .section .div-border .hint ~ .punctuation { padding-right: 0; }
-main .section .div-border .hint ~ .punctuation > span { padding-right: 0; }
+main .section .div-border .punctuation ~ .hint { padding-right: 0; }
+main .section .div-border .punctuation ~ .hint > span { padding-right: 0; }
 
 main .section .div-border .punctuation {
   display: inline-block;
