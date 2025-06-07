@@ -48,7 +48,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang) {
       submeaning = [];
       continue;
     } else if (tokens[i] === ".") {
-      string += `<div class="hint period">${tokens[i]}</div>`;
+      string += `<div class="punctuation">${tokens[i]}</div>`;
       save = "";
       keys = undefined;
       submeaning = [];
