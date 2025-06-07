@@ -13,19 +13,19 @@
             "tip": "If there is no subject, verbs take he/she/it as its subject. Depending on if the object is plural, they is the implied subject.",
             "example": {
               "sentence": "[han]",
-              "translation": "he/she/it [is]"
+              "translation": "He/she/it [is]"
             }
         },
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "she is",
+          "prompt": "She is.",
           "answers": ["han"]
         },
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "han",
+          "prompt": "han.",
           "answers": ["to be", "to exist", "be", "he is", "she is", "it is"]
         },
         {
@@ -33,19 +33,19 @@
           "word": "symi",
           "example": {
             "sentence": "han [symi]",
-            "translation": "he is [a man]"
+            "translation": "He is [a man]"
           }
         },
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "symi",
+          "prompt": "symi.",
           "answers": ["a man", "man"]
         },
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "he is a man",
+          "prompt": "He is a man.",
           "answers": ["han symi"]
         },
         {
@@ -53,39 +53,39 @@
           "word": "cévo",
           "example": {
             "sentence": "han [cévo]",
-            "translation": "she is [a woman]"
+            "translation": "She is [a woman]"
           }
         },
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "a woman",
+          "prompt": "A woman.",
           "answers": ["cévo"]
         },
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "Sylvie han cévo",
-          "answers": ["Sylvie is a woman"]
+          "prompt": "Sylvie han cévo.",
+          "answers": ["sylvie is a woman"]
         },
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "she is a woman",
+          "prompt": "She is a woman.",
           "answers": ["han cévo"]
         },
         {
           "type": "vocabulary",
           "word": "ele",
           "example": {
-            "sentence": "cévo [ele] symi",
-            "translation": "a woman [and] a man"
+            "sentence": "cévo [ele] symi.",
+            "translation": "A woman [and] a man"
           }
         },
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "a man and a woman",
+          "prompt": "A man and a woman.",
           "answers": ["symi ele cévo"]
         },
         {
