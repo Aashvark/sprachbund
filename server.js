@@ -19,8 +19,42 @@ handlebars.registerHelper('ternaryEq', function(arg1, arg2, op1, op2) { return (
 handlebars.registerHelper('json', function(a) { return JSON.stringify(a); });
 handlebars.registerHelper('get-attribute', function(word, attribute) { return dict[word.trimEnd()][attribute]; });
 handlebars.registerHelper('tip-format', function(arg) { return new handlebars.SafeString(arg.replace("[", "<span class=\"merienda accent\">").replace("]", "</span>")); });
- 
-handlebars.registerHelper('hover-translate', function(arg, lang) {
+
+handlebars.registerHelper('hover-translate', function(prompt, lang) {
+  // Sylvia is a person. => [["Sylvia"], ["is"], ["a"], ["person", "."]]
+  let tokens = [];
+  for (var word of prompt.split(" ")) {
+    let section = "";
+    for (var letter of word) {
+      if (letter === ".") section += " ";
+      section += letter;
+    }
+    tokens.push(section.split(" "));
+  }
+  console.log(tokens);
+
+  if (lang === "native") { return "native"; }
+  else { return "foreign";}
+});
+
+function formHints(word, key, submeaning) {
+  let construction;
+  if (keys != undefined || keys.length >= 1) {
+    construction = `<div class="hint"><span>${word.trimEnd(" ")}</span><table><tbody>`;
+    for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
+    if (submeaning.length > 0) {
+      for (let i = 0; i < getLongestList(submeaning).length; i++) {
+        construction += `<tr>`;
+        for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
+        construction += `</tr>`;
+      }
+    }
+    construction += `</tbody></table></div>`;
+  } else { construction = `<div class="hint">${word.trimEnd(" ")}</div>`; }
+  return construction;
+}
+
+handlebars.registerHelper('hover-translates', function(arg, lang) {
   let string = "";
   let save = "";
   
