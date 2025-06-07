@@ -43,7 +43,7 @@ function hoverForeign(tokens) {
     for (var str of token) {
       let keys, submeaning;
       if (!(str in dict)) string += formHints(str, undefined, undefined);
-      else string += formHints(str, dict[save.trimEnd().toLowerCase()].simple, undefined);
+      else string += formHints(str, dict[str].simple, undefined);
     }
   }
   return new handlebars.SafeString(string);
