@@ -59,7 +59,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang) {
     } else if (lang === "foreign" && save.trimEnd() in dict && !(save.toLowerCase() + tokens[i + 1] in dict) && !(save.toLowerCase() + tokens[i + 1] + " " + tokens[i + 2] in dict)) {
       keys = dict[save.trimEnd().toLowerCase()].simple;
       if (save.trimEnd().includes(" ")) { submeaning = save.toLowerCase().trimEnd().split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
-    }
+    } else if (lang === "foreign" && save[0] === save[0].toUpperCase()) {} else continue;
     
     let construction;
     if (keys == undefined || keys.length >= 1) {
