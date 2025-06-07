@@ -62,7 +62,7 @@ handlebars.registerHelper('hover-translate', function(arg, lang) {
     }
     
     let construction;
-    if (keys.length >= 1 || keys == undefined) {
+    if (keys == undefined || keys.length >= 1) {
       construction = `<div class="hint"><span>${save.trimEnd(" ")}</span><table><tbody>`;
       for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
       if (submeaning.length > 0) {
