@@ -31,11 +31,11 @@ handlebars.registerHelper('hover-translate', function(prompt, lang) {
     }
     tokens.push(section.split(" "));
   }
-  if (lang === "native") return hoverNative(tokens);
-  else { return "foreign";}
+  if (lang === "native") return "native";
+  else return hoverForeign(tokens);
 });
 
-function hoverNative(tokens) {
+function hoverForeign(tokens) {
   let string = "";
   for (var index in tokens) {
     let token = tokens[index];
