@@ -45,7 +45,8 @@ function hoverForeign(tokens) {
 
     if (index < tokens.length - 1 && stored + " " + tokens[parseInt(index) + 1][0] in dict) stored += " ";
     else {
-      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : dict[stored].simple, undefined);
+      if (save.trimEnd().includes(" ")) { submeaning = save.toLowerCase().trimEnd().split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
+      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : dict[stored].simple, submeaning);
       stored = "";
     }
   }
@@ -58,20 +59,15 @@ function formHints(word, keys, submeaning) {
   else {
     construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
     for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
+    if (submeaning != undefined) {
+       for (let i = 0; i < getLongestList(submeaning).length; i++) {
+         construction += `<tr>`;
+         for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
+         construction += `</tr>`;
+       }
+     }
     construction += `</tbody></table></div>`;
   }
-  // if (keys != undefined || keys.length >= 1) {
-  //   construction = `<div class="hint"><span>${word.trimEnd(" ")}</span><table><tbody>`;
-  //   for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
-  //   if (submeaning.length > 0) {
-  //     for (let i = 0; i < getLongestList(submeaning).length; i++) {
-  //       construction += `<tr>`;
-  //       for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
-  //       construction += `</tr>`;
-  //     }
-  //   }
-  //   construction += `</tbody></table></div>`;
-  // } else { construction = `<div class="hint">${word.trimEnd(" ")}</div>`; }
   return construction;
 }
 
