@@ -184,9 +184,8 @@ main .section .div-border .hint .dictionary .dictionary-header span {
 }
 
 main .section .div-border .hint .dictionary .dictionary-body { width: 100%; }
-main .section .div-border .hint .dictionary .dictionary-body li {
-  margin-left: 15px;
-}
+main .section .div-border .hint .dictionary .dictionary-body li { margin-left: 15px; }
+main .section .div-border .hint .dictionary .dictionary-body .indent { margin-left: 30px; }
 
 .accent { color: var(--accent); }
 .highlight {

@@ -60,13 +60,7 @@ function formHints(word, entry) {
     construction += `<div class="dictionary-body"><ul>`;
     for (var definition of entry.definitions) {
       construction += `<li>${definition.text}</li>`;
-      if (definition.indent != undefined) {
-        construction += `<ul>`;
-        for (var d of definition.indent) {
-          construction `<li>${d}</li>`;
-        }
-        construction += `</ul>`;
-      }
+      for (var d of definition.indent) { construction `<li class=\"indent\">${d}</li>`; }
     }
     construction += `</ul></div>`;
     construction += `</div></div></div>`;
