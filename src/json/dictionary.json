@@ -193,9 +193,20 @@
     "han": {
       "ipa": "ˈxan",
       "pos": "verb",
+      "definition": "Used to describe the existence or relation between nouns.",
+      "definitions": [
+        {
+          "definition": "signifying a relation between the [subject] and [object]; to be",
+          "definitions": [
+            "Used alongside a [preverb] to describe the [preverb]'s relation to the [subject] and [object]."
+          ]
+        },
+        {
+          "definition": "used to signify the existence of the SUBJECT; to exist"
+        }
+      ],
       "simple": ["be", "exist", "he/she/it is"],
-      "complex": ["be", "exist", "am", "are", "is", "he is", "she is", "it is", "they are"],
-      "definition": "Used to describe the existence or relation between nouns."
+      "complex": ["be", "exist", "am", "are", "is", "he is", "she is", "it is", "they are"]
     },
     "hotá": {
       "ipa": "ˈxoˌta˦",
