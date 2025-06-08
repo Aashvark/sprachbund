@@ -45,7 +45,7 @@ function hoverForeign(tokens) {
 
     if (index < tokens.length - 1 && stored + " " + tokens[parseInt(index) + 1][0] in dict) stored += " ";
     else {
-      string += formHints(stored, !(stored in dict) ? undefined : dict[stored].simple, undefined);
+      string += formHints(token.length > 1 ? [stored, tokens[index][1]] : [stored], !(stored in dict) ? undefined : dict[stored].simple, undefined);
       stored = "";
     }
   }
@@ -54,9 +54,9 @@ function hoverForeign(tokens) {
 
 function formHints(word, keys, submeaning) {
   let construction = "";
-  if (keys === undefined) construction = `<div class="hint">${word}</div>`;
+  if (keys === undefined) construction = `<div class="hint">${word.join(" ").trimEnd()}</div>`;
   else {
-    construction = `<div class="hint"><span>${word}</span><table><tbody>`;
+    construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
     for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
     construction += `</tbody></table></div>`;
   }
