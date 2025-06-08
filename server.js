@@ -54,9 +54,9 @@ function hoverForeign(tokens) {
 
 function formHints(word, keys, submeaning) {
   let construction = "";
-  if (keys === undefined) construction = `<div class="hint">${stored}</div>`;
+  if (keys === undefined) construction = `<div class="hint">${word}</div>`;
   else {
-    construction = `<div class="hint"><span>${stored}</span><table><tbody>`;
+    construction = `<div class="hint"><span>${word}</span><table><tbody>`;
     for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
     construction += `</tbody></table></div>`;
   }
