@@ -50,7 +50,7 @@ function hoverForeign(tokens) {
     console.log("___________________")
     stored += token;
 
-    if (index + 1 < tokens.length && stored + " " + tokens[index + 1] in dict) stored += " ";
+    if (index < tokens.length - 1 && stored + " " + tokens[index + 1] in dict) stored += " ";
     else {
       string += formHints(tokens[index], !(stored in dict) ? undefined : dict[stored].simple, undefined);
       stored = "";
