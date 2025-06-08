@@ -39,6 +39,8 @@ function hoverForeign(tokens) {
   let string = "";
   let stored = "";
 
+  console.log(tokens);
+
   for (var index in tokens) {
     let token = tokens[index];
 
@@ -46,9 +48,8 @@ function hoverForeign(tokens) {
       if (stored.trimEnd() === stored) stored = "";
       stored += str;
 
-      if (index + 1 < tokens.length && stored + " " + tokens[index + 1][0] in dict) stored = str + " ";
-      else if (!(stored in dict)) string += formHints(stored, undefined, undefined);
-      else string += formHints(stored, dict[stored].simple, undefined);
+      if (!(stored in dict)) string += formHints(token, undefined, undefined);
+      else string += formHints(token, dict[stored].simple, undefined);
     }
   }
   return new handlebars.SafeString(string);
@@ -56,9 +57,9 @@ function hoverForeign(tokens) {
 
 function formHints(word, keys, submeaning) {
   let construction = "";
-  if (keys === undefined) construction = `<div class="hint">${word}</div>`;
+  if (keys === undefined) construction = `<div class="hint">${word[0]}</div>`;
   else {
-    construction = `<div class="hint"><span>${word}</span><table><tbody>`;
+    construction = `<div class="hint"><span>${word[0]}</span><table><tbody>`;
     for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
     construction += `</tbody></table></div>`;
   }
