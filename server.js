@@ -41,17 +41,16 @@ function hoverForeign(tokens) {
 
   for (var index in tokens) {
     let token = tokens[index][0];
-    let next = index + 1;
     stored += token;
     
-    console.log(index + " " + tokens.length);
+    console.log(index + " " + (index + 1) + "/" + tokens.length);
     console.log(tokens);
     console.log(token);
     if (tokens.at(next)) console.log(tokens.at(next));
     console.log("___________________")
     stored += token;
 
-    if (index < tokens.length - 1 && stored + " " + tokens[index + 1] in dict) stored += " ";
+    if (index < tokens.length - 1 && stored + " " + tokens[next] in dict) stored += " ";
     else {
       string += formHints(tokens[index], !(stored in dict) ? undefined : dict[stored].simple, undefined);
       stored = "";
