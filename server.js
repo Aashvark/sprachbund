@@ -40,12 +40,12 @@ function hoverForeign(tokens) {
   let stored = "";
 
   for (var index in tokens) {
-    let token = tokens[index][0];
-    stored += token;
+    let token = tokens[index];
+    stored += token[0];
 
     if (index < tokens.length - 1 && stored + " " + tokens[parseInt(index) + 1][0] in dict) stored += " ";
     else {
-      string += formHints(token.length > 1 ? [stored, tokens[index][1]] : [stored], !(stored in dict) ? undefined : dict[stored].simple, undefined);
+      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : dict[stored].simple, undefined);
       stored = "";
     }
   }
