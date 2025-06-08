@@ -42,12 +42,11 @@ function hoverForeign(tokens) {
   for (var index in tokens) {
     let token = tokens[index];
 
-    for (var str of token) { 
-      console.log(stored + ":" + stored + " " + tokens[index + 1][0] + ":");
+    for (var str of token) {
       if (stored.trimEnd() === stored) stored = "";
       stored += str;
 
-      if (stored + " " + tokens[index + 1][0] in dict || stored + " " + tokens[index + 1][0] + " " + tokens[index + 2][0] in dict) stored = str + " ";
+      if (index + 1 < tokens.length && stored + " " + tokens[index + 1][0] in dict || index + 2 < tokens.length && stored + " " + tokens[index + 1][0] + " " + tokens[index + 2][0] in dict) stored = str + " ";
       else if (!(stored in dict)) string += formHints(stored, undefined, undefined);
       else string += formHints(stored, dict[stored].simple, undefined);
     }
