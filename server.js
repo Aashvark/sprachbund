@@ -46,16 +46,17 @@ function hoverForeign(tokens) {
     console.log(index);
     console.log(tokens);
     console.log(token);
-    if (index + 1 < tokens.length) console.log(tokens[index + 1]);
+    if ((index + 1) < tokens.length) console.log(tokens[index + 1]);
+    console.log("___________________")
     stored += token;
 
     if (index + 1 < tokens.length && stored + " " + tokens[index + 1] in dict) stored += " ";
     else {
-      string += formHints(token, !(stored in dict) ? undefined : dict[stored].simple, undefined);
+      string += formHints(tokens[index], !(stored in dict) ? undefined : dict[stored].simple, undefined);
       stored = "";
     }
   } 
-  if (stored != "") string += formHints(token, !(stored in dict) ? undefined : dict[stored].simple, undefined);
+  if (stored != "") string += formHints(tokens[index], !(stored in dict) ? undefined : dict[stored].simple, undefined);
   return new handlebars.SafeString(string);
 }
 
