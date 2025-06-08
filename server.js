@@ -45,19 +45,18 @@ function hoverForeign(tokens) {
 
     if (index < tokens.length - 1 && stored + " " + tokens[parseInt(index) + 1][0] in dict) stored += " ";
     else {
-      string += formHints(tokens[index], !(stored in dict) ? undefined : dict[stored].simple, undefined);
+      string += formHints(stored, !(stored in dict) ? undefined : dict[stored].simple, undefined);
       stored = "";
     }
-  } 
-  if (stored != "") string += formHints(tokens[index], !(stored in dict) ? undefined : dict[stored].simple, undefined);
+  }
   return new handlebars.SafeString(string);
 }
 
 function formHints(word, keys, submeaning) {
   let construction = "";
-  if (keys === undefined) construction = `<div class="hint">${word.join(" ").trimEnd()}</div>`;
+  if (keys === undefined) construction = `<div class="hint">${stored}</div>`;
   else {
-    construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
+    construction = `<div class="hint"><span>${stored}</span><table><tbody>`;
     for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
     construction += `</tbody></table></div>`;
   }
