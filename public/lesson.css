@@ -190,7 +190,10 @@ main .section .div-border .hint .dictionary .dictionary-header span {
 main .section .div-border .hint .dictionary .dictionary-header { border-bottom: 2px solid var(--accent); }
 main .section .div-border .hint .dictionary .dictionary-header .term { font-size: 20px; }
 main .section .div-border .hint .dictionary .dictionary-header .ipa { font-size: 15px; }
-main .section .div-border .hint .dictionary .dictionary-header .pos { font-size: 20px; }
+main .section .div-border .hint .dictionary .dictionary-header .pos {
+  height: 15px;
+  font-size: 20px;
+}
 
 main .section .div-border .hint .dictionary .dictionary-body li { margin-left: 15px; }
 main .section .div-border .hint .dictionary .dictionary-body .indent { margin-left: 30px; }
