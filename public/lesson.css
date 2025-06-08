@@ -188,6 +188,8 @@ main .section .div-border .hint .dictionary .dictionary-header span {
 }
 
 main .section .div-border .hint .dictionary .dictionary-header .root { font-size: 30px; }
+main .section .div-border .hint .dictionary .dictionary-header .ipa { font-size: 20px; }
+main .section .div-border .hint .dictionary .dictionary-header .pos { font-size: 20px; }
 
 main .section .div-border .hint .dictionary .dictionary-body li { margin-left: 15px; }
 main .section .div-border .hint .dictionary .dictionary-body .indent { margin-left: 30px; }
