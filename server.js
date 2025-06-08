@@ -43,7 +43,7 @@ function hoverForeign(tokens) {
     let token = tokens[index][0];
     stored += token;
     
-    console.log(index);
+    console.log(index + " " + tokens.length);
     console.log(tokens);
     console.log(token);
     if ((index + 1) < tokens.length) console.log(tokens[index + 1]);
