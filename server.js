@@ -45,6 +45,7 @@ function hoverForeign(tokens) {
 
     if (index < tokens.length - 1 && stored + " " + tokens[parseInt(index) + 1][0] in dict) stored += " ";
     else {
+      let submeaning;
       if (stored.includes(" ")) { submeaning = stored.split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : dict[stored].simple, submeaning);
       stored = "";
