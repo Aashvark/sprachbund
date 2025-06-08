@@ -182,7 +182,11 @@ main .section .div-border .hint .dictionary .dictionary-header span {
   display: inline-block;
   vertical-align: middle;
 }
+
 main .section .div-border .hint .dictionary .dictionary-body { width: 100%; }
+main .section .div-border .hint .dictionary .dictionary-body li {
+  margin-left: 10px;
+}
 
 .accent { color: var(--accent); }
 .highlight {
