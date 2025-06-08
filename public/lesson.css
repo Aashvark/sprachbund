@@ -187,8 +187,8 @@ main .section .div-border .hint .dictionary .dictionary-header span {
   vertical-align: middle;
 }
 
-main .section .div-border .hint .dictionary .dictionary-header .root { font-size: 30px; }
-main .section .div-border .hint .dictionary .dictionary-header .ipa { font-size: 20px; }
+main .section .div-border .hint .dictionary .dictionary-header .term { font-size: 35px; }
+main .section .div-border .hint .dictionary .dictionary-header .ipa { font-size: 15px; }
 main .section .div-border .hint .dictionary .dictionary-header .pos { font-size: 20px; }
 
 main .section .div-border .hint .dictionary .dictionary-body li { margin-left: 15px; }
