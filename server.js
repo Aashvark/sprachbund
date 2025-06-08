@@ -40,20 +40,19 @@ function hoverForeign(tokens) {
   let stored = "";
 
   for (var index in tokens) {
-    let token = tokens[index];
+    let token = tokens[index][0];
+    stored += str;
+    
+    console.log(index);
+    console.log(tokens);
+    console.log(tokens[index]);
+    console.log(tokens[index + 1]);
+    stored += str;
 
-    for (var str of token) {
-      console.log(index);
-      console.log(tokens);
-      console.log(tokens[index]);
-      console.log(tokens[index + 1]);
-      stored += str;
-
-      if (index + 1 < tokens.length && stored + " " + tokens[index + 1] in dict) stored = str + " ";
-      else {
-        string += formHints(token, !(stored in dict) ? undefined : dict[stored].simple, undefined);
-        stored = "";
-      }
+    if (index + 1 < tokens.length && stored + " " + tokens[index + 1] in dict) stored = str + " ";
+    else {
+      string += formHints(token, !(stored in dict) ? undefined : dict[stored].simple, undefined);
+      stored = "";
     }
   } 
   if (stored != "") string += formHints(token, !(stored in dict) ? undefined : dict[stored].simple, undefined);
