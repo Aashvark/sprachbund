@@ -181,7 +181,6 @@ main .section .div-border .hint .dictionary .dictionary-header { width: 100%; }
 main .section .div-border .hint .dictionary .dictionary-header span {
   display: inline-block;
   vertical-align: middle;
-  width: 100%;
 }
 main .section .div-border .hint .dictionary .dictionary-body { width: 100%; }
 
