@@ -63,7 +63,7 @@ function formHints(word, entry) {
     }
     construction += `</ul></div></div></div></div>`;
   }
-  return construction;
+  return construction; 
 }
 
 handlebars.registerHelper('hover-translates', function(arg, lang) {
