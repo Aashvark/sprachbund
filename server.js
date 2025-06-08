@@ -53,7 +53,7 @@ function hoverForeign(tokens) {
       else if (!(stored in dict)) string += formHints(token, undefined, undefined);
       else string += formHints(token, dict[stored].simple, undefined);
     }
-  }
+  } 
   return new handlebars.SafeString(string);
 }
 
