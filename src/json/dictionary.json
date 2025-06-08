@@ -28,12 +28,40 @@
       "complex": ["tall", "large", "big"],
       "definition": "Tall or big, especially in comparison to the subject."
     },
-    "sorón": {
-      "ipa": "ˈsoˌron˦",
+    "sojón": {
+      "ipa": "ˈsoˌjon˦",
       "pos": "adjective",
       "simple": ["kind", "nice"],
       "complex": ["kind", "nice"],
       "definition": "Kind"
+    },
+    
+    "i": {
+      "ipa": "ˈi",
+      "pos": "article",
+      "simple": ["the"],
+      "complex": ["the"],
+      "definition": "denoting one or more people or things already mentioned or assumed to be common knowledge."
+    },
+    "i amif": {
+      "simple": ["the bad thing"],
+      "complex": ["the bad thing", "the bad one"]
+    },
+    "i sói": {
+      "simple": ["the good thing"],
+      "complex": ["the good thing", "the good one"]
+    },
+    "i mikol": {
+      "simple": ["the short thing", "the small thing"],
+      "complex": ["the short thing", "the small thing", "the short one", "the small one"]
+    },
+    "i náu": {
+      "simple": ["the tall thing", "the large thing", "the big thing"],
+      "complex": ["the tall thing", "the large thing", "the big thing", "the tall one", "the large one", "the big one"]
+    },
+    "i sojón": {
+      "simple": ["the kind thing", "the nice thing"],
+      "complex": ["the kind thing", "the nice thing", "the kind one", "the nice one"]
     },
     
     "ele": {
