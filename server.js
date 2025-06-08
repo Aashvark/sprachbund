@@ -43,9 +43,8 @@ function hoverForeign(tokens) {
     let token = tokens[index][0];
     stored += token;
     
-    console.log(index + " " + (index + 1) + "/" + tokens.length);
     console.log(tokens);
-    console.log(token);
+    console.log(stored);
     if (index < tokens.length - 1) console.log(tokens.at(parseInt(index) + 1));
     console.log("___________________")
     stored += token;
