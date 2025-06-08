@@ -26,7 +26,7 @@ handlebars.registerHelper('hover-translate', function(prompt, lang) {
   for (var word of prompt.split(" ")) {
     let section = "";
     for (var letter of word) {
-      if (/[^A-Za-z0-9]/.test(letter)) section += " ";
+      if (/[.,\/#!$%\^&\*;:{}=\-_`~()]/g.test(letter)) section += " ";
       section += letter;
     }
     tokens.push(section.split(" "));

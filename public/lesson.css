@@ -137,15 +137,6 @@ main .section .div-border .hint .blank {
   border: 1px solid var(--light-cont);
 }
 
-main .section .div-border .hint:has(~ .punctuation):not(:has(~ .hint)) { padding-right: 0; }
-main .section .div-border .hint:has(~ .punctuation):not(:has(~ .hint)) > span { padding-right: 0; }
-
-main .section .div-border .punctuation {
-  display: inline-block;
-  position: relative;
-  padding: 0 3px 0 0;
-}
-
 main .section .div-border .hint table { 
   display: none;
   
