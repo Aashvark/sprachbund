@@ -46,7 +46,7 @@ function hoverForeign(tokens) {
     console.log(index + " " + tokens.length);
     console.log(tokens);
     console.log(token);
-    if (index < tokens.length - 1) console.log(tokens[index + 1][0]);
+    if (index < tokens.length - 1) console.log(tokens.at(index + 1).at(0));
     console.log("___________________")
     stored += token;
 
