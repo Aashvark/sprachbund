@@ -42,12 +42,6 @@ function hoverForeign(tokens) {
   for (var index in tokens) {
     let token = tokens[index][0];
     stored += token;
-    
-    console.log(tokens);
-    console.log(stored);
-    if (index < tokens.length - 1) console.log(tokens.at(parseInt(index) + 1));
-    console.log("___________________")
-    stored += token;
 
     if (index < tokens.length - 1 && stored + " " + tokens[parseInt(index) + 1][0] in dict) stored += " ";
     else {
