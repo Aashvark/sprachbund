@@ -198,6 +198,7 @@ main .section .div-border .hint .dictionary .dictionary-body .indent { margin-le
 .accent { color: var(--accent); }
 .highlight {
   font-variant: small-caps;
+  line-height: 0.6;
   font-weight: bold;
   color: var(--accent);
 }
