@@ -45,7 +45,7 @@ function hoverForeign(tokens) {
     let token = tokens[index];
 
     for (var str of token) {
-      console.log(stored + ":");
+      console.log(stored + ":" + stored.trimEnd() === stored);
       if (stored.trimEnd() === stored) stored = "";
       stored += str;
 
