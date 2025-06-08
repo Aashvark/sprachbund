@@ -39,12 +39,13 @@ function hoverForeign(tokens) {
   let string = "";
   let stored = "";
 
-  console.log(tokens);
-
   for (var index in tokens) {
     let token = tokens[index];
 
     for (var str of token) {
+      console.log(index);
+      console.log(tokens);
+      console.log(tokens[index]);
       console.log(tokens[index + 1]);
       stored += str;
 
