@@ -59,7 +59,14 @@ function formHints(word, entry) {
     construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<div class=\"dictionary\"><div class=\"dictionary-header\"><span class=\"term merienda\">${word[0]}</span><span class=\"ipa\">/${entry.ipa}/</span> &middot; <span class=\"pos\">${entry.pos}</span></div>`;
     construction += `<div class="dictionary-body"><ul>`;
     for (var definition of entry.definitions) {
-      construction += `<li>${definition.text}</li>`
+      construction += `<li>${definition.text}</li>`;
+      if (definition.indent != undefined) {
+        construction += `<ul>`;
+        for (var d of definition.indent) {
+          construction `<li>${d}</li>`;
+        }
+        construction += `</ul>`;
+      }
     }
     construction += `</ul></div>`;
     construction += `</div></div></div>`;

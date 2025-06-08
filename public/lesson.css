@@ -185,7 +185,7 @@ main .section .div-border .hint .dictionary .dictionary-header span {
 
 main .section .div-border .hint .dictionary .dictionary-body { width: 100%; }
 main .section .div-border .hint .dictionary .dictionary-body li {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .accent { color: var(--accent); }
