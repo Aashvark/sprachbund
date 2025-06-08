@@ -57,7 +57,7 @@ function formHints(word, entry) {
   if (entry === undefined) construction = `<div class="hint">${word.join(" ").trimEnd()}</div>`;
   else {
     construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<div class=\"dictionary\">`;
-    construction += `<div class=\"dictionary-header\"><span class=\"term merienda\">${word[0]}</span><span class=\"ipa\">${entry.ipa}</span> &middot; <span class=\"pos\">${entry.pos}</span>`;
+    construction += `<div class=\"dictionary-header\"><span class=\"term merienda\">${word[0]}</span><span class=\"ipa\">${entry.ipa}</span> &middot; <span class=\"pos\">${entry.pos}</span></div>`;
     construction += `</div></div>`;
   }
   return construction;
