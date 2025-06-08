@@ -144,13 +144,13 @@ main .section .div-border .hint .dictionary {
   top: 44px;
   left: 50%;
 
-  min-width: max-content; 
+  width: 550px; 
   
   transform: translateX(-50%);
   
   background: var(--contrast);
   padding: 10px;
-  text-align: center;
+  text-align: left;
   
   border: 2px solid var(--light-cont);
   border-radius: 5px;
@@ -178,6 +178,11 @@ main .section .div-border .hint .dictionary::before {
 }
 
 main .section .div-border .hint .dictionary .dictionary-header { width: 100%; }
+main .section .div-border .hint .dictionary .dictionary-header span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
 main .section .div-border .hint .dictionary .dictionary-body { width: 100%; }
 
 .accent { color: var(--accent); }
