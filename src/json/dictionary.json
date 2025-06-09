@@ -197,12 +197,10 @@
       "definitions": [
         {
           "text": "signifying a relation between the [subject] and [object]; to be",
-          "indent": [
-            "Used alongside a [preverb] to describe the [preverb]'s relation to the [subject] and [object]."
-          ]
+          "indent": [ "Used alongside a [preverb] to describe the [preverb]'s relation to the [subject] and [object]." ]
         },
         {
-          "text": "used to signify the existence of the SUBJECT; to exist"
+          "text": "used to signify the existence of the [subject]; to exist"
         }
       ],
       "simple": ["be", "exist", "he/she/it is"],
