@@ -58,13 +58,15 @@ function formHints(word, entry) {
   else {
     construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<div class=\"dictionary\"><div class=\"dictionary-header\"><span class=\"term merienda\">${word[0]}</span> <span class=\"ipa\">/${entry.ipa}/</span> &middot; <span class=\"pos highlight\">${entry.pos}</span></div><div class="dictionary-body"><ul>`;
     for (var definition of entry.definitions) {
-      construction += `<li>${definition.text.replaceAll("[", "<span class=\"highlight\">").replaceAll("]", "</span>")}</li>`;
-      if (definition.indent) for (var d of definition.indent) { construction += `<li class=\"indent\">${d.replaceAll("[", "<span class=\"highlight\">").replaceAll("]", "</span>")}</li>`; }
+      construction += `<li>${replaceClass(definition.text, "highlight")}</li>`;
+      if (definition.indent) for (var d of definition.indent) { construction += `<li class=\"indent\">${replaceClass(d, "highlight")}</li>`; }
     }
     construction += `</ul></div></div></div></div>`;
   }
   return construction; 
 }
+
+function replaceClass(text, class_) { return text.replaceAll("[", `<span class=\"${class_}\">`).replaceAll("]", "</span>"); }
 
 handlebars.registerHelper('hover-translates', function(arg, lang) {
   let string = "";
