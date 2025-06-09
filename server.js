@@ -56,7 +56,7 @@ function formHints(word, entry) {
   let construction = "";
   if (entry === undefined) construction = `<div class="hint">${word.join(" ").trimEnd()}</div>`;
   else {
-    construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<div class=\"dictionary\"><div class=\"dictionary-header\"><span class=\"term merienda\">${word[0]}</span> <span class=\"ipa\">/${entry.ipa}/</span> &middot; <span class=\"pos highlight\">${entry.pos}</span></div><div class="dictionary-body"><ul>`;
+    construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<div class=\"dictionary\"><div class=\"dictionary-header\"><p class=\"term merienda\">${word[0]}</p><span class=\"ipa\">/${entry.ipa}/</span> &middot; <span class=\"pos highlight\">${entry.pos}</span></div><div class="dictionary-body"><ul>`;
     for (var definition of entry.definitions) {
       construction += `<li>${replaceClass(definition.text, "highlight")}</li>`;
       if (definition.indent) for (var d of definition.indent) { construction += `<li class=\"indent\">${replaceClass(d, "highlight")}</li>`; }
