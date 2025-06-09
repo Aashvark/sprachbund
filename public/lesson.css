@@ -195,6 +195,7 @@ main .section .div-border .hint .dictionary .dictionary-header .pos {
   font-size: 20px;
 }
 
+main .section .div-border .hint .dictionary .dictionary-body { padding: 20px; }
 main .section .div-border .hint .dictionary .dictionary-body li { margin-left: 15px; }
 main .section .div-border .hint .dictionary .dictionary-body .indent { margin-left: 30px; }
 
