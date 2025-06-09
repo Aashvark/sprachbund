@@ -177,17 +177,18 @@ main .section .div-border .hint .dictionary::before {
   border-color: transparent transparent var(--light-cont) transparent;
 }
 
-main .section .div-border .hint .dictionary .dictionary-header, main .section .div-border .hint .dictionary .dictionary-body { 
-  width: 100%;
-  padding: 10px;
-}
+main .section .div-border .hint .dictionary .dictionary-header, main .section .div-border .hint .dictionary .dictionary-body { width: 100%; }
 
 main .section .div-border .hint .dictionary .dictionary-header span {
   display: inline-block;
   vertical-align: middle;
 }
 
-main .section .div-border .hint .dictionary .dictionary-header { border-bottom: 2px solid var(--accent); }
+main .section .div-border .hint .dictionary .dictionary-header { 
+  padding: 15px;
+  border-bottom: 2px solid var(--accent);
+}
+
 main .section .div-border .hint .dictionary .dictionary-header .term { font-size: 30px; }
 main .section .div-border .hint .dictionary .dictionary-header .ipa { font-size: 15px; }
 main .section .div-border .hint .dictionary .dictionary-header .pos {
