@@ -155,7 +155,7 @@ main .section .div-border .hint .dictionary {
   box-shadow: 0 0 30px;
   
   border: 2px solid var(--light-cont);
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
 main .section .div-border .hint:hover .dictionary, main .section .div-border .hint .dictionary:hover { display: block; }
