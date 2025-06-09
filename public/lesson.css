@@ -150,11 +150,12 @@ main .section .div-border .hint .dictionary {
   
   background: var(--contrast);
   text-align: left;
+  font-size: 18px;
+
+  box-shadow: 0 0 15px;
   
   border: 2px solid var(--light-cont);
   border-radius: 5px;
-  
-  font-size: 18px;
 }
 
 main .section .div-border .hint:hover .dictionary, main .section .div-border .hint .dictionary:hover { display: block; }
