@@ -179,7 +179,7 @@ main .section .div-border .hint .dictionary::before {
 
 main .section .div-border .hint .dictionary .dictionary-header, main .section .div-border .hint .dictionary .dictionary-body { 
   width: 100%;
-  padding: 5px;
+  padding: 10px;
 }
 
 main .section .div-border .hint .dictionary .dictionary-header span {
