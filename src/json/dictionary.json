@@ -194,15 +194,6 @@
       "ipa": "ˈxan",
       "pos": "verb",
       "definition": "Used to describe the existence or relation between nouns.",
-      "definitions": [
-        {
-          "text": "signifying a relation between the [subject] and [object]; to be",
-          "indent": [ "Used alongside a [preverb] to describe the [preverb]'s relation to the [subject] and [object]." ]
-        },
-        {
-          "text": "used to signify the existence of the [subject]; to exist"
-        }
-      ],
       "simple": ["be", "exist", "he/she/it is"],
       "complex": ["be", "exist", "am", "are", "is", "he is", "she is", "it is", "they are"]
     },

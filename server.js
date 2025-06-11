@@ -45,6 +45,8 @@ function hoverForeign(tokens) {
 
     if (index < tokens.length - 1 && stored + " " + tokens[parseInt(index) + 1][0] in dict) stored += " ";
     else {
+      let submeaning;
+      if (stored.includes(" ")) { submeaning = stored.split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], stored in dict ? dict[stored] : undefined);
       stored = "";
     }
@@ -56,12 +58,16 @@ function formHints(word, entry) {
   let construction = "";
   if (entry === undefined) construction = `<div class="hint">${word.join(" ").trimEnd()}</div>`;
   else {
-    construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<div class=\"dictionary\"><div class=\"dictionary-header\"><p class=\"term merienda\">${word[0]}</p><span class=\"ipa\">/${entry.ipa}/</span> &middot; <span class=\"pos highlight\">${entry.pos}</span></div><div class="dictionary-body"><ul>`;
-    for (var definition of entry.definitions) {
-      construction += `<li>${replaceClass(definition.text, "highlight")}</li>`;
-      if (definition.indent) for (var d of definition.indent) { construction += `<li class=\"indent\">${replaceClass(d, "highlight")}</li>`; }
-    }
-    construction += `</ul></div></div></div></div>`;
+    construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
+    for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
+    if (submeaning != undefined) {
+       for (let i = 0; i < getLongestList(submeaning).length; i++) {
+         construction += `<tr>`;
+         for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
+         construction += `</tr>`;
+       }
+     }
+    construction += `</tbody></table></div>`;
   }
   return construction; 
 }

@@ -137,29 +137,28 @@ main .section .div-border .hint .blank {
   border: 1px solid var(--light-cont);
 }
 
-main .section .div-border .hint .dictionary { 
+main .section .div-border .hint table { 
   display: none;
   
   position: absolute;
   top: 44px;
   left: 50%;
-
-  width: 575px; 
   
   transform: translateX(-50%);
   
   background: var(--contrast);
-  text-align: left;
-  font-size: 18px;
-
-  box-shadow: 0 0 10px;
+  text-align: center;
   
   border: 2px solid var(--light-cont);
-  border-radius: 20px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 5px;
+  
+  font-size: 18px;
 }
 
-main .section .div-border .hint:hover .dictionary, main .section .div-border .hint .dictionary:hover { display: block; }
-main .section .div-border .hint .dictionary::before {
+main .section .div-border .hint:hover table, main .section .div-border .hint table:hover { display: block; }
+main .section .div-border .hint table::before {
   content: " ";
   
   position: absolute;
@@ -177,28 +176,14 @@ main .section .div-border .hint .dictionary::before {
   border-color: transparent transparent var(--light-cont) transparent;
 }
 
-main .section .div-border .hint .dictionary .dictionary-header, main .section .div-border .hint .dictionary .dictionary-body { width: 100%; }
-
-main .section .div-border .hint .dictionary .dictionary-header span {
-  display: inline-block;
-  vertical-align: middle;
+main .section .div-border .hint table tr td {
+  padding: 10px 15px;
+  white-space: nowrap;
+  width: 100%;
 }
 
-main .section .div-border .hint .dictionary .dictionary-header { 
-  padding: 15px;
-  border-bottom: 2px solid var(--accent);
-}
-
-main .section .div-border .hint .dictionary .dictionary-header .term { font-size: 30px; }
-main .section .div-border .hint .dictionary .dictionary-header .ipa { font-size: 15px; }
-main .section .div-border .hint .dictionary .dictionary-header .pos {
-  height: 15px;
-  font-size: 20px;
-}
-
-main .section .div-border .hint .dictionary .dictionary-body { padding: 20px; }
-main .section .div-border .hint .dictionary .dictionary-body li { margin-left: 15px; }
-main .section .div-border .hint .dictionary .dictionary-body .indent { margin-left: 30px; }
+main .section .div-border .hint table tr td:not(:last-child) { border-right: 2px solid var(--light-cont); }
+main .section .div-border .hint table > tbody > tr:not(:last-child) > td { border-bottom: 2px solid var(--light-cont); }
 
 .accent { color: var(--accent); }
 .highlight {
