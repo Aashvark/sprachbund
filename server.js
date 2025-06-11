@@ -47,14 +47,14 @@ function hoverForeign(tokens) {
     else {
       let submeaning;
       if (stored.includes(" ")) { submeaning = stored.split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
-      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], stored in dict ? dict[stored] : undefined);
+      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : dict[stored].simple, submeaning);
       stored = "";
     }
   }
   return new handlebars.SafeString(string);
 }
 
-function formHints(word, entry) {
+function formHints(word, keys, submeaning) {
   let construction = "";
   if (entry === undefined) construction = `<div class="hint">${word.join(" ").trimEnd()}</div>`;
   else {
