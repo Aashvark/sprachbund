@@ -59,14 +59,12 @@ main .module .grammar, main .module .lesson {
   text-align: center;
   color: var(--white);
   margin: 0;
-  
-  padding: 20px;
 }
 
 main .module .grammar {
-  aspect-ratio: 1/1;
   width: 20%;
   font-size: 50px;
+  padding: 0 25px;
 }
 
 main .module .lesson {
@@ -77,6 +75,8 @@ main .module .lesson {
   font-weight: 300;
   font-style: normal;
   
+  padding: 25px;
+
   text-align: left;
   font-size: 0;
 }
