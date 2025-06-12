@@ -172,7 +172,31 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "han mikol ćina.",
-          "answers": ["he is a small person", "she is a small person", "it is a small person"]
+          "answers": ["he is a small person", "she is a small person", "it is a small person", "he is a short person", "she is a short person", "it is a short person"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "Amy is a tall person.",
+          "answers": ["Amy han náu ćina"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "Sarah han náu.",
+          "answers": ["Sarah is large", "Sarah is big", "Sarah is tall"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han mikol ele náu.",
+          "answers": ["he is small and big", "she is small and big", "it is small and big", "he is short and big", "she is short and big", "it is short and big", "he is small and large", "she is small and large", "it is small and large", "he is short and large", "she is short and large", "it is short and large", "he is small and tall", "she is small and tall", "it is small and tall", "he is short and tall", "she is short and tall", "it is short and tall"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "Amy is a tall person.",
+          "answers": ["Amy han náu ćina"]
         },
         {
           "type": "short-response",

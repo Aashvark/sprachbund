@@ -82,9 +82,9 @@
       "match": ["woman", "a woman"]
     },
     "ćina": {
-      "ipa": "ˈt͡se˦ˌʋo",
+      "ipa": "ˈt͡ʃiˌna",
       "pos": "noun",
-      "definition": "A person.",
+      "definition": "Any given person.",
       "hint": ["(a) person"],
       "match": ["person", "a person"]
     },
