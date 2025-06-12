@@ -193,16 +193,16 @@
     "han": {
       "ipa": "ˈxan",
       "pos": "verb",
-      "definition": "Used to describe the existence or relation between nouns.",
-      "hint": ["be", "exist", "he/she/it is"],
-      "match": ["be", "exist", "am", "are", "is", "he is", "she is", "it is", "they are"]
+      "definition": "Correlating the relation between nouns or the existence of a noun.",
+      "hint": ["be", "exist", "he/she/it is", "he/she/it exists"],
+      "match": ["be", "am", "are", "is", "he is", "she is", "it is", "they are", "exist", "exists", "he exists", "she exists", "it exists", "they exist"]
     },
     "hotá": {
       "ipa": "ˈxoˌta˦",
       "pos": "verb",
+      "definition": "Used to describe the nonexistence or irrelation between nouns.",
       "hint": ["not be", "not", "he/she/it is not"],
-      "match": ["not be", "not", "am not", "are not", "is not", "he is not", "she is not", "it is not", "they are"],
-      "definition": "Used to describe the nonexistence or irrelation between nouns."
+      "match": ["not be", "not", "am not", "are not", "is not", "he is not", "she is not", "it is not", "they are"]
     }
   }
 }

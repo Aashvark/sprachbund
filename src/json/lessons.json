@@ -12,8 +12,8 @@
             "word": "han",
             "tip": "If there is no subject, verbs take he/she/it as its subject. Depending on if the object is plural, they is the implied subject.",
             "example": {
-              "sentence": "[han]",
-              "translation": "He/she/it [is]"
+              "sentence": "[han].",
+              "translation": "He/she/it [is]."
             }
         },
         {
@@ -32,8 +32,8 @@
           "type": "vocabulary",
           "word": "symi",
           "example": {
-            "sentence": "han [symi]",
-            "translation": "He is [a man]"
+            "sentence": "han [symi].",
+            "translation": "He is [a man]."
           }
         },
         {
@@ -52,8 +52,8 @@
           "type": "vocabulary",
           "word": "cévo",
           "example": {
-            "sentence": "han [cévo]",
-            "translation": "She is [a woman]"
+            "sentence": "han [cévo].",
+            "translation": "She is [a woman]."
           }
         },
         {
@@ -79,7 +79,7 @@
           "word": "ele",
           "example": {
             "sentence": "cévo [ele] symi.",
-            "translation": "A woman [and] a man"
+            "translation": "A woman [and] a man."
           }
         },
         {
@@ -103,8 +103,8 @@
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "Kevin han symi.",
-          "answers": ["Kevin is a man"]
+          "prompt": "han symi ele cévo.",
+          "answers": ["They are a man and a woman"]
         }
       ]
     ]
