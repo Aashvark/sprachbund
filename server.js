@@ -42,7 +42,8 @@ function hoverNative(tokens) {
     else {
       let submeaning;
       if (stored.includes(" ")) { submeaning = stored.split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].hint.includes(v)); }); }
-      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], Object.keys(dict).filter(key => getInComplex(key, stored.toLowerCase())), submeaning);
+      let keys = Object.keys(dict).filter(key => getInComplex(key, stored.toLowerCase()));
+      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], keys.length > 0 ? keys : undefined, submeaning);
       stored = "";
     }
   }
@@ -71,7 +72,7 @@ function hoverForeign(tokens) {
 
 function formHints(word, keys, submeaning) {
   let construction = "";
-  if (keys === undefined) construction = `<div class="hint">${word.slice(0, word.length - 1).join(" ").trimEnd() + word[word.length - 1]}</div>`;
+  if (keys === undefined) construction = `<div class="hint">${word.slice(0, word.length - 1).join(" ") + word[word.length - 1]}</div>`;
   else {
     construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
     for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
@@ -110,6 +111,6 @@ fastify.listen({ port: process.env.PORT || 4000, host: "0.0.0.0" },
       console.error(err);
       process.exit(1);
     }
-    console.log(`Your app is listening on ${address}`);
+    console.log(`Sprachbund is listening on ${address}`);
   }
 );
