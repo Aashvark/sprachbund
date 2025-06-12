@@ -195,14 +195,14 @@
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "Amy is a tall person.",
-          "answers": ["Amy han náu ćina"]
+          "prompt": "Jordan exists.",
+          "answers": ["Jordan han"]
         },
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "Amy is a tall person.",
-          "answers": ["Amy han náu ćina"]
+          "prompt": "He is short.",
+          "answers": ["han mikol"]
         }
       ]
     ]

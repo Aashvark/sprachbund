@@ -219,6 +219,7 @@ main .section .div-border .divider {
   margin: 5px 0;
 }
 
+main .section .div-border .meaning { padding: 5px; }
 main .section .div-border .tip { text-align: left; }
 
 main .section .p-text {
