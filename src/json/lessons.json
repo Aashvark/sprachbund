@@ -106,6 +106,56 @@
           "prompt": "They are a man and a woman.",
           "answers": ["han symi ele cévo"]
         }
+      ],
+      [
+        {
+          "type": "vocabulary",
+          "word": "mikol",
+          "example": {
+            "sentence": "David han [mikol] symi.",
+            "translation": "David is a [short] man"
+          },
+          "tip": "Adjectives come before nouns."
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "mikol symi",
+          "answers": ["a short man", "short man", "a small man", "small man"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "it is small",
+          "answers": ["han mikol"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "náu",
+          "tip": "Adjectives will always come before nouns",
+          "example": {
+            "sentence": "[náu] cévo",
+            "translation": "a [tall] woman"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "náu symi.",
+          "answers": ["a tall man", "tall man", "a big man", "big man"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "She is tall.",
+          "answers": ["han náu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han náu symi.",
+          "answers": ["he is a tall man", "he is a big man", "it is a tall man", "it is a big man"]
+        }
       ]
     ]
   }
