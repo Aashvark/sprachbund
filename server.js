@@ -44,7 +44,7 @@ function hoverNative(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
-    if (index < tokens.length - 1 && getInComplexByLength(stored + " " + tokens[next][0])) stored += " ";
+    if (index < tokens.length - 1 && !getInComplexByLength(stored + " " + tokens[next][0])) stored += " ";
     else {
       let submeaning;
       if (stored.includes(" ")) { submeaning = stored.split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
@@ -162,6 +162,7 @@ function replaceClass(text, class_) { return text.replaceAll("[", `<span class=\
 function getInComplexByLength(match) {
   console.log(match);
   return Object.keys(dict).filter(key => dict[key].complex.includes(match.toLowerCase())).length === 0; }
+
 function getInComplex(key, match) { return dict[key].complex.includes(match); }
 
 function getLongestList(nestedList) {
