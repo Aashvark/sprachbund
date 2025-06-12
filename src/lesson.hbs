@@ -88,14 +88,14 @@
           <p class="meaning">{{get-attribute lesson.word "definition"}}</p>
         </div>
         {{#if lesson.example}}
-        <p class="p-text"><i class="icon fa-solid fa-message"></i> Example</p>
+        <p class="p-text"><i class="accent fa-solid fa-message"></i> Example</p>
         <div class="div-border">
           <p>{{tip-format example.sentence}}</p>
           <p class="translation"><span class="highlight">"</span>{{tip-format example.translation}}<span class="highlight">"</span></p>
         </div>
         {{/if}}
         {{#if lesson.tip}}
-        <p class="p-text"><i class="icon fa-solid fa-lightbulb"></i> Tip</p>
+        <p class="p-text"><i class="accent fa-solid fa-lightbulb"></i> Tip</p>
         <div class="div-border scale">{{tip-format lesson.tip}}</div>
         {{/if}}
         {{/ifEquals}}
