@@ -113,20 +113,20 @@
           "word": "mikol",
           "example": {
             "sentence": "David han [mikol] symi.",
-            "translation": "David is a [short] man"
+            "translation": "David is a [short] man."
           },
           "tip": "Adjectives come before nouns."
         },
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "mikol symi",
+          "prompt": "mikol symi.",
           "answers": ["a short man", "short man", "a small man", "small man"]
         },
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "it is small",
+          "prompt": "it is small.",
           "answers": ["han mikol"]
         },
         {
@@ -134,8 +134,8 @@
           "word": "náu",
           "tip": "Adjectives will always come before nouns",
           "example": {
-            "sentence": "[náu] cévo",
-            "translation": "a [tall] woman"
+            "sentence": "[náu] cévo.",
+            "translation": "a [tall] woman."
           }
         },
         {
