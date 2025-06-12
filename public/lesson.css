@@ -23,7 +23,7 @@ header .progress-bar {
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
   border: 1px solid var(--light-cont);
   
-  width: calc(92% - 94px);
+  width: calc(87% - 94px);
   height: 30px;
   padding: 3px;
   text-align: left;
@@ -43,7 +43,7 @@ header .progress {
 }
 
 header .progress-count { 
-  width: 5%;
+  width: 10%;
   
   font-size: 20px;
   font-weight: bold;

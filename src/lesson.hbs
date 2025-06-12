@@ -43,7 +43,7 @@
     <header>
       <div class="language-flag"><svg><image href="/svg/flag.svg" xlink:href="/svg/flag.svg"></image></svg></div>
       <div class="progress-bar"><div class="progress" id="progress"></div></div>
-      <div class="progress-count" id="progress-count">0/{{lessons.length}}</div>
+      <div class="progress-count"><span id="progress-count">0/{{lessons.length}}</span> &middot; <span id="client-timer">0:00</span></div>
     </header>
     <main>
       {{#each lessons as |lesson|}}
@@ -160,7 +160,7 @@
       stopTimer();
       let percentage = (lessons.length / (index + wrong) * 100).toFixed(2);
       document.getElementById("percentage").innerHTML = `${percentage}%`;
-      document.getElementById("timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60).toString().padStart(2, '0')}`
+      document.getElementById("timer").innerHTML = document.getElementById("clinet-timer").innerText;
       document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
       if (percentage >= 90) document.getElementById("final-text").innerHTML = "Aren't you a smart cookie?";
       else if (percentage >= 70) document.getElementById("final-text").innerHTML = "Such a valiant effort!";
@@ -173,7 +173,12 @@
       window.location = "{{seo.learn}}";
     }
 
-    function startTimer() { timerInterval = setInterval(function() { seconds++; console.log(seconds); }, 1000); }
+    function startTimer() {
+      timerInterval = setInterval(function() {
+        seconds++;
+        document.getElementById("client-timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60).toString().padStart(2, '0')}`;
+      }, 1000);
+    }
     function stopTimer()  { clearInterval(timerInterval); }
 
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }

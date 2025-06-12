@@ -102,9 +102,9 @@
         },
         {
           "type": "short-response",
-          "direction": "foreign-native",
-          "prompt": "han symi ele cévo.",
-          "answers": ["They are a man and a woman"]
+          "direction": "native-foreign",
+          "prompt": "They are a man and a woman.",
+          "answers": ["han symi ele cévo"]
         }
       ]
     ]
