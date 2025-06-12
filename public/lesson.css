@@ -194,7 +194,7 @@ main .section .div-border .hint table > tbody > tr:not(:last-child) > td { borde
 }
 
 main .section .div-border .root {
-  padding: 10px;
+  padding: 5px;
   font-size: 35px;
 }
 
@@ -218,7 +218,7 @@ main .section .div-border .divider {
 
   border-width: 1px;
   border-color: var(--accent);
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 main .section .p-text {
