@@ -39,6 +39,9 @@ main .module {
 main .unit {
   border: 3px solid var(--light-cont);
   border-bottom: 0px;
+  
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 main .module .unit:hover  { border: 3px solid var(--contrast); border-bottom: 0px; }
 main .module .unit:active { border: 3px solid var(--accent);   border-bottom: 0px; }
@@ -59,10 +62,7 @@ main .module .grammar, main .module .lesson {
 
 main .module .grammar {
   width: 15%;
-  border-top-left-radius: 15px;
-  
   font-size: 50px;
-  border-right: 3px dashed var(--light-cont);
 }
 
 main .module .lesson {
@@ -76,10 +76,6 @@ main .module .lesson {
   
   text-align: left;
   font-size: 0;
-  
-  border-top: 3px solid var(--light-cont);
-  border-right: 3px solid var(--light-cont);
-  border-top-right-radius: 15px;
 }
 
 main .module .lesson .name, main .module .lesson .level {
