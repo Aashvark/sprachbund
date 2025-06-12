@@ -91,7 +91,7 @@
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "Mark and Amy are a man and a woman",
+          "prompt": "Mark and Amy are a man and a woman.",
           "answers": ["Mark ele Amy han symi ele cévo"]
         },
         {
@@ -102,9 +102,9 @@
         },
         {
           "type": "short-response",
-          "direction": "native-foreign",
-          "prompt": "he is a man",
-          "answers": ["han symi"]
+          "direction": "foreign-native",
+          "prompt": "Kevin han symi.",
+          "answers": ["Kevin is a man"]
         }
       ]
     ]
