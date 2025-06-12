@@ -31,9 +31,29 @@ handlebars.registerHelper('hover-translate', function(prompt, lang) {
     }
     tokens.push(section.split(" "));
   }
-  if (lang === "native") return "native";
+  if (lang === "native") return hoverNative(tokens);
   else return hoverForeign(tokens);
 });
+
+function hoverNative(tokens) {
+  let string = "";
+  let stored = "";
+
+  for (var index in tokens) {
+    let token = tokens[index];
+    let next = parseInt(index) + 1;
+    stored += token[0];
+
+    if (index < tokens.length - 1 && getInComplexByLength(stored.toLowerCase() + " " + tokens[next])) stored += " ";
+    else {
+      let submeaning;
+      if (stored.includes(" ")) { submeaning = stored.split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
+      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : Object.keys(dict).filter(key => getInComplex(key, save.trimEnd().toLowerCase())), submeaning);
+      stored = "";
+    }
+  }
+  return new handlebars.SafeString(string);
+}
 
 function hoverForeign(tokens) {
   let string = "";
@@ -41,9 +61,10 @@ function hoverForeign(tokens) {
 
   for (var index in tokens) {
     let token = tokens[index];
+    let next = parseInt(index) + 1;
     stored += token[0];
 
-    if (index < tokens.length - 1 && stored + " " + tokens[parseInt(index) + 1][0] in dict) stored += " ";
+    if (index < tokens.length - 1 && stored + " " + tokens[next][0] in dict) stored += " ";
     else {
       let submeaning;
       if (stored.includes(" ")) { submeaning = stored.split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
