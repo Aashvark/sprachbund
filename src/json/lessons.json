@@ -126,16 +126,15 @@
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "it is small.",
+          "prompt": "It is small.",
           "answers": ["han mikol"]
         },
         {
           "type": "vocabulary",
           "word": "náu",
-          "tip": "Adjectives will always come before nouns",
           "example": {
             "sentence": "[náu] cévo.",
-            "translation": "a [tall] woman."
+            "translation": "A [tall] woman."
           }
         },
         {
@@ -152,9 +151,14 @@
         },
         {
           "type": "short-response",
-          "direction": "foreign-native",
-          "prompt": "han náu symi.",
-          "answers": ["he is a tall man", "he is a big man", "it is a tall man", "it is a big man"]
+          "direction": "native-foreign",
+          "prompt": "Michael is a short man and Naomi is a tall woman.",
+          "answers": ["Micheal han mikol symi ele Naomi han náu cévo."]
+        },
+        {
+          "type": "match",
+          "foreign": ["han", "symi", "cévo", "mikol", "náu"],
+          "native": ["it is", "man", "woman", "short", "tall"]
         }
       ]
     ]
