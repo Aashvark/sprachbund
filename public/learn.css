@@ -43,7 +43,6 @@ main .unit {
   border-bottom: 0px;
 
   width: 100%;
-  padding: 20px;
 
   font-size: 0;
   
@@ -60,7 +59,8 @@ main .module .grammar, main .module .lesson {
   text-align: center;
   color: var(--white);
   margin: 0;
-  padding: 0;
+  
+  padding: 10px;
 }
 
 main .module .grammar {
