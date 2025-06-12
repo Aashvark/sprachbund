@@ -48,7 +48,7 @@ function hoverNative(tokens) {
     else {
       let submeaning;
       if (stored.includes(" ")) { submeaning = stored.split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
-      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : Object.keys(dict).filter(key => getInComplex(key, save.trimEnd().toLowerCase())), submeaning);
+      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : Object.keys(dict).filter(key => getInComplex(key, stored.toLowerCase())), submeaning);
       stored = "";
     }
   }
