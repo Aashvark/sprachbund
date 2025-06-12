@@ -64,12 +64,13 @@ main .module .grammar, main .module .lesson {
 }
 
 main .module .grammar {
-  width: 15%;
+  aspect-ratio: 1/1;
+  width: 20%;
   font-size: 50px;
 }
 
 main .module .lesson {
-  width: 85%;
+  width: 80%;
   
   font-family: "Parkinsans", sans-serif;
   font-optical-sizing: auto;
