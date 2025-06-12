@@ -176,7 +176,7 @@
     function startTimer() {
       timerInterval = setInterval(function() {
         seconds++;
-        document.getElementById("client-timer").innerHTML = `${Math.floor(seconds/60)}:${seconds-(Math.floor(seconds/60)*60).toString().padStart(2, '0')}`;
+        document.getElementById("client-timer").innerHTML = `${Math.floor(seconds/60)}:${(seconds-(Math.floor(seconds/60)*60)).toString().padStart(2, '0')}`;
       }, 1000);
     }
     function stopTimer()  { clearInterval(timerInterval); }
@@ -216,14 +216,14 @@
     function playCorrect() {
       incorrect.pause();
       correct.pause();
-      correct.duration = 0;
+      correct.currentTime = 0;
       correct.play();
     }
 
     function playIncorrect() {
       correct.pause();
       incorrect.pause();
-      incorrect.duration = 0;
+      incorrect.currentTime = 0;
       incorrect.play();
     }
 
