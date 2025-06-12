@@ -202,7 +202,7 @@
       "pos": "verb",
       "definition": "Used to describe the nonexistence or irrelation between nouns.",
       "hint": ["not be", "not", "he/she/it is not"],
-      "match": ["not be", "not", "am not", "are not", "is not", "he is not", "she is not", "it is not", "they are"]
+      "match": ["not be", "not", "am not", "are not", "is not", "he is not", "she is not", "it is not", "they are not"]
     }
   }
 }
