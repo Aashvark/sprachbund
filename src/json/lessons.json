@@ -26,7 +26,7 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "han.",
-          "answers": ["to be", "to exist", "be", "he is", "she is", "it is"]
+          "answers": ["to be", "he is", "she is", "it is", "they are", "to exist", "he exists", "she exists", "it exists", "they exist"]
         },
         {
           "type": "vocabulary",
