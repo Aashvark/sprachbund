@@ -19,7 +19,7 @@
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "She is.",
+          "prompt": "She exists.",
           "answers": ["han"]
         },
         {
