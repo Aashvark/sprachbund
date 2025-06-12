@@ -44,9 +44,9 @@ function hoverNative(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
-    console.log(stored.toLowerCase() + " " + tokens[next]);
+    console.log(stored.toLowerCase() + " " + tokens[next][0]);
 
-    if (index < tokens.length - 1 && getInComplexByLength(stored.toLowerCase() + " " + tokens[next])) stored += " ";
+    if (index < tokens.length - 1 && getInComplexByLength(stored.toLowerCase() + " " + tokens[next][0])) stored += " ";
     else {
       let submeaning;
       if (stored.includes(" ")) { submeaning = stored.split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
