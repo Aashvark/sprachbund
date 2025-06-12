@@ -48,7 +48,7 @@ function hoverNative(tokens) {
     else {
       let submeaning;
       if (stored.includes(" ")) { submeaning = stored.split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
-      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : Object.keys(dict).filter(key => getInComplex(key, stored.toLowerCase())), submeaning);
+      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], Object.keys(dict).filter(key => getInComplex(key, stored.toLowerCase())), submeaning);
       stored = "";
     }
   }
@@ -159,10 +159,7 @@ handlebars.registerHelper('hover-translates', function(arg, lang) {
   return new handlebars.SafeString(string.trimEnd());
 });
 
-function getInComplexByLength(match) {
-  console.log(match);
-  return Object.keys(dict).filter(key => getInComplex(key, match)).length === 0; 
-}
+function getInComplexByLength(match) { return Object.keys(dict).filter(key => dict[key].complex.includes(match)).length === 0; }
 function getInComplex(key, match) { return dict[key].complex.includes(match); }
 
 function getLongestList(nestedList) {
