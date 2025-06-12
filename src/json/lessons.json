@@ -153,7 +153,7 @@
           "type": "short-response",
           "direction": "native-foreign",
           "prompt": "Michael is a short man and Naomi is a tall woman.",
-          "answers": ["Micheal han mikol symi ele Naomi han náu cévo."]
+          "answers": ["Michael han mikol symi ele Naomi han náu cévo."]
         },
         {
           "type": "match",
