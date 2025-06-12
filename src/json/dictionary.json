@@ -170,13 +170,6 @@
       "match": ["you"],
       "definition": "Used to informally refer to a person the speaker is addressing in the subject."
     },
-    "vu": {
-      "ipa": "ˈʋu",
-      "pos": "pronoun",
-      "hint": ["you (sing.)"],
-      "match": ["you"],
-      "definition": "Used to informally refer to a person the speaker is addressing in the object."
-    },
     "ny": {
       "ipa": "ˈnə",
       "pos": "pronoun",
@@ -191,10 +184,17 @@
       "match": ["him", "her", "it"],
       "definition": "Used to refer a person or group other than the speaker or addressee as the object of a sentence."
     },
+    "vu": {
+      "ipa": "ˈʋu",
+      "pos": "pronoun",
+      "hint": ["you (sing.)"],
+      "match": ["you"],
+      "definition": "Used to informally refer to a person the speaker is addressing in the object."
+    },
     "vun": {
       "ipa": "ˈʋun",
       "pos": "pronoun",
-      "hint": ["you (pl.)"],
+      "hint": ["you (plur.)"],
       "match": ["you", "you guys", "you all"],
       "definition": "Used to informally refer to the people the speaker is addressing."
     },

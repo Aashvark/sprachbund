@@ -204,6 +204,32 @@
           "prompt": "He is short.",
           "answers": ["han mikol"]
         }
+      ],
+      [
+        {
+          "type": "vocabulary",
+          "word": "ké",
+          "example": {
+            "sentence": "[ké] han cévo",
+            "translation": "[you] are a woman"
+          },
+          "tip": "[ké] can only be used as a subject (infront of the verb)."
+        },
+        {
+          "type": "short-response",
+          "direction": "native-new",
+          "prompt": "you are tall",
+          "answers": ["ké han náu"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "vu",
+          "example": {
+            "sentence": "[ké] han vu",
+            "translation": "you are [you]"
+          },
+          "tip": "[vu] can only be used as a object (after the verb)."
+        }
       ]
     ]
   }
