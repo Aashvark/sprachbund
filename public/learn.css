@@ -60,7 +60,7 @@ main .module .grammar, main .module .lesson {
   color: var(--white);
   margin: 0;
   
-  padding: 10px;
+  padding: 20px;
 }
 
 main .module .grammar {
@@ -70,7 +70,6 @@ main .module .grammar {
 
 main .module .lesson {
   width: 85%;
-  padding: 10px 20px;
   
   font-family: "Parkinsans", sans-serif;
   font-optical-sizing: auto;
