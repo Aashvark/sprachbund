@@ -20,18 +20,13 @@ handlebars.registerHelper('get-attribute', function(word, attribute) { return di
 handlebars.registerHelper('tip-format', function(arg) { return new handlebars.SafeString(replaceClass(arg, "merienda accent")); });
 
 handlebars.registerHelper('hover-translate', function(prompt, lang) {
-  // han i mikol. => [["han"], ["i"], ["mikol", "."]]
   let tokens = [];
   for (var word of prompt.split(" ")) {
     let section = "";
-    for (var letter of word) {
-      if (/[.,\/#!$%\^&\*;:{}=\-_`~()]/g.test(letter)) section += " ";
-      section += letter;
-    }
+    for (var letter of word) section += (/[.,\/#!$%\^&\*;:{}=\-_`~()]/g.test(letter) ? " " : "") + letter;
     tokens.push(section.split(" "));
   }
-  if (lang === "native") return hoverNative(tokens);
-  else return hoverForeign(tokens);
+  return lang === "native" ? hoverNative(tokens) : hoverForeign(tokens);
 });
 
 function hoverNative(tokens) {
@@ -46,7 +41,7 @@ function hoverNative(tokens) {
     if (index < tokens.length - 1 && isInDictionary(stored + " " + tokens[next][0]) && token.length === 1) stored += " ";
     else {
       let submeaning;
-      if (stored.includes(" ")) { submeaning = stored.split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].simple.includes(v)); }); }
+      if (stored.includes(" ")) { submeaning = stored.split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].hint.includes(v)); }); }
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], Object.keys(dict).filter(key => getInComplex(key, stored.toLowerCase())), submeaning);
       stored = "";
     }
@@ -66,8 +61,8 @@ function hoverForeign(tokens) {
     if (index < tokens.length - 1 && (stored + " " + tokens[next][0]).toLowerCase() in dict && token.length === 1) stored += " ";
     else {
       let submeaning;
-      if (stored.includes(" ")) { submeaning = stored.split(" ").map((key) => { return key in dict ? dict[key].simple : []; }); }
-      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : dict[stored].simple, submeaning);
+      if (stored.includes(" ")) { submeaning = stored.split(" ").map((key) => { return key in dict ? dict[key].hint : []; }); }
+      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : dict[stored].hint, submeaning);
       stored = "";
     }
   }
@@ -94,8 +89,8 @@ function formHints(word, keys, submeaning) {
 
 function replaceClass(text, class_) { return text.replaceAll("[", `<span class=\"${class_}\">`).replaceAll("]", "</span>"); }
 
-function isInDictionary(match) { return Object.keys(dict).filter(key => dict[key].complex.includes(match.toLowerCase())).length !== 0; }
-function getInComplex(key, match) { return dict[key].complex.includes(match); }
+function isInDictionary(match) { return Object.keys(dict).filter(key => dict[key].match.includes(match.toLowerCase())).length !== 0; }
+function getInComplex(key, match) { return dict[key].match.includes(match); }
 
 function getLongestList(nestedList) {
   let largest = [];
