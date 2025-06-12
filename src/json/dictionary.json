@@ -7,13 +7,14 @@
       "match": ["bad"],
       "definition": "Bad, especially in the views of the speaker"
     },
-    "sói": {
-      "ipa": "ˈsoi˦˧",
+    "sa": {
+      "ipa": "ˈsa",
       "pos": "adjective",
       "hint": ["good"],
       "match": ["good", "well"],
-      "definition": "Good, especially in the views of the speaker"
+      "definition": "Good, well, or favorable, especially in the views of the speaker"
     },
+
     "mikol": {
       "ipa": "ˈmiˌkol",
       "pos": "adjective",
@@ -28,6 +29,7 @@
       "match": ["tall", "large", "big"],
       "definition": "Tall or big, especially in comparison to the subject."
     },
+
     "sojón": {
       "ipa": "ˈsoˌjon˦",
       "pos": "adjective",
@@ -67,24 +69,31 @@
     "ele": {
       "ipa": "ˈeˌle",
       "pos": "conjunction",
+      "definition": "Used to connect words of the same part of speech, clauses, or sentences meant to be taken jointly.",
       "hint": ["and"],
-      "match": ["and"],
-      "definition": "Used to connect words of the same part of speech, clauses, or sentences, that are to be taken jointly."
+      "match": ["and"]
     },
     
     "cévo": {
       "ipa": "ˈt͡se˦ˌʋo",
       "pos": "noun",
+      "definition": "Females attaining the age of adulthood; woman. When referring to children, it signifies their physical and/or emotional maturity.",
       "hint": ["(a) woman"],
-      "match": ["woman", "a woman"],
-      "definition": "Females attaining the age of adulthood. When referring to children, it signifies their physical and/or emotional maturity."
+      "match": ["woman", "a woman"]
+    },
+    "ćina": {
+      "ipa": "ˈt͡se˦ˌʋo",
+      "pos": "noun",
+      "definition": "A person.",
+      "hint": ["(a) person"],
+      "match": ["person", "a person"]
     },
     "symi": {
       "ipa": "ˈsəˌmi",
       "pos": "noun",
+      "definition": "Males attaining the age of adulthood; man. When referring to children, it signifies their physical and/or emotional maturity.",
       "hint": ["(a) man"],
-      "match": ["man", "a man"],
-      "definition": "Males attaining the age of adulthood. When referring to children, it signifies their physical and/or emotional maturity."
+      "match": ["man", "a man"]
     },
 
     "miro": {
@@ -190,6 +199,7 @@
       "definition": "Used to informally refer to the people the speaker is addressing."
     },
     
+
     "han": {
       "ipa": "ˈxan",
       "pos": "verb",
@@ -197,6 +207,8 @@
       "hint": ["be", "exist", "he/she/it is", "he/she/it exists"],
       "match": ["be", "am", "are", "is", "he is", "she is", "it is", "they are", "exist", "exists", "he exists", "she exists", "it exists", "they exist"]
     },
+
+
     "hotá": {
       "ipa": "ˈxoˌta˦",
       "pos": "verb",

@@ -262,6 +262,7 @@
     }
     
     function select(self) {
+      if (document.getElementById("alert").classList.contains("block")) document.getElementById("alert").classList.remove("block");
       if (selection === undefined || selection === self) { selectBtn(self); return; }
       
       let idx = selection.id.split("-").slice(1).join("-");

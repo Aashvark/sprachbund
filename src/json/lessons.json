@@ -159,6 +159,26 @@
           "type": "match",
           "foreign": ["han", "symi", "cévo", "mikol", "náu"],
           "native": ["it is", "man", "woman", "short", "tall"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "ćina",
+          "example": {
+            "sentence": "cévo han [ćina].",
+            "translation": "A woman is [a person]."
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han mikol ćina.",
+          "answers": ["he is a small person", "she is a small person", "it is a small person"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "Amy is a tall person.",
+          "answers": ["Amy han náu ćina"]
         }
       ]
     ]
