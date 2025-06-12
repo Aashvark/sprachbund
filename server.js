@@ -159,7 +159,10 @@ handlebars.registerHelper('hover-translates', function(arg, lang) {
   return new handlebars.SafeString(string.trimEnd());
 });
 
-function getInComplexByLength(match) { return Object.keys(dict).filter(key => getInComplex(key, match)).length === 0; }
+function getInComplexByLength(match) {
+  console.log(match);
+  return Object.keys(dict).filter(key => getInComplex(key, match)).length === 0; 
+}
 function getInComplex(key, match) { return dict[key].complex.includes(match); }
 
 function getLongestList(nestedList) {
