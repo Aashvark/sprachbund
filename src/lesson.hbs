@@ -161,7 +161,7 @@
       let percentage = (lessons.length / (index + wrong) * 100).toFixed(2);
       document.getElementById("percentage").innerText = `${percentage}%`;
       document.getElementById("timer").innerText = document.getElementById("client-timer").innerText;
-      document.getElementById("footer").innerText = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
+      document.getElementById("footer").innerHTML = "<a class=\"button finish-button\" onclick=\"completeLesson()\">Good job!</a>";
       if (percentage >= 90) document.getElementById("final-text").innerText = "Aren't you a smart cookie?";
       else if (percentage >= 70) document.getElementById("final-text").innerText = "Such a valiant effort!";
       else document.getElementById("final-text").innerText = "You'll get it next time!";
@@ -181,7 +181,7 @@
     }
     function stopTimer()  { clearInterval(timerInterval); }
 
-    function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd(); }
+    function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ").trimEnd().trimStart(); }
     
     function caseshift() {
       document.getElementById("shift-case").innerHTML = document.getElementById("shift-case").innerHTML == "⬇" ? "⬆" : "⬇";
