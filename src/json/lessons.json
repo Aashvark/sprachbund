@@ -390,19 +390,19 @@
           "word": "sojón",
           "example": {
             "sentence": "ké han [sojón].",
-            "translation": "you are [kind]"
+            "translation": "You are [kind]."
           }
         },
         {
           "type": "short-response",
-          "direction": "native-new",
-          "prompt": "you are kind",
+          "direction": "native-foreign",
+          "prompt": "You are kind.",
           "answers": ["ké han sojón", "vun han sojón"]
         },
         {
           "type": "short-response",
-          "direction": "new-native",
-          "prompt": "ċo han sojón",
+          "direction": "foreign-native",
+          "prompt": "ćy han sojón",
           "answers": ["we are nice", "we are kind"]
         }
       ]
