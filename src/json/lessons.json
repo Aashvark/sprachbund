@@ -210,25 +210,45 @@
           "type": "vocabulary",
           "word": "ké",
           "example": {
-            "sentence": "[ké] han cévo",
-            "translation": "[you] are a woman"
+            "sentence": "[ké] han cévo.",
+            "translation": "[You] are a woman."
           },
           "tip": "[ké] can only be used as a subject (infront of the verb)."
         },
         {
           "type": "short-response",
-          "direction": "native-new",
-          "prompt": "you are tall",
+          "direction": "native-foreign",
+          "prompt": "You are tall.",
           "answers": ["ké han náu"]
         },
         {
           "type": "vocabulary",
           "word": "vu",
           "example": {
-            "sentence": "[ké] han vu",
-            "translation": "you are [you]"
+            "sentence": "han [vu].",
+            "translation": "He/she/it is [you]."
           },
           "tip": "[vu] can only be used as a object (after the verb)."
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ké han vu.",
+          "answers": ["you are you"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "ny",
+          "example": {
+            "sentence": "[ny] han náu ćina.",
+            "translation": "[I] am tall"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "it is me",
+          "answers": ["han ny"]
         }
       ]
     ]

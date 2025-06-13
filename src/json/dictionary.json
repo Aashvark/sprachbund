@@ -161,42 +161,42 @@
       "pos": "pronoun",
       "hint": ["we", "us"],
       "match": ["we", "us"],
-      "definition": "Used by a speaker to refer to themself and another person as the subject or object of a sentence."
+      "definition": "Used by a speaker to refer to themself and another person as the subject or object of a sentence; we"
     },
     "ké": {
       "ipa": "ˈke˦",
       "pos": "pronoun",
       "hint": ["you (sing.)"],
       "match": ["you"],
-      "definition": "Used to informally refer to a person the speaker is addressing in the subject."
+      "definition": "Used to informally refer to a person the speaker is addressing in the subject; you"
     },
     "ny": {
       "ipa": "ˈnə",
       "pos": "pronoun",
       "hint": ["I", "me"],
       "match": ["i", "me"],
-      "definition": "Used by a speaker to refer to themself as the subject or object of a sentence."
+      "definition": "Used by a speaker to refer to themself as the subject or object of a sentence; I"
     },
     "téu": {
       "ipa": "ˈteu˦˧",
       "pos": "pronoun",
       "hint": ["him", "her", "it"],
       "match": ["him", "her", "it"],
-      "definition": "Used to refer a person or group other than the speaker or addressee as the object of a sentence."
+      "definition": "Used to refer a person or group other than the speaker or addressee as the object of a sentence; him/her/it"
     },
     "vu": {
       "ipa": "ˈʋu",
       "pos": "pronoun",
       "hint": ["you (sing.)"],
       "match": ["you"],
-      "definition": "Used to informally refer to a person the speaker is addressing in the object."
+      "definition": "Used to informally refer to a person the speaker is addressing in the object; you"
     },
     "vun": {
       "ipa": "ˈʋun",
       "pos": "pronoun",
       "hint": ["you (plur.)"],
       "match": ["you", "you guys", "you all"],
-      "definition": "Used to informally refer to the people the speaker is addressing."
+      "definition": "Used to informally refer to the people the speaker is addressing; y'all"
     },
     
 
