@@ -287,12 +287,12 @@
           "type": "short-response",
           "direction": "native-foreign",
           "prompt": "David is him.",
-          "answers": ["han téu"]
+          "answers": ["David han téu"]
         },
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "ny han mikol",
+          "prompt": "ny han mikol.",
           "answers": ["I am short", "I am small"]
         },
         {
