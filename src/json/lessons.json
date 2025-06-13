@@ -358,7 +358,7 @@
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "Y\\'all are large.",
+          "prompt": "Yall are large.",
           "answers": ["vun han náu"]
         },
         {
