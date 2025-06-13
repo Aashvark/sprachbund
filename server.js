@@ -59,7 +59,7 @@ function hoverForeign(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
-    if (stored === "_") string += `<div class="hint"><p class="blank"></p></div>`;
+    if (stored === "___") string += `<div class="hint"><p class="blank"></p></div>`;
     else if (index < tokens.length - 1 && (stored + " " + tokens[next][0]).toLowerCase() in dict && token.length === 1) stored += " ";
     else {
       let submeaning;
