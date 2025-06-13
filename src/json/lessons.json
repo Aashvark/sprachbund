@@ -307,6 +307,104 @@
           "prompt": "ké han.",
           "answers": ["you are", "you exist"]
         }
+      ],
+      [
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ny han mikol.",
+          "answers": ["I am short", "I am small"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han náu.",
+          "answers": ["he is tall", "she is tall", "it is tall", "he is big", "she is big", "it is big", "he is large", "she is large", "it is large"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "ćy",
+          "example": {
+            "sentence": "[ćy] han.",
+            "translation": "[We] exist."
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ćy han náu.",
+          "answers": ["we are tall", "we are big", "we are large"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "We are short.",
+          "answers": ["ćy han mikol"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "You are us.",
+          "answers": ["ké han ćy"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "vun",
+          "example": {
+            "sentence": "[vun] han.",
+            "translation": "[You] exist."
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "Yall are large.",
+          "answers": ["vun han náu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "vun han mikol.",
+          "answers": ["you are small", "you all are small", "you are short", "you all are short"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ny han téu.",
+          "answers": ["I am him", "I am her", "I am it"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "It is us.",
+          "answers": ["han ćy"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "We are short.",
+          "answers": ["ćy han mikol"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "sojón",
+          "example": {
+            "sentence": "ké han [sojón].",
+            "translation": "You are [kind]."
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "You are kind.",
+          "answers": ["ké han sojón", "vun han sojón"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ćy han sojón",
+          "answers": ["we are nice", "we are kind"]
+        }
       ]
     ]
   }
