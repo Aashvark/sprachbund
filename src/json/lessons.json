@@ -298,8 +298,8 @@
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "She is short.",
-          "answers": ["han mikol"]
+          "prompt": "It is them.",
+          "answers": ["han téu"]
         },
         {
           "type": "short-response",
@@ -404,6 +404,98 @@
           "direction": "foreign-native",
           "prompt": "ćy han sorón",
           "answers": ["we are nice", "we are kind"]
+        }
+      ],
+      [
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ćy han sorón.",
+          "answers": ["we are nice", "we are kind"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han mikol.",
+          "answers": ["he is short", "he is small", "she is short", "she is small", "it is short", "it is small"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "They are nice.",
+          "answers": ["han sorón"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "You are her.",
+          "answers": ["ké han téu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han vun",
+          "answers": ["it is you", "she is you", "he is you", "it is you all", "she is you all", "he is you all"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "he is a man",
+          "answers": ["han symi"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "it is us",
+          "answers": ["han ćy"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han vu.",
+          "answers": ["it is you", "he is you", "she is you"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ké han symi.",
+          "answers": ["you are a man"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "You are kind.",
+          "answers": ["vun han sojón", "ké han sojón"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ny han téu.",
+          "answers": ["I am him", "I am her", "I am it"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han cévo.",
+          "answers": ["he is a woman", "she is a woman", "it is a woman"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "You are me.",
+          "answers": ["ké han ny"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ny han náu.",
+          "answers": ["I am tall", "I am big", "I am large"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han vun.",
+          "answers": ["it is you", "it is you all"]
         }
       ]
     ]
