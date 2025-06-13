@@ -397,12 +397,12 @@
           "type": "short-response",
           "direction": "native-foreign",
           "prompt": "You are kind.",
-          "answers": ["ké han sojón", "vun han sorón"]
+          "answers": ["ké han sorón", "vun han sorón"]
         },
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "ćy han sojón",
+          "prompt": "ćy han sorón",
           "answers": ["we are nice", "we are kind"]
         }
       ]
