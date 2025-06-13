@@ -8,6 +8,8 @@ const lessons = require("./src/json/lessons.json");
 const dictionary = require("./src/json/dictionary.json");
 let dict = dictionary.nórem;
 
+fastify.addContentTypeParser('text/json', { parseAs: 'string' }, fastify.getDefaultJsonParser('ignore', 'ignore'))
+
 fastify.register(require("@fastify/static"), { root: path.join(__dirname, "public"), prefix: "/" });
 fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
 fastify.register(require("@fastify/formbody"));
