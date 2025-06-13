@@ -208,6 +208,26 @@
       [
         {
           "type": "vocabulary",
+          "word": "ny",
+          "example": {
+            "sentence": "[ny] han náu ćina.",
+            "translation": "[I] am tall"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "It is me.",
+          "answers": ["han ny"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "I am Alex.",
+          "answers": ["ny han Alex"]
+        },
+        {
+          "type": "vocabulary",
           "word": "ké",
           "example": {
             "sentence": "[ké] han cévo.",
@@ -220,6 +240,12 @@
           "direction": "native-foreign",
           "prompt": "You are tall.",
           "answers": ["ké han náu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ké han Daniel.",
+          "answers": ["you are Daniel"]
         },
         {
           "type": "vocabulary",
@@ -237,18 +263,10 @@
           "answers": ["you are you"]
         },
         {
-          "type": "vocabulary",
-          "word": "ny",
-          "example": {
-            "sentence": "[ny] han náu ćina.",
-            "translation": "[I] am tall"
-          }
-        },
-        {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "I am Alex.",
-          "answers": ["ny han Alex"]
+          "prompt": "It is you.",
+          "answers": ["han vu"]
         },
         {
           "type": "fill-in-the-blank",
