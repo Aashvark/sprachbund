@@ -23,7 +23,7 @@ handlebars.registerHelper('hover-translate', function(prompt, lang) {
   let tokens = [];
   for (var word of prompt.split(" ")) {
     let section = "";
-    for (var letter of word) section += (/[.,\/#!$%\^&\*;:{}=\-_`~()]/g.test(letter) ? " " : "") + letter;
+    for (var letter of word) section += (/[.,\/#!$%\^&\*;:{}=\-`~()]/g.test(letter) ? " " : "") + letter;
     tokens.push(section.split(" "));
   }
   return lang === "native" ? hoverNative(tokens) : hoverForeign(tokens);
@@ -59,7 +59,8 @@ function hoverForeign(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
-    if (index < tokens.length - 1 && (stored + " " + tokens[next][0]).toLowerCase() in dict && token.length === 1) stored += " ";
+    if (stored === "_") string += `<div class="hint"><p class="blank"></p></div>`;
+    else if (index < tokens.length - 1 && (stored + " " + tokens[next][0]).toLowerCase() in dict && token.length === 1) stored += " ";
     else {
       let submeaning;
       if (stored.includes(" ")) { submeaning = stored.split(" ").map((key) => { return key in dict ? dict[key].hint : []; }); }
@@ -72,9 +73,8 @@ function hoverForeign(tokens) {
 
 function formHints(word, keys, submeaning) {
   let construction = "";
-  console.log(word);
-  if (word === "_") construction = `<div class="blank"><p class="blank"></p></div>`;
-  else if (keys === undefined) construction = `<div class="hint">${word.slice(0, word.length - 1).join(" ") + word[word.length - 1]}</div>`;
+  
+  if (keys === undefined) construction = `<div class="hint">${word.slice(0, word.length - 1).join(" ") + word[word.length - 1]}</div>`;
   else {
     construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
     for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
