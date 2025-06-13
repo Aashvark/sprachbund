@@ -29,13 +29,12 @@
       "match": ["tall", "large", "big"],
       "definition": "Tall or big, especially in comparison to the subject."
     },
-
-    "sojón": {
-      "ipa": "ˈsoˌjon˦",
+    "sorón": {
+      "ipa": "ˈsoˌron˦",
       "pos": "adjective",
+      "definition": "Kind or nice",
       "hint": ["kind", "nice"],
-      "match": ["kind", "nice"],
-      "definition": "Kind"
+      "match": ["kind", "nice"]
     },
     
     "i": {

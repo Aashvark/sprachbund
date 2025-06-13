@@ -387,9 +387,9 @@
         },
         {
           "type": "vocabulary",
-          "word": "sojón",
+          "word": "sorón",
           "example": {
-            "sentence": "ké han [sojón].",
+            "sentence": "ké han [sorón].",
             "translation": "You are [kind]."
           }
         },
@@ -397,7 +397,7 @@
           "type": "short-response",
           "direction": "native-foreign",
           "prompt": "You are kind.",
-          "answers": ["ké han sojón", "vun han sojón"]
+          "answers": ["ké han sojón", "vun han sorón"]
         },
         {
           "type": "short-response",
