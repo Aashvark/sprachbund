@@ -72,6 +72,7 @@ function hoverForeign(tokens) {
 
 function formHints(word, keys, submeaning) {
   let construction = "";
+  console.log(word);
   if (word === "_") construction = `<div class="blank"><p class="blank"></p></div>`;
   else if (keys === undefined) construction = `<div class="hint">${word.slice(0, word.length - 1).join(" ") + word[word.length - 1]}</div>`;
   else {
