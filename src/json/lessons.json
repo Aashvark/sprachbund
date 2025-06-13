@@ -247,8 +247,14 @@
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "it is me",
-          "answers": ["han ny"]
+          "prompt": "I am Alex",
+          "answers": ["ny han Alex"]
+        },
+        {
+          "type": "fill-in-the-blank",
+          "prompt": "han vu. ___ han náu.",
+          "answer": "ké",
+          "choices": ["ké", "vu", "mikol"]
         }
       ]
     ]

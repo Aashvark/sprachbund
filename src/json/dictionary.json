@@ -166,7 +166,7 @@
     "ké": {
       "ipa": "ˈke˦",
       "pos": "pronoun",
-      "hint": ["you (sing.)"],
+      "hint": ["you (NOM.SING.)"],
       "match": ["you"],
       "definition": "Used to informally refer to a person the speaker is addressing in the subject; you"
     },
@@ -187,14 +187,14 @@
     "vu": {
       "ipa": "ˈʋu",
       "pos": "pronoun",
-      "hint": ["you (sing.)"],
+      "hint": ["you (ACC.SING.)"],
       "match": ["you"],
       "definition": "Used to informally refer to a person the speaker is addressing in the object; you"
     },
     "vun": {
       "ipa": "ˈʋun",
       "pos": "pronoun",
-      "hint": ["you (plur.)"],
+      "hint": ["you (PLUR.)"],
       "match": ["you", "you guys", "you all"],
       "definition": "Used to informally refer to the people the speaker is addressing; y'all"
     },
