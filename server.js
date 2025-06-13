@@ -59,9 +59,9 @@ function hoverForeign(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
-    if (token === "___") {
+    if (stored === "___") {
       string += `<div class="hint"><p class="blank"></p></div>`;
-      stored = ""
+      stored = "";
     }
     else if (index < tokens.length - 1 && (stored + " " + tokens[next][0]).toLowerCase() in dict && token.length === 1) stored += " ";
     else {

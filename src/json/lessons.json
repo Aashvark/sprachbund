@@ -216,7 +216,7 @@
         },
         {
           "type": "short-response",
-          "direction": "foreign-native",
+          "direction": "native-foreign",
           "prompt": "It is me.",
           "answers": ["han ny"]
         },
