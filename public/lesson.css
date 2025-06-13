@@ -130,9 +130,9 @@ main .section .div-border .hint > span {
 
 main .section .div-border .hint .blank {
   position: relative;
-  top: 13px;
+  top: 5px;
   width: 30px;
-  border: 1px solid var(--light-cont);
+  border: 1.5px solid var(--light-cont);
 }
 
 main .section .div-border .hint table { 

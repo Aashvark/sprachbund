@@ -247,7 +247,7 @@
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "I am Alex",
+          "prompt": "I am Alex.",
           "answers": ["ny han Alex"]
         },
         {
