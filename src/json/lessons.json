@@ -490,7 +490,7 @@
           "direction": "foreign-native",
           "prompt": "ny han náu.",
           "answers": ["I am tall", "I am big", "I am large"]
-        },
+        }, 
         {
           "type": "short-response",
           "direction": "foreign-native",
