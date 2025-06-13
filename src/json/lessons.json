@@ -211,7 +211,7 @@
           "word": "ny",
           "example": {
             "sentence": "[ny] han náu ćina.",
-            "translation": "[I] am tall"
+            "translation": "[I] am a tall person"
           }
         },
         {
@@ -273,6 +273,39 @@
           "prompt": "han vu. ___ han náu.",
           "answer": "ké",
           "choices": ["ké", "vu", "mikol"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "téu",
+          "example": {
+            "sentence": "han [téu].",
+            "translation": "it is [him/her/it]."
+          },
+          "tip": "[téu] may not be used as a subject of a sentence."
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "David is him.",
+          "answers": ["han téu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ny han mikol",
+          "answers": ["I am short", "I am small"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "She is short.",
+          "answers": ["han mikol"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ké han.",
+          "answers": ["you are", "you exist"]
         }
       ]
     ]
