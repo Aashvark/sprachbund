@@ -38,7 +38,7 @@ function hoverNative(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
-    if (index < tokens.length - 1 && (isInDictionary(stored + " " + tokens[next][0]) || isInDictionary(stored + " " + tokens[next][0] + " " + tokens[next + 1][0])) && token.length === 1) stored += " ";
+    if (index < tokens.length - 1 && (isInDictionary(stored + " " + tokens[next][0]) || index < tokens.length - 2 && isInDictionary(stored + " " + tokens[next][0] + " " + tokens[next + 1][0])) && token.length === 1) stored += " ";
     else {
       let submeaning;
       if (stored.includes(" ")) { submeaning = stored.split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].hint.includes(v)); }); }
