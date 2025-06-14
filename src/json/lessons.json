@@ -653,7 +653,7 @@
         },
         {
           "type": "match",
-          "new": ["miro", "ćina", "ćy", "han", "téu"],
+          "foreign": ["miro", "ćina", "ćy", "han", "téu"],
           "native": ["bread", "person", "we", "to be", "him/her/it"]
         },
         {
@@ -713,5 +713,26 @@
         }
       ]
     ]
+  },
+  {
+    "name": "Basics II",
+    "icon": "file-circle-question",
+    "difficulty": "A1",
+    "description": "Learn question words and question form",
+    "unit": []
+  },
+  {
+    "name": "Basics III",
+    "icon": "walkie-talkie",
+    "difficulty": "A1",
+    "description": "Learn everyday phrases",
+    "unit": []
+  },
+  {
+    "name": "Vocabulary I",
+    "icon": "clipboard-check",
+    "difficulty": "A1",
+    "description": "Learn more basic vocabulary",
+    "unit": []
   }
 ]
