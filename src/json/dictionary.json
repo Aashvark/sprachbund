@@ -99,9 +99,10 @@
       "ipa": "ˈmiˌro",
       "pos": "noun",
       "hint": ["(a loaf of) bread"],
-      "match": ["bread", "loaf of bread", "a loaf of bread"],
-      "definition": "Refering to bread in general, but refers to leavened bread when nessecery"
+      "match": ["bread", "bread loaf", "a bread loaf", "loaf of bread", "a loaf of bread"],
+      "definition": "Any given loaf of bread. When necessary, leavened bread."
     },
+
     "mai": {
       "ipa": "ˈmai",
       "pos": "noun",
@@ -109,26 +110,27 @@
       "match": ["unleavened bread", "loaf of unleavened bread", "a loaf of unleavened bread", "cracker", "a cracker"],
       "definition": "Refering to unleavened bread"
     },
+
     "nes": {
       "ipa": "ˈnes",
       "pos": "noun",
       "hint": ["(a) thing", "(an) object"],
       "match": ["thing", "a thing"],
-      "definition": "Any given thing/object"
+      "definition": "Any given thing or object."
     },
     "lavat": {
-      "ipa": "ˈlaˌvat",
+      "ipa": "ˈlaˌʋat",
       "pos": "noun",
       "hint": ["(an) apple"],
       "match": ["apple", "an apple"],
-      "definition": "An apple"
+      "definition": "Any given apple."
     },
     
     "vé": {
       "ipa": "ˈʋe˦",
       "pos": "preverb",
       "hint": ["have"],
-      "match": ["have", "has", "he has", "she has", "it has"],
+      "match": ["have", "has", "he has", "she has", "it has", "they have"],
       "definition": "Used to describe the possession of nouns."
     },
     "vé han": {
@@ -139,6 +141,7 @@
       "hint": ["have not", "he/she/it has not"],
       "match": ["have not", "do not have", "has not", "he has not", "she has not", "it has not", "he does not have", "she does not have", "it does not have"]
     },
+
     "wéka": {
       "ipa": "ˈwe˦ˌka",
       "pos": "preverb",

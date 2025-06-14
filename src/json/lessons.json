@@ -499,5 +499,225 @@
         }
       ]
     ]
+  },
+  {
+    "name": "Basics I",
+    "icon": "bridge-circle-exclamation",
+    "difficulty": "A1",
+    "description": "Learn the definite article, demonstratives, negation, and verb form.",
+    "unit": [
+      [
+        {
+          "type": "vocabulary",
+          "word": "i",
+          "tip": "[i] can turn an adjective into a noun. (ex. [i náu] means [the tall one/thing])",
+          "example": {
+            "sentence": "[i] cévo han sorón.",
+            "translation": "[The] woman is kind."
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "i symi.",
+          "answers": ["the man"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "i náu.",
+          "answers": ["the tall thing", "the big thing", "the large thing", "the tall one", "the big one", "the large one"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "It is her! She is the woman.",
+          "answers": ["han téu han i cévo"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ny han i symi.",
+          "answers": ["I am the man"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "nes",
+          "example": {
+            "sentence": "i [nes].",
+            "translation": "The [thing]."
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "nes han náu.",
+          "answers": ["a thing is tall", "thing is tall", "a thing is big", "thing is big", "a thing is large", "thing is large", "an object is tall", "object is tall", "an object is big", "object is big", "an object is large", "object is large"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "The thing exists. It is large!",
+          "answers": ["i nes han han náu"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "vé",
+          "example": {
+            "sentence": "i cévo [vé han] nes.",
+            "translation": "The woman [has] a thing."
+          },
+          "tip": "Preverbs like [vé] must always be used before [han], unless otherwise mentioned."
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "i symi vé han nes.",
+          "answers": ["the man has a thing", "the man has an object"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "vé han nes.",
+          "answers": ["he has a thing", "she has a thing", "it has a thing", "he has an object", "she has an object", "it has an object"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "She has a kind man. He is short.",
+          "answers": ["vé han sorón symi han mikol"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "The man is the short one.",
+          "answers": ["i symi han i mikol"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "i sorón han ny.",
+          "answers": ["the kind thing is me", "the nice thing is me", "the kind one is me", "the nice one is me", "the kind thing is I", "the nice thing is I", "the kind one is I", "the nice one is I"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "You are the tall ones.",
+          "answers": ["vun han i náu"]
+        }
+      ],
+      [
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "The tall thing is a tall person.",
+          "answers": ["i náu han náu ćina"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "vé han i sorón",
+          "answers": ["he has the kind thing", "she has the kind thing", "it has the kind thing", "he has the nice one", "she has the nice one", "it has the nice one"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "miro",
+          "example": {
+            "sentence": "ny vé han [miro].",
+            "translation": "I have [(a loaf of) bread]."
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ćy vé han miro.",
+          "answers": ["we have bread", "we have a loaf of bread", "we have bread loaf"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "You have the bread loaf.",
+          "answers": ["ké vé han i miro", "vun vé han i miro"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "The bread is small.",
+          "answers": ["i miro han mikol"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "i nes han miro.",
+          "answers": ["the thing is bread", "the thing is a bread loaf", "the thing is a loaf of bread", "the object is bread", "the object is a bread loaf", "the object is a loaf of bread"]
+        },
+        {
+          "type": "match",
+          "new": ["miro", "ćina", "ćy", "han", "téu"],
+          "native": ["bread", "person", "we", "to be", "him/her/it"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "The kind man has the bread.",
+          "answers": ["i sorón symi vé han i miro"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "The short one is the woman.",
+          "answers": ["i mikol han i cévo"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "lavat",
+          "example": {
+            "sentence": "vé han lavat.",
+            "translation": "he/she/it has an apple."
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "i symi vé han i lavat.",
+          "answers": ["the man has the apple"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han sorón mikol cévo.",
+          "answers": ["he is a nice short woman", "he is a kind short woman", "he is a nice small woman", "he is a kind small woman", "she is a nice short woman", "she is a kind short woman", "she is a nice small woman", "she is a kind small woman", "it is a nice short woman", "it is a kind short woman", "it is a nice small woman", "it is a kind small woman"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ké vé han i miro.",
+          "answers": ["you have the bread", "you have the loaf of bread", "you have the bread loaf"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "The kind woman has the small loaf of bread.",
+          "answers": ["i sorón cévo vé han i mikol miro"]
+        }
+      ],
+      [
+        {
+          "type": "vocabulary",
+          "word": "hotá",
+          "tip": "In the verb pattern, [hotá] replaces [han].",
+          "example": {
+            "sentence": "i cévo vé [hotá] i náu",
+            "translation": "the woman [does not] have the tall thing"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "new-native",
+          "prompt": "wéka hotá i miro",
+          "answers": ["he does not give the bread", "she does not give the bread", "it does not give the bread", "he does not give the loaf of bread", "she does not give the loaf of bread", "it does not give the loaf of bread"]
+        }
+      ]
+    ]
   }
 ]
