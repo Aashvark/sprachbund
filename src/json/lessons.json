@@ -429,24 +429,24 @@
           "type": "short-response",
           "direction": "native-foreign",
           "prompt": "You are her.",
-          "answers": ["ké han téu"]
+          "answers": ["ké han téu", "vun han téu"]
         },
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "han vun",
+          "prompt": "han vun.",
           "answers": ["it is you", "she is you", "he is you", "it is you all", "she is you all", "he is you all"]
         },
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "he is a man",
+          "prompt": "He is a man.",
           "answers": ["han symi"]
         },
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "it is us",
+          "prompt": "It is us.",
           "answers": ["han ćy"]
         },
         {
@@ -465,7 +465,7 @@
           "type": "short-response",
           "direction": "native-foreign",
           "prompt": "You are kind.",
-          "answers": ["vun han sojón", "ké han sojón"]
+          "answers": ["ké han sorón", "vun han sorón"]
         },
         {
           "type": "short-response",
@@ -483,7 +483,7 @@
           "type": "short-response",
           "direction": "native-foreign",
           "prompt": "You are me.",
-          "answers": ["ké han ny"]
+          "answers": ["ké han ny", "vun han ny"]
         },
         {
           "type": "short-response",
