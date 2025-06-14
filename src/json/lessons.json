@@ -631,7 +631,7 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "ćy vé han miro.",
-          "answers": ["we have bread", "we have a loaf of bread", "we have bread loaf"]
+          "answers": ["we have bread", "we have a loaf of bread", "we have a bread loaf"]
         },
         {
           "type": "short-response",
@@ -672,8 +672,8 @@
           "type": "vocabulary",
           "word": "lavat",
           "example": {
-            "sentence": "vé han lavat.",
-            "translation": "he/she/it/they has/have an apple."
+            "sentence": "vé han [lavat].",
+            "translation": "he/she/it/they have [an apple]."
           }
         },
         {
@@ -691,8 +691,8 @@
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "ké vé han i miro.",
-          "answers": ["you have the bread", "you have the loaf of bread", "you have the bread loaf"]
+          "prompt": "ké han lavat.",
+          "answers": ["you are an apple"]
         },
         {
           "type": "short-response",
