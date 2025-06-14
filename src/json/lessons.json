@@ -705,11 +705,11 @@
         {
           "type": "vocabulary",
           "word": "hotá",
-          "tip": "In the verb pattern, [hotá] replaces [han].",
           "example": {
             "sentence": "i cévo vé [hotá] i náu",
             "translation": "the woman [does not] have the tall thing"
-          }
+          },
+          "tip": "In verb form, [hotá] replaces [han]."
         }
       ]
     ]
