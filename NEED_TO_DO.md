@@ -1,10 +1,11 @@
-1. Back-play feature
+1. Back-play feature/Review
 2. Sound Effects
 3. Find a good voice synth
 4. More challenge types
 
 Accessable Dictionary
 Accessable Grammarbook
+Similarity
 
 Inspiration:
  Mikagu : https://migaku.com/blog/youtube/the-pop-up-dictionary-migaku-browser-extension

@@ -13,7 +13,7 @@
             "tip": "[He/she/it] is the implied subject. If context demands it, [they] may be the implied subject.",
             "example": {
               "sentence": "[han].",
-              "translation": "He/she/it [is]."
+              "translation": "[He/she/it is]."
             }
         },
         {
@@ -33,7 +33,7 @@
           "word": "symi",
           "example": {
             "sentence": "han [symi].",
-            "translation": "He is [a man]."
+            "translation": "[He/she/it] is [a man]."
           }
         },
         {
@@ -53,7 +53,7 @@
           "word": "cévo",
           "example": {
             "sentence": "han [cévo].",
-            "translation": "She is [a woman]."
+            "translation": "He/she/it is [a woman]."
           }
         },
         {
@@ -66,7 +66,7 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "Sylvie han cévo.",
-          "answers": ["sylvie is a woman"]
+          "answers": ["Sylvie is a woman"]
         },
         {
           "type": "short-response",
@@ -126,7 +126,7 @@
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "It is small.",
+          "prompt": "They are small.",
           "answers": ["han mikol"]
         },
         {
@@ -172,7 +172,7 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "han mikol ćina.",
-          "answers": ["he is a small person", "she is a small person", "it is a small person", "he is a short person", "she is a short person", "it is a short person"]
+          "answers": ["he is a small person", "she is a small person", "it is a small person", "they are a small person", "he is a short person", "she is a short person", "it is a short person", "they are a short person"]
         },
         {
           "type": "short-response",
@@ -190,7 +190,7 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "han mikol ele náu.",
-          "answers": ["he is small and big", "she is small and big", "it is small and big", "he is short and big", "she is short and big", "it is short and big", "he is small and large", "she is small and large", "it is small and large", "he is short and large", "she is short and large", "it is short and large", "he is small and tall", "she is small and tall", "it is small and tall", "he is short and tall", "she is short and tall", "it is short and tall"]
+          "answers": ["he is small and big", "she is small and big", "it is small and big", "they are small and big", "he is short and big", "she is short and big", "it is short and big", "they are short and big", "he is small and large", "she is small and large", "it is small and large", "they are small and large", "he is short and large", "she is short and large", "it is short and large", "they are short and large", "he is small and tall", "she is small and tall", "it is small and tall", "they are small and tall", "he is short and tall", "she is short and tall", "it is short and tall", "they are short and tall"]
         },
         {
           "type": "short-response",
@@ -279,7 +279,7 @@
           "word": "téu",
           "example": {
             "sentence": "han [téu].",
-            "translation": "it is [him/her/it]."
+            "translation": "it is [him/her/it/them]."
           },
           "tip": "[téu] may not be used as a subject of a sentence."
         },
@@ -319,7 +319,7 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "han náu.",
-          "answers": ["he is tall", "she is tall", "it is tall", "he is big", "she is big", "it is big", "he is large", "she is large", "it is large"]
+          "answers": ["he is tall", "she is tall", "it is tall", "they are tall", "he is big", "she is big", "it is big", "they are big", "he is large", "she is large", "it is large", "they are large"]
         },
         {
           "type": "vocabulary",
@@ -417,7 +417,7 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "han mikol.",
-          "answers": ["he is short", "he is small", "she is short", "she is small", "it is short", "it is small"]
+          "answers": ["he is short", "he is small", "she is short", "she is small", "it is short", "it is small", "they is short", "they is small"]
         },
         {
           "type": "short-response",
@@ -435,7 +435,7 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "han vun.",
-          "answers": ["it is you", "she is you", "he is you", "it is you all", "she is you all", "he is you all"]
+          "answers": ["it is you", "they are you", "it is you all", "they are you all", "he is you all"]
         },
         {
           "type": "short-response",
@@ -477,7 +477,7 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "han cévo.",
-          "answers": ["he is a woman", "she is a woman", "it is a woman"]
+          "answers": ["he is a woman", "she is a woman", "it is a woman", "they are a woman"]
         },
         {
           "type": "short-response",
@@ -579,7 +579,7 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "vé han nes.",
-          "answers": ["he has a thing", "she has a thing", "it has a thing", "he has an object", "she has an object", "it has an object"]
+          "answers": ["he has a thing", "she has a thing", "it has a thing", "they have a thing", "he has an object", "she has an object", "it has an object", "they have an object"]
         },
         {
           "type": "short-response",
@@ -617,7 +617,7 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "vé han i sorón",
-          "answers": ["he has the kind thing", "she has the kind thing", "it has the kind thing", "he has the nice one", "she has the nice one", "it has the nice one"]
+          "answers": ["he has the kind thing", "she has the kind thing", "it has the kind thing", "they have the kind thing", "he has the nice thing", "she has the nice thing", "it has the nice thing", "they have the nice thing", "he has the kind object", "she has the kind object", "it has the kind object", "they have the kind object", "he has the nice object", "she has the nice object", "it has the nice object", "they have the nice object", "he has the kind one", "she has the kind one", "it has the kind one", "they have the kind one", "he has the nice one", "she has the nice one", "it has the nice one", "they have the nice one"]
         },
         {
           "type": "vocabulary",
@@ -673,7 +673,7 @@
           "word": "lavat",
           "example": {
             "sentence": "vé han lavat.",
-            "translation": "he/she/it has an apple."
+            "translation": "he/she/it/they has/have an apple."
           }
         },
         {
@@ -686,7 +686,7 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "han sorón mikol cévo.",
-          "answers": ["he is a nice short woman", "he is a kind short woman", "he is a nice small woman", "he is a kind small woman", "she is a nice short woman", "she is a kind short woman", "she is a nice small woman", "she is a kind small woman", "it is a nice short woman", "it is a kind short woman", "it is a nice small woman", "it is a kind small woman"]
+          "answers": ["he is a nice short woman", "he is a kind short woman", "he is a nice small woman", "he is a kind small woman", "she is a nice short woman", "she is a kind short woman", "she is a nice small woman", "she is a kind small woman", "it is a nice short woman", "it is a kind short woman", "it is a nice small woman", "it is a kind small woman", "they are a nice short woman", "they are a kind short woman", "they are a nice small woman", "they are a kind small woman"]
         },
         {
           "type": "short-response",
@@ -710,12 +710,6 @@
             "sentence": "i cévo vé [hotá] i náu",
             "translation": "the woman [does not] have the tall thing"
           }
-        },
-        {
-          "type": "short-response",
-          "direction": "new-native",
-          "prompt": "wéka hotá i miro",
-          "answers": ["he does not give the bread", "she does not give the bread", "it does not give the bread", "he does not give the loaf of bread", "she does not give the loaf of bread", "it does not give the loaf of bread"]
         }
       ]
     ]
