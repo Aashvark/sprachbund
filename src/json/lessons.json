@@ -493,9 +493,9 @@
         }, 
         {
           "type": "short-response",
-          "direction": "foreign-native",
-          "prompt": "han vun.",
-          "answers": ["it is you", "it is you all"]
+          "direction": "native-foreign",
+          "prompt": "Alexa and Sarah are them.",
+          "answers": ["Alexa ele Sarah han téu."]
         }
       ]
     ]
