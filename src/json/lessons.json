@@ -710,6 +710,12 @@
             "translation": "the woman [does not] have the tall thing"
           },
           "tip": "In verb form, [hotá] replaces [han]."
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ny vé hotá miro.",
+          "answers": ["I do not have bread", "I do not have a loaf of bread", "I do not have a bread loaf"]
         }
       ]
     ]
