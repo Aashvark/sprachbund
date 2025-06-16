@@ -183,7 +183,7 @@
       "ipa": "ˈteu˦˧",
       "pos": "pronoun",
       "hint": ["him", "her", "it", "them"],
-      "match": ["him", "her", "it"],
+      "match": ["him", "her", "it", "them"],
       "definition": "Used to refer a person or group other than the speaker or addressee as the object of a sentence; him/her/it/them"
     },
     "vu": {
