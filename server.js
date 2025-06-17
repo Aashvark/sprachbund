@@ -62,13 +62,14 @@ function hoverForeign(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
+    console.log(checkMatchCluster(stored + " " + tokens[next][0]));
+
     if (stored === "___") {
       string += `<div class="hint"><p class="blank"></p></div>`;
       stored = "";
     }
     else if (index < tokens.length - 1 && (stored + " " + tokens[next][0]).toLowerCase() in dict && token.length === 1) stored += " ";
     else {
-      console.log(checkMatchCluster(stored));
       let submeaning;
       if (stored.includes(" ")) { submeaning = stored.split(" ").map((key) => { return key in dict ? dict[key].hint : []; }); }
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : dict[stored].hint, submeaning);
@@ -79,10 +80,18 @@ function hoverForeign(tokens) {
 }
 
 function checkMatchCluster(phrase) {
-  console.log(phrase);
-  let translated_words = phrase.split(" ").map((word) => dict[word]);
-  console.log(Object.keys(grammar));
-  return undefined; 
+  let translated_words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
+  let templates = Object.keys(grammar["templates"]);
+  console.log(`${translated_words}\n${templates}`);
+
+  for (let template of templates) {
+    let match = template.split(" ").map((word, index) => {
+      console.log(`${index} ${word} ${translated_words[index].simple} ${translated_words[index].pos}`);
+      return (word.at(0) != "[" && word === translated_words[index].simple || word.at(0) === "[" && word.substring(1, word.length - 1) === translated_words[index].pos);
+    });
+    if (!match.includes(false)) return "its a match";
+  }
+  return "no dice"; 
 }
 
 function formHints(word, keys, submeaning) {

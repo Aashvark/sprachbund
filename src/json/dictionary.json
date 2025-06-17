@@ -1,6 +1,6 @@
 {
   "nórem-grammar": {
-    "_cluster": {
+    "templates": {
       "i [adjective]": {
         "hint": ["the [adjective] one/thing"],
         "match": ["the [adjective] one", "the [adjective] thing", "the [adjective] ones", "the [adjective] things"]
