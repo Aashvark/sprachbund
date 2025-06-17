@@ -716,6 +716,24 @@
           "direction": "foreign-native",
           "prompt": "ny vé hotá miro.",
           "answers": ["I do not have bread", "I do not have a loaf of bread", "I do not have a bread loaf"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "You are not an apple.",
+          "answers": ["ké hotá lavat", "vun hotá lavat"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "Andrea hotá cévo.",
+          "answers": ["Andrea is not a woman"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "Jake vé hotá mikol miro.",
+          "answers": ["Jake does not have a small loaf of bread", "Jake does not have a small bread loaf"]
         }
       ]
     ]
