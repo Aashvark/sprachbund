@@ -6,7 +6,10 @@ const seo = require("./src/json/seo.json");
 
 const lessons = require("./src/json/lessons.json");
 const dictionary = require("./src/json/dictionary.json");
-let dict = dictionary.nórem;
+
+let language = "nórem";
+let dict     = dictionary[language];
+let grammar  = dictionary[`${language}-grammar`]; 
 
 fastify.register(require("@fastify/static"), { root: path.join(__dirname, "public"), prefix: "/" });
 fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
@@ -65,6 +68,7 @@ function hoverForeign(tokens) {
     }
     else if (index < tokens.length - 1 && (stored + " " + tokens[next][0]).toLowerCase() in dict && token.length === 1) stored += " ";
     else {
+      console.log(checkMatchCluster(stored));
       let submeaning;
       if (stored.includes(" ")) { submeaning = stored.split(" ").map((key) => { return key in dict ? dict[key].hint : []; }); }
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : dict[stored].hint, submeaning);
@@ -72,6 +76,13 @@ function hoverForeign(tokens) {
     }
   }
   return new handlebars.SafeString(string);
+}
+
+function checkMatchCluster(phrase) {
+  console.log(phrase);
+  let translated_words = phrase.split(" ").map((word) => dict[word]);
+  console.log(Object.keys(grammar));
+  return undefined; 
 }
 
 function formHints(word, keys, submeaning) {

@@ -743,7 +743,14 @@
     "icon": "file-circle-question",
     "difficulty": "A1",
     "description": "Learn question words and question form",
-    "unit": []
+    "unit": [
+      {
+        "type": "short-response",
+        "direction": "foreign-native",
+        "prompt": "i symi.",
+        "answers": ["a"]
+      }
+    ]
   },
   {
     "name": "Basics III",
