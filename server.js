@@ -82,11 +82,12 @@ function hoverForeign(tokens) {
 function checkMatchCluster(phrase) {
   let translated_words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
   let templates = Object.keys(grammar["templates"]);
-  console.log(`${translated_words}\n${templates}`);
+  console.log(translated_words)
+  console.log(templates);
 
   for (let template of templates) {
     let match = template.split(" ").map((word, index) => {
-      console.log(`${index} ${word} ${translated_words[index].simple} ${translated_words[index].pos}`);
+      console.log(`${index} ${word} ${translated_words[index]} ${translated_words[index].pos}`);
       return (word.at(0) != "[" && word === translated_words[index].simple || word.at(0) === "[" && word.substring(1, word.length - 1) === translated_words[index].pos);
     });
     if (!match.includes(false)) return "its a match";
