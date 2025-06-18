@@ -90,7 +90,7 @@ function generateKeys(phrase) {
   if (phrase.includes(" ")) submeaning = phrase.split(" ").map((key) => key in dict ? dict[key].hint : []);
   if (match) {
     let words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
-    return [match.hint.map((word) => word.includes("[") ? word.split(" ").map((value, index) => value.at(0) === "[" ? value.replace(`[${words[index].pos}]`, words[index].simple).join(" ") : value) : word), submeaning];
+    return [match.hint.map((word) => word.includes("[") ? word.split(" ").map((value, index) => value.at(0) === "[" ? value.replace(`[${words[index].pos}]`, words[index].simple) : value).join(" ") : word), submeaning];
   }
   return [dict[phrase].hint, submeaning];
 }
