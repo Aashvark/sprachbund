@@ -92,14 +92,17 @@ function generateKeys(phrase) {
   if (match) {
     let words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
     let hints = [];
-    match.hint.forEach((word) => {
-      if (!word.includes("[")) hints.push(word);
-      hints.push(word.split(" ").map((value, index) => {
-        if (value[0] != "[") return value;
-        let lists = [];
-        words[index].simple.forEach((hint) => lists.push(value.replace(`[${words[index].pos}]`, hint)));
-        return lists;
-      }));
+    match.hint.forEach((template) => {
+      if (!template.includes("[")) hints.push(template);
+      let chosen = [];
+      for (let word of template.split(" ")) {
+        let pos = words.map((w) => w.pos);
+        if (word[0] === "[" && pos.includes(word.substring(1, word.length - 1))) chosen.push(words[pos.indexOf(word.substring(1, word.length - 1))]);
+      }
+      let pusher = template;
+      for (let chose of chosen) {
+        for (let l of chose.simple) pusher.replace(`[${chose.pos}]`, l);
+      }
     });
     return [hints, submeaning];
   }
