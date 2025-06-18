@@ -80,6 +80,7 @@ function hoverForeign(tokens) {
 function matchCluster(phrase) {
   let words = phrase.toLowerCase().split(" ").map((word) => [word, dict[word]]);
   for (let template of Object.keys(grammar["templates"])) {
+    console.log(words);
     if (words.length === template.split(" ").length && !template.split(" ").map((word, index) => word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.length - 1) === words[index][1].pos).includes(false)) return grammar["templates"][template];
   }
   return undefined; 
@@ -95,8 +96,6 @@ function generateKeys(phrase) {
     match.hint.forEach((template) => {
       if (!template.includes("[")) hints.push(template);
       let chosen = [];
-      console.log(template);
-      console.log(words);
       for (let word of template.split(" ")) {
         let pos = words.map((w) => w.pos || "");
         if (word[0] === "[" && pos.includes(word.substring(1, word.indexOf("]")))) chosen.push(words[pos.indexOf(word.substring(1, word.indexOf("]")))]);
