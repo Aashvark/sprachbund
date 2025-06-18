@@ -94,7 +94,14 @@ function generateKeys(phrase) {
     let hints = [];
     match.hint.forEach((word) => {
       if (!word.includes("[")) hints.push(word);
-      for (let hint of words[index].simple) hints.push(word.split(" ").map((value, index) => value.at(0) === "[" ? value.replace(`[${words[index].pos}]`, hint) : value).join(" "));
+      hints.push(word.split(" ").map((value, index) => {
+        if (value.at(0) === "[") return value;
+        let lists = [];
+        words[index].simple.forEach((hint) => {
+          lists.push(value.replace(`[${words[index].pos}]`, hint));
+        });
+        return lists;
+      }));
     });
     return [hints, submeaning];
   }
