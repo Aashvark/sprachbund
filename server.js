@@ -67,7 +67,7 @@ function hoverForeign(tokens) {
       string += `<div class="hint"><p class="blank"></p></div>`;
       stored = "";
     }
-    else if (index < tokens.length - 1 && ((stored + " " + tokens[next][0]) in dict || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
+    else if (index < tokens.length - 1 && (dict[stored + " " + tokens[next][0]].hints || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
     else {
       let generated = generateKeys(stored);
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
@@ -79,7 +79,7 @@ function hoverForeign(tokens) {
 
 function matchCluster(phrase) {
   let words = phrase.toLowerCase().split(" ").map((word) => word in dict ? [word, dict[word]] : undefined);
-  if (words.includes(undefined)) return undefined; 
+  if (words.includes(undefined)) return undefined;
   for (let template of Object.keys(grammar["templates"])) {
     if (words.length === template.split(" ").length && !template.split(" ").map((word, index) => word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.length - 1) === words[index][1].pos).includes(false)) return grammar["templates"][template];
   }
