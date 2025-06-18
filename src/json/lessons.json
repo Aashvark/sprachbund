@@ -748,13 +748,7 @@
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "han",
-          "answers": ["a"]
-        },
-        {
-          "type": "short-response",
-          "direction": "native-foreign",
-          "prompt": "the man is a man",
+          "prompt": "mikol",
           "answers": ["a"]
         }
       ]

@@ -1,6 +1,10 @@
 {
   "nórem-grammar": {
     "templates": {
+      "[adjective]": {
+        "hint": ["[adjective]"],
+        "match": ["[adjective]"]
+      },
       "i [adjective]": {
         "hint": ["the [adjective] one/thing"],
         "match": ["the [adjective] one", "the [adjective] thing", "the [adjective] ones", "the [adjective] things"]
