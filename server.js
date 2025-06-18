@@ -6,6 +6,7 @@ const seo = require("./src/json/seo.json");
 
 const lessons = require("./src/json/lessons.json");
 const dictionary = require("./src/json/dictionary.json");
+const { console } = require("inspector");
 
 let language = "nórem";
 let dict     = dictionary[language];
@@ -97,6 +98,8 @@ function generateKeys(phrase) {
         let singular = [""];
         console.log(hint.split(" "));
         for (const [index, value] of hint.split(" ")) {
+          console.log(index);
+          console.log(value);
           if (value.at(0) != "[") { singular[0] += value; } 
           else {
             //for (let i = 0; i < words[index].simple.length - 1; i++) singular.push(singular.at(0));
