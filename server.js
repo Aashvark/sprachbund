@@ -62,37 +62,38 @@ function hoverForeign(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
-    console.log(checkMatchCluster(stored + " " + tokens[next][0]));
-
     if (stored === "___") {
       string += `<div class="hint"><p class="blank"></p></div>`;
       stored = "";
     }
-    else if (index < tokens.length - 1 && (stored + " " + tokens[next][0]).toLowerCase() in dict && token.length === 1) stored += " ";
+    else if (index < tokens.length - 1 && matchCluster(stored + " " + tokens[next][0]) && token.length === 1) stored += " ";
     else {
-      let submeaning;
-      if (stored.includes(" ")) { submeaning = stored.split(" ").map((key) => { return key in dict ? dict[key].hint : []; }); }
-      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], !(stored in dict) ? undefined : dict[stored].hint, submeaning);
+      let generated = generateKeys(stored);
+      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
       stored = "";
     }
   }
   return new handlebars.SafeString(string);
 }
 
-function checkMatchCluster(phrase) {
+function matchCluster(phrase) {
   let words = phrase.toLowerCase().split(" ").map((word) => [word, dict[word]]);
-  let templates = Object.keys(grammar["templates"]);
-  console.log(words)
-  console.log(templates);
-
-  for (let template of templates) {
-    let match = template.split(" ").map((word, index) => {
-      console.log(`${index} ${word} ${words[index][0]} ${words[index][1].pos}`);
-      return (word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.length - 1) === words[index][1].pos);
-    });
-    if (!match.includes(false)) return "its a match";
+  for (let template of Object.keys(grammar["templates"])) {
+    if (!template.split(" ").map((word, index) => word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.length - 1) === words[index][1].pos).includes(false)) return grammar["templates"][template];
   }
-  return "no dice"; 
+  return undefined; 
+}
+
+function generateKeys(phrase) {
+  let match = matchCluster(phrase);
+  let submeaning;
+  if (stored.includes(" ")) submeaning = stored.split(" ").map((key) => key in dict ? dict[key].hint : []);
+  if (match) {
+    let words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
+    let hint = match.hint.map((word) => word.includes("[") ? word.split(" ").map((value, index) => value.at(0) === "[" ? value.replace(`[${words[index].pos}]`, words[index].simple) : value) : word);
+    return [hint, submeaning];
+  }
+  return [dict[phrase].hint, submeaning];
 }
 
 function formHints(word, keys, submeaning) {
