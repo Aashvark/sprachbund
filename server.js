@@ -90,7 +90,22 @@ function generateKeys(phrase) {
   if (phrase.includes(" ")) submeaning = phrase.split(" ").map((key) => key in dict ? dict[key].hint : []);
   if (match) {
     let words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
-    return [match.hint.map((word) => word.includes("[") ? word.split(" ").map((value, index) => value.at(0) === "[" ? value.replace(`[${words[index].pos}]`, words[index].simple) : value).join(" ") : word), submeaning];
+    let hints = [];
+    for (let hint of match.hint) {
+      if (!hint.includes("[")) hints.push(hint);
+      else {
+        let singular = [""];
+        for (const [index, value] of hint.split(" ")) {
+          if (value.at(0) != "[") singular.map((element) => element += value);
+          else {
+            for (let i = 0; i < words[index].simple.length - 1; i++) singular.push(singular.at(0));
+            for (let i = 0; i < words[index].simple.length; i++) singular.at(i) += words[index].simple[i];
+          }
+        }
+        hints.concat(singular);
+      }
+    }
+    return [hints, submeaning];
   }
   return [dict[phrase].hint, submeaning];
 }
