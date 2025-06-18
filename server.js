@@ -100,7 +100,7 @@ function generateKeys(phrase) {
         if (word[0] === "[" && pos.includes(word.substring(1, word.indexOf("]")))) chosen.push(words[pos.indexOf(word.substring(1, word.indexOf("]")))]);
       }
       for (let chose of chosen) {
-        for (let l of chose.simple) hints.push(template.replaceAll(`[${chose.pos}]`, l));
+        for (let l of chose.simple) hints.push(template.replaceAll(`[${chose.pos || ""}]`, l));
       }
     });
     return [hints, submeaning];
