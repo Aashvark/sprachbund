@@ -106,7 +106,7 @@ function generateKeys(phrase) {
     });
     return [hints, submeaning];
   }
-  return [dict[phrase].hint, submeaning];
+  return [phrase in dict ? dict[phrase].hint : undefined, submeaning];
 }
 
 function formHints(word, keys, submeaning) {
