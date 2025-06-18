@@ -102,7 +102,7 @@ function generateKeys(phrase) {
             for (let i = 0; i < words[index].simple.length; i++) singular.at(i) += words[index].simple[i];
           }
         }
-        hints.concat(singular);
+        singular.forEach((value) => hints.push(value));
       }
     }
     return [hints, submeaning];
