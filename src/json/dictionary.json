@@ -10,8 +10,8 @@
         "match": ["the [noun]"]
       },
       "[preverb] han": {
-        "hint": ["[preverb]", "(he/she/it) [preverb.3rd-sing]", "(they) [preverb]"],
-        "match": ["[preverb]", "he [preverb.3rd-sing]", "she [preverb.3rd-sing]", "it [preverb.3rd-sing]", "they [preverb]"]
+        "hint": ["[preverb]", "(he/she/it) [preverb]s", "(they) [preverb]"],
+        "match": ["[preverb]", "he [preverb]s", "she [preverb]s", "it [preverb]s", "they [preverb]"]
       },
       "[preverb] hotá": {
         "hint": ["do not [preverb]", "(he/she/it) does not [preverb]", "(they) do not [preverb]"],
