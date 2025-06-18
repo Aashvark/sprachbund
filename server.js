@@ -92,9 +92,9 @@ function generateKeys(phrase) {
   if (match) {
     let words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
     let hints = [];
-    let m = match.hint.map((word) => {
+    match.hint.forEach((word) => {
       if (!word.includes("[")) hints.push(word);
-      hints.push(word.split(" ").map((value, index) => value.at(0) === "[" ? value.replace(`[${words[index].pos}]`, words[index].simple) : value).join(" "));
+      for (let hint of words[index].simple) hints.push(word.split(" ").map((value, index) => value.at(0) === "[" ? value.replace(`[${words[index].pos}]`, hint) : value).join(" "));
     });
     return [hints, submeaning];
   }

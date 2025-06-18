@@ -140,7 +140,7 @@
       "ipa": "ˈsəˌmi",
       "pos": "noun",
       "definition": "A male human attaining the age of adulthood; man. When referring to children, it signifies their physical and/or emotional maturity.",
-      "simple": "man",
+      "simple": ["man"],
       "hint": ["(a) man"],
       "match": ["man", "a man"]
     },
