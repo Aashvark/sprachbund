@@ -137,6 +137,7 @@
     "kas": {
       "ipa": "ˈkas",
       "pos": "preverb",
+      "simple": ["eat", "drink"],
       "hint": ["eat", "drink"],
       "match": ["eat", "eats", "drink", "drinks"],
       "definition": "Used to describe the possession of nouns."
@@ -206,6 +207,7 @@
       "ipa": "ˈxan",
       "pos": "verb",
       "definition": "Correlating the relation between nouns or the existence of a noun.",
+      "simple": ["be", "exist"],
       "hint": ["be", "exist", "he/she/it is", "he/she/it exists"],
       "match": ["be", "am", "are", "is", "he is", "she is", "it is", "they are", "exist", "exists", "he exists", "she exists", "it exists", "they exist"]
     },
