@@ -750,6 +750,12 @@
           "direction": "foreign-native",
           "prompt": "i mikol kas han i symi. vé han",
           "answers": ["a"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "the man is a man",
+          "answers": ["a"]
         }
       ]
     ]
