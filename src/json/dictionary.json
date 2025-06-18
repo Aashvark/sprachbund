@@ -145,6 +145,7 @@
     "vé": {
       "ipa": "ˈʋe˦",
       "pos": "preverb",
+      "simple": ["have"],
       "hint": ["have"],
       "match": ["have", "has"],
       "definition": "Used to describe the possession of nouns."
