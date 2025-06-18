@@ -748,7 +748,7 @@
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "i symi.",
+          "prompt": "i mikol.",
           "answers": ["a"]
         }
       ]
