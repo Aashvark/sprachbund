@@ -99,9 +99,8 @@ function generateKeys(phrase) {
         let pos = words.map((w) => w.pos);
         if (word[0] === "[" && pos.includes(word.substring(1, word.length - 1))) chosen.push(words[pos.indexOf(word.substring(1, word.length - 1))]);
       }
-      let pusher = template;
       for (let chose of chosen) {
-        for (let l of chose.simple) pusher.replace(`[${chose.pos}]`, l);
+        for (let l of chose.simple) hints.push(template.replace(`[${chose.pos}]`, l));
       }
     });
     return [hints, submeaning];
