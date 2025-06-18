@@ -61,7 +61,7 @@
       "ipa": "ˈi",
       "pos": "article",
       "definition": "denoting one or more people or things already mentioned or assumed to be common knowledge.",
-      "simple": "the",
+      "simple": ["the"],
       "hint": ["the"],
       "match": ["the"]
     },
