@@ -97,7 +97,7 @@ function generateKeys(phrase) {
       let chosen = [];
       for (let word of template.split(" ")) {
         let pos = words.map((w) => w.pos);
-        if (word[0] === "[" && pos.includes(word.substring(1, word.length - 1))) chosen.push(words[pos.indexOf(word.substring(1, word.length - 1))]);
+        if (word[0] === "[" && pos.includes(word.substring(1, word.indexOf("]")))) chosen.push(words[pos.indexOf(word.substring(1, word.length - 1))]);
       }
       for (let chose of chosen) {
         for (let l of chose.simple) hints.push(template.replaceAll(`[${chose.pos}]`, l));
