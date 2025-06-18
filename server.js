@@ -93,7 +93,7 @@ function generateKeys(phrase) {
     let hints  = [];
     for (let hint of match.hint) {
       if (!hint.includes("[")) { hints.push(hint); continue; }
-      for (let {index, value} in hint.split(" ")) {
+      for (const [index, value] of hint.split(" ").entries()) {
         hints.push(value.at(0) === "[" ? value.replace(`[${words[index].pos}]`, words[index].simple) : value);
       }
     }
