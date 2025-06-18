@@ -23,6 +23,7 @@
     "amif": {
       "ipa": "ˈaˌmif",
       "pos": "adjective",
+      "simple": ["bad"],
       "hint": ["bad"],
       "match": ["bad"],
       "definition": "Bad, especially in the views of the speaker"
@@ -30,6 +31,7 @@
     "sa": {
       "ipa": "ˈsa",
       "pos": "adjective",
+      "simple": ["good"],
       "hint": ["good"],
       "match": ["good", "well"],
       "definition": "Good, well, or favorable, especially in the views of the speaker"
@@ -46,6 +48,7 @@
     "náu": {
       "ipa": "ˈnau˦˧",
       "pos": "adjective",
+      "simple": ["tall", "large", "big"],
       "hint": ["tall", "large", "big"],
       "match": ["tall", "large", "big"],
       "definition": "Tall or big, especially in comparison to the subject."
@@ -53,6 +56,7 @@
     "sorón": {
       "ipa": "ˈsoˌron˦",
       "pos": "adjective",
+      "simple": ["kind", "nice"],
       "definition": "Kind or nice",
       "hint": ["kind", "nice"],
       "match": ["kind", "nice"]
@@ -70,6 +74,7 @@
     "ele": {
       "ipa": "ˈeˌle",
       "pos": "conjunction",
+      "simple": ["and"],
       "definition": "Used to connect words of the same part of speech, clauses, or sentences meant to be taken jointly; and",
       "hint": ["and"],
       "match": ["and"]
@@ -78,6 +83,7 @@
     "cévo": {
       "ipa": "ˈt͡se˦ˌʋo",
       "pos": "noun",
+      "simple": ["woman"],
       "definition": "A female human attaining the age of adulthood; woman. When referring to children, it signifies their physical and/or emotional maturity.",
       "hint": ["(a) woman"],
       "match": ["woman", "a woman"]
@@ -85,6 +91,7 @@
     "ćina": {
       "ipa": "ˈt͡ʃiˌna",
       "pos": "noun",
+      "simple": ["person"],
       "definition": "Any given person.",
       "hint": ["(a) person"],
       "match": ["person", "a person"]
@@ -92,6 +99,7 @@
     "lavat": {
       "ipa": "ˈlaˌʋat",
       "pos": "noun",
+      "simple": ["apple"],
       "hint": ["(an) apple"],
       "match": ["apple", "an apple"],
       "definition": "Any given apple."
@@ -99,6 +107,7 @@
     "miro": {
       "ipa": "ˈmiˌro",
       "pos": "noun",
+      "simple": ["bread"],
       "hint": ["(a loaf of) bread"],
       "match": ["bread", "bread loaf", "a bread loaf", "loaf of bread", "a loaf of bread"],
       "definition": "Any given loaf of bread. When necessary, leavened bread."
@@ -106,6 +115,7 @@
     "mou": {
       "ipa": "ˈmou",
       "pos": "noun",
+      "simple": ["water"],
       "hint": ["water"],
       "match": ["water"],
       "definition": "water."
@@ -113,6 +123,7 @@
     "nes": {
       "ipa": "ˈnes",
       "pos": "noun",
+      "simple": ["thing", "object"],
       "hint": ["(a) thing", "(an) object"],
       "match": ["thing", "a thing"],
       "definition": "Any given thing or object."
@@ -129,6 +140,7 @@
     "mai": {
       "ipa": "ˈmai",
       "pos": "noun",
+      "simple": ["bread"],
       "hint": ["(a loaf of) unleavened bread", "(a) cracker"],
       "match": ["unleavened bread", "loaf of unleavened bread", "a loaf of unleavened bread", "cracker", "a cracker"],
       "definition": "Refering to unleavened bread"
@@ -158,6 +170,7 @@
     "ćy": {
       "ipa": "ˈt͡ʃə",
       "pos": "pronoun",
+      "simple": ["we"],
       "hint": ["we", "us"],
       "match": ["we", "us"],
       "definition": "Used by a speaker to refer to themself and another person as the subject or object of a sentence; we"
@@ -165,6 +178,7 @@
     "ké": {
       "ipa": "ˈke˦",
       "pos": "pronoun",
+      "simple": ["you"],
       "hint": ["you (NOM.SING.)"],
       "match": ["you"],
       "definition": "Used to informally refer to a person the speaker is addressing in the subject; you"
@@ -172,6 +186,7 @@
     "ny": {
       "ipa": "ˈnə",
       "pos": "pronoun",
+      "simple": ["I"],
       "hint": ["I", "me"],
       "match": ["i", "me"],
       "definition": "Used by a speaker to refer to themself as the subject or object of a sentence; I"
@@ -179,6 +194,7 @@
     "téu": {
       "ipa": "ˈteu˦˧",
       "pos": "pronoun",
+      "simple": ["him"],
       "hint": ["him", "her", "it", "them"],
       "match": ["him", "her", "it", "them"],
       "definition": "Used to refer a person or group other than the speaker or addressee as the object of a sentence; him/her/it/them"
@@ -186,6 +202,7 @@
     "vu": {
       "ipa": "ˈʋu",
       "pos": "pronoun",
+      "simple": ["you"],
       "hint": ["you (ACC.SING.)"],
       "match": ["you"],
       "definition": "Used to informally refer to a person the speaker is addressing in the object; you"
@@ -193,6 +210,7 @@
     "vun": {
       "ipa": "ˈʋun",
       "pos": "pronoun",
+      "simple": ["you"],
       "hint": ["you (PLUR.)"],
       "match": ["you", "you guys", "you all"],
       "definition": "Used to informally refer to the people the speaker is addressing; y'all"
@@ -209,6 +227,7 @@
     "hotá": {
       "ipa": "ˈxoˌta˦",
       "pos": "verb",
+      "simple": ["not be", "exist"],
       "definition": "Correlating the irrelation between nouns or the existence of a noun.",
       "hint": ["not be", "not", "(he/she/it) is not"],
       "match": ["not be", "not", "am not", "are not", "is not", "he is not", "she is not", "it is not", "they are not", "do not exist", "he does not exist", "she does not exist", "it does not exist", "they do not exist"]
