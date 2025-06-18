@@ -96,8 +96,9 @@ function generateKeys(phrase) {
       else {
         let singular = [""];
         for (const [index, value] of hint.split(" ")) {
-          if (value.at(0) != "[") singular.map((element) => element += value);
-          else {
+          if (value.at(0) != "[") {
+            for (let i of singular) i += element;
+          } else {
             //for (let i = 0; i < words[index].simple.length - 1; i++) singular.push(singular.at(0));
             for (let i = 0; i < words[index].simple.length; i++) singular[i] = singular[i] + value.replace(`[${words[index].pos}]`, words[index].simple[i]);
           }
