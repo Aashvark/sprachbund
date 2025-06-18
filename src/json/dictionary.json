@@ -66,26 +66,6 @@
       "hint": ["the"],
       "match": ["the"]
     },
-    "i amif": {
-      "hint": ["the bad one/thing"],
-      "match": ["the bad thing", "the bad one", "the bad things", "the bad ones"]
-    },
-    "i sa": {
-      "hint": ["the good one/thing"],
-      "match": ["the good thing", "the good one", "the good things", "the good ones"]
-    },
-    "i mikol": {
-      "hint": ["the short one/thing", "the small one/thing"],
-      "match": ["the short thing", "the small thing", "the short one", "the small one", "the short things", "the small things", "the short ones", "the small ones"]
-    },
-    "i náu": {
-      "hint": ["the tall one/thing", "the large one/thing", "the big one/thing"],
-      "match": ["the tall thing", "the large thing", "the big thing", "the tall one", "the large one", "the big one", "the tall things", "the large things", "the big things", "the tall ones", "the large ones", "the big ones"]
-    },
-    "i sorón": {
-      "hint": ["the kind one/thing", "the nice one/thing"],
-      "match": ["the kind thing", "the nice thing", "the kind one", "the nice one", "the kind things", "the nice things", "the kind ones", "the nice ones"]
-    },
     
     "ele": {
       "ipa": "ˈeˌle",
