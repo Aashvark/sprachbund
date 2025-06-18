@@ -95,14 +95,15 @@ function generateKeys(phrase) {
       if (!hint.includes("[")) hints.push(hint);
       else {
         let singular = [""];
+        console.log(hint.split(" "));
         for (const [index, value] of hint.split(" ")) {
-          if (value.at(0) != "[") {
-            singular[0] += value;
-          } else {
+          if (value.at(0) != "[") { singular[0] += value; } 
+          else {
             //for (let i = 0; i < words[index].simple.length - 1; i++) singular.push(singular.at(0));
             for (let i = 0; i < words[index].simple.length; i++) singular[i] = singular[i] + value.replace(`[${words[index].pos}]`, words[index].simple[i]);
           }
           console.log(singular);
+
         }
         singular.map((value) => hints.push(value));
       }
