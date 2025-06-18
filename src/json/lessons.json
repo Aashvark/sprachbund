@@ -748,7 +748,7 @@
         {
           "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "i mikol kas han i symi. vé han",
+          "prompt": "han",
           "answers": ["a"]
         },
         {
