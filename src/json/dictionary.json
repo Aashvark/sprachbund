@@ -10,7 +10,7 @@
         "match": ["the [noun]"]
       },
       "[preverb] han": {
-        "hint": ["[preverb]", "(he/she/it) [preverb]", "(they) [preverb]"],
+        "hint": ["[preverb]", "(he/she/it) [preverb]s", "(they) [preverb]"],
         "match": ["[preverb]", "he [preverb]s", "she [preverb]s", "it [preverb]s", "they [preverb]"]
       },
       "[preverb] hotá": {
