@@ -99,10 +99,10 @@ function generateKeys(phrase) {
           if (value.at(0) != "[") singular.map((element) => element += value);
           else {
             for (let i = 0; i < words[index].simple.length - 1; i++) singular.push(singular.at(0));
-            for (let i = 0; i < words[index].simple.length; i++) singular.at(i) += words[index].simple[i];
+            for (let i = 0; i < words[index].simple.length; i++) singular[i] += words[index].simple[i];
           }
         }
-        for (let l of singular) hints.push(l);
+        singular.map((value) => hints.push(value));
       }
     }
     return [hints, submeaning];
