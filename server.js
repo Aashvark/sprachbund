@@ -95,8 +95,9 @@ function generateKeys(phrase) {
     match.hint.forEach((template) => {
       if (!template.includes("[")) hints.push(template);
       let chosen = [];
+      console.log(template);
+      console.log(words);
       for (let word of template.split(" ")) {
-        console.log(words);
         let pos = words.map((w) => w.pos || "");
         if (word[0] === "[" && pos.includes(word.substring(1, word.indexOf("]")))) chosen.push(words[pos.indexOf(word.substring(1, word.indexOf("]")))]);
       }
