@@ -141,14 +141,6 @@
       "match": ["eat", "eats", "drink", "drinks"],
       "definition": "Used to describe the possession of nouns."
     },
-    "kas han": {
-      "hint": ["(he/she/it) eats", "(they) eat", "(he/she/it) drinks", "(they) drink"],
-      "match": ["eat", "eats", "drink", "drinks"]
-    },
-    "kas hotá": {
-      "hint": ["have not", "he/she/it has not"],
-      "match": ["have not", "do not have", "has not", "he has not", "she has not", "it has not", "he does not have", "she does not have", "it does not have"]
-    },
     "vé": {
       "ipa": "ˈʋe˦",
       "pos": "preverb",
