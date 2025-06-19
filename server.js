@@ -63,13 +63,16 @@ function hoverForeign(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
+    console.log(stored);
+    console.log(index);
+    console.log(tokens.length - 1);
+
     if (stored === "___") {
       string += `<div class="hint"><p class="blank"></p></div>`;
       stored = "";
     }
     else if (index < tokens.length - 1 && ((stored + " " + tokens[next][0]) in dict || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
     else {
-      console.log(stored);
       let generated = generateKeys(stored);
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
       stored = "";
