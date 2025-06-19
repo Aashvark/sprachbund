@@ -63,13 +63,11 @@ function hoverForeign(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
-    console.log(stored);
-
     if (stored === "___") {
       string += `<div class="hint"><p class="blank"></p></div>`;
       stored = "";
     }
-    else if (index < tokens.length - 1 && ((stored + " " + tokens[next][0]) in dict || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
+    else if (index < tokens.length - 1 && (dict[stored + " " + tokens[next][0]].hint || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
     else {
       let generated = generateKeys(stored);
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
@@ -92,7 +90,7 @@ function generateKeys(phrase) {
   let match = matchCluster(phrase);
   let submeaning;
   if (phrase.includes(" ")) submeaning = phrase.split(" ").map((key) => key in dict ? dict[key].hint : []);
-  if (!(dict[phrase].hints) && match) {
+  if (!(dict[phrase].hint) && match) {
     let words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
     let hints = [];
     match.hint.forEach((template) => {
