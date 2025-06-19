@@ -28,16 +28,12 @@
       "ipa": "ˈaˌmif",
       "pos": "adjective",
       "simple": ["bad"],
-      "hint": ["bad"],
-      "match": ["bad"],
       "definition": "Bad, especially in the views of the speaker"
     },
     "sa": {
       "ipa": "ˈsa",
       "pos": "adjective",
-      "simple": ["good"],
-      "hint": ["good"],
-      "match": ["good", "well"],
+      "simple": ["good", "well"],
       "definition": "Good, well, or favorable, especially in the views of the speaker"
     },
 
@@ -51,17 +47,13 @@
       "ipa": "ˈnau˦˧",
       "pos": "adjective",
       "simple": ["tall", "large", "big"],
-      "hint": ["tall", "large", "big"],
-      "match": ["tall", "large", "big"],
       "definition": "Tall or big, especially in comparison to the subject."
     },
     "sorón": {
       "ipa": "ˈsoˌron˦",
       "pos": "adjective",
       "simple": ["kind", "nice"],
-      "definition": "Kind or nice",
-      "hint": ["kind", "nice"],
-      "match": ["kind", "nice"]
+      "definition": "Kind or nice"
     },
     
     "i": {

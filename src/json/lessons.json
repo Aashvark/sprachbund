@@ -747,9 +747,15 @@
       [
         {
           "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "She exists.",
+          "answers": ["han"]
+        },
+        {
+          "type": "short-response",
           "direction": "foreign-native",
-          "prompt": "mikol",
-          "answers": ["a"]
+          "prompt": "han.",
+          "answers": ["to be", "he is", "she is", "it is", "they are", "to exist", "he exists", "she exists", "it exists", "they exist"]
         }
       ]
     ]

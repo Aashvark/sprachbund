@@ -63,10 +63,6 @@ function hoverForeign(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
-    console.log(stored);
-    console.log(index);
-    console.log(tokens.length - 1);
-
     if (stored === "___") {
       string += `<div class="hint"><p class="blank"></p></div>`;
       stored = "";
@@ -92,7 +88,6 @@ function matchCluster(phrase) {
 
 function generateKeys(phrase) {
   let match = matchCluster(phrase);
-  console.log(match);
   let submeaning;
   if (phrase.includes(" ")) submeaning = phrase.split(" ").map((key) => key in dict ? dict[key].hint : []);
   if (!(dict[phrase].hints) && match) {
