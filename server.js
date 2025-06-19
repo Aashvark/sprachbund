@@ -63,6 +63,8 @@ function hoverForeign(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
+    console.log(stored);
+
     if (stored === "___") {
       string += `<div class="hint"><p class="blank"></p></div>`;
       stored = "";
