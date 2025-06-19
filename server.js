@@ -95,7 +95,7 @@ function generateKeys(phrase) {
   console.log(match);
   let submeaning;
   if (phrase.includes(" ")) submeaning = phrase.split(" ").map((key) => key in dict ? dict[key].hint : []);
-  if (!(phrase in dict) && match) {
+  if (!(dict[phrase].hints) && match) {
     let words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
     let hints = [];
     match.hint.forEach((template) => {
