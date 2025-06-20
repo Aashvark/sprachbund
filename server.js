@@ -67,7 +67,7 @@ function hoverForeign(tokens) {
       string += `<div class="hint"><p class="blank"></p></div>`;
       stored = "";
     }
-    //else if (index < tokens.length - 1 && (stored + " " + tokens[next][0] in dict && !dict[stored + " " + tokens[next][0]].hint || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
+    else if (index < tokens.length - 1 && (stored + " " + tokens[next][0] in dict && !dict[stored + " " + tokens[next][0]].hint || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
     else {
       console.log(stored);
       //let generated = generateKeys(stored);
