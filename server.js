@@ -67,7 +67,7 @@ function hoverForeign(tokens) {
       string += `<div class="hint"><p class="blank"></p></div>`;
       stored = "";
     }
-    else if (index < tokens.length - 1 && matchCluster(stored + " " + tokens[next][0]) && token.length === 1) stored += " ";
+    else if (index < tokens.length - 1 && (stored + " " + tokens[next][0] in dict && "hint" in dict[stored + " " + tokens[next][0]] || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
     //else if (index < tokens.length - 1 && (stored + " " + tokens[next][0] in dict && "hint" in dict[stored + " " + tokens[next][0]] || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
     else {
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], ["test"], undefined);
