@@ -82,9 +82,9 @@ function hoverForeign(tokens) {
 function matchCluster(phrase) {
   let words = phrase.toLowerCase().split(" ").map(word => word in dict ? [word, dict[word]] : undefined);
   if (words.includes(undefined)) return undefined;
-  // for (template of Object.keys(grammar["templates"])) {
-  //   if (words.length === template.split(" ").length && !template.split(" ").map((word, index) => word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.length - 1) === words[index][1].pos).includes(false)) return grammar["templates"][template];
-  // }
+  for (template of Object.keys(grammar["templates"])) {
+     if (words.length === template.split(" ").length && !template.split(" ").map((word, index) => word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.length - 1) === words[index][1].pos).includes(false)) return grammar["templates"][template];
+  }
   return undefined; 
 }
 
