@@ -30,7 +30,7 @@ handlebars.registerHelper('hover-translate', function(prompt, lang) {
     for (var letter of word) section += (/[.,\/#!$%\^&\*;:{}=\-`~()]/g.test(letter) ? " " : "") + letter;
     tokens.push(section.split(" "));
   }
-  return lang === "native" ? hoverNative(tokens) : hoverForeign(tokens);
+  return lang === "native" ? "" : hoverForeign(tokens);
 });
 
 function hoverNative(tokens) {
