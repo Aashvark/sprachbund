@@ -45,7 +45,7 @@ function hoverNative(tokens) {
     if ((index < tokens.length - 1 && isInDictionary(stored + " " + tokens[next][0]) || index < tokens.length - 2 && isInDictionary(stored + " " + tokens[next][0] + " " + tokens[parseInt(next) + 1][0])) && token.length === 1) stored += " ";
     else {
       let submeaning;
-      if (stored.includes(" ")) { submeaning = stored.split(" ").map((v) => { return Object.keys(dict).filter(key => dict[key].hint.includes(v)); }); }
+      if (stored.includes(" ")) { submeaning = stored.split(" ").map((v) => { return Object.keys(dict).filter(key => 'hint' in dict[key] && dict[key].hint.includes(v)); }); }
       let keys = Object.keys(dict).filter(key => getInComplex(key, stored.toLowerCase()));
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], keys.length > 0 ? keys : undefined, submeaning);
       stored = "";
