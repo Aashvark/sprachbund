@@ -67,8 +67,10 @@ function hoverForeign(tokens) {
       string += `<div class="hint"><p class="blank"></p></div>`;
       stored = "";
     }
-    else if (index < tokens.length - 1 && (stored + " " + tokens[next][0] in dict && !dict[stored + " " + tokens[next][0]].hint || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
+    else if (index < tokens.length - 1 && matchCluster(stored + " " + tokens[next][0]) && token.length === 1) stored += " ";
+    //else if (index < tokens.length - 1 && (stored + " " + tokens[next][0] in dict && "hint" in dict[stored + " " + tokens[next][0]] || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
     else {
+      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], ["test"], undefined);
       //let generated = generateKeys(stored);
       //string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
       stored = "";
@@ -78,9 +80,8 @@ function hoverForeign(tokens) {
 }
 
 function matchCluster(phrase) {
-  let l = phrase.toLowerCase().split(" ");
-  let words = [];
-  console.log(phrase); 
+  let words = phrase.toLowerCase().split(" ").map(word => word in dict ? [word, dict[word]] : undefined);
+  console.log(words);
   // for (let word of l) {
   //   words.push(word in dict ? [word, dict[word]] : undefined);
   // }
