@@ -80,7 +80,7 @@ function hoverForeign(tokens) {
 function matchCluster(phrase) {
   let l = phrase.toLowerCase().split(" ");
   let words = [];
-  console.log(phrase);
+  console.log(phrase); 
   // for (let word of l) {
   //   words.push(word in dict ? [word, dict[word]] : undefined);
   // }
