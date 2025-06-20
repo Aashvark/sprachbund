@@ -111,8 +111,8 @@ function generateKeys(phrase) {
 
 function formHints(word, keys, submeaning) {
   let construction = "";
-  console.log(keys);
-  console.log(submeaning);
+
+  console.trace(word);
   
   if (keys === undefined) construction = `<div class="hint">${word.slice(0, word.length - 1).join(" ") + word[word.length - 1]}</div>`;
   else {
