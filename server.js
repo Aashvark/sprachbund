@@ -70,7 +70,7 @@ function hoverForeign(tokens) {
     else if (index < tokens.length - 1 && (stored + " " + tokens[next][0] in dict && "hint" in dict[stored + " " + tokens[next][0]] || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
     else {
       let generated = generateKeys(stored);
-      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
+      //string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
       stored = "";
     }
   }
