@@ -70,7 +70,7 @@ function hoverForeign(tokens) {
     else if (index < tokens.length - 1 && (stored + " " + tokens[next][0] in dict && "hint" in dict[stored + " " + tokens[next][0]] || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
     else {
       let generated = generateKeys(stored);
-      //string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
+      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
       stored = "";
     }
   }
@@ -111,6 +111,8 @@ function generateKeys(phrase) {
 
 function formHints(word, keys, submeaning) {
   let construction = "";
+  console.log(keys);
+  console.log(submeaning);
   
   if (keys === undefined) construction = `<div class="hint">${word.slice(0, word.length - 1).join(" ") + word[word.length - 1]}</div>`;
   else {
