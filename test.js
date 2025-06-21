@@ -23,7 +23,6 @@ function hoverNative(tokens) {
     if (index < tokens.length - 1 && matchSelector(stored + " " + tokens[next][0]) && token.length === 1) stored += " ";
     else {
       let generated = generateN(stored);
-      console.log(generated);
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
       stored = "";
     }
@@ -40,14 +39,14 @@ function matchCluster(phrase) {
   return undefined; 
 }
 
-function isInDictionary(match) { return Object.keys(dict).filter(key => "match" in dict && dict[key].match.includes(match.toLowerCase())).length !== 0; }
+function isInDictionary(match) { return Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(match.toLowerCase())).length !== 0; }
 function findmatchingsimple(match) {
     let val = Object.keys(dict).filter(key => "simple" in dict[key] && dict[key].simple.includes(match))[0];
     return [val, dict[val]];
 }
 
 function matchSelector(phrase) {
-  if (isInDictionary(phrase.toLowerCase())) return Object.keys(dict).filter(key => dict[key].includes(stored));
+  if (isInDictionary(phrase.toLowerCase())) { return Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(phrase)); }
   let words = phrase.toLowerCase().split(" ");
 
   for (template of Object.keys(grammar["templates"])) {
@@ -69,7 +68,7 @@ function generateN(phrase) {
   let match = matchSelector(phrase);
   let submeaning;
   if (phrase.includes(" ")) submeaning = phrase.split(" ").map(v => Object.keys(dict).filter(key => 'simple' in dict[key] && dict[key].simple.includes(v)));
-  if (submeaning.length === 0 || submeaning.every(i => i.length === 0)) submeaning = undefined;
+  if (submeaning != undefined && (submeaning.length === 0 || submeaning.every(i => i.length === 0))) submeaning = undefined;
   if (!isInDictionary(phrase) && match) {
     let slots = phrase.toLowerCase().split(" ").map((word, index) => {
         if (match[1].split(" ")[index].at(0) != "[") return false;
@@ -83,7 +82,7 @@ function generateN(phrase) {
     }
     return [[hint], submeaning];
   }
-  return [phrase in dict ? dict[phrase].hint : undefined, submeaning];
+  return [isInDictionary(phrase) ? Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(phrase)) : undefined, submeaning];
 }
 
 function generateKeys(phrase) {
@@ -134,4 +133,4 @@ function formHints(word, keys, submeaning) {
   return construction; 
 }
 
-console.log(hoverNative([["she"], ["eats", "."]]));
+console.log(hoverNative([["she"], ["exists", "."]]));
