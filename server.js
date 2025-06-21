@@ -41,10 +41,10 @@ function hoverNative(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
-    if (index < tokens.length - 1 && isInDictionary(stored + " " + tokens[next][0]) && token.length === 1) stored += " ";
+    if (index < tokens.length - 1 && matchSelector(stored + " " + tokens[next][0]) && token.length === 1) stored += " ";
     else {
       let submeaning;
-      if (stored.includes(" ")) { submeaning = stored.split(" ").map((v) => { return Object.keys(dict).filter(key => 'hint' in dict[key] && dict[key].hint.includes(v)); }); }
+      if (stored.includes(" ")) submeaning = stored.split(" ").map(v => Object.keys(dict).filter(key => 'hint' in dict[key] && dict[key].hint.includes(v)));
       let keys = Object.keys(dict).filter(key => getInComplex(key, stored.toLowerCase()));
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], keys.length > 0 ? keys : undefined, submeaning);
       stored = "";
@@ -87,14 +87,14 @@ function matchCluster(phrase) {
 }
 
 function isInDictionary(match) { return Object.keys(dict).filter(key => dict[key].match.includes(match.toLowerCase())).length !== 0; }
-function matchSelector(match) {}
+function getInComplex(key, match) { return dict[key].match.includes(match); }
 
-function matchClusterNativr(phrase) {
-  let words = phrase.toLowerCase().split(" ").map(word => word in dict ? [word, dict[word]] : undefined);
-  if (words.includes(undefined)) return undefined;
-  for (template of Object.keys(grammar["templates"])) {
-     if (words.length === template.split(" ").length && !template.split(" ").map((word, index) => word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.length - 1) === words[index][1].pos).includes(false)) return grammar["templates"][template];
-  }
+function matchSelector(phrase) {
+  let words = phrase.toLowerCase().split(" ");
+  console.log(words);
+  console.log(Object.keys(dict).map(key => "match" in dict[key] ? dict[key].match : "nope"));
+  if (isInDictionary(phrase)) return Object.keys(dict).filter(key => dict[key].includes(stored));
+  console.log(Object.keys(dict).filter(key => dict[key].includes(stored)));
   return undefined; 
 }
 
@@ -141,7 +141,6 @@ function formHints(word, keys, submeaning) {
 }
 
 function replaceClass(text, class_) { return text.replaceAll("[", `<span class=\"${class_}\">`).replaceAll("]", "</span>"); }
-function getInComplex(key, match) { return dict[key].match.includes(match); }
 
 function getLongestList(nestedList) {
   let largest = [];
