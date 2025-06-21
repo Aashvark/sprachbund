@@ -21,16 +21,13 @@ function matchSelector(phrase) {
 
   for (template of Object.keys(grammar["templates"]).map(key => grammar["templates"][key])) {
     for (let temp of template.match) {
-      console.log(temp);
-      console.log(words);
-      
       // [noun]
-      if (words.length === temp.split(" ").length && !temp.split(" ").filter((word, index) => {
+      if (words.length === temp.split(" ").length && temp.split(" ").filter((word, index) => {
         if (word.at(0) != "[" && word === words[index]) return true;
         else if (word.at(0) === "[") {
-          let use = words[index].substring(0, words[index].length - (word[word.length - 1] === "s" ? 1 : 0) - 1);
-          console.log(use);
-          return word.substring(1, word.indexOf("]")) === findmatchingsimple(use).pos; 
+          let find = findmatchingsimple(words[index].substring(0, words[index].length - (word[word.length - 1] === "s" ? 1 : 0)));
+          if (find === undefined) return false;
+          return word.substring(1, word.indexOf("]")) === find.pos; 
         }
       }).length != 0) return template;
     }
@@ -38,4 +35,4 @@ function matchSelector(phrase) {
   return undefined; 
 }
 
-matchSelector("she exists");
+console.log(matchSelector("she eats"));
