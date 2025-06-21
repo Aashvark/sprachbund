@@ -90,11 +90,11 @@ function isInDictionary(match) { return Object.keys(dict).filter(key => dict[key
 function getInComplex(key, match) { return dict[key].match.includes(match); }
 
 function matchSelector(phrase) {
+  if (isInDictionary(phrase.toLowerCase())) return Object.keys(dict).filter(key => dict[key].includes(stored));
   let words = phrase.toLowerCase().split(" ");
+  let matchContests = Object.keys(dict).filter(key => "match" in dict[key]).map(key => [key, dict[key]]);
   console.log(words);
-  console.log(Object.keys(dict).map(key => "match" in dict[key] ? dict[key].match : "nope"));
-  if (isInDictionary(phrase)) return Object.keys(dict).filter(key => dict[key].includes(stored));
-  console.log(Object.keys(dict).filter(key => dict[key].includes(stored)));
+  console.log(matchContests);
   return undefined; 
 }
 
