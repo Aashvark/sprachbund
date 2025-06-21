@@ -135,3 +135,4 @@ function formHints(word, keys, submeaning) {
 }
 
 console.log(hoverNative([["A"], ["woman", "."]]));
+console.log(hoverNative([["She"], ["exists", "."]]));
