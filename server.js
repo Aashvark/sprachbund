@@ -95,14 +95,11 @@ function matchSelector(phrase) {
   let words = phrase.toLowerCase().split(" ");
   let matchContests = Object.keys(dict).filter(key => "match" in dict[key]).map(key => [key, dict[key]]);
 
-  console.log(words);
-  console.log(matchContests);
-
   for (template of grammar["templates"]) {
     for (let temp of template.match) {
       console.log(temp);
       console.log(words);
-      if (words.length === temp.split(" ").length && !temp.split(" ").map((word, index) => word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.indexOf("]")) === findmatchingsimple(words[index][1].substring(0, words[index][1].length + (word.indexOf("]") - word.length + 1))).pos).includes(false)) return grammar["templates"][template];
+      if (words.length === temp.split(" ").length && !temp.split(" ").map((word, index) => word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.indexOf("]")) === findmatchingsimple(words[index][1].substring(0, words[index][1].length + (word.indexOf("]") - word.length + 1))).pos).includes(false)) return template;
     }
   }
   return undefined; 
