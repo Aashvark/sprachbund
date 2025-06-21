@@ -66,7 +66,6 @@ function hoverForeign(tokens) {
     }
     else if (index < tokens.length - 1 && (stored + " " + tokens[next][0] in dict && "hint" in dict[stored + " " + tokens[next][0]] || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
     else {
-      console.log(stored);
       let generated = generateKeys(stored.toLowerCase());
       string += formHints(token.length === 1 ? [stored] : [stored, token[1]], generated[0], generated[1]);
       stored = "";
