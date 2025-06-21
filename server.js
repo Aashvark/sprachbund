@@ -89,7 +89,7 @@ function matchCluster(phrase) {
 function generateKeys(phrase) {
   let match = matchCluster(phrase);
   let submeaning;
-  if (phrase.includes(" ")) submeaning = phrase.split(" ").map((key) => key in dict ? dict[key].hint : []);
+  if (phrase.includes(" ")) submeaning = phrase.split(" ").map((key) => key in dict && "hint" in dict[key] ? dict[key].hint : generateKeys(key)[0]);
   if (!(phrase in dict && dict[phrase].hint) && match) {
     let words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
     let hints = [];
