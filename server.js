@@ -43,7 +43,7 @@ function hoverNative(tokens) {
 
     if (index < tokens.length - 1 && matchSelector(stored + " " + tokens[next][0]) && token.length === 1) stored += " ";
     else {
-      let generated = generateN(stored);
+      let generated = generateN(stored.toLowerCase());
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
       stored = "";
     }
@@ -126,6 +126,7 @@ function generateN(phrase) {
     }
     return [[hint], submeaning];
   }
+  console.log(isInDictionary(phrase));
   return [isInDictionary(phrase) ? Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(phrase)) : undefined, submeaning];
 }
 
