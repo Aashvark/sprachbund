@@ -100,12 +100,12 @@ function matchSelector(phrase) {
       console.log(words);
       // he eats       (i: 3/4)
       // he [preverb]s (i: 9/10) len + (position - len)
-      if (words.length === temp.split(" ").length && !temp.split(" ").map((word, index) => {
-        console.log(words[index].substring(0, words[index].length + (word.indexOf("]") - word.length)));
-        return word.at(0) != "[" && word === words[index] || 
+      console.log(findmatchingsimple(words[1].substring(0, words[1].length + (temp.split(" ")[1].indexOf("]") - temp.split(" ")[1].length))))
+      if (words.length === temp.split(" ").length && !temp.split(" ").map((word, index) =>
+        word.at(0) != "[" && word === words[index] || 
         word.at(0) === "[" && word.substring(1, word.indexOf("]")) === 
                  findmatchingsimple(words[index].substring(0, words[index].length + (word.indexOf("]") - word.length))).pos
-      }).includes(false)) return template;
+      ).includes(false)) return template;
     }
   }
   return undefined; 
