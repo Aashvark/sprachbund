@@ -748,7 +748,7 @@
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "She exists.",
+          "prompt": "She eats.",
           "answers": ["a"]
         },
         {
