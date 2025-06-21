@@ -748,13 +748,7 @@
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "She eats.",
-          "answers": ["a"]
-        },
-        {
-          "type": "short-response",
-          "direction": "foreign-native",
-          "prompt": "mikol.",
+          "prompt": "She eats",
           "answers": ["a"]
         }
       ]
