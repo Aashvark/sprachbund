@@ -100,11 +100,10 @@ function matchSelector(phrase) {
     for (let temp of template.match) {
       console.log(temp);
       console.log(words);
-      console.log(findmatchingsimple("eat").pos);
+
       // [noun]
-      if (words.length === temp.split(" ").length && !temp.split(" ").map((word, index) => word.at(0) != "[" && word === words[index] || 
-        word.at(0) === "[" && word.substring(1, word.indexOf("]")) === 
-                 findmatchingsimple(words[index].substring(0, words[index].length - (word.at(word.length - 1) === "s" ? 1 : 0))).pos
+      if (words.length === temp.split(" ").length && !temp.split(" ").map((word, index) => word.at(0) != "[" && word === words[index] || word.at(0) === "[" && word.substring(1, word.indexOf("]")) === 
+            findmatchingsimple(words[index].substring(0, words[index].length - 1)).pos
       ).includes(false)) return template;
     }
   }
