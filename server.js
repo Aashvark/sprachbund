@@ -88,11 +88,7 @@ function matchCluster(phrase) {
 
 function isInDictionary(match) { return Object.keys(dict).filter(key => "match" in dict && dict[key].match.includes(match.toLowerCase())).length !== 0; }
 function getInComplex(key, match) { return dict[key].match.includes(match); }
-function findmatchingsimple(match) { 
-  console.log(Object.keys(dict));
-  console.log(Object.keys(dict).filter(key => "simple" in dict[key] && dict[key].simple));
-  return Object.keys(dict).filter(key => "simple" in dict[key] && dict[key].simple.includes(match));
-}
+function findmatchingsimple(match) { return dict[Object.keys(dict).filter(key => "simple" in dict[key] && dict[key].simple.includes(match))[0]]; }
 
 function matchSelector(phrase) {
   if (isInDictionary(phrase.toLowerCase())) return Object.keys(dict).filter(key => dict[key].includes(stored));
