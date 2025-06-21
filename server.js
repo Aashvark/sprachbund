@@ -95,7 +95,7 @@ function matchSelector(phrase) {
   let words = phrase.toLowerCase().split(" ");
   let matchContests = Object.keys(dict).filter(key => "match" in dict[key]).map(key => [key, dict[key]]);
 
-  for (template of grammar["templates"]) {
+  for (template of Object.keys(grammar["templates"]).map(key => grammar["templates"][key])) {
     for (let temp of template.match) {
       console.log(temp);
       console.log(words);
