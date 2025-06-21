@@ -126,8 +126,8 @@ function generateN(phrase) {
     }
     return [[hint], submeaning];
   }
-  console.log(isInDictionary(phrase));
-  return [isInDictionary(phrase) ? Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(phrase)) : undefined, submeaning];
+  let ret = isInDictionary(phrase) ? Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(phrase)) : undefined;
+  return [ret, ret.length === 1 ? undefined : submeaning];
 }
 
 function generateKeys(phrase) {

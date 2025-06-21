@@ -82,7 +82,8 @@ function generateN(phrase) {
     }
     return [[hint], submeaning];
   }
-  return [isInDictionary(phrase) ? Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(phrase)) : undefined, submeaning];
+  let ret = isInDictionary(phrase) ? Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(phrase)) : undefined;
+  return [ret, ret.length === 1 ? undefined : submeaning];
 }
 
 function generateKeys(phrase) {
@@ -133,4 +134,4 @@ function formHints(word, keys, submeaning) {
   return construction; 
 }
 
-console.log(hoverNative([["She"], ["exists", "."]]));
+console.log(hoverNative([["A"], ["woman", "."]]));
