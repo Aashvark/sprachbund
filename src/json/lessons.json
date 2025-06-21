@@ -747,8 +747,8 @@
       [
         {
           "type": "short-response",
-          "direction": "foreign-native",
-          "prompt": "i mikol.",
+          "direction": "native-foreign",
+          "prompt": "She exists.",
           "answers": ["a"]
         },
         {
