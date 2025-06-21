@@ -88,7 +88,9 @@ function matchCluster(phrase) {
 
 function isInDictionary(match) { return Object.keys(dict).filter(key => "match" in dict && dict[key].match.includes(match.toLowerCase())).length !== 0; }
 function getInComplex(key, match) { return dict[key].match.includes(match); }
-function findmatchingsimple(lol) { return Object.keys(dict).filter(key => dict[key].simple.includes(lol))[0] }
+function findmatchingsimple(lol) { 
+  console.log(Object.keys(dict).map(key => dict[key].simple));
+  return Object.keys(dict).filter(key => dict[key].simple.includes(lol))[0]; }
 
 function matchSelector(phrase) {
   if (isInDictionary(phrase.toLowerCase())) return Object.keys(dict).filter(key => dict[key].includes(stored));
@@ -100,7 +102,12 @@ function matchSelector(phrase) {
       console.log(words);
       // he eats       (i: 3/4)
       // he [preverb]s (i: 9/10) len + (position - len)
-      if (words.length === temp.split(" ").length && !temp.split(" ").map((word, index) => word.at(0) != "[" && word === words[index] || word.at(0) === "[" && word.substring(1, word.indexOf("]")) === findmatchingsimple(words[index].substring(0, words[index].length + (word.indexOf("]") - word.length + 1))).pos).includes(false)) return template;
+      if (words.length === temp.split(" ").length && !temp.split(" ").map((word, index) => {
+        console.log(words[index].substring(0, words[index].length + (word.indexOf("]") - word.length + 1)));
+        return word.at(0) != "[" && word === words[index] || 
+        word.at(0) === "[" && word.substring(1, word.indexOf("]")) === 
+                 findmatchingsimple(words[index].substring(0, words[index].length + (word.indexOf("]") - word.length + 1))).pos
+      }).includes(false)) return template;
     }
   }
   return undefined; 
