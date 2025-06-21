@@ -100,7 +100,10 @@ function matchSelector(phrase) {
       console.log(words);
       // he eats       (i: 3/4)
       // he [preverb]s (i: 9/10) len + (position - len)
-      console.log(findmatchingsimple("eat").pos)
+      console.log(temp.split(" ").map((word, index) => word.at(0) != "[" && word === words[index] || 
+        word.at(0) === "[" && word.substring(1, word.indexOf("]")) === 
+                 findmatchingsimple(words[index].substring(0, words[index].length + (word.indexOf("]") - word.length))).pos
+      ))
       if (words.length === temp.split(" ").length && !temp.split(" ").map((word, index) => word.at(0) != "[" && word === words[index] || 
         word.at(0) === "[" && word.substring(1, word.indexOf("]")) === 
                  findmatchingsimple(words[index].substring(0, words[index].length + (word.indexOf("]") - word.length))).pos
