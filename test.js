@@ -22,7 +22,7 @@ function hoverNative(tokens) {
 
     if (index < tokens.length - 1 && matchSelector(stored + " " + tokens[next][0]) && token.length === 1) stored += " ";
     else {
-      let generated = generateN(stored);
+      let generated = generateN(stored.toLowerCase());
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
       stored = "";
     }
@@ -133,4 +133,4 @@ function formHints(word, keys, submeaning) {
   return construction; 
 }
 
-console.log(hoverNative([["she"], ["exists", "."]]));
+console.log(hoverNative([["She"], ["exists", "."]]));
