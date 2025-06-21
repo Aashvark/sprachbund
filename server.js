@@ -86,7 +86,7 @@ function matchCluster(phrase) {
   return undefined; 
 }
 
-function isInDictionary(match) { return Object.keys(dict).filter(key => dict[key].match.includes(match.toLowerCase())).length !== 0; }
+function isInDictionary(match) { return Object.keys(dict).filter(key => "match" in dict && dict[key].match.includes(match.toLowerCase())).length !== 0; }
 function getInComplex(key, match) { return dict[key].match.includes(match); }
 function findmatchingsimple(lol) { return Object.keys(dict).filter(key => dict[key].simple.includes(lol))[0] }
 
