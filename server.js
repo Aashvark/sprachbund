@@ -98,7 +98,7 @@ function matchSelector(phrase) {
   console.log(words);
   console.log(matchContests);
 
-  for (template of Object.keys(grammar["templates"])) {
+  for (template of grammar["templates"]) {
     for (let temp of template.match) {
       console.log(temp);
       console.log(words);
