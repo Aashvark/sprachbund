@@ -102,7 +102,7 @@ function matchSelector(phrase) {
       // he [preverb]s (i: 9/10) len + (position - len)
       console.log(temp.split(" ").map((word, index) => word.at(0) != "[" && word === words[index] || 
         word.at(0) === "[" && word.substring(1, word.indexOf("]")) === 
-                 findmatchingsimple(words[index].substring(0, words[index].length + (word.indexOf("]") - word.length))).pos
+                 findmatchingsimple(words[index].substring(0, words[index].length + (word.indexOf("]") - word.length)))
       ))
       if (words.length === temp.split(" ").length && !temp.split(" ").map((word, index) => word.at(0) != "[" && word === words[index] || 
         word.at(0) === "[" && word.substring(1, word.indexOf("]")) === 
