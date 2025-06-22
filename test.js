@@ -184,4 +184,4 @@ function getLongestList(nestedList) {
   return largest;
 }
 
-console.log(hoverForeign([["ny"], ["kas"], ["han", "."]]));
+console.log(hoverForeign([["vé"], ["hotá"]]));
