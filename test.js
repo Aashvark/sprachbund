@@ -184,4 +184,4 @@ function getLongestList(nestedList) {
   return largest;
 }
 
-console.log(hoverNative([["She"], ["does"], ["not"], ["eat"]]));
+console.log(hoverForeign([["i"], ["mikol"], ["lavat"]]));

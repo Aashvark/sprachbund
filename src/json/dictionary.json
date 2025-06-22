@@ -25,34 +25,31 @@
         "hint": ["the [adjective] one/thing"],
         "match": ["the [adjective] one", "the [adjective] thing", "the [adjective] ones", "the [adjective] things"]
       },
+      "i [adjective] [noun]": {
+        "hint": ["the [adjective] [noun]"],
+        "match": ["the [adjective] [noun]"]
+      },
       "i [noun]": {
         "hint": ["the [noun]"],
         "match": ["the [noun]"]
       },
       "[preverb] han": {
         "hint": ["[preverb]", "(he/she/it) [preverb]s", "(they) [preverb]"],
-        "match": ["[preverb]", "he [preverb]s", "she [preverb]s", "it [preverb]s", "they [preverb]"]
+        "match": ["[preverb]", "[preverb]s", "he [preverb]s", "she [preverb]s", "it [preverb]s", "they [preverb]"]
       },
       "[preverb] hotá": {
         "hint": ["do not [preverb]", "(he/she/it) does not [preverb]", "(they) do not [preverb]"],
-        "match": ["do not [preverb]", "he does not [preverb]", "she does not [preverb]", "it does not [preverb]", "they do not [preverb]"]
+        "match": ["do not [preverb]", "does not [preverb]", "he does not [preverb]", "she does not [preverb]", "it does not [preverb]", "they do not [preverb]"]
       }
     }
   },
   "nórem": {
-    "amif": {
-      "ipa": "ˈaˌmif",
+    "eu": {
+      "ipa": "ˈeu",
       "pos": "adjective",
       "simple": ["bad"],
-      "definition": "Bad, especially in the views of the speaker"
+      "definition": "Bad or Evil, especially in the views of the speaker"
     },
-    "sa": {
-      "ipa": "ˈsa",
-      "pos": "adjective",
-      "simple": ["good", "well"],
-      "definition": "Good, well, or favorable, especially in the views of the speaker"
-    },
-
     "mikol": {
       "ipa": "ˈmiˌkol",
       "pos": "adjective",
@@ -64,6 +61,12 @@
       "pos": "adjective",
       "simple": ["tall", "large", "big"],
       "definition": "Tall or big, especially in comparison to the subject."
+    },
+    "sa": {
+      "ipa": "ˈsa",
+      "pos": "adjective",
+      "simple": ["good", "well"],
+      "definition": "Good, well, or favorable, especially in the views of the speaker"
     },
     "sorón": {
       "ipa": "ˈsoˌron˦",

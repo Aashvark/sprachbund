@@ -3,7 +3,7 @@
     "name": "Basics I",
     "icon": "book",
     "difficulty": "A1",
-    "description": "Learn more basic vocabulary",
+    "description": "Learn some basic vocabulary and grammar.",
     "dictionary": ["han"],
     "unit": [
       [
@@ -501,7 +501,7 @@
     ]
   },
   {
-    "name": "Basics I",
+    "name": "Basics II",
     "icon": "bridge-circle-exclamation",
     "difficulty": "A1",
     "description": "Learn the definite article, demonstratives, negation, and verb form.",
@@ -813,19 +813,19 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "ny vé hotá na nes.",
-          "answers": ["I do not have this thing."]
+          "answers": ["I do not have this thing"]
         },
         {
           "type": "short-response",
           "direction": "native-foreign",
           "prompt": "This thing is tall.",
-          "answers": ["na nas han náu."]
+          "answers": ["na nes han náu"]
         },
         {
           "type": "short-response",
           "direction": "native-foreign",
           "prompt": "This short person is Alex.",
-          "answers": ["na mikol ćina han Alex."]
+          "answers": ["na mikol ćina han Alex"]
         },
         {
           "type": "vocabulary",
@@ -834,12 +834,63 @@
             "sentence": "[na] cévo kas hotá miro.",
             "translation": "[That] woman does not eat bread."
           }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "That woman is nice.",
+          "answers": ["mu cévo han sorón"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "That person has water.",
+          "answers": ["mu ćina vé han móu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "mu han téu.",
+          "answers": ["that is him", "that is her", "that is it"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "eu",
+          "example": {
+            "sentence": "na cévo hotá [eu].",
+            "translation": "This woman is not [bad]."
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ny han eu.",
+          "answers": ["I am bad"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "han eu.",
+          "answers": ["he is bad", "she is bad", "it is bad", "they are bad"]
+        },
+        {
+          "type": "comprehension",
+          "prompt": "Alex han symi ele Sarah han cévo. mu symi han náu ele eu. na cévo han mikol ele sorón.",
+          "question": "Who is the nice one?",
+          "answer": "Alex",
+          "choices": ["Alex", "Sarah"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "na symi ele mu symi han mikol",
+          "answers": ["this man and that man are small", "this man and that man are short"]
         }
       ]
     ]
   },
   {
-    "name": "Basics II",
+    "name": "Greetings and Questions",
     "icon": "file-circle-question",
     "difficulty": "A1",
     "description": "Learn question words and question form",
@@ -853,19 +904,5 @@
         }
       ]
     ]
-  },
-  {
-    "name": "Basics III",
-    "icon": "walkie-talkie",
-    "difficulty": "A1",
-    "description": "Learn everyday phrases",
-    "unit": []
-  },
-  {
-    "name": "Vocabulary I",
-    "icon": "clipboard-check",
-    "difficulty": "A1",
-    "description": "Learn more basic vocabulary",
-    "unit": []
   }
 ]
