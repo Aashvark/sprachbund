@@ -774,6 +774,18 @@
           "direction": "foreign-native",
           "prompt": "ké kas hotá móu.",
           "answers": ["you do not drink water"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "He does not have water.",
+          "answers": ["vé hotá móu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "The woman drinks water.",
+          "answers": ["i cévo kas han móu"]
         }
       ],
       [
