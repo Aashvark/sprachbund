@@ -786,7 +786,13 @@
           "direction": "native-foreign",
           "prompt": "The woman drinks water.",
           "answers": ["i cévo kas han móu"]
-        }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "The woman drinks water.",
+          "answers": ["i cévo kas han móu"]
+        },
       ],
       [
         {
