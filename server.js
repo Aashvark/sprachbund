@@ -163,7 +163,7 @@ function formHints(word, keys, submeaning) {
     if (submeaning != undefined) {
        for (let i = 0; i < getLongestList(submeaning).length; i++) {
          construction += `<tr>`;
-         for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
+         for (var sub of submeaning) construction += `<td>${sub && sub.length > i ? sub[i] : ""}</td>`;
          construction += `</tr>`;
        }
      }
@@ -176,7 +176,7 @@ function replaceClass(text, class_) { return text.replaceAll("[", `<span class=\
 
 function getLongestList(nestedList) {
   let largest = [];
-  nestedList.forEach(element => { if (element.length > largest.length) largest = element; });
+  nestedList.forEach(element => { if (element != undefined && element.length > largest.length) largest = element; });
   return largest;
 }
 

@@ -11,6 +11,27 @@ let language = "nórem";
 let dict     = dictionary[language];
 let grammar  = dictionary[`${language}-grammar`]; 
 
+fastify.register(require("@fastify/static"), { root: path.join(__dirname, "public"), prefix: "/" });
+fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
+fastify.register(require("@fastify/formbody"));
+
+handlebars.registerHelper('add', function(a, b) { return a + b; });
+handlebars.registerHelper('ifEquals', function(arg1, arg2, options) { return (arg1 === arg2) ? options.fn(this) : options.inverse(this); });
+handlebars.registerHelper('ternaryEq', function(arg1, arg2, op1, op2) { return (arg1 === arg2) ? op1 : op2; });
+handlebars.registerHelper('json', function(a) { return JSON.stringify(a); });
+handlebars.registerHelper('get-attribute', function(word, attribute) { return dict[word.trimEnd()][attribute]; });
+handlebars.registerHelper('tip-format', function(arg) { return new handlebars.SafeString(replaceClass(arg, "merienda accent")); });
+
+handlebars.registerHelper('hover-translate', function(prompt, lang) {
+  let tokens = [];
+  for (var word of prompt.split(" ")) {
+    let section = "";
+    for (var letter of word) section += (/[.,\/#!$%\^&\*;:{}=\-`~()]/g.test(letter) ? " " : "") + letter;
+    tokens.push(section.split(" "));
+  }
+  return lang === "native" ? hoverNative(tokens) : hoverForeign(tokens);
+});
+
 function hoverNative(tokens) {
   let string = "";
   let stored = "";
@@ -24,6 +45,29 @@ function hoverNative(tokens) {
     else {
       let generated = generateN(stored.toLowerCase());
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
+      stored = "";
+    }
+  }
+  return new handlebars.SafeString(string);
+}
+
+function hoverForeign(tokens) {
+  let string = "";
+  let stored = "";
+
+  for (var index in tokens) {
+    let token = tokens[index];
+    let next = parseInt(index) + 1;
+    stored += token[0];
+
+    if (stored === "___") {
+      string += `<div class="hint"><p class="blank"></p></div>`;
+      stored = "";
+    }
+    else if (index < tokens.length - 1 && (stored + " " + tokens[next][0] in dict && "hint" in dict[stored + " " + tokens[next][0]] || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
+    else {
+      let generated = generateKeys(stored.toLowerCase());
+      string += formHints(token.length === 1 ? [stored] : [stored, token[1]], generated[0], generated[1]);
       stored = "";
     }
   }
@@ -109,12 +153,6 @@ function generateKeys(phrase) {
   return [phrase in dict ? dict[phrase].hint : undefined, submeaning];
 }
 
-function getLongestList(nestedList) {
-  let largest = [];
-  nestedList.forEach(element => { if (element.length > largest.length) largest = element; });
-  return largest;
-}
-
 function formHints(word, keys, submeaning) {
   let construction = "";
   
@@ -125,7 +163,7 @@ function formHints(word, keys, submeaning) {
     if (submeaning != undefined) {
        for (let i = 0; i < getLongestList(submeaning).length; i++) {
          construction += `<tr>`;
-         for (var sub of submeaning) { construction += `<td>${sub.length > i ? sub[i] : ""}</td>`; } 
+         for (var sub of submeaning) construction += `<td>${sub && sub.length > i ? sub[i] : ""}</td>`;
          construction += `</tr>`;
        }
      }
@@ -134,5 +172,12 @@ function formHints(word, keys, submeaning) {
   return construction; 
 }
 
-console.log(hoverNative([["A"], ["woman", "."]]));
-console.log(hoverNative([["Mark"], ["and"], ["Amy"], ["are"], ["a"], ["man"], ["and"], ["a"], ["woman", "."]]));
+function replaceClass(text, class_) { return text.replaceAll("[", `<span class=\"${class_}\">`).replaceAll("]", "</span>"); }
+
+function getLongestList(nestedList) {
+  let largest = [];
+  nestedList.forEach(element => { if (element != undefined && element.length > largest.length) largest = element; });
+  return largest;
+}
+
+console.log(hoverForeign([["i"], ["symi"], ["vé"], ["han"], ["nes", "."]]));
