@@ -17,6 +17,10 @@
         "hint": ["[demonstrative] [adjective] one/thing"],
         "match": ["[demonstrative] [adjective] one", "[demonstrative] [adjective] thing", "[demonstrative] [adjective] ones", "[demonstrative] [adjective] things"]
       },
+      "[demonstrative] [adjective] [noun]": {
+        "hint": ["[demonstrative] [adjective] [noun]"],
+        "match": ["[demonstrative] [adjective] [noun]"]
+      },
       "[demonstrative] [noun]": {
         "hint": ["[demonstrative] [noun]"],
         "match": ["[demonstrative] [noun]"]

@@ -3,9 +3,8 @@ const handlebars = require("handlebars");
 const fastify = require("fastify")({ logger: false });
 
 const seo = require("./src/json/seo.json");
-
-const lessons = require("./src/json/lessons.json");
 const dictionary = require("./src/json/dictionary.json");
+const lessons = require("./src/json/lessons.json");
 
 let language = "nórem";
 let dict     = dictionary[language];
@@ -15,12 +14,14 @@ fastify.register(require("@fastify/static"), { root: path.join(__dirname, "publi
 fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
 fastify.register(require("@fastify/formbody"));
 
-handlebars.registerHelper('add', function(a, b) { return a + b; });
-handlebars.registerHelper('ifEquals', function(arg1, arg2, options) { return (arg1 === arg2) ? options.fn(this) : options.inverse(this); });
-handlebars.registerHelper('ternaryEq', function(arg1, arg2, op1, op2) { return (arg1 === arg2) ? op1 : op2; });
-handlebars.registerHelper('json', function(a) { return JSON.stringify(a); });
-handlebars.registerHelper('get-attribute', function(word, attribute) { return dict[word.trimEnd()][attribute]; });
-handlebars.registerHelper('tip-format', function(arg) { return new handlebars.SafeString(replaceClass(arg, "merienda accent")); });
+handlebars.registerHelper('ifEquals',  function (a, b, options)  { return a === b ? options.fn(this) : options.inverse(this); });
+handlebars.registerHelper('ternaryEq', function (a, b, op1, op2) { return a === b ? op1 : op2; });
+
+handlebars.registerHelper('add',       function (a, b) { return a + b; });
+handlebars.registerHelper('json',      function (a)    { return JSON.stringify(a); });
+
+handlebars.registerHelper('get-attribute', function (word, attribute) { return dict[word.trimEnd()][attribute]; });
+handlebars.registerHelper('tip-format',    function (arg)             { return new handlebars.SafeString(replaceClass(arg, "merienda accent")); });
 
 handlebars.registerHelper('hover-translate', function(prompt, lang) {
   let tokens = [];
@@ -40,7 +41,7 @@ function hoverNative(tokens) {
     let token = tokens[index];
     let next = parseInt(index) + 1;
     stored += token[0];
-    
+
     if ((index < tokens.length - 1 && matchSelector(stored + " " + tokens[next][0]) || index < tokens.length - 2 && matchSelector(stored + " " + tokens[next][0] + " " + tokens[next + 1][0]) || index < tokens.length - 3 && matchSelector(stored + " " + tokens[next][0] + " " + tokens[next + 1][0] + " " + tokens[next + 2][0])) && token.length === 1) stored += " ";
     else {
       let generated = generateN(stored.toLowerCase());
@@ -184,4 +185,9 @@ function getLongestList(nestedList) {
   return largest;
 }
 
-console.log(hoverForeign([["i"], ["mikol"], ["lavat"]]));
+fastify.get("/", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
+fastify.get("/learn", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
+fastify.get("/lesson", function (request, reply) { return reply.redirect('/learn'); });
+fastify.post("/lesson", function (request, reply) { return reply.view('/src/lesson.hbs', {seo: seo, unitno: request.body.unit, lessons: lessons[request.body.unit].unit[request.body[request.body.unit + "-lesson"]]});});
+
+fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });

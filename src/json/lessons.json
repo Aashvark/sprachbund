@@ -831,7 +831,7 @@
           "type": "vocabulary",
           "word": "mu",
           "example": {
-            "sentence": "[na] cévo kas hotá miro.",
+            "sentence": "[mu] cévo kas hotá miro.",
             "translation": "[That] woman does not eat bread."
           }
         },
@@ -875,9 +875,9 @@
         },
         {
           "type": "comprehension",
-          "prompt": "Alex han symi ele Sarah han cévo. mu symi han náu ele eu. na cévo han mikol ele sorón.",
+          "prompt": "Alex han symi ele Sarah han cévo. na symi han náu ele eu. na cévo han mikol ele sorón.",
           "question": "Who is the nice one?",
-          "answer": "Alex",
+          "answer": "Sarah",
           "choices": ["Alex", "Sarah"]
         },
         {
@@ -888,7 +888,7 @@
         },
         {
           "type": "short-response",
-          "direction": "native-foreign",
+          "direction": "foreign-native",
           "prompt": "miro kas hotá",
           "answers": ["bread does not eat", "bread does not drink", "a loaf of bread does not eat", "a loaf of bread does not drink", "a bread loaf does not eat", "a bread loaf does not drink"]
         },
