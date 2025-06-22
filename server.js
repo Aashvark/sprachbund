@@ -51,39 +51,6 @@ function hoverNative(tokens) {
   return new handlebars.SafeString(string);
 }
 
-function hoverForeign(tokens) {
-  let string = "";
-  let stored = "";
-
-  for (var index in tokens) {
-    let token = tokens[index];
-    let next = parseInt(index) + 1;
-    stored += token[0];
-
-    if (stored === "___") {
-      string += `<div class="hint"><p class="blank"></p></div>`;
-      stored = "";
-    }
-    else if ((index < tokens.length - 1 && matchCluster(stored + " " + tokens[next][0]) || index < tokens.length - 2 && matchCluster(stored + " " + tokens[next][0] + " " + tokens[next + 1][0])) && token.length === 1) stored += " ";
-    else {
-      let generated = generateKeys(stored.toLowerCase());
-      string += formHints(token.length === 1 ? [stored] : [stored, token[1]], generated[0], generated[1]);
-      stored = "";
-    }
-  }
-  return new handlebars.SafeString(string);
-}
-
-function matchCluster(phrase) {
-  if (phrase.toLowerCase() in dict && "hint" in dict[phrase.toLowerCase()]) return dict[phrase.toLowerCase()];
-  let words = phrase.toLowerCase().split(" ").map(word => word in dict ? [word, dict[word]] : undefined);
-  if (words.includes(undefined)) return undefined;
-  for (template of Object.keys(grammar["templates"])) {
-     if (words.length === template.split(" ").length && !template.split(" ").map((word, index) => word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.length - 1) === words[index][1].pos).includes(false)) return grammar["templates"][template];
-  }
-  return undefined; 
-}
-
 function isInDictionary(match) { return Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(match.toLowerCase())).length !== 0; }
 function findmatchingsimple(match) {
     let val = Object.keys(dict).filter(key => "simple" in dict[key] && dict[key].simple.includes(match))[0];
@@ -131,17 +98,50 @@ function generateN(phrase) {
   return [ret, ret != undefined && ret.length === 1 ? undefined : submeaning];
 }
 
+function hoverForeign(tokens) {
+  let string = "";
+  let stored = "";
+
+  for (var index in tokens) {
+    let token = tokens[index];
+    let next = parseInt(index) + 1;
+    stored += token[0];
+
+    if (stored === "___") {
+      string += `<div class="hint"><p class="blank"></p></div>`;
+      stored = "";
+    }
+    else if ((index < tokens.length - 1 && matchCluster(stored + " " + tokens[next][0]) || index < tokens.length - 2 && matchCluster(stored + " " + tokens[next][0] + " " + tokens[next + 1][0])) && token.length === 1) stored += " ";
+    else {
+      let generated = generateKeys(stored.toLowerCase());
+      string += formHints(token.length === 1 ? [stored] : [stored, token[1]], generated[0], generated[1]);
+      stored = "";
+    }
+  }
+  return new handlebars.SafeString(string);
+}
+
+function matchCluster(phrase) {
+  if (phrase.toLowerCase() in dict && "hint" in dict[phrase.toLowerCase()]) return dict[phrase.toLowerCase()];
+  let words = phrase.toLowerCase().split(" ").map(word => word in dict ? [word, dict[word]] : undefined);
+  if (words.includes(undefined)) return undefined;
+  for (template of Object.keys(grammar["templates"])) {
+    if (words.length === template.split(" ").length && !template.split(" ").map((word, index) => word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.length - 1) === words[index][1].pos).includes(false)) return [template, grammar["templates"][template]];
+  }
+  return undefined; 
+}
+
 function generateKeys(phrase) {
   let match = matchCluster(phrase);
   let submeaning;
   if (phrase.includes(" ")) submeaning = phrase.split(" ").map((key) => key in dict && "hint" in dict[key] ? dict[key].hint : generateKeys(key)[0]);
   if (!(phrase in dict && "hint" in dict[phrase]) && match) {
+    let slots = phrase.toLowerCase().split(" ").map((word, index) => {
+      if (match[0].split(" ")[index] === undefined || match[0].split(" ")[index].at(0) != "[") return false;
+      return dict[word];
+    }).filter(word => word);
     let hints = [];
-    for (let m of match.hint) {
-      let slots = phrase.toLowerCase().split(" ").map((word, index) => {
-        if (m.split(" ")[index] === undefined || m.split(" ")[index].at(0) != "[") return false;
-        return dict[word];
-      }).filter(word => word);
+    for (let m of match[1].hint) {
       let hint = [m];
       for (let slot of slots) {
         let n = hint;

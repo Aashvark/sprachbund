@@ -79,7 +79,7 @@ function matchCluster(phrase) {
   let words = phrase.toLowerCase().split(" ").map(word => word in dict ? [word, dict[word]] : undefined);
   if (words.includes(undefined)) return undefined;
   for (template of Object.keys(grammar["templates"])) {
-     if (words.length === template.split(" ").length && !template.split(" ").map((word, index) => word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.length - 1) === words[index][1].pos).includes(false)) return grammar["templates"][template];
+    if (words.length === template.split(" ").length && !template.split(" ").map((word, index) => word.at(0) != "[" && word === words[index][0] || word.at(0) === "[" && word.substring(1, word.length - 1) === words[index][1].pos).includes(false)) return [template, grammar["templates"][template]];
   }
   return undefined; 
 }
@@ -136,12 +136,12 @@ function generateKeys(phrase) {
   let submeaning;
   if (phrase.includes(" ")) submeaning = phrase.split(" ").map((key) => key in dict && "hint" in dict[key] ? dict[key].hint : generateKeys(key)[0]);
   if (!(phrase in dict && "hint" in dict[phrase]) && match) {
+    let slots = phrase.toLowerCase().split(" ").map((word, index) => {
+      if (match[0].split(" ")[index] === undefined || match[0].split(" ")[index].at(0) != "[") return false;
+      return dict[word];
+    }).filter(word => word);
     let hints = [];
-    for (let m of match.hint) {
-      let slots = phrase.toLowerCase().split(" ").map((word, index) => {
-        if (m.split(" ")[index] === undefined || m.split(" ")[index].at(0) != "[") return false;
-        return dict[word];
-      }).filter(word => word);
+    for (let m of match[1].hint) {
       let hint = [m];
       for (let slot of slots) {
         let n = hint;
