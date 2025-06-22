@@ -510,11 +510,11 @@
         {
           "type": "vocabulary",
           "word": "i",
-          "tip": "[i] can turn an adjective into a noun. (ex. [i náu] means [the tall one/thing])",
           "example": {
             "sentence": "[i] cévo han sorón.",
             "translation": "[The] woman is kind."
-          }
+          },
+          "tip": "[i] can turn an adjective into a noun. (ex. [i náu] means [the tall one/thing])"
         },
         {
           "type": "short-response",
@@ -789,9 +789,14 @@
         },
         {
           "type": "short-response",
-          "direction": "native-foreign",
-          "prompt": "The woman drinks water.",
-          "answers": ["i cévo kas han móu"]
+          "direction": "foreign-native",
+          "prompt": "ké kas han i mikol lavat.",
+          "answers": ["you eat the small apple"]
+        },
+        {
+          "type": "match",
+          "foreign": ["kas", "ćina", "hotá", "móu", "i"],
+          "native": ["to drink", "person", "to not", "water", "the"]
         }
       ],
       [
@@ -801,7 +806,26 @@
           "example": {
             "sentence": "[na] symi han mikol.",
             "translation": "[This] man is small."
-          }
+          },
+          "tip": "Similar to the definite article, [i], demonstratives can turn an adjective into a noun. (ex. [na náu] means [this tall one/thing])"
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ny vé hotá na nes.",
+          "answers": ["I do not have this thing."]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "This thing is tall.",
+          "answers": ["na nas han náu."]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "This short person is Alex.",
+          "answers": ["na mikol ćina han Alex."]
         },
         {
           "type": "vocabulary",
