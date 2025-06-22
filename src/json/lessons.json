@@ -706,8 +706,8 @@
           "type": "vocabulary",
           "word": "hotá",
           "example": {
-            "sentence": "i cévo vé [hotá] i náu",
-            "translation": "the woman [does not] have the tall thing"
+            "sentence": "i cévo vé [hotá] i náu.",
+            "translation": "the woman [does not] have the tall thing."
           },
           "tip": "In verb form, [hotá] replaces [han]."
         },
@@ -734,6 +734,46 @@
           "direction": "foreign-native",
           "prompt": "Jake vé hotá mikol miro.",
           "answers": ["Jake does not have a small loaf of bread", "Jake does not have a small bread loaf"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "kas",
+          "example": {
+            "sentence": "i sorón ćina [kas] han i miro.",
+            "translation": "The kind person [eats] the bread."
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ny kas han.",
+          "answers": ["I eat", "I drink"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "She does not eat bread.",
+          "answers": ["kas hotá miro"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "Kiera kas hotá.",
+          "answers": ["Kiera does not eat", "Kiera does not drink"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "móu",
+          "example": {
+            "sentence": "kas han [móu].",
+            "translation": "(He/she/it/they) drink [water]."
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ké kas hotá móu.",
+          "answers": ["you do not drink water"]
         }
       ]
     ]

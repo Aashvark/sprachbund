@@ -106,8 +106,8 @@
       "match": ["bread", "bread loaf", "a bread loaf", "loaf of bread", "a loaf of bread"],
       "definition": "Any given loaf of bread. When necessary, leavened bread."
     },
-    "mou": {
-      "ipa": "ˈmou",
+    "móu": {
+      "ipa": "ˈmou˦˧",
       "pos": "noun",
       "simple": ["water"],
       "hint": ["water"],
@@ -144,23 +144,19 @@
       "ipa": "ˈkas",
       "pos": "preverb",
       "simple": ["eat", "drink"],
-      "hint": ["eat", "drink"],
-      "match": ["eat", "eats", "drink", "drinks"],
-      "definition": "Used to describe the possession of nouns."
+      "definition": "Eating and Drinking"
     },
     "vé": {
       "ipa": "ˈʋe˦",
       "pos": "preverb",
       "simple": ["have"],
-      "hint": ["have"],
-      "match": ["have", "has"],
       "definition": "Used to describe the possession of nouns."
     },
     "vé han": {
       "hint": ["have", "(he/she/it) has"],
       "match": ["have", "has", "he has", "she has", "it has"]
-    }, 
-    
+    },
+
     "ćy": {
       "ipa": "ˈt͡ʃə",
       "pos": "pronoun",
@@ -188,7 +184,7 @@
     "téu": {
       "ipa": "ˈteu˦˧",
       "pos": "pronoun",
-      "simple": ["him"],
+      "simple": ["him", "her", "it", "them"],
       "hint": ["him", "her", "it", "them"],
       "match": ["him", "her", "it", "them"],
       "definition": "Used to refer a person or group other than the speaker or addressee as the object of a sentence; him/her/it/them"
