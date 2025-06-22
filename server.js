@@ -139,7 +139,7 @@ function generateKeys(phrase) {
     let hints = [];
     for (let m of match.hint) {
       let slots = phrase.toLowerCase().split(" ").map((word, index) => {
-        if (m.split(" ")[index].at(0) != "[") return false;
+        if (m.split(" ")[index] === undefined || m.split(" ")[index].at(0) != "[") return false;
         return dict[word];
       }).filter(word => word);
       let hint = [m];
