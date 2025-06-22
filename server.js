@@ -64,7 +64,7 @@ function hoverForeign(tokens) {
       string += `<div class="hint"><p class="blank"></p></div>`;
       stored = "";
     }
-    else if (index < tokens.length - 1 && (stored + " " + tokens[next][0] in dict && "hint" in dict[stored + " " + tokens[next][0]] || matchCluster(stored + " " + tokens[next][0])) && token.length === 1) stored += " ";
+    else if ((index < tokens.length - 1 && matchCluster(stored + " " + tokens[next][0]) || index < tokens.length - 2 && matchCluster(stored + " " + tokens[next][0] + " " + tokens[next + 1][0])) && token.length === 1) stored += " ";
     else {
       let generated = generateKeys(stored.toLowerCase());
       string += formHints(token.length === 1 ? [stored] : [stored, token[1]], generated[0], generated[1]);
@@ -75,6 +75,7 @@ function hoverForeign(tokens) {
 }
 
 function matchCluster(phrase) {
+  if (phrase.toLowerCase() in dict && "hint" in dict[phrase.toLowerCase()]) return dict[phrase.toLowerCase()];
   let words = phrase.toLowerCase().split(" ").map(word => word in dict ? [word, dict[word]] : undefined);
   if (words.includes(undefined)) return undefined;
   for (template of Object.keys(grammar["templates"])) {
@@ -134,7 +135,7 @@ function generateKeys(phrase) {
   let match = matchCluster(phrase);
   let submeaning;
   if (phrase.includes(" ")) submeaning = phrase.split(" ").map((key) => key in dict && "hint" in dict[key] ? dict[key].hint : generateKeys(key)[0]);
-  if (!(phrase in dict && dict[phrase].hint) && match) {
+  if (!(phrase in dict && "hint" in dict[phrase]) && match) {
     let words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
     let hints = [];
     match.hint.forEach((template) => {
@@ -150,7 +151,7 @@ function generateKeys(phrase) {
     });
     return [hints, submeaning];
   }
-  return [phrase in dict ? dict[phrase].hint : undefined, submeaning];
+  return [phrase in dict && "hint" in dict[phrase] ? dict[phrase].hint : undefined, submeaning];
 }
 
 function formHints(word, keys, submeaning) {
