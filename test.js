@@ -116,8 +116,8 @@ function generateN(phrase) {
   if (submeaning != undefined && (submeaning.length === 0 || submeaning.every(i => i.length === 0))) submeaning = undefined;
   if (!isInDictionary(phrase) && match) {
     let slots = phrase.toLowerCase().split(" ").map((word, index) => {
-        if (match[1].split(" ")[index].at(0) != "[") return false;
         let section = match[1].split(" ")[index];
+        if (section.at(0) != "[") return false;
         return word.substring(0, word.length - (section[section.length - 1] === "s" ? 1 : 0));
     }).filter(word => word);
     let hint = match[0];
@@ -136,30 +136,22 @@ function generateKeys(phrase) {
   let submeaning;
   if (phrase.includes(" ")) submeaning = phrase.split(" ").map((key) => key in dict && "hint" in dict[key] ? dict[key].hint : generateKeys(key)[0]);
   if (!(phrase in dict && "hint" in dict[phrase]) && match) {
-    let words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
-    let slots = phrase.toLowerCase().split(" ").map((word, index) => {
-      let hints = [];
-      match.hint.forEach(template => {
-        console.log(template);
-      });
-      console.log(word);
-      console.log(match);
-      return word;
-    });
-    console.log(slots);
-
     let hints = [];
-    match.hint.forEach((template) => {
-      if (!template.includes("[")) hints.push(template);
-      let chosen = [];
-      for (let word of template.split(" ")) {
-        let pos = words.map((w) => w.pos || "");
-        if (word[0] === "[" && pos.includes(word.substring(1, word.indexOf("]")))) chosen.push(words[pos.indexOf(word.substring(1, word.indexOf("]")))]);
+    for (let m of match.hint) {
+      let slots = phrase.toLowerCase().split(" ").map((word, index) => {
+        if (m.split(" ")[index].at(0) != "[") return false;
+        return dict[word];
+      }).filter(word => word);
+      let hint = [m];
+      for (let slot of slots) {
+        let n = hint;
+        for (let i = 0; i < slot.simple.length; i++) { 
+          let l = n.map(h => h.replace('[' + slot.pos + ']', slot.simple[i]));
+          hint = i === 0 ? l : hint.concat(l);
+        }
       }
-      for (let chose of chosen) {
-        for (let l of chose.simple) hints.push(template.replaceAll(`[${chose.pos || ""}]`, l));
-      }
-    });
+      hints = hints.concat(hint);
+    }
     return [hints, submeaning];
   }
   return [phrase in dict && "hint" in dict[phrase] ? dict[phrase].hint : undefined, submeaning];
