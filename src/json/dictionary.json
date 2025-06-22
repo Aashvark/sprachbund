@@ -13,6 +13,10 @@
         "hint": ["the [noun]"],
         "match": ["the [noun]"]
       },
+      "[adjective] [noun]": {
+        "hint": ["[adjective] [noun]"],
+        "match": ["a [adjective] [noun]"]
+      },
       "[preverb] han": {
         "hint": ["[preverb]", "(he/she/it) [preverb]s", "(they) [preverb]"],
         "match": ["[preverb]", "he [preverb]s", "she [preverb]s", "it [preverb]s", "they [preverb]"]
