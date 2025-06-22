@@ -869,7 +869,7 @@
         },
         {
           "type": "short-response",
-          "direction": "native-foreign",
+          "direction": "foreign-native",
           "prompt": "han eu.",
           "answers": ["he is bad", "she is bad", "it is bad", "they are bad"]
         },
@@ -882,9 +882,65 @@
         },
         {
           "type": "short-response",
-          "direction": "native-foreign",
+          "direction": "foreign-native",
           "prompt": "na symi ele mu symi han mikol",
           "answers": ["this man and that man are small", "this man and that man are short"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "miro kas hotá",
+          "answers": ["bread does not eat", "bread does not drink", "a loaf of bread does not eat", "a loaf of bread does not drink", "a bread loaf does not eat", "a bread loaf does not drink"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "na eu ćina han vu.",
+          "answers": ["this bad person is you"]
+        }
+      ],
+      [
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "na eu ćina han vu.",
+          "answers": ["this bad person is you"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "This thing is tall.",
+          "answers": ["na nes han náu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "This short person is Alex.",
+          "answers": ["na mikol ćina han Alex"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "Andrea hotá cévo.",
+          "answers": ["Andrea is not a woman"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "Jake vé hotá mikol miro.",
+          "answers": ["Jake does not have a small loaf of bread", "Jake does not have a small bread loaf"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "It is her! She is the woman.",
+          "answers": ["han téu han i cévo"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ny han i symi.",
+          "answers": ["I am the man"]
         }
       ]
     ]
