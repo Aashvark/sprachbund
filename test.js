@@ -41,7 +41,7 @@ function hoverNative(tokens) {
     let next = parseInt(index) + 1;
     stored += token[0];
 
-    if (index < tokens.length - 1 && matchSelector(stored + " " + tokens[next][0]) && token.length === 1) stored += " ";
+    if ((index < tokens.length - 1 && matchSelector(stored + " " + tokens[next][0]) || index < tokens.length - 2 && matchSelector(stored + " " + tokens[next][0] + " " + tokens[next + 1][0])) && token.length === 1) stored += " ";
     else {
       let generated = generateN(stored.toLowerCase());
       string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
@@ -180,4 +180,4 @@ function getLongestList(nestedList) {
   return largest;
 }
 
-console.log(hoverForeign([["i"], ["symi"], ["vé"], ["han"], ["nes", "."]]));
+console.log(hoverNative([["the"], ["short"], ["one", "."]]));
