@@ -75,7 +75,6 @@ function hoverForeign(tokens) {
 }
 
 function matchCluster(phrase) {
-  console.log(phrase);
   if (phrase.toLowerCase() in dict && "hint" in dict[phrase.toLowerCase()]) return dict[phrase.toLowerCase()];
   let words = phrase.toLowerCase().split(" ").map(word => word in dict ? [word, dict[word]] : undefined);
   if (words.includes(undefined)) return undefined;
@@ -138,6 +137,17 @@ function generateKeys(phrase) {
   if (phrase.includes(" ")) submeaning = phrase.split(" ").map((key) => key in dict && "hint" in dict[key] ? dict[key].hint : generateKeys(key)[0]);
   if (!(phrase in dict && "hint" in dict[phrase]) && match) {
     let words = phrase.toLowerCase().split(" ").map((word) => dict[word]);
+    let slots = phrase.toLowerCase().split(" ").map((word, index) => {
+      let hints = [];
+      match.hint.forEach(template => {
+        console.log(template);
+      });
+      console.log(word);
+      console.log(match);
+      return word;
+    });
+    console.log(slots);
+
     let hints = [];
     match.hint.forEach((template) => {
       if (!template.includes("[")) hints.push(template);
@@ -182,4 +192,4 @@ function getLongestList(nestedList) {
   return largest;
 }
 
-console.log(hoverNative([["a"], ["tall"], ["man", "."]]));
+console.log(hoverForeign([["mu"], ["miro"]]));

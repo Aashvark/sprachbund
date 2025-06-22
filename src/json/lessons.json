@@ -775,6 +775,24 @@
           "prompt": "ké kas hotá móu.",
           "answers": ["you do not drink water"]
         }
+      ],
+      [
+        {
+          "type": "vocabulary",
+          "word": "na",
+          "example": {
+            "sentence": "[na] symi han mikol.",
+            "translation": "[This] man is small."
+          }
+        },
+        {
+          "type": "vocabulary",
+          "word": "mu",
+          "example": {
+            "sentence": "[na] cévo kas hotá miro.",
+            "translation": "[That] woman does not eat bread."
+          }
+        }
       ]
     ]
   },

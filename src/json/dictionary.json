@@ -5,6 +5,22 @@
         "hint": ["[adjective]"],
         "match": ["[adjective]"]
       },
+      "[adjective] [noun]": {
+        "hint": ["[adjective] [noun]"],
+        "match": ["a [adjective] [noun]"]
+      },
+      "[demonstrative]": {
+        "hint": ["[demonstrative]"],
+        "match": ["[demonstrative]"]
+      },
+      "[demonstrative] [adjective]": {
+        "hint": ["[demonstrative] [adjective] one/thing"],
+        "match": ["[demonstrative] [adjective] one", "[demonstrative] [adjective] thing", "[demonstrative] [adjective] ones", "[demonstrative] [adjective] things"]
+      },
+      "[demonstrative] [noun]": {
+        "hint": ["[demonstrative] [noun]"],
+        "match": ["[demonstrative] [noun]"]
+      },
       "i [adjective]": {
         "hint": ["the [adjective] one/thing"],
         "match": ["the [adjective] one", "the [adjective] thing", "the [adjective] ones", "the [adjective] things"]
@@ -12,10 +28,6 @@
       "i [noun]": {
         "hint": ["the [noun]"],
         "match": ["the [noun]"]
-      },
-      "[adjective] [noun]": {
-        "hint": ["[adjective] [noun]"],
-        "match": ["a [adjective] [noun]"]
       },
       "[preverb] han": {
         "hint": ["[preverb]", "(he/she/it) [preverb]s", "(they) [preverb]"],
@@ -77,6 +89,19 @@
       "hint": ["and"],
       "match": ["and"]
     },
+
+    "na": {
+      "ipa": "ˈna",
+      "pos": "demonstrative",
+      "simple": ["this"],
+      "definition": "This"
+    },
+    "mu": {
+      "ipa": "ˈmu",
+      "pos": "demonstrative",
+      "simple": ["that"],
+      "definition": "That"
+    },
     
     "cévo": {
       "ipa": "ˈt͡se˦ˌʋo",
@@ -105,7 +130,7 @@
     "miro": {
       "ipa": "ˈmiˌro",
       "pos": "noun",
-      "simple": ["bread"],
+      "simple": ["bread", "loaf of bread", "bread loaf"],
       "hint": ["(a loaf of) bread"],
       "match": ["bread", "bread loaf", "a bread loaf", "loaf of bread", "a loaf of bread"],
       "definition": "Any given loaf of bread. When necessary, leavened bread."
