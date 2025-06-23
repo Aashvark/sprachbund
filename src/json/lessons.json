@@ -902,6 +902,18 @@
       [
         {
           "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "Mark and Amy are a man and a woman.",
+          "answers": ["Mark ele Amy han symi ele cévo"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "They are not bad.",
+          "answers": ["hotá eu"]
+        },
+        {
+          "type": "short-response",
           "direction": "foreign-native",
           "prompt": "na eu ćina han vu.",
           "answers": ["this bad person is you"]
@@ -921,8 +933,25 @@
         {
           "type": "short-response",
           "direction": "foreign-native",
+          "prompt": "ny han téu.",
+          "answers": ["I am him", "I am her", "I am it"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "han cévo.",
+          "answers": ["he is a woman", "she is a woman", "it is a woman", "they are a woman"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
           "prompt": "Andrea hotá cévo.",
           "answers": ["Andrea is not a woman"]
+        },
+        {
+          "type": "match",
+          "foreign": ["miro", "ćina", "ćy", "han", "téu"],
+          "native": ["bread", "person", "we", "to be", "him/her/it"]
         },
         {
           "type": "short-response",
@@ -938,9 +967,27 @@
         },
         {
           "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "You are not an apple.",
+          "answers": ["ké hotá lavat", "vun hotá lavat"]
+        },
+        {
+          "type": "short-response",
           "direction": "foreign-native",
           "prompt": "ny han i symi.",
           "answers": ["I am the man"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "The woman drinks water.",
+          "answers": ["i cévo kas han móu"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ké kas han i mikol lavat.",
+          "answers": ["you eat the small apple"]
         }
       ]
     ]
