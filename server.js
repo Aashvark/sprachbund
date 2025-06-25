@@ -18,7 +18,7 @@ handlebars.registerHelper('ifEquals',  function (a, b, options)  { return a === 
 handlebars.registerHelper('ternaryEq', function (a, b, op1, op2) { return a === b ? op1 : op2; });
 
 handlebars.registerHelper('add',       function (a, b) { return a + b; });
-handlebars.registerHelper('json',      function (a)    { return JSON.stringify(a); });
+handlebars.registerHelper('json',      function (a)    { return escape(JSON.stringify(a)); });
 
 handlebars.registerHelper('get-attribute', function (word, attribute) { return dict[word.trimEnd()][attribute]; });
 handlebars.registerHelper('tip-format',    function (arg)             { return new handlebars.SafeString(replaceClass(arg, "merienda accent")); });
@@ -161,14 +161,14 @@ function generateKeys(phrase) {
 function formHints(word, keys, submeaning) {
   let construction = "";
   
-  if (keys === undefined) construction = `<div class="hint">${handlebars.Utils.escapeExpression(word.slice(0, word.length - 1).join(" ") + word[word.length - 1])}</div>`;
+  if (keys === undefined) construction = `<div class="hint">${escape(word.slice(0, word.length - 1).join(" ") + word[word.length - 1])}</div>`;
   else {
-    construction = `<div class="hint"><span>${handlebars.Utils.escapeExpression(word[0])}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
-    for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${handlebars.Utils.escapeExpression(key)}</td></tr>`; }
+    construction = `<div class="hint"><span>${escape(word[0])}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
+    for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${escape(key)}</td></tr>`; }
     if (submeaning != undefined) {
        for (let i = 0; i < getLongestList(submeaning).length; i++) {
          construction += `<tr>`;
-         for (var sub of submeaning) construction += `<td>${sub && sub.length > i ? handlebars.Utils.escapeExpression(sub[i]) : ""}</td>`;
+         for (var sub of submeaning) construction += `<td>${sub && sub.length > i ? escape(sub[i]) : ""}</td>`;
          construction += `</tr>`;
        }
      }
@@ -184,6 +184,8 @@ function getLongestList(nestedList) {
   nestedList.forEach(element => { if (element != undefined && element.length > largest.length) largest = element; });
   return largest;
 }
+
+function escape(text) { return text.replaceAll("'", "&#x27;"); }
 
 fastify.get("/", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
 fastify.get("/learn", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
