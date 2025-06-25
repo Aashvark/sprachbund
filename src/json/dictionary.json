@@ -1,5 +1,5 @@
 {
-  "nórem-grammar": {
+  "nóri-grammar": {
     "templates": {
       "[adjective]": {
         "hint": ["[adjective]"],
@@ -43,11 +43,11 @@
       },
       "[preverb] hotá": {
         "hint": ["do not [preverb]", "(he/she/it) does not [preverb]", "(they) do not [preverb]"],
-        "match": ["do not [preverb]", "does not [preverb]", "he does not [preverb]", "she does not [preverb]", "it does not [preverb]", "they do not [preverb]"]
+        "match": ["don't [preverb]", "doesn't [preverb]", "he doesn't [preverb]", "she doesn't [preverb]", "it doesn't [preverb]", "they don't [preverb]", "do not [preverb]", "does not [preverb]", "he does not [preverb]", "she does not [preverb]", "it does not [preverb]", "they do not [preverb]"]
       }
     }
   },
-  "nórem": {
+  "nóri": {
     "eu": {
       "ipa": "ˈeu",
       "pos": "adjective",
@@ -110,22 +110,6 @@
       "definition": "That"
     },
     
-    "cévo": {
-      "ipa": "ˈt͡se˦ˌʋo",
-      "pos": "noun",
-      "simple": ["woman"],
-      "definition": "A female human attaining the age of adulthood; woman. When referring to children, it signifies their physical and/or emotional maturity.",
-      "hint": ["(a) woman"],
-      "match": ["woman", "a woman"]
-    },
-    "ćina": {
-      "ipa": "ˈt͡ʃiˌna",
-      "pos": "noun",
-      "simple": ["person"],
-      "definition": "Any given person.",
-      "hint": ["(a) person"],
-      "match": ["person", "a person"]
-    },
     "lavat": {
       "ipa": "ˈlaˌʋat",
       "pos": "noun",
@@ -150,13 +134,22 @@
       "match": ["water"],
       "definition": "water."
     },
-    "nes": {
-      "ipa": "ˈnes",
+
+    "cévo": {
+      "ipa": "ˈt͡se˦ˌʋo",
       "pos": "noun",
-      "simple": ["thing", "object"],
-      "hint": ["(a) thing", "(an) object"],
-      "match": ["thing", "a thing"],
-      "definition": "Any given thing or object."
+      "simple": ["woman"],
+      "definition": "A female human attaining the age of adulthood; woman. When referring to children, it signifies their physical and/or emotional maturity.",
+      "hint": ["(a) woman"],
+      "match": ["woman", "a woman"]
+    },
+    "ćina": {
+      "ipa": "ˈt͡ʃiˌna",
+      "pos": "noun",
+      "simple": ["person"],
+      "definition": "Any given person.",
+      "hint": ["(a) person"],
+      "match": ["person", "a person"]
     },
     "symi": {
       "ipa": "ˈsəˌmi",
@@ -167,13 +160,13 @@
       "match": ["man", "a man"]
     },
 
-    "mai": {
-      "ipa": "ˈmai",
+    "nes": {
+      "ipa": "ˈnes",
       "pos": "noun",
-      "simple": ["bread"],
-      "hint": ["(a loaf of) unleavened bread", "(a) cracker"],
-      "match": ["unleavened bread", "loaf of unleavened bread", "a loaf of unleavened bread", "cracker", "a cracker"],
-      "definition": "Refering to unleavened bread"
+      "simple": ["thing", "object"],
+      "hint": ["(a) thing", "(an) object"],
+      "match": ["thing", "a thing"],
+      "definition": "Any given thing or object."
     },
     
     "kas": {

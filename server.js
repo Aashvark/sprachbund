@@ -6,7 +6,7 @@ const seo = require("./src/json/seo.json");
 const dictionary = require("./src/json/dictionary.json");
 const lessons = require("./src/json/lessons.json");
 
-let language = "nórem";
+let language = "nóri";
 let dict     = dictionary[language];
 let grammar  = dictionary[`${language}-grammar`]; 
 
@@ -49,7 +49,7 @@ function hoverNative(tokens) {
       stored = "";
     }
   }
-  return new handlebars.SafeString(string);
+  return new handlebars.Utils.escapeExpression(string);
 }
 
 function isInDictionary(match) { return Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(match.toLowerCase())).length !== 0; }
@@ -119,7 +119,7 @@ function hoverForeign(tokens) {
       stored = "";
     }
   }
-  return new handlebars.SafeString(string);
+  return new handlebars.Utils.escapeExpression(string);
 }
 
 function matchCluster(phrase) {
