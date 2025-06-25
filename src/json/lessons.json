@@ -1018,7 +1018,7 @@
         {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "savél vu.",
+          "prompt": "kas hotá.",
           "answers": ["a"]
         }
       ]

@@ -49,7 +49,7 @@ function hoverNative(tokens) {
       stored = "";
     }
   }
-  return new handlebars.SafeString(handlebars.Utils.escapeExpression(string));
+  return new handlebars.SafeString(string);
 }
 
 function isInDictionary(match) { return Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(match.toLowerCase())).length !== 0; }
@@ -119,7 +119,7 @@ function hoverForeign(tokens) {
       stored = "";
     }
   }
-  return new handlebars.SafeString(handlebars.Utils.escapeExpression(string));
+  return new handlebars.SafeString(string);
 }
 
 function matchCluster(phrase) {
@@ -161,14 +161,14 @@ function generateKeys(phrase) {
 function formHints(word, keys, submeaning) {
   let construction = "";
   
-  if (keys === undefined) construction = `<div class="hint">${word.slice(0, word.length - 1).join(" ") + word[word.length - 1]}</div>`;
+  if (keys === undefined) construction = `<div class="hint">${handlebars.Utils.escapeExpression(word.slice(0, word.length - 1).join(" ") + word[word.length - 1])}</div>`;
   else {
-    construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
-    for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
+    construction = `<div class="hint"><span>${handlebars.Utils.escapeExpression(word[0])}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
+    for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${handlebars.Utils.escapeExpression(key)}</td></tr>`; }
     if (submeaning != undefined) {
        for (let i = 0; i < getLongestList(submeaning).length; i++) {
          construction += `<tr>`;
-         for (var sub of submeaning) construction += `<td>${sub && sub.length > i ? sub[i] : ""}</td>`;
+         for (var sub of submeaning) construction += `<td>${sub && sub.length > i ? handlebars.Utils.escapeExpression(sub[i]) : ""}</td>`;
          construction += `</tr>`;
        }
      }
