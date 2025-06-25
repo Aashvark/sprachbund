@@ -1023,7 +1023,7 @@
         },
         {
           "type": "short-response",
-          "direction": "foreign-native",
+          "direction": "native-foreign",
           "prompt": "they don't have",
           "answers": ["a"]
         }
