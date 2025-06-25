@@ -185,7 +185,7 @@ function getLongestList(nestedList) {
   return largest;
 }
 
-function escape(text) { return text.replaceAll("'", "&#x27;"); }
+function escape(text) { return text ? text.replaceAll("'", "&#x27;") : text; }
 
 fastify.get("/", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
 fastify.get("/learn", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
