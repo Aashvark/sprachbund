@@ -49,7 +49,7 @@ function hoverNative(tokens) {
       stored = "";
     }
   }
-  return new handlebars.Utils.escapeExpression(string);
+  return new handlebars.SafeString(handlebars.Utils.escapeExpression(string));
 }
 
 function isInDictionary(match) { return Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(match.toLowerCase())).length !== 0; }
@@ -119,7 +119,7 @@ function hoverForeign(tokens) {
       stored = "";
     }
   }
-  return new handlebars.Utils.escapeExpression(string);
+  return new handlebars.SafeString(handlebars.Utils.escapeExpression(string));
 }
 
 function matchCluster(phrase) {
