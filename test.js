@@ -6,7 +6,7 @@ const seo = require("./src/json/seo.json");
 const dictionary = require("./src/json/dictionary.json");
 const lessons = require("./src/json/lessons.json");
 
-let language = "nórem";
+let language = "nóri";
 let dict     = dictionary[language];
 let grammar  = dictionary[`${language}-grammar`]; 
 
@@ -161,14 +161,14 @@ function generateKeys(phrase) {
 function formHints(word, keys, submeaning) {
   let construction = "";
   
-  if (keys === undefined) construction = `<div class="hint">${word.slice(0, word.length - 1).join(" ") + word[word.length - 1]}</div>`;
+  if (keys === undefined) construction = `<div class="hint">${handlebars.Utils.escapeExpression(word.slice(0, word.length - 1).join(" ") + word[word.length - 1])}</div>`;
   else {
-    construction = `<div class="hint"><span>${word[0]}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
-    for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${key}</td></tr>`; }
+    construction = `<div class="hint"><span>${handlebars.Utils.escapeExpression(word[0])}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
+    for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${handlebars.Utils.escapeExpression(key)}</td></tr>`; }
     if (submeaning != undefined) {
        for (let i = 0; i < getLongestList(submeaning).length; i++) {
          construction += `<tr>`;
-         for (var sub of submeaning) construction += `<td>${sub && sub.length > i ? sub[i] : ""}</td>`;
+         for (var sub of submeaning) construction += `<td>${sub && sub.length > i ? handlebars.Utils.escapeExpression(sub[i]) : ""}</td>`;
          construction += `</tr>`;
        }
      }
@@ -192,4 +192,4 @@ fastify.post("/lesson", function (request, reply) { return reply.view('/src/less
 
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
 
-console.log(hoverForeign([["kas"], ["hotá"]]))
+console.log(hoverNative([["they"], ["don't"], ["have"]]));

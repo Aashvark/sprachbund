@@ -1017,8 +1017,14 @@
       [
         {
           "type": "short-response",
-          "direction": "native-foreign",
+          "direction": "foreign-native",
           "prompt": "kas hotá.",
+          "answers": ["a"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "they don't have",
           "answers": ["a"]
         }
       ]
