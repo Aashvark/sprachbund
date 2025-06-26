@@ -1038,6 +1038,32 @@
           "direction": "foreign-native",
           "prompt": "savél vu!",
           "answers": ["goodbye", "bye"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "ćimon",
+          "example": {
+            "sentence": "ny vé han [ćimon]!",
+            "translation": "I am [sorry]!"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "I'm sorry!",
+          "answers": ["goodbye", "bye"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ćimon, Alex!",
+          "answers": ["sorry Alex", "please Alex"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "Please!",
+          "answers": ["ćimon"]
         }
       ]
     ]

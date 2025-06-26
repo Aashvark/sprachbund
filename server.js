@@ -64,7 +64,7 @@ function matchSelector(phrase) {
 
   for (template of Object.keys(grammar["templates"])) {
     for (let temp of grammar["templates"][template].match) {
-      if (words.length === temp.split(" ").length && temp.split(" ").filter((word, index) => {
+      if (words.length === temp.split(" ").length && temp.toLowerCase().split(" ").filter((word, index) => {
         if (word.at(0) != "[" && word === words[index]) return true;
         else if (word.at(0) === "[") {
           let find = findmatchingsimple(words[index].substring(0, words[index].length - (word[word.length - 1] === "s" ? 1 : 0)));

@@ -41,10 +41,6 @@
         "hint": ["[interjection]"],
         "match": ["[interjection]"]
       },
-      "[phrase]": {
-        "hint": ["[phrase]"],
-        "match": ["[phrase]"]
-      },
       "[preverb] han": {
         "hint": ["[preverb]", "(he/she/it) [preverb]s", "(they) [preverb]"],
         "match": ["[preverb]", "[preverb]s", "he [preverb]s", "she [preverb]s", "it [preverb]s", "they [preverb]"]
@@ -52,6 +48,38 @@
       "[preverb] hotá": {
         "hint": ["do not [preverb]", "(he/she/it) does not [preverb]", "(they) do not [preverb]"],
         "match": ["don't [preverb]", "doesn't [preverb]", "he doesn't [preverb]", "she doesn't [preverb]", "it doesn't [preverb]", "they don't [preverb]", "do not [preverb]", "does not [preverb]", "he does not [preverb]", "she does not [preverb]", "it does not [preverb]", "they do not [preverb]"]
+      },
+      "ny han": {
+        "hint": ["I am"],
+        "match": ["I'm", "I am"]
+      },
+      "ny hotá": {
+        "hint": ["I am not"],
+        "match": ["I'm not", "I am not"]
+      },
+      "ké han": {
+        "hint": ["you are"],
+        "match": ["you're", "you are"]
+      },
+      "ké hotá": {
+        "hint": ["you are not"],
+        "match": ["you're not", "you aren't", "you are not"]
+      },
+      "ćy han": {
+        "hint": ["we are"],
+        "match": ["we're", "we are"]
+      },
+      "ćy hotá": {
+        "hint": ["we are not"],
+        "match": ["we're not", "we aren't", "we are not"]
+      },
+      "vun han": {
+        "hint": ["you are"],
+        "match": ["you're", "you are"]
+      },
+      "vun hotá": {
+        "hint": ["you are not"],
+        "match": ["you're not", "you aren't", "you are not"]
       }
     }
   },
@@ -124,12 +152,20 @@
       "simple": ["hello", "hi"],
       "definition": "A common informal greeting; Hello or Hi."
     },
+    "ćimon": {
+      "ipa": "ˈt͡ʃiˌmon",
+      "pos": "interjection",
+      "simple": ["please", "sorry"],
+      "definition": "An expression of disappointment; Please or Sorry."
+    },
 
     "savél vu": {
       "ipa": "ˈsaˌʋel˦ ˈʋu",
       "pos": "phrase",
       "simple": ["goodbye", "bye"],
-      "definition": "A common farewell; Goodbye."
+      "definition": "A common farewell; Goodbye.",
+      "hint": ["goodbye", "bye"],
+      "match": ["goodbye", "bye"]
     },
     
     "lavat": {
@@ -187,7 +223,7 @@
       "pos": "noun",
       "simple": ["thing", "object"],
       "hint": ["(a) thing", "(an) object"],
-      "match": ["thing", "a thing"],
+      "match": ["thing", "a thing", "object", "an object"],
       "definition": "Any given thing or object."
     },
     
@@ -205,7 +241,7 @@
     },
     "vé han": {
       "hint": ["have", "(he/she/it) has"],
-      "match": ["have", "has", "he has", "she has", "it has"]
+      "match": ["have", "has", "he has", "she has", "it has", "they have"]
     },
 
     "ćy": {
@@ -229,7 +265,7 @@
       "pos": "pronoun",
       "simple": ["I"],
       "hint": ["I", "me"],
-      "match": ["i", "me"],
+      "match": ["I", "me"],
       "definition": "Used by a speaker to refer to themself as the subject or object of a sentence; I"
     },
     "téu": {
@@ -263,7 +299,7 @@
       "definition": "Correlating the relation between nouns or the existence of a noun.",
       "simple": ["be", "exist"],
       "hint": ["be", "exist", "(he/she/it) is", "(he/she/it) exists"],
-      "match": ["be", "am", "are", "is", "he is", "she is", "it is", "they are", "exist", "exists", "he exists", "she exists", "it exists", "they exist"]
+      "match": ["be", "am", "are", "is", "he is", "she is", "it is", "they are", "he's", "she's", "it's", "they're", "exist", "exists", "he exists", "she exists", "it exists", "they exist"]
     },
     "hotá": {
       "ipa": "ˈxoˌta˦",
@@ -271,7 +307,7 @@
       "simple": ["not be", "exist"],
       "definition": "Correlating the irrelation between nouns or the existence of a noun.",
       "hint": ["not be", "not", "(he/she/it) is not"],
-      "match": ["not be", "not", "am not", "are not", "is not", "he is not", "she is not", "it is not", "they are not", "do not exist", "he does not exist", "she does not exist", "it does not exist", "they do not exist"]
+      "match": ["not be", "not", "am not", "are not", "is not", "he is not", "she is not", "it is not", "they are not", "aren't", "isn't", "he isn't", "she isn't", "it isn't", "they aren't", "do not exist", "he does not exist", "she does not exist", "it does not exist", "they do not exist", "don't exist", "he doesn't exist", "she doesn't exist", "it doesn't exist", "they don't exist"]
     }
   }
 }
