@@ -1085,6 +1085,18 @@
           "direction": "foreign-native",
           "prompt": "ćimon! ny hotá eu. ny han sa!",
           "answers": ["sorry I am not evil I am good", "sorry I'm not evil I am good", "sorry I am not bad I am good", "sorry I'm not bad I am good", "sorry I am not evil I'm good", "sorry I'm not evil I'm good", "sorry I am not bad I'm good", "sorry I'm not bad I'm good"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ké han sa.",
+          "answers": ["you are good", "you are well"]
+        },
+        {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "You are a good thing",
+          "answers": ["ké han sa nes"]
         }
       ]
     ]
