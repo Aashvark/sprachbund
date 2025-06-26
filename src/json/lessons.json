@@ -1000,10 +1000,32 @@
     "unit": [
       [
         {
+          "type": "vocabulary",
+          "word": "hansai",
+          "example": {
+            "sentence": "[hansai] Morgan!",
+            "translation": "[Hello] Morgan!"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "hansai!",
+          "answers": ["hello", "hi"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "savél vu",
+          "example": {
+            "sentence": "[savél vu] Morgan!",
+            "translation": "[Bye] Morgan!"
+          }
+        },
+        {
           "type": "short-response",
           "direction": "native-foreign",
-          "prompt": "She eats",
-          "answers": ["a"]
+          "prompt": "Goodbye Alex!",
+          "answers": ["savél vu Alex"]
         }
       ]
     ]

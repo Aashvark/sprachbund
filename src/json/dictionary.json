@@ -109,6 +109,20 @@
       "simple": ["that"],
       "definition": "That"
     },
+
+    "hansai": {
+      "ipa": "ˈxanˌsai",
+      "pos": "interjection",
+      "simple": ["hello", "hi"],
+      "definition": "A common informal greeting; Hello or Hi."
+    },
+
+    "savél vu": {
+      "ipa": "ˈsaˌʋel˦ ˈʋu",
+      "pos": "phrase",
+      "simple": ["goodbye", "bye"],
+      "definition": "A common farewell; Goodbye."
+    },
     
     "lavat": {
       "ipa": "ˈlaˌʋat",
