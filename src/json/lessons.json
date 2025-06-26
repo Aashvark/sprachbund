@@ -1044,7 +1044,7 @@
           "word": "ćimon",
           "example": {
             "sentence": "ny vé han [ćimon]!",
-            "translation": "I am [sorry]!"
+            "translation": "I'm [sorry]!"
           },
           "tip": "The interjection [ćimon], is used in conjuction with [vé han] (to have) instead of just [han]."
         },
@@ -1065,6 +1065,26 @@
           "direction": "native-foreign",
           "prompt": "Please!",
           "answers": ["ćimon"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ćimon! ny han symi.",
+          "answers": ["sorry! I am a man", "sorry! I'm a man"]
+        },
+        {
+          "type": "vocabulary",
+          "word": "sa",
+          "example": {
+            "sentence": "han [sa]",
+            "translation": "I'm [sorry]!"
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ćimon! ny hotá eu. ny han sa!",
+          "answers": ["sorry I am not evil I am good", "sorry I'm not evil I am good", "sorry I am not bad I am good", "sorry I'm not bad I am good", "sorry I am not evil I'm good", "sorry I'm not evil I'm good", "sorry I am not bad I'm good", "sorry I'm not bad I'm good"]
         }
       ]
     ]

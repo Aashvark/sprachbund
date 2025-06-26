@@ -49,6 +49,10 @@
         "hint": ["do not [preverb]", "(he/she/it) does not [preverb]", "(they) do not [preverb]"],
         "match": ["don't [preverb]", "doesn't [preverb]", "he doesn't [preverb]", "she doesn't [preverb]", "it doesn't [preverb]", "they don't [preverb]", "do not [preverb]", "does not [preverb]", "he does not [preverb]", "she does not [preverb]", "it does not [preverb]", "they do not [preverb]"]
       },
+      "ny vé han ćimon": {
+        "hint": ["I am sorry"],
+        "match": ["I'm sorry", "I am sorry"]
+      },
       "ny han": {
         "hint": ["I am"],
         "match": ["I'm", "I am"]
