@@ -1045,13 +1045,14 @@
           "example": {
             "sentence": "ny vé han [ćimon]!",
             "translation": "I am [sorry]!"
-          }
+          },
+          "tip": "The interjection [ćimon], is used in conjuction with [vé han] (to have) instead of just [han]."
         },
         {
           "type": "short-response",
           "direction": "native-foreign",
           "prompt": "I'm sorry!",
-          "answers": ["goodbye", "bye"]
+          "answers": ["ny vé han ćimon"]
         },
         {
           "type": "short-response",
