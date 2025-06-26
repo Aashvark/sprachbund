@@ -37,6 +37,14 @@
         "hint": ["the [noun]"],
         "match": ["the [noun]"]
       },
+      "[interjection]": {
+        "hint": ["[interjection]"],
+        "match": ["[interjection]"]
+      },
+      "[phrase]": {
+        "hint": ["[phrase]"],
+        "match": ["[phrase]"]
+      },
       "[preverb] han": {
         "hint": ["[preverb]", "(he/she/it) [preverb]s", "(they) [preverb]"],
         "match": ["[preverb]", "[preverb]s", "he [preverb]s", "she [preverb]s", "it [preverb]s", "they [preverb]"]

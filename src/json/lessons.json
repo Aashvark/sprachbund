@@ -1014,6 +1014,12 @@
           "answers": ["hello", "hi"]
         },
         {
+          "type": "short-response",
+          "direction": "native-foreign",
+          "prompt": "Hi Jude!",
+          "answers": ["hansai Jude"]
+        },
+        {
           "type": "vocabulary",
           "word": "savél vu",
           "example": {
@@ -1026,6 +1032,12 @@
           "direction": "native-foreign",
           "prompt": "Goodbye Alex!",
           "answers": ["savél vu Alex"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "savél vu!",
+          "answers": ["goodbye", "bye"]
         }
       ]
     ]
