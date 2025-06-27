@@ -86,11 +86,26 @@ main .section .scale {
   font-size: 20px;
 }
 
-main .section .conversations { position: relative; }
-main .section .conversation {
+main .section .conversations {
+  display: inline-flex;
+  position: relative;
+
+  padding: 15px;
+
+  min-height: 50px;
+  height: auto;
+}
+
+main .section .conversations .conversation {
   position: absolute;
   left: 0;
   width: 80%;
+
+  font-size: 25px;
+  color: var(--white);
+
+  border: 3px solid var(--contrast);
+  border-radius: 10px;
 }
 
 main .section .conversation:nth-child(odd) { right: 0; }
