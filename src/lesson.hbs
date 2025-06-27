@@ -61,7 +61,7 @@
           {{#each lesson.conversation}}
           <div class="div-border scale conversation">{{hover-translate this "foreign"}}</div>
           {{/each}}
-        </div>
+        </div> 
         <p class="p-text">{{lesson.prompt}}</p>
         <br>
         <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectBtn(this)">{{this}}</a>{{/each}}</div>
