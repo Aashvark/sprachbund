@@ -1168,7 +1168,8 @@
             "inilo vu'an?"
           ],
           "prompt": "How should you respond?",
-          "answers": ["ny mysvi'n vu!", "hvéi han sa!", "ny kas hotá!"]
+          "answer": "hvéi han sa!",
+          "choices": ["ny mysvi'n vu!", "hvéi han sa!", "ny kas hotá!"]
         }
       ]
     ]
