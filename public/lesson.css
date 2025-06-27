@@ -86,11 +86,14 @@ main .section .scale {
   font-size: 20px;
 }
 
+main .section .conversations { position: relative; }
 main .section .conversation {
-  position: relative;
+  position: absolute;
   left: 0;
   width: 80%;
 }
+
+main .section .conversation:nth-child(odd) { right: 0; }
 
 main .section .div-border {
   display: inline-flex;
