@@ -1076,8 +1076,8 @@
           "type": "vocabulary",
           "word": "sa",
           "example": {
-            "sentence": "han [sa]",
-            "translation": "I'm [sorry]!"
+            "sentence": "han [sa].",
+            "translation": "He/she/it/they are good."
           }
         },
         {
@@ -1098,6 +1098,58 @@
           "prompt": "You are a good thing",
           "answers": ["ké han sa nes"]
         }
+      ],
+      [
+        {
+          "type": "vocabulary",
+          "word": "ai",
+          "example": {
+            "sentence": "han [sa].",
+            "translation": "He/she/it/they are good."
+          }
+        },
+        {
+          "type": "vocabulary",
+          "word": "kono",
+          "example": {
+            "sentence": "han [sa].",
+            "translation": "He/she/it/they are good."
+          }
+        },
+        {
+          "type": "vocabulary",
+          "word": "tá",
+          "example": {
+            "sentence": "han [sa].",
+            "translation": "He/she/it/they are good."
+          }
+        }
+      ],
+      [
+        {
+          "type": "vocabulary",
+          "word": "yvé",
+          "example": {
+            "sentence": "han [sa].",
+            "translation": "He/she/it/they are good."
+          }
+        },
+        {
+          "type": "vocabulary",
+          "word": "inilo",
+          "example": {
+            "sentence": "han [sa].",
+            "translation": "He/she/it/they are good."
+          }
+        },
+        {
+          "type": "vocabulary",
+          "word": "tá",
+          "example": {
+            "sentence": "han [sa].",
+            "translation": "He/she/it/they are good."
+          }
+        }
       ]
     ]
   },
@@ -1109,16 +1161,14 @@
     "unit": [
       [
         {
-          "type": "short-response",
-          "direction": "foreign-native",
-          "prompt": "kas hotá.",
-          "answers": ["a"]
-        },
-        {
-          "type": "short-response",
-          "direction": "native-foreign",
-          "prompt": "they don't have",
-          "answers": ["a"]
+          "type": "conversation",
+          "conversation": [
+            "hansai Alex!",
+            "hansai Jamie!",
+            "inilo vu'an?"
+          ],
+          "prompt": "How should you respond?",
+          "answers": ["ny mysvi'n vu!", "hvéi han sa!", "ny kas hotá!"]
         }
       ]
     ]
