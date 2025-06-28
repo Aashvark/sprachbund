@@ -109,7 +109,7 @@ function hoverForeign(tokens) {
     stored += token[0];
 
     if (stored === "___") {
-      string += `<div class="hint"><p class="blank"></p></div>`;
+      string += `<span class="hint"><span class="blank"></span></span>`;
       stored = "";
     }
     else if ((index < tokens.length - 1 && matchCluster(stored + " " + tokens[next][0]) || index < tokens.length - 2 && matchCluster(stored + " " + tokens[next][0] + " " + tokens[next + 1][0])) && token.length === 1) stored += " ";
@@ -161,9 +161,9 @@ function generateKeys(phrase) {
 function formHints(word, keys, submeaning) {
   let construction = "";
   
-  if (keys === undefined) construction = `<div class="hint">${escape(word.slice(0, word.length - 1).join(" ") + word[word.length - 1])}</div>`;
+  if (keys === undefined) construction = `<span class="hint">${escape(word.slice(0, word.length - 1).join(" ") + word[word.length - 1])}</span>`;
   else {
-    construction = `<div class="hint"><span>${escape(word[0])}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
+    construction = `<span class="hint"><span>${escape(word[0])}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
     for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${escape(key)}</td></tr>`; }
     if (submeaning != undefined) {
        for (let i = 0; i < getLongestList(submeaning).length; i++) {
@@ -172,7 +172,7 @@ function formHints(word, keys, submeaning) {
          construction += `</tr>`;
        }
      }
-    construction += `</tbody></table></div>`;
+    construction += `</tbody></table></span>`;
   }
   return construction; 
 }
