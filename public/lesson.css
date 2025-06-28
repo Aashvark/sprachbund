@@ -87,7 +87,8 @@ main .section .scale {
 }
 
 main .section .conversations {
-  display: inline-flex;
+  display: inline-block;
+  position: relative;
   width: 100%;
   padding: 15px;
 }
@@ -104,9 +105,15 @@ main .section .conversations .conversation {
 
   border: 3px solid var(--contrast);
   border-radius: 10px;
+  border-bottom-left-radius: 3px;
 }
 
-main .section .conversation:nth-child(odd) { right: 0; }
+main .section .conversation:nth-child(even) {
+  position: absolute;
+  right: 0;
+  border-radius: 10px;
+  border-bottom-right-radius: 3px;
+}
 
 main .section .div-border {
   display: inline-flex;
