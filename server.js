@@ -177,7 +177,7 @@ function formHints(word, keys, submeaning) {
   return construction; 
 }
 
-function replaceClass(text, class_) { return text.replaceAll("[", `<div class=\"${class_}\">`).replaceAll("]", "</div>"); }
+function replaceClass(text, class_) { return text.replaceAll("[", `<span class=\"${class_}\">`).replaceAll("]", "</span>"); }
 
 function getLongestList(nestedList) {
   let largest = [];
