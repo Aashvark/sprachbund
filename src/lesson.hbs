@@ -249,13 +249,13 @@
       if (lesson.type === "match") {
         shuffleDivs("foreign-" + index.toString());
         shuffleDivs("native-" + index.toString());
-      } else if (lesson.type === "comprehension" || lesson.type === "fill-in-the-blank") shuffleDivs("buttons-" + index.toString());
+      } else if (lesson.type === "comprehension" || lesson.type === "conversation" || lesson.type === "fill-in-the-blank") shuffleDivs("buttons-" + index.toString());
       
       document.getElementsByClassName("section")[index].style.display = "inline-block";
     }
 
     function checkAnswer() {
-      if (((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) || lesson.type === "match") {
+      if (((lesson.type === "comprehension" || lesson.type === "conversation" || lesson.type === "fill-in-the-blank") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) || lesson.type === "match") {
         playCorrect();
         setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
       } else if (lesson.type === "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
