@@ -58,8 +58,8 @@
         {{#ifEquals lesson.type "conversation"}}
         <p class="heading"><i class="fa-solid fa-phone"></i> Read this conversation!</p>
         <div class="conversations">
-          {{#each lesson.conversation as |conversation|}}
-          <div class="conversation">{{hover-translate conversation "foreign"}}</div>
+          {{#each lesson.conversation}}
+          <div class="conversation">{{hover-translate this "foreign"}}</div>
           {{/each}}
         </div> 
         <p class="p-text">{{lesson.prompt}}</p>
