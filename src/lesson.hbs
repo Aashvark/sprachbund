@@ -76,10 +76,12 @@
         {{#ifEquals lesson.type "grammar"}}
         <p class="heading"><i class="fa-solid fa-shapes"></i> But first!</p>
         <p class="p-text">{{lesson.description}}</p>
-        {{#each lesson.sentences}}
+        {{#if lesson.syntax}}
+        {{#each lesson.syntax.sentences}}
         <p class="p-text">{{hover-translate prompt "foreign"}}</p>
         <p class="p-text small">{{meaning}}</p>
         {{/each}}
+        {{/if}}
         {{/ifEquals}}
         {{#ifEquals lesson.type "match"}}
         <p class="heading"><i class="fa-solid fa-motorcycle"></i> Match these terms!</p>
