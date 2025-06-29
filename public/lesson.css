@@ -219,6 +219,7 @@ main .section .div-border .hint table tr td, main .section .conversations .conve
 main .section .div-border .hint table tr td:not(:last-child), main .section .conversations .conversation .hint table tr td:not(:last-child) { border-right: 2px solid var(--light-cont); }
 main .section .div-border .hint table > tbody > tr:not(:last-child) > td, main .section .conversations .conversation .hint table > tbody > tr:not(:last-child) > td { border-bottom: 2px solid var(--light-cont); }
 
+.small { font-size: 16px; }
 .accent { color: var(--accent); }
 .highlight {
   font-variant: small-caps;

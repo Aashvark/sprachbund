@@ -1162,9 +1162,20 @@
       [
         {
           "type": "grammar",
-          "components": [
-            
-          ]
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "syntax": {
+            "highlight": "[interjection]",
+            "sentences": [
+              {
+                "phrase": "ké myhvé han téu, ai?",
+                "meaning": "Do you like him?"
+              },
+              {
+                "phrase": "ké myhvé han téu, tá?",
+                "meaning": "Don't you like him?"
+              }
+            ]
+          }
         }
       ]
     ]
