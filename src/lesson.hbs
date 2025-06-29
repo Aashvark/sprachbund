@@ -73,6 +73,9 @@
         <br>
         <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectBtn(this)">{{this}}</a>{{/each}}</div>
         {{/ifEquals}}
+        {{#ifEquals lesson.type "grammar"}}
+        <p class="heading"><i class="fa-solid fa-shapes"></i> But first!</p>
+        {{/ifEquals}}
         {{#ifEquals lesson.type "match"}}
         <p class="heading"><i class="fa-solid fa-motorcycle"></i> Match these terms!</p>
         <div class="btn-container half" id="foreign-{{@index}}">{{#each foreign}}<a class="answer-btn button" onclick="select(this)" id="foreign-{{@../index}}-{{@index}}">{{this}}</a>{{/each}}</div>
@@ -218,6 +221,15 @@
       document.getElementById("alert").classList.add("block");
     }
     
+    function correctAnswer(heading, caption) {
+      playCorrect();
+      setAlert(heading, caption);
+
+      index++;
+      document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
+      document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
+    }
+
     function incorrectAnswer(heading, caption) {
       wrong++;
       playIncorrect();
@@ -240,11 +252,11 @@
 
     function nextLesson() {
       document.getElementsByClassName("section")[index - 1].style.display = "none";
-      if (index >= lessons.length) { endLesson(); return; }
+      if (index >= lessons.length) return endLesson();
 
       lesson = lessons[index];
       document.getElementById("next").style.display = lesson.type != "match" ? "inline-flex" : "none";
-      document.getElementById("next").innerText = lesson.type == "vocabulary" ? "Got it!" : "Check";
+      document.getElementById("next").innerText = lesson.type == "vocabulary" || lesson.type == "grammar" ? "Got it!" : "Check";
 
       if (lesson.type === "match") {
         shuffleDivs("foreign-" + index.toString());
@@ -255,21 +267,10 @@
     }
 
     function checkAnswer() {
-      if (((lesson.type === "comprehension" || lesson.type === "conversation" || lesson.type === "fill-in-the-blank") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) || lesson.type === "match") {
-        playCorrect();
-        setAlert("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
-      } else if (lesson.type === "vocabulary") setAlert("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
-      else if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined) {
-        incorrectAnswer("<i class=\"fas fa-circle-times\"></i> Please answer!", "Tap or click on the correct response.");
-        return;
-      } else { 
-        incorrectAnswer("<i class=\"fas fa-circle-times\"></i> Try again!", "Hover over words you don't know if you need to.");
-        return;
-      }
-      
-      index++;
-      document.getElementById("progress").style.width = `${100 * index / lessons.length}%`;
-      document.getElementById("progress-count").innerText = `${index}/${lessons.length}`;
+      if (((lesson.type === "comprehension" || lesson.type === "conversation" || lesson.type === "fill-in-the-blank") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) || lesson.type === "match") correctAnswer("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
+      else if (lesson.type === "grammar" || lesson.type === "vocabulary") correctAnswer("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
+      else if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined) incorrectAnswer("<i class=\"fas fa-circle-times\"></i> Please answer!", "Tap or click on the correct response.");
+      else incorrectAnswer("<i class=\"fas fa-circle-times\"></i> Try again!", "Hover over words you don't know if you need to.");
     }
     
     function select(self) {

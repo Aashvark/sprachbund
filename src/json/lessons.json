@@ -1161,15 +1161,10 @@
     "unit": [
       [
         {
-          "type": "conversation",
-          "conversation": [
-            "hansai Alex!",
-            "hansai Jamie!",
-            "inilo vu'an?"
-          ],
-          "prompt": "How should you respond?",
-          "answer": "hvéi han sa!",
-          "choices": ["ny mysvi'n vu!", "hvéi han sa!", "ny kas hotá!"]
+          "type": "grammar",
+          "components": [
+            
+          ]
         }
       ]
     ]
