@@ -145,18 +145,18 @@ main .section .div-border > p {
   margin: 0;
 }
 
-main .section .div-border:has(p) { 
+main .section div:has(p) { 
   display: inline-block;
   text-align: center;
 }
 
-main .section .div-border .hint, main .section .conversations .conversation .hint {
+main .section .hint {
   display: inline-block;
   position: relative;
   padding: 0 3px;
 }
 
-main .section .div-border .hint > span, main .section .conversations .conversation .hint > span {
+main .section .hint > span {
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: var(--light-cont);
@@ -164,14 +164,14 @@ main .section .div-border .hint > span, main .section .conversations .conversati
   text-underline-offset: 3px;
 }
 
-main .section .div-border .hint .blank, main .section .conversations .conversation .hint .blank {
+main .section .hint .blank {
   position: relative;
   top: 5px;
   width: 30px;
   border: 1.5px solid var(--light-cont);
 }
 
-main .section .div-border .hint table, main .section .conversations .conversation .hint table { 
+main .section .hint table { 
   display: none;
   
   position: absolute;
@@ -191,8 +191,8 @@ main .section .div-border .hint table, main .section .conversations .conversatio
   font-size: 18px;
 }
 
-main .section .div-border .hint:hover table, main .section .div-border .hint table:hover, main .section .conversations .conversation .hint:hover table, main .section .conversations .conversation .hint table:hover { display: block; }
-main .section .div-border .hint table::before, main .section .conversations .conversation .hint table:before {
+main .section .hint:hover table, main .section .hint table:hover { display: block; }
+main .section .hint table::before {
   content: " ";
   
   position: absolute;
@@ -210,14 +210,14 @@ main .section .div-border .hint table::before, main .section .conversations .con
   border-color: transparent transparent var(--light-cont) transparent;
 }
 
-main .section .div-border .hint table tr td, main .section .conversations .conversation .hint table tr td {
+main .section .hint table tr td {
   padding: 10px 15px;
   white-space: nowrap;
   width: 100%;
 }
 
-main .section .div-border .hint table tr td:not(:last-child), main .section .conversations .conversation .hint table tr td:not(:last-child) { border-right: 2px solid var(--light-cont); }
-main .section .div-border .hint table > tbody > tr:not(:last-child) > td, main .section .conversations .conversation .hint table > tbody > tr:not(:last-child) > td { border-bottom: 2px solid var(--light-cont); }
+main .section .hint table tr td:not(:last-child) { border-right: 2px solid var(--light-cont); }
+main .section .hint table > tbody > tr:not(:last-child) > td { border-bottom: 2px solid var(--light-cont); }
 
 .small { font-size: 16px; }
 .accent { color: var(--accent); }
@@ -265,6 +265,15 @@ main .section .p-text {
   font-size: 25px;
   color: var(--white);
 }
+
+main .section .p-small {
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--white);
+}
+
+main .section .center { text-align: center; }
 
 main .section .btn-container { 
   padding: 10px;
