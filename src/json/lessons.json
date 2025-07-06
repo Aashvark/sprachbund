@@ -1123,6 +1123,29 @@
             "sentence": "han [sa].",
             "translation": "He/she/it/they are good."
           }
+        },
+        {
+          "type": "grammar",
+          "description": "Nóri uses single-word tag questions, following a three-form system consisting of two affirmative forms and one negative form. Only ai and tá may be used to form a question.",
+          "syntax": {
+            "highlight": "[interjection]",
+            "sentences": [
+              {
+                "phrase": "ké vé han miro, ai?",
+                "meaning": "Do you have bread?"
+              },
+              {
+                "phrase": "ké vé han miro, tá?",
+                "meaning": "Don't you have bread?"
+              }
+            ]
+          }
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ké han Amy, tá?",
+          "answers": ["are you not Amy", "are you amy", "aren't you amy"]
         }
       ],
       [

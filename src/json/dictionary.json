@@ -150,17 +150,41 @@
       "definition": "That"
     },
 
-    "hansai": {
-      "ipa": "ˈxanˌsai",
+    "ai": {
+      "ipa": "ˈai",
       "pos": "interjection",
-      "simple": ["hello", "hi"],
-      "definition": "A common informal greeting; Hello or Hi."
+      "simple": ["yes"],
+      "definition": "Used to approve of or agree to a positive statement; yes/aye",
+      "hint": ["yes"],
+      "match": ["yes"]
     },
     "ćimon": {
       "ipa": "ˈt͡ʃiˌmon",
       "pos": "interjection",
       "simple": ["please", "sorry"],
       "definition": "An expression of disappointment; Please or Sorry."
+    },
+    "hansai": {
+      "ipa": "ˈxanˌsai",
+      "pos": "interjection",
+      "simple": ["hello", "hi"],
+      "definition": "A common informal greeting; Hello or Hi."
+    },
+    "kono": {
+      "ipa": "ˈai",
+      "pos": "interjection",
+      "simple": ["yes"],
+      "definition": "Used to approve of or agree to a negative statement; yes",
+      "hint": ["yes (neg.)"],
+      "match": ["yes"]
+    },
+    "tá": {
+      "ipa": "ˈai",
+      "pos": "interjection",
+      "simple": ["no"],
+      "definition": "Used to disapprove of or disagree to a statement; no",
+      "hint": ["no (neg.)"],
+      "match": ["no"]
     },
 
     "savél vu": {
