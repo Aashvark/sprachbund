@@ -145,7 +145,7 @@ main .section .div-border > p {
   margin: 0;
 }
 
-main .section div:has(p) { 
+main .section .div-border:has(p) { 
   display: inline-block;
   text-align: center;
 }
@@ -189,6 +189,7 @@ main .section .hint table {
   border-radius: 5px;
   
   font-size: 18px;
+  z-index: 1;
 }
 
 main .section .hint:hover table, main .section .hint table:hover { display: block; }

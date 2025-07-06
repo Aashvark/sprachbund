@@ -78,8 +78,10 @@
         <p class="p-text">{{lesson.description}}</p>
         {{#if lesson.syntax}}
         {{#each lesson.syntax.sentences}}
-        <div class="p-text center scale">{{hover-translate phrase "foreign"}}</div>
-        <p class="p-small center">{{meaning}}</p>
+        <div class="p-text center scale">
+          {{hover-translate phrase "foreign"}}
+          <p class="p-small center">{{meaning}}</p>
+        </div>
         {{/each}}
         {{/if}}
         {{/ifEquals}}
