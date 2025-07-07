@@ -1104,24 +1104,24 @@
           "type": "vocabulary",
           "word": "ai",
           "example": {
-            "sentence": "han [sa].",
-            "translation": "He/she/it/they are good."
-          }
-        },
-        {
-          "type": "vocabulary",
-          "word": "kono",
-          "example": {
-            "sentence": "han [sa].",
-            "translation": "He/she/it/they are good."
+            "sentence": "[ai], han ćevo.",
+            "translation": "[yes], I am a woman."
           }
         },
         {
           "type": "vocabulary",
           "word": "tá",
           "example": {
-            "sentence": "han [sa].",
-            "translation": "He/she/it/they are good."
+            "sentence": "[tá], hotá symi.",
+            "translation": "[No], I am not a man."
+          }
+        },
+        {
+          "type": "vocabulary",
+          "word": "kono",
+          "example": {
+            "sentence": "[kono], han ćina.",
+            "translation": "[Yes], it is a person."
           }
         },
         {
