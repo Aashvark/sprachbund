@@ -154,9 +154,7 @@
       "ipa": "ˈai",
       "pos": "interjection",
       "simple": ["yes"],
-      "definition": "Used to approve of or agree to a positive statement; yes/aye",
-      "hint": ["yes"],
-      "match": ["yes"]
+      "definition": "Used to approve of or agree to a positive statement; yes/aye"
     },
     "ćimon": {
       "ipa": "ˈt͡ʃiˌmon",
@@ -175,16 +173,13 @@
       "pos": "interjection",
       "simple": ["yes"],
       "definition": "Used to approve of or agree to a negative statement; yes",
-      "hint": ["yes (neg.)"],
-      "match": ["yes"]
+      "hint": ["yes (neg.)"]
     },
     "tá": {
       "ipa": "ˈta˦",
       "pos": "interjection",
       "simple": ["no"],
-      "definition": "Used to disapprove of or disagree to a statement; no",
-      "hint": ["no (neg.)"],
-      "match": ["no"]
+      "definition": "Used to disapprove of or disagree to a statement; no"
     },
 
     "savél vu": {
