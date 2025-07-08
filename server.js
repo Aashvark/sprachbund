@@ -27,7 +27,7 @@ handlebars.registerHelper('hover-translate', function(prompt, lang) {
   let tokens = [];
   for (var word of prompt.split(" ")) {
     let section = "";
-    for (var letter of word) section += (/[.,\/#!$%\^&\*;:{}=\-`~()]/g.test(letter) ? " " : "") + letter;
+    for (var letter of word) section += (/[.,\/#!$%\^&\*;\?:{}=\-`~()]/g.test(letter) ? " " : "") + letter;
     tokens.push(section.split(" "));
   }
   return lang === "native" ? hoverNative(tokens) : hoverForeign(tokens);
