@@ -19,7 +19,7 @@
     </header>
     <main>
     {{#each units}}
-      <div class="divider"><hr><p class="label"><i class="fas fa-book"></i> — {{name}}</p><hr></div>
+      <div class="divider"><hr><p class="label">{{name}}</p><hr></div>
       {{#each modules}}
       <div class="module">
         <div class="start">
@@ -28,11 +28,11 @@
         </div>
         <div class="completion">
         {{#each lessons}}
-          <div class="indicator" style="width: calc(100%/{{../unit.length}} - 1%);"></div>
+          <div class="indicator" style="width: calc(100%/{{@length}} - 1%);"></div>
         {{/each}}
         </div>
-      {{/each}}
       </div>
+      {{/each}}
     {{/each}}
     </main>
   </body>
