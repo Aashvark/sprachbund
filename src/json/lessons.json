@@ -1145,7 +1145,19 @@
           "type": "short-response",
           "direction": "foreign-native",
           "prompt": "ké han Amy, tá?",
-          "answers": ["are you not Amy", "are you amy", "aren't you amy"]
+          "answers": ["are you not Amy", "are you amy", "arent you amy"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "ny han eu, ai?",
+          "answers": ["am I bad"]
+        },
+        {
+          "type": "short-response",
+          "direction": "foreign-native",
+          "prompt": "Ellie hotá mikol, tá? kono, han.",
+          "answers": ["is Ellie not short yes she is", "isnt ellie short yes she is"]
         }
       ],
       [

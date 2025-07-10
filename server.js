@@ -192,6 +192,9 @@ fastify.get("/learn",   function (request, reply) { return reply.view("/src/inde
 fastify.get("/lesson",  function (request, reply) { return reply.redirect('/learn'); });
 fastify.post("/lesson", function (request, reply) { return reply.view('/src/lesson.hbs', {seo: seo, unitno: request.body.unit, lessons: lessons[request.body.unit].unit[request.body[request.body.unit + "-lesson"]]});});
 
+const ulessons = require("./src/unreleased/lessons.json");
+fastify.get("/learn/u",   function (request, reply) { return reply.view("/src/unreleased/learn.hbs", { seo: seo.index, units: ulessons }); });
+
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
 
 fastify.listen({ port: process.env.PORT || 4000, host: "0.0.0.0" },

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sprachbund</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+      <div class="sticky-header">
+        <div class="flag"><svg><image href="/svg/flag.svg" xlink:href="/svg/flag.svg"></image></svg></div>
+        <div class="unit">
+          <p class="name">Nóri &middot; Unit {{units.length}}</p>
+          <p class="description">Unit Description.</p>
+        </div>
+      </div>
+    </header>
+    <main>
+    {{#each units}}
+      <div class="divider"><hr><p class="label"><i class="fas fa-book"></i> — {{name}}</p><hr></div>
+      {{#each modules}}
+      <div class="module">
+        <div class="start">
+          <i class="fa-solid fa-{{icon}}"></i>
+          <button class="start-btn">START</button>
+        </div>
+        <div class="completion">
+        {{#each lessons}}
+          <div class="indicator" style="width: calc(100%/{{../unit.length}} - 1%);"></div>
+        {{/each}}
+        </div>
+      {{/each}}
+      </div>
+    {{/each}}
+    </main>
+  </body>
+  <script></script>
+</html>

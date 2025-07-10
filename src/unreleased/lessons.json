@@ -1,0 +1,24 @@
+[   
+  {
+    "name": "Introduction",
+    "description": "Learn basic words and grammar.",
+    "modules": [
+      {
+        "icon": "bread",
+        "lessons": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "icon": "bread",
+        "lessons": [
+          [],
+          [],
+          []
+        ]
+      }
+    ]
+  }
+]
