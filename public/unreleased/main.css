@@ -9,10 +9,9 @@
 
 :root {
     --background: #000814;
-    --contrast:   #002D4D;
-    --light-cont: #236290;
-    --accent:     #C4334B;
+    --blue:       #236290;
     --green:      #33C485;
+    --red:        #C4334B;
     --white:      #FFFFFF;
 }
 
@@ -28,7 +27,7 @@ body {
     font-family: "Parkinsans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-weight: 300;
+    font-weight: bold;
     
     font-size: 0px;
 }
@@ -65,19 +64,19 @@ header .sticky-header {
 }
 
 header .sticky-header .flag, header .sticky-header .unit {
-  display: inline-block;
-  vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 header .sticky-header .flag {
-  width: 92px;
-  text-align: left;
+    width: 92px;
+    text-align: left;
 }
 
 header .sticky-header .flag svg { 
-  width: 82px;
-  height: 66px;
-  aspect-ratio: 44 / 31;
+    width: 82px;
+    height: 66px;
+    aspect-ratio: 44 / 31;
 }
 
 header .sticky-header .unit { width: calc(100% - 92px); }
@@ -129,27 +128,32 @@ main .divider > hr {
 
 main .divider > .label {
     padding: 0 15px;
+    font-weight: 300;
     color: rgba(from var(--white) r g b / 55%);
 }
 
 main .module {
     display: inline-block;
-    width: calc(100% / 3 - 4px);
     margin: 0;
     padding: 6px 3px;
+    width: calc(100% / 3 - 4px);
 }
 
 main .module > * {
-    border: 3px solid var(--light-cont);
+    display: inline-block;
+    background: rgba(from var(--blue) r g b / 50%);
+    
     width: 100%;
+    padding: 10px;
+    
+    border: 3px solid var(--blue);
+}
+main .module.completed > * {
+    background: rgba(from var(--red) r g b / 50%);
+    border: 3px solid var(--red);
 }
 
 main .module .start {
-    display: inline-block;
-    background: var(--contrast);
-
-    padding: 10px 0;
-    
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom: 0;
@@ -166,53 +170,73 @@ main .module .start .start-btn {
     width: 90%;
     aspect-ratio: 5/1;
 
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     font-weight: bold;
     font-size: 20px;
 
     outline: 0;
     border: 0;
-    border-bottom: 2px solid rgba(from var(--contrast) r g b / 50%);
+    border-bottom: 5px solid rgba(from var(--contrast) r g b / 50%);
     border-radius: 5px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
 
     color: black;
     mix-blend-mode: screen;
 }
+main .module.completed .start .start-btn { border-bottom: 5px solid rgba(from var(--red) r g b / 50%); }
+
+main .module .start .start-btn:active {
+    transform: scaleY(0.95);
+
+    border-bottom: 0;
+    border-radius: 5px;
+}
 
 main .module .completion {
-    display: inline-block;
-    background: var(--contrast);
-    padding: 10px;
-
     font-size: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-main .module .completion .indicator {
+main .module .completion > * {
     display: inline-block;
-    background: var(--background);
     vertical-align: middle;
-
     margin: 0 0.5%;
+}
+
+main .module .completion .indicator {
+    background: var(--background);
     padding: 8px;
 
-    font-size: 10px;
     border-radius: 5px;
 }
+main .module .completion .indicator.completed { background: var(--red); }
+
+main .module .completion .fa-solid {
+    width: 10%;
+
+    text-align: center;
+    
+    font-size: 20px;
+    color: var(--background);
+}
+main .module.completed .completion .fa-solid { color: var(--red); }
 
 @media screen and (max-width: 1000px) {
     header { padding: 0 15%; }
     main   { padding: 15px 15%; }
+    main .module { width: calc(100% / 3 - 4px); }
 }
 
 @media screen and (max-width: 900px) {
     header { padding: 0 10%; }
     main   { padding: 15px 10%; }
+    main .module { width: calc(90% / 2 - 4px); }
 }
 
 @media screen and (max-width: 700px) {
     header { padding: 0 5%; }
     main   { padding: 15px 5%; }
+    main .module { width: 90%; }
 }
