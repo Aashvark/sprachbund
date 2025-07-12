@@ -4,15 +4,25 @@
     "description": "Learn basic words and grammar.",
     "modules": [
       {
-        "icon": "child-reaching",
+        "icon": "child-dress",
         "lessons": [
-          [],
+          [
+            {
+              "type": "vocabulary",
+                "word": "han",
+                "tip": "[He/she/it] is the implied subject. If context demands it, [they] may be the implied subject.",
+                "example": {
+                  "sentence": "[han].",
+                  "translation": "[He/she/it is]."
+                }
+            }
+          ],
           [],
           []
         ]
       },
       {
-        "icon": "child-reaching",
+        "icon": "handshake",
         "lessons": [
           [],
           [],

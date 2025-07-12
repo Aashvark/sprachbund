@@ -23,13 +23,16 @@
       {{#each modules}}
       <div class="module">
         <div class="start">
-          <form method="post" action="/lesson">
+          <form method="post" action="/lesson/u">
+            <input name="unit" value="{{@../index}}" hidden>
+            <input name="module" value="{{@index}}" hidden>
+            <input name="lesson" id="u{{@../index}}-m{{@index}}" hidden>
             <i class="fa-solid fa-{{icon}}"></i>
-            <button class="start-btn" name="lesson">{{@../index}}-l{{@index}}</button>
+            <button class="start-btn">START</button>
           </form>
         </div>
         <div class="completion">
-        {{#each lessons}}<div class="indicator" style="width: calc(89%/{{../lessons.length}} - 1%);"></div>{{/each}}
+        {{#each lessons}}<div class="indicator i-{{@../index}}-{{@index}}" style="width: calc(89%/{{../lessons.length}} - 1%);"></div>{{/each}}
         <i class="fa-solid fa-star"></i>
         </div>
       </div>
@@ -37,5 +40,14 @@
     {{/each}}
     </main>
   </body>
-  <script></script>
+  <script>
+    for (var i = 0; i < {{units.length}}; i++) {
+      for (var j = 0; j < {{units.[j].length}}; j++) {
+        let name = `u${i}-m${j}`;
+        if (localStorage.getItem(name) === undefined || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
+        document.getElementById(name).value = localStorage.getItem(name);
+        for (var k = 0; k < localStorage.getItem(name); k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
+      }
+    }
+  </script>
 </html>
