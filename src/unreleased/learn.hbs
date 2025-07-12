@@ -21,7 +21,7 @@
     {{#each units}}
       <div class="divider"><hr><p class="label">{{name}}</p><hr></div>
       {{#each modules}}
-      <div class="module">
+      <div class="module m{{@../index}}">
         <div class="start">
           <form method="post" action="/lesson/u">
             <input name="unit" value="{{@../index}}" hidden>
@@ -42,7 +42,7 @@
   </body>
   <script>
     for (var i = 0; i < {{units.length}}; i++) {
-      for (var j = 0; j < document.getElementsByClassName("module")[i].length; j++) {
+      for (var j = 0; j < document.getElementsByClassName("m${i}").length; j++) {
         let name = `u${i}-m${j}`;
         if (localStorage.getItem(name) === undefined || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
         document.getElementById(name).value = localStorage.getItem(name);
