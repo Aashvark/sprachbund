@@ -42,7 +42,7 @@
   </body>
   <script>
     for (var i = 0; i < {{units.length}}; i++) {
-      for (var j = 0; j < {{units.[j].length}}; j++) {
+      for (var j = 0; j < document.getElementsByClassName("module")[i].length; j++) {
         let name = `u${i}-m${j}`;
         if (localStorage.getItem(name) === undefined || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
         document.getElementById(name).value = localStorage.getItem(name);
