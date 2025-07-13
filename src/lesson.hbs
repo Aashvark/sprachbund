@@ -167,7 +167,7 @@
     document.onkeydown = (event) => {
       if (event.key === "Enter") {
         event.preventDefault();
-        if (document.getElementById("alert").classList.contains("block")) setTimeout(() => { alert(); }, 350);
+        if (document.getElementById("alert").classList.contains("block")) setTimeout(() => alert(), 350);
         else if (lesson.type != "match") checkAnswer();
       }
     }
@@ -192,7 +192,9 @@
     }
 
     function completeLesson() {
-      localStorage.setItem("{{id}}", parseInt(localStorage.getItem("{{id}}")) + 1);
+      let last = localStorage.getItem("{{id}}");
+      if (last === "test") localStorage.setItem("{{id}}", "done");
+      else if (last != "done") localStorage.setItem("{{id}}", parseInt(last) < {{modlen}} ? parseInt(last) + 1 : "test");
       window.location = "/learn";
     }
 
@@ -202,7 +204,7 @@
         document.getElementById("client-timer").innerHTML = `${Math.floor(seconds/60)}:${(seconds-(Math.floor(seconds/60)*60)).toString().padStart(2, '0')}`;
       }, 1000);
     }
-    function stopTimer()  { clearInterval(timerInterval); }
+    function stopTimer() { clearInterval(timerInterval); }
 
     function formatAnswer(text) { return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`'\?~()]/g, "").replace(/\s{2,}/g, " ").trimEnd().trimStart(); }
     

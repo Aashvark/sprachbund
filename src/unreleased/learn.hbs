@@ -43,11 +43,21 @@
   </body>
   <script>
     for (var i = 0; i < {{units.length}}; i++) {
-      for (var j = 0; j < document.getElementsByClassName(`m${i}`).length; j++) {
+      let mi = document.getElementsByClassName(`m${i}`);
+      for (var j = 0; j < mi.length; j++) {
         let name = `u${i}-m${j}`;
         if (localStorage.getItem(name) === undefined || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
         document.getElementById(name).value = localStorage.getItem(name);
-        for (var k = 0; k < localStorage.getItem(name); k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
+        terminator = localStorage.getItem(name);
+        if (localStorage.getItem(name) === "test") {
+          terminator = document.getElementsByClassName(`m${i}`).length;
+          mi[j].getElementsByClassName("start-btn")[0].innerHTML = "TEST";
+        } else if (localStorage.getItem(name) === "done") {
+          terminator = document.getElementsByClassName(`m${i}`).length;
+          mi[j].classList.add("completed");
+          mi[j].getElementsByClassName("start-btn")[0].innerHTML = "REVIEW";
+        }
+        for (var k = 0; k < terminator; k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
       }
     }
   </script>

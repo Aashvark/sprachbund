@@ -110,15 +110,22 @@
               }
             }
           ]
-        ]
-      },
-      {
-        "icon": "handshake",
-        "title": "Pronouns",
-        "lessons": [
-          [],
-          [],
-          []
+        ],
+        "test": [
+          {
+            "type": "short-response",
+            "direction": "foreign-native",
+            "prompt": "symi.",
+            "answers": ["a man", "man"]
+          }
+        ],
+        "review": [
+          {
+            "type": "short-response",
+            "direction": "foreign-native",
+            "prompt": "woman.",
+            "answers": ["a woman", "woman"]
+          }
         ]
       }
     ]
