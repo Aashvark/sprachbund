@@ -198,7 +198,7 @@ fastify.post("/lesson/u",   function (request, reply) {
   console.log(request.body.unit);
   console.log(request.body.module);
   console.log(request.body["u0-m0"]);
-  console.log(ulessons[0].modules[0].lessons[0]);
+  console.log(ulessons[0].modules[0].lessons[0]); 
   return reply.view("/src/lesson.hbs", { seo: seo.index, unitno: request.body.unit, lessons: ulessons[request.body.unit].modules[request.body.module].lessons[request.body["u" + request.body.unit + "-m" + request.body.module]] });
 });
 
