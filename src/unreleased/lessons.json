@@ -133,16 +133,67 @@
   {
     "name": "Introduction",
     "description": "Learn basic words and grammar.",
-    "modules": []
+    "modules": [
+      {
+        "icon": "child-dress",
+        "title": "The verb 'lá'.",
+        "lessons": [
+          [
+            {
+              "type": "vocabulary",
+              "word": "symi",
+              "example": {
+                "sentence": "[symi].",
+                "translation": "[(a) man]."
+              }
+            }
+          ]
+        ]
+      }
+    ]
   },
   {
     "name": "Introduction",
     "description": "Learn basic words and grammar.",
-    "modules": []
+    "modules": [
+      {
+        "icon": "child-dress",
+        "title": "The verb 'lá'.",
+        "lessons": [
+          [
+            {
+              "type": "vocabulary",
+              "word": "symi",
+              "example": {
+                "sentence": "[symi].",
+                "translation": "[(a) man]."
+              }
+            }
+          ]
+        ]
+      }
+    ]
   },
   {
     "name": "Introduction",
     "description": "Learn basic words and grammar.",
-    "modules": []
+    "modules": [
+      {
+        "icon": "child-dress",
+        "title": "The verb 'lá'.",
+        "lessons": [
+          [
+            {
+              "type": "vocabulary",
+              "word": "symi",
+              "example": {
+                "sentence": "[symi].",
+                "translation": "[(a) man]."
+              }
+            }
+          ]
+        ]
+      }
+    ]
   }
 ]
