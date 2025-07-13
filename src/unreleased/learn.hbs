@@ -19,7 +19,7 @@
     </header>
     <main>
     {{#each units}}
-      <div class="divider" id="{{@index}}" data-description="{{description}}"><hr><p class="label">{{name}}</p><hr></div>
+      <div class="divider" id="divider{{@index}}" data-description="{{description}}"><hr><p class="label">{{name}}</p><hr></div>
       {{#each modules}}
       <div class="module m{{@../index}}">
         <div class="start">
