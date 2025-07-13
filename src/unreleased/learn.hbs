@@ -44,7 +44,7 @@
   <script>
     document.onscroll = () => {
       let scrollPos = window.scrollY;
-      for (let i = {{units.length}}; i > 0; i--) {
+      for (let i = {{units.length}} - 1; i >= 0; i--) {
         if (scrollPos - (document.getElementById("header").offsetHeight * 1.5) <= document.getElementsById("divider" + i)) {
           document.getElementById("unitno").innerHTML = i;
           document.getElementById("unitdesc").innerHTML = document.getElementsById("divider" + i).getAttribute("data-description");
