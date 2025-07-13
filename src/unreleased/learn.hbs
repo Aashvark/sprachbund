@@ -42,8 +42,8 @@
   </body>
   <script>
     for (var i = 0; i < {{units.length}}; i++) {
-      console.log(document.getElementsByClassName("m${i}").length);
-      for (var j = 0; j < document.getElementsByClassName("m${i}").length; j++) {
+      console.log(document.getElementsByClassName(`m${i}`).length);
+      for (var j = 0; j < document.getElementsByClassName(`m${i}`).length; j++) {
         let name = `u${i}-m${j}`;
         if (localStorage.getItem(name) === undefined || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
         document.getElementById(name).value = localStorage.getItem(name);
