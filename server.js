@@ -195,7 +195,6 @@ fastify.post("/lesson", function (request, reply) { return reply.view('/src/less
 const ulessons = require("./src/unreleased/lessons.json");
 fastify.get("/learn/u",   function (request, reply) { return reply.view("/src/unreleased/learn.hbs", { seo: seo.index, units: ulessons }); });
 fastify.post("/lesson/u",   function (request, reply) {
-  console.log(request.body.lesson);
   if (request.body.lesson === "test") return reply.view("/src/lesson.hbs", { seo: seo.index, id: "u" + request.body.unit + "-m" + request.body.module, modlen: ulessons[request.body.unit].modules[request.body.module].lessons.length, lessons: ulessons[request.body.unit].modules[request.body.module].test });
   else if (request.body.lesson === "done") return reply.view("/src/lesson.hbs", { seo: seo.index, id: "u" + request.body.unit + "-m" + request.body.module, modlen: ulessons[request.body.unit].modules[request.body.module].lessons.length, lessons: ulessons[request.body.unit].modules[request.body.module].review });
   return reply.view("/src/lesson.hbs", { seo: seo.index, id: "u" + request.body.unit + "-m" + request.body.module, modlen: ulessons[request.body.unit].modules[request.body.module].lessons.length, lessons: ulessons[request.body.unit].modules[request.body.module].lessons[request.body.lesson] });

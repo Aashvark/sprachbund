@@ -50,7 +50,7 @@
         terminator = localStorage.getItem(name);
         if (isNaN(terminator)) {
           document.getElementsByClassName(`m${i}`)[j].getElementsByClassName("start-btn")[0].innerHTML = localStorage.getItem(name) === "test" ? "TEST" : "REVIEW";
-          terminator = document.getElementsByClassName(`m${i}`).getElementsByClassName("indicator").length;
+          terminator = document.getElementsByClassName('i-' + i + "-" + j).length;
         }
 
         if (localStorage.getItem(name) === "done") document.getElementsByClassName(`m${i}`)[j].classList.add("completed");
