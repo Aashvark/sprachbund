@@ -42,9 +42,9 @@
   </body>
   <script>
     for (var i = 0; i < {{units.length}}; i++) {
-      console.log(document.getElementsByClassName(`m${i}`).length);
       for (var j = 0; j < document.getElementsByClassName(`m${i}`).length; j++) {
         let name = `u${i}-m${j}`;
+        console.log(name);
         if (localStorage.getItem(name) === undefined || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
         document.getElementById(name).value = localStorage.getItem(name);
         for (var k = 0; k < localStorage.getItem(name); k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
