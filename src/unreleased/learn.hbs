@@ -50,11 +50,11 @@
         terminator = localStorage.getItem(name);
         if (localStorage.getItem(name) === "test") {
           terminator = document.getElementsByClassName(`m${i}`).length;
-          document.getElementsByClassName(`m${i}`);[j].getElementsByClassName("start-btn")[0].innerHTML = "TEST";
+          document.getElementsByClassName(`m${i}`)[j].getElementsByClassName("start-btn")[0].innerHTML = "TEST";
         } else if (localStorage.getItem(name) === "done") {
           terminator = document.getElementsByClassName(`m${i}`).length;
-          document.getElementsByClassName(`m${i}`);[j].classList.add("completed");
-          document.getElementsByClassName(`m${i}`);[j].getElementsByClassName("start-btn")[0].innerHTML = "REVIEW";
+          document.getElementsByClassName(`m${i}`)[j].classList.add("completed");
+          document.getElementsByClassName(`m${i}`)[j].getElementsByClassName("start-btn")[0].innerHTML = "REVIEW";
         }
         for (var k = 0; k < terminator; k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
       }
