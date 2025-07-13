@@ -5,6 +5,7 @@
     "modules": [
       {
         "icon": "child-dress",
+        "title": "The verb 'lá'.",
         "lessons": [
           [
             {
@@ -72,12 +73,48 @@
               "direction": "native-foreign",
               "prompt": "He exists.",
               "answers": ["lá"]
+            },
+            {
+              "type": "vocabulary",
+              "word": "miro",
+              "example": {
+                "sentence": "lá [miro].",
+                "translation": "It is [(a loaf of) bread]."
+              }
+            }
+          ],
+          [
+            {
+              "type": "vocabulary",
+              "word": "kas",
+              "example": {
+                "sentence": "i sorón ćina [kas] han i miro.",
+                "translation": "The kind person [eats] the bread."
+              }
+            },
+            {
+              "type": "vocabulary",
+              "word": "mikol",
+              "example": {
+                "sentence": "David lá [mikol] symi.",
+                "translation": "David is a [short] man."
+              },
+              "tip": "Adjectives come before nouns."
+            },
+            {
+              "type": "vocabulary",
+              "word": "su",
+              "example": {
+                "sentence": "kas lá [milk].",
+                "translation": "He/she/it drinks [milk]."
+              }
             }
           ]
         ]
       },
       {
         "icon": "handshake",
+        "title": "Pronouns",
         "lessons": [
           [],
           [],

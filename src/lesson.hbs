@@ -192,7 +192,7 @@
     }
 
     function completeLesson() {
-      localStorage.setItem('u{{unitno}}-lesson', parseInt(localStorage.getItem('u{{unitno}}-lesson')) + 1);
+      localStorage.setItem({{id}}, parseInt(localStorage.getItem({{id}})) + 1);
       window.location = "/learn";
     }
 

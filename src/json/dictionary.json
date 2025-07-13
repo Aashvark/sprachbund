@@ -12,6 +12,29 @@
     }
   },
   "nóri": {
+    "mikol": {
+      "ipa": "ˈmiˌkol",
+      "pos": "adjective",
+      "simple": ["short", "small"],
+      "definition": "Short or small, especially in comparison to the subject"
+    },
+    
+    "miro": {
+      "ipa": "ˈmiˌro",
+      "pos": "noun",
+      "definition": "Any given loaf of bread.",
+      "simple": ["bread", "loaf of bread", "bread loaf"],
+      "hint": ["(a loaf of) bread"]
+    },
+    "su": {
+      "ipa": "ˈsu",
+      "pos": "noun",
+      "definition": "Milk.",
+      "simple": ["milk"],
+      "hint": ["milk"],
+      "match": ["milk"]
+    },
+
     "cévo": {
       "ipa": "ˈt͡se˦ˌʋo",
       "pos": "noun",
@@ -23,6 +46,13 @@
       "pos": "noun",
       "definition": "A male human attaining the age of adulthood; man. When referring to children, it signifies their physical and/or emotional maturity.",
       "simple": ["man"]
+    },
+
+    "kas": {
+      "ipa": "ˈkas",
+      "pos": "preverb",
+      "definition": "Eating and Drinking",
+      "simple": ["eat", "drink"]
     },
 
     "lá": {
