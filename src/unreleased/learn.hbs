@@ -12,14 +12,14 @@
       <div class="sticky-header">
         <div class="flag"><svg><image href="/svg/flag.svg" xlink:href="/svg/flag.svg"></image></svg></div>
         <div class="unit">
-          <p class="name">Nóri &middot; Unit {{units.length}}</p>
-          <p class="description">Unit Description.</p>
+          <p class="name">Nóri &middot; Unit <span id="unitno"></span></p>
+          <p class="description" id="unitdesc"></p>
         </div>
       </div>
     </header>
     <main>
     {{#each units}}
-      <div class="divider"><hr><p class="label">{{name}}</p><hr></div>
+      <div class="divider" id="{{@index}}" data-description="{{description}}"><hr><p class="label">{{name}}</p><hr></div>
       {{#each modules}}
       <div class="module m{{@../index}}">
         <div class="start">
@@ -42,10 +42,20 @@
     </main>
   </body>
   <script>
-    for (var i = 0; i < {{units.length}}; i++) {
-      for (var j = 0; j < document.getElementsByClassName(`m${i}`).length; j++) {
+    document.onscroll = () => {
+      let scrollPos = window.scrollY;
+      for (let i = 0; i < {{units.length}}; i++) {
+        if (scrollPos > document.getElementsById("divider" + i)) {
+          document.getElementById("unitno").innerHTML = i;
+          document.getElementById("unitdesc").innerHTML = document.getElementsById("divider" + i).getAttribute("data-description");
+        }
+      }
+    };
+
+    for (let i = 0; i < {{units.length}}; i++) {
+      for (let j = 0; j < document.getElementsByClassName(`m${i}`).length; j++) {
         let name = `u${i}-m${j}`;
-        if (localStorage.getItem(name) === undefined || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
+        if (localStorage.getItem(name) === undefined || localStorage.getItem(name) < 0) localStorage.setItem(name, 0);
         document.getElementById(name).value = localStorage.getItem(name);
         terminator = localStorage.getItem(name);
         if (isNaN(terminator)) {
