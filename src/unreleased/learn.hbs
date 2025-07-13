@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <div class="sticky-header">
+      <div class="sticky-header" id="header">
         <div class="flag"><svg><image href="/svg/flag.svg" xlink:href="/svg/flag.svg"></image></svg></div>
         <div class="unit">
           <p class="name">Nóri &middot; Unit <span id="unitno"></span></p>
@@ -45,7 +45,7 @@
     document.onscroll = () => {
       let scrollPos = window.scrollY;
       for (let i = 0; i < {{units.length}}; i++) {
-        if (scrollPos > document.getElementsById("divider" + i)) {
+        if (scrollPos - (document.getElementById("header").offsetHeight * 1.5) > document.getElementsById("divider" + i)) {
           document.getElementById("unitno").innerHTML = i;
           document.getElementById("unitdesc").innerHTML = document.getElementsById("divider" + i).getAttribute("data-description");
         }
