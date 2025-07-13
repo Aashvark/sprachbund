@@ -48,14 +48,12 @@
         if (localStorage.getItem(name) === undefined || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
         document.getElementById(name).value = localStorage.getItem(name);
         terminator = localStorage.getItem(name);
-        if (localStorage.getItem(name) === "test") {
-          terminator = document.getElementsByClassName(`m${i}`).length;
-          document.getElementsByClassName(`m${i}`)[j].getElementsByClassName("start-btn")[0].innerHTML = "TEST";
-        } else if (localStorage.getItem(name) === "done") {
-          terminator = document.getElementsByClassName(`m${i}`).length;
-          document.getElementsByClassName(`m${i}`)[j].classList.add("completed");
-          document.getElementsByClassName(`m${i}`)[j].getElementsByClassName("start-btn")[0].innerHTML = "REVIEW";
+        if (isNaN(terminator)) {
+          document.getElementsByClassName(`m${i}`)[j].getElementsByClassName("start-btn")[0].innerHTML = localStorage.getItem(name) === "test" ? "TEST" : "REVIEW";
+          terminator = document.getElementsByClassName(`m${i}`).getElementsByClassName("indicator").length;
         }
+
+        if (localStorage.getItem(name) === "done") document.getElementsByClassName(`m${i}`)[j].classList.add("completed");
         for (var k = 0; k < terminator; k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
       }
     }
