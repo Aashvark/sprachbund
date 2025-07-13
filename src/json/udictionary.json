@@ -1,0 +1,336 @@
+{
+  "nóri-grammar": {
+    "templates": {
+      "[adjective]": {
+        "hint": ["[adjective]"],
+        "match": ["[adjective]"]
+      },
+      "[adjective] [noun]": {
+        "hint": ["[adjective] [noun]"],
+        "match": ["a [adjective] [noun]"]
+      },
+      "[demonstrative]": {
+        "hint": ["[demonstrative]"],
+        "match": ["[demonstrative]"]
+      },
+      "[demonstrative] [adjective]": {
+        "hint": ["[demonstrative] [adjective] one/thing"],
+        "match": ["[demonstrative] [adjective] one", "[demonstrative] [adjective] thing", "[demonstrative] [adjective] ones", "[demonstrative] [adjective] things"]
+      },
+      "[demonstrative] [adjective] [noun]": {
+        "hint": ["[demonstrative] [adjective] [noun]"],
+        "match": ["[demonstrative] [adjective] [noun]"]
+      },
+      "[demonstrative] [noun]": {
+        "hint": ["[demonstrative] [noun]"],
+        "match": ["[demonstrative] [noun]"]
+      },
+      "i [adjective]": {
+        "hint": ["the [adjective] one/thing"],
+        "match": ["the [adjective] one", "the [adjective] thing", "the [adjective] ones", "the [adjective] things"]
+      },
+      "i [adjective] [noun]": {
+        "hint": ["the [adjective] [noun]"],
+        "match": ["the [adjective] [noun]"]
+      },
+      "i [noun]": {
+        "hint": ["the [noun]"],
+        "match": ["the [noun]"]
+      },
+      "[interjection]": {
+        "hint": ["[interjection]"],
+        "match": ["[interjection]"]
+      },
+      "[preverb] han": {
+        "hint": ["[preverb]", "(he/she/it) [preverb]s", "(they) [preverb]"],
+        "match": ["[preverb]", "[preverb]s", "he [preverb]s", "she [preverb]s", "it [preverb]s", "they [preverb]"]
+      },
+      "[preverb] hotá": {
+        "hint": ["do not [preverb]", "(he/she/it) does not [preverb]", "(they) do not [preverb]"],
+        "match": ["don't [preverb]", "doesn't [preverb]", "he doesn't [preverb]", "she doesn't [preverb]", "it doesn't [preverb]", "they don't [preverb]", "do not [preverb]", "does not [preverb]", "he does not [preverb]", "she does not [preverb]", "it does not [preverb]", "they do not [preverb]"]
+      },
+      "ny vé han ćimon": {
+        "hint": ["I am sorry"],
+        "match": ["I'm sorry", "I am sorry"]
+      },
+      "ny han": {
+        "hint": ["I am"],
+        "match": ["I'm", "I am"]
+      },
+      "ny hotá": {
+        "hint": ["I am not"],
+        "match": ["I'm not", "I am not"]
+      },
+      "ké han": {
+        "hint": ["you are"],
+        "match": ["you're", "you are"]
+      },
+      "ké hotá": {
+        "hint": ["you are not"],
+        "match": ["you're not", "you aren't", "you are not"]
+      },
+      "ćy han": {
+        "hint": ["we are"],
+        "match": ["we're", "we are"]
+      },
+      "ćy hotá": {
+        "hint": ["we are not"],
+        "match": ["we're not", "we aren't", "we are not"]
+      },
+      "vun han": {
+        "hint": ["you are"],
+        "match": ["you're", "you are"]
+      },
+      "vun hotá": {
+        "hint": ["you are not"],
+        "match": ["you're not", "you aren't", "you are not"]
+      }
+    }
+  },
+  "nóri": {
+    "eu": {
+      "ipa": "ˈeu",
+      "pos": "adjective",
+      "simple": ["bad"],
+      "definition": "Bad or Evil, especially in the views of the speaker"
+    },
+    "mikol": {
+      "ipa": "ˈmiˌkol",
+      "pos": "adjective",
+      "simple": ["short", "small"],
+      "definition": "Short or small, especially in comparison to the subject"
+    },
+    "náu": {
+      "ipa": "ˈnau˦˧",
+      "pos": "adjective",
+      "simple": ["tall", "large", "big"],
+      "definition": "Tall or big, especially in comparison to the subject."
+    },
+    "sa": {
+      "ipa": "ˈsa",
+      "pos": "adjective",
+      "simple": ["good", "well"],
+      "definition": "Good, well, or favorable, especially in the views of the speaker"
+    },
+    "sorón": {
+      "ipa": "ˈsoˌron˦",
+      "pos": "adjective",
+      "simple": ["kind", "nice"],
+      "definition": "Kind or nice"
+    },
+    
+    "i": {
+      "ipa": "ˈi",
+      "pos": "article",
+      "definition": "denoting one or more people or things already mentioned or assumed to be common knowledge.",
+      "simple": ["the"],
+      "hint": ["the"],
+      "match": ["the"]
+    },
+    
+    "ele": {
+      "ipa": "ˈeˌle",
+      "pos": "conjunction",
+      "simple": ["and"],
+      "definition": "Used to connect words of the same part of speech, clauses, or sentences meant to be taken jointly; and",
+      "hint": ["and"],
+      "match": ["and"]
+    },
+
+    "na": {
+      "ipa": "ˈna",
+      "pos": "demonstrative",
+      "simple": ["this"],
+      "definition": "This"
+    },
+    "mu": {
+      "ipa": "ˈmu",
+      "pos": "demonstrative",
+      "simple": ["that"],
+      "definition": "That"
+    },
+
+    "ai": {
+      "ipa": "ˈai",
+      "pos": "interjection",
+      "simple": ["yes"],
+      "definition": "Used to approve of or agree to a positive statement; yes/aye"
+    },
+    "ćimon": {
+      "ipa": "ˈt͡ʃiˌmon",
+      "pos": "interjection",
+      "simple": ["please", "sorry"],
+      "definition": "An expression of disappointment; Please or Sorry."
+    },
+    "hansai": {
+      "ipa": "ˈxanˌsai",
+      "pos": "interjection",
+      "simple": ["hello", "hi"],
+      "definition": "A common informal greeting; Hello or Hi."
+    },
+    "kono": {
+      "ipa": "ˈkoˌno",
+      "pos": "interjection",
+      "simple": ["yes"],
+      "definition": "Used to approve of or agree to a negative statement; yes",
+      "hint": ["yes (neg.)"]
+    },
+    "tá": {
+      "ipa": "ˈta˦",
+      "pos": "interjection",
+      "simple": ["no"],
+      "definition": "Used to disapprove of or disagree to a statement; no"
+    },
+
+    "savél vu": {
+      "ipa": "ˈsaˌʋel˦ ˈʋu",
+      "pos": "phrase",
+      "simple": ["goodbye", "bye"],
+      "definition": "A common farewell; Goodbye.",
+      "hint": ["goodbye", "bye"],
+      "match": ["goodbye", "bye"]
+    },
+    
+    "lavat": {
+      "ipa": "ˈlaˌʋat",
+      "pos": "noun",
+      "simple": ["apple"],
+      "hint": ["(an) apple"],
+      "match": ["apple", "an apple"],
+      "definition": "Any given apple."
+    },
+    "miro": {
+      "ipa": "ˈmiˌro",
+      "pos": "noun",
+      "simple": ["bread", "loaf of bread", "bread loaf"],
+      "hint": ["(a loaf of) bread"],
+      "match": ["bread", "bread loaf", "a bread loaf", "loaf of bread", "a loaf of bread"],
+      "definition": "Any given loaf of bread. When necessary, leavened bread."
+    },
+    "móu": {
+      "ipa": "ˈmou˦˧",
+      "pos": "noun",
+      "simple": ["water"],
+      "hint": ["water"],
+      "match": ["water"],
+      "definition": "water."
+    },
+
+    "cévo": {
+      "ipa": "ˈt͡se˦ˌʋo",
+      "pos": "noun",
+      "simple": ["woman"],
+      "definition": "A female human attaining the age of adulthood; woman. When referring to children, it signifies their physical and/or emotional maturity.",
+      "hint": ["(a) woman"],
+      "match": ["woman", "a woman"]
+    },
+    "ćina": {
+      "ipa": "ˈt͡ʃiˌna",
+      "pos": "noun",
+      "simple": ["person"],
+      "definition": "Any given person.",
+      "hint": ["(a) person"],
+      "match": ["person", "a person"]
+    },
+    "symi": {
+      "ipa": "ˈsəˌmi",
+      "pos": "noun",
+      "definition": "A male human attaining the age of adulthood; man. When referring to children, it signifies their physical and/or emotional maturity.",
+      "simple": ["man"],
+      "hint": ["(a) man"],
+      "match": ["man", "a man"]
+    },
+
+    "nes": {
+      "ipa": "ˈnes",
+      "pos": "noun",
+      "simple": ["thing", "object"],
+      "hint": ["(a) thing", "(an) object"],
+      "match": ["thing", "a thing", "object", "an object"],
+      "definition": "Any given thing or object."
+    },
+    
+    "kas": {
+      "ipa": "ˈkas",
+      "pos": "preverb",
+      "simple": ["eat", "drink"],
+      "definition": "Eating and Drinking"
+    },
+    "vé": {
+      "ipa": "ˈʋe˦",
+      "pos": "preverb",
+      "simple": ["have"],
+      "definition": "Used to describe the possession of nouns."
+    },
+    "vé han": {
+      "hint": ["have", "(he/she/it) has"],
+      "match": ["have", "has", "he has", "she has", "it has", "they have"]
+    },
+
+    "ćy": {
+      "ipa": "ˈt͡ʃə",
+      "pos": "pronoun",
+      "simple": ["we"],
+      "hint": ["we", "us"],
+      "match": ["we", "us"],
+      "definition": "Used by a speaker to refer to themself and another person as the subject or object of a sentence; we"
+    },
+    "ké": {
+      "ipa": "ˈke˦",
+      "pos": "pronoun",
+      "simple": ["you"],
+      "hint": ["you (NOM.SING.)"],
+      "match": ["you"],
+      "definition": "Used to informally refer to a person the speaker is addressing in the subject; you"
+    },
+    "ny": {
+      "ipa": "ˈnə",
+      "pos": "pronoun",
+      "simple": ["I"],
+      "hint": ["I", "me"],
+      "match": ["I", "me"],
+      "definition": "Used by a speaker to refer to themself as the subject or object of a sentence; I"
+    },
+    "téu": {
+      "ipa": "ˈteu˦˧",
+      "pos": "pronoun",
+      "simple": ["him", "her", "it", "them"],
+      "hint": ["him", "her", "it", "them"],
+      "match": ["him", "her", "it", "them"],
+      "definition": "Used to refer a person or group other than the speaker or addressee as the object of a sentence; him/her/it/them"
+    },
+    "vu": {
+      "ipa": "ˈʋu",
+      "pos": "pronoun",
+      "simple": ["you"],
+      "hint": ["you (ACC.SING.)"],
+      "match": ["you"],
+      "definition": "Used to informally refer to a person the speaker is addressing in the object; you"
+    },
+    "vun": {
+      "ipa": "ˈʋun",
+      "pos": "pronoun",
+      "simple": ["you"],
+      "hint": ["you (PLUR.)"],
+      "match": ["you", "you guys", "you all"],
+      "definition": "Used to informally refer to the people the speaker is addressing; y'all"
+    },
+    
+    "han": {
+      "ipa": "ˈxan",
+      "pos": "verb",
+      "definition": "Correlating the relation between nouns or the existence of a noun.",
+      "simple": ["be", "exist"],
+      "hint": ["be", "exist", "(he/she/it) is", "(he/she/it) exists"],
+      "match": ["be", "am", "are", "is", "he is", "she is", "it is", "they are", "he's", "she's", "it's", "they're", "exist", "exists", "he exists", "she exists", "it exists", "they exist"]
+    },
+    "hotá": {
+      "ipa": "ˈxoˌta˦",
+      "pos": "verb",
+      "simple": ["not be", "exist"],
+      "definition": "Correlating the irrelation between nouns or the existence of a noun.",
+      "hint": ["not be", "not", "(he/she/it) is not"],
+      "match": ["not be", "not", "am not", "are not", "is not", "he is not", "she is not", "it is not", "they are not", "aren't", "isn't", "he isn't", "she isn't", "it isn't", "they aren't", "do not exist", "he does not exist", "she does not exist", "it does not exist", "they do not exist", "don't exist", "he doesn't exist", "she doesn't exist", "it doesn't exist", "they don't exist"]
+    }
+  }
+}
