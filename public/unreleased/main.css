@@ -161,13 +161,13 @@ main .module .start {
 
 main .module .start > * { width: 100%; }
 main .module .start .fa-solid {
-    padding: 5px 0;
+    padding: 5px 0 0;
     font-size: 80px;
 }
 
 main .module .start .title {
-    padding: 5px 0 0;
-    font-size: 24px;
+    padding: 7px 0;
+    font-size: 22px;
 }
 
 main .module .start .start-btn {

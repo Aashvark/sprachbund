@@ -78,8 +78,8 @@
         <p class="p-text">{{lesson.description}}</p>
         {{#if lesson.syntax}}
         {{#each lesson.syntax.sentences}}
-        <div class="p-text center scale">
-          {{hover-translate phrase "foreign"}}
+        <div class="div-border">
+          <div class="p-text center">{{hover-translate phrase "foreign"}}</div>
           <p class="p-small center">{{meaning}}</p>
         </div>
         {{/each}}
@@ -192,7 +192,7 @@
     }
 
     function completeLesson() {
-      localStorage.setItem({{id}}, parseInt(localStorage.getItem({{id}})) + 1);
+      localStorage.setItem("{{id}}", parseInt(localStorage.getItem("{{id}}")) + 1);
       window.location = "/learn";
     }
 
