@@ -190,14 +190,10 @@ function escape(text) { return text ? text.replaceAll("'", "&#x27;") : text; }
 fastify.get("/",        function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
 fastify.get("/learn",   function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
 fastify.get("/lesson",  function (request, reply) { return reply.redirect('/learn'); });
-fastify.post("/lesson", function (request, reply) { return reply.view('/src/lesson.hbs', {seo: seo, unitno: request.body.unit, lessons: lessons[request.body.unit].unit[request.body[request.body.unit + "-lesson"]]});});
-
-const ulessons = require("./src/unreleased/lessons.json");
-fastify.get("/learn/u",   function (request, reply) { return reply.view("/src/unreleased/learn.hbs", { seo: seo.index, units: ulessons }); });
-fastify.post("/lesson/u",   function (request, reply) {
-  if (request.body.lesson === "test") return reply.view("/src/lesson.hbs", { seo: seo.index, id: "u" + request.body.unit + "-m" + request.body.module, modlen: ulessons[request.body.unit].modules[request.body.module].lessons.length, lessons: ulessons[request.body.unit].modules[request.body.module].test });
-  else if (request.body.lesson === "done") return reply.view("/src/lesson.hbs", { seo: seo.index, id: "u" + request.body.unit + "-m" + request.body.module, modlen: ulessons[request.body.unit].modules[request.body.module].lessons.length, lessons: ulessons[request.body.unit].modules[request.body.module].review });
-  return reply.view("/src/lesson.hbs", { seo: seo.index, id: "u" + request.body.unit + "-m" + request.body.module, modlen: ulessons[request.body.unit].modules[request.body.module].lessons.length, lessons: ulessons[request.body.unit].modules[request.body.module].lessons[request.body.lesson] });
+fastify.post("/lesson",   function (request, reply) {
+  if (request.body.lesson === "test") return reply.view("/src/lesson.hbs", { seo: seo.index, id: "u" + request.body.unit + "-m" + request.body.module, modlen: lessons[request.body.unit].modules[request.body.module].lessons.length, lessons: lessons[request.body.unit].modules[request.body.module].test });
+  else if (request.body.lesson === "done") return reply.view("/src/lesson.hbs", { seo: seo.index, id: "u" + request.body.unit + "-m" + request.body.module, modlen: lessons[request.body.unit].modules[request.body.module].lessons.length, lessons: lessons[request.body.unit].modules[request.body.module].review });
+  return reply.view("/src/lesson.hbs", { seo: seo.index, id: "u" + request.body.unit + "-m" + request.body.module, modlen: lessons[request.body.unit].modules[request.body.module].lessons.length, lessons: lessons[request.body.unit].modules[request.body.module].lessons[request.body.lesson] });
 });
 
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });

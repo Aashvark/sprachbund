@@ -263,7 +263,8 @@
 
     function nextLesson() {
       document.getElementsByClassName("section")[index - 1].style.display = "none";
-      if (index >= lessons.length) return endLesson();
+      if (index === lessons.length) return endLesson();
+      else if (index > lessons.length) return completeLesson();
 
       lesson = lessons[index];
       document.getElementById("next").style.display = lesson.type != "match" ? "inline-flex" : "none";
