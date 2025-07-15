@@ -187,8 +187,8 @@ function getLongestList(nestedList) {
 
 function escape(text) { return text ? text.replaceAll("'", "&#x27;") : text; }
 
-fastify.get("/",        function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
-fastify.get("/learn",   function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
+fastify.get("/",        function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: units }); });
+fastify.get("/learn",   function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: units }); });
 fastify.get("/lesson",  function (request, reply) { return reply.redirect('/learn'); });
 fastify.post("/lesson",   function (request, reply) {
   let {unit, module, lesson} = request.body;
