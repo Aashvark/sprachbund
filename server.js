@@ -191,18 +191,18 @@ fastify.get("/",        function (request, reply) { return reply.view("/src/inde
 fastify.get("/learn",   function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
 fastify.get("/lesson",  function (request, reply) { return reply.redirect('/learn'); });
 fastify.post("/lesson",   function (request, reply) {
-  let {unit, modul, lesson} = request.body;
-  let id = `u${unit}-m${modul}`;
+  let {unit, module, lesson} = request.body;
+  let id = `u${unit}-m${module}`;
   console.log(id);
 
-  let modlen = units[unit].modules[modul].lessons.length;
+  let modlen = units[unit].modules[module].lessons.length;
   console.log(modlen);
-  
-  let lessons = units[unit].modules[modul].lessons[lesson];
+
+  let lessons = units[unit].modules[module].lessons[lesson];
   console.log(lessons); 
 
-  if (lesson === "test") lessons = units[unit].modules[modul].test;
-  else if (lesson === "done") lessons = units[unit].modules[modul].review;
+  if (lesson === "test") lessons = units[unit].modules[module].test;
+  else if (lesson === "done") lessons = units[unit].modules[module].review;
 
   return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: modlen, lessons: lessons });
 });
