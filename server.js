@@ -191,9 +191,19 @@ fastify.get("/",        function (request, reply) { return reply.view("/src/inde
 fastify.get("/learn",   function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
 fastify.get("/lesson",  function (request, reply) { return reply.redirect('/learn'); });
 fastify.post("/lesson",   function (request, reply) {
-  if (request.body.lesson === "test") return reply.view("/src/lesson.hbs", { seo: seo.index, id: "u" + request.body.unit + "-m" + request.body.module, modlen: lessons[request.body.unit].modules[request.body.module].lessons.length, lessons: lessons[request.body.unit].modules[request.body.module].test });
-  else if (request.body.lesson === "done") return reply.view("/src/lesson.hbs", { seo: seo.index, id: "u" + request.body.unit + "-m" + request.body.module, modlen: lessons[request.body.unit].modules[request.body.module].lessons.length, lessons: lessons[request.body.unit].modules[request.body.module].review });
-  return reply.view("/src/lesson.hbs", { seo: seo.index, id: "u" + request.body.unit + "-m" + request.body.module, modlen: lessons[request.body.unit].modules[request.body.module].lessons.length, lessons: lessons[request.body.unit].modules[request.body.module].lessons[request.body.lesson] });
+  let {unit, modul, lesson} = request.body;
+  let id = `u${unit}-m${modul}`;
+  let modlen = lessons[unit].modules[modul].lessons.length;
+  let lessons = lessons[unit].modules[modul].lessons[lesson];
+
+  console.log(id);
+  console.log(modlen);
+  console.log(lessons);
+
+  if (lesson === "test") lessons = lessons[unit].modules[module].test;
+  else if (lesson === "done") lessons = lessons[unit].modules[module].review;
+
+  return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: modlen, lessons: lessons });
 });
 
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
