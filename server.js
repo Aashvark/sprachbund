@@ -198,10 +198,10 @@ fastify.post("/lesson",   function (request, reply) {
 
   console.log(id);
   console.log(modlen);
-  console.log(lessons);
+  console.log(lessons); 
 
-  if (lesson === "test") less = lessons[unit].modules[module].test;
-  else if (lesson === "done") v = lessons[unit].modules[module].review;
+  if (lesson === "test") less = lessons[unit].modules[modul].test;
+  else if (lesson === "done") v = lessons[unit].modules[modul].review;
 
   return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: modlen, lessons: less });
 });
