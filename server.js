@@ -194,6 +194,7 @@ fastify.post("/lesson",   function (request, reply) {
   let {unit, module, lesson} = request.body;
   let id = `u${unit}-m${module}`;
   console.log(id);
+  console.log(lesson);
 
   let modlen = units[unit].modules[module].lessons.length;
   console.log(modlen);
