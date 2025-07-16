@@ -4,7 +4,7 @@ const fastify = require("fastify")({ logger: false });
 
 const seo = require("./src/json/seo.json");
 const dictionary = require("./src/json/dictionary.json");
-const units = require("./src/json/lessons.json");
+const units = require("./src/json/units.json");
 
 let language = "nóri";
 let dict     = dictionary[language];

@@ -4,7 +4,7 @@ const fastify = require("fastify")({ logger: false });
 
 const seo = require("./src/json/seo.json");
 const dictionary = require("./src/json/dictionary.json");
-const lessons = require("./src/json/lessons.json");
+const units = require("./src/json/units.json");
 
 let language = "nóri";
 let dict     = dictionary[language];
@@ -27,7 +27,7 @@ handlebars.registerHelper('hover-translate', function(prompt, lang) {
   let tokens = [];
   for (var word of prompt.split(" ")) {
     let section = "";
-    for (var letter of word) section += (/[.,\/#!$%\^&\*;:{}=\-`~()]/g.test(letter) ? " " : "") + letter;
+    for (var letter of word) section += (/[.,\/#!$%\^&\*;\?:{}=\-`~()]/g.test(letter) ? " " : "") + letter;
     tokens.push(section.split(" "));
   }
   return lang === "native" ? hoverNative(tokens) : hoverForeign(tokens);
@@ -109,7 +109,7 @@ function hoverForeign(tokens) {
     stored += token[0];
 
     if (stored === "___") {
-      string += `<div class="hint"><p class="blank"></p></div>`;
+      string += `<div class="hint"><span class="blank"></span></div>`;
       stored = "";
     }
     else if ((index < tokens.length - 1 && matchCluster(stored + " " + tokens[next][0]) || index < tokens.length - 2 && matchCluster(stored + " " + tokens[next][0] + " " + tokens[next + 1][0])) && token.length === 1) stored += " ";
@@ -187,11 +187,35 @@ function getLongestList(nestedList) {
 
 function escape(text) { return text ? text.replaceAll("'", "&#x27;") : text; }
 
-fastify.get("/", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
-fastify.get("/learn", function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: lessons }); });
-fastify.get("/lesson", function (request, reply) { return reply.redirect('/learn'); });
-fastify.post("/lesson", function (request, reply) { return reply.view('/src/lesson.hbs', {seo: seo, unitno: request.body.unit, lessons: lessons[request.body.unit].unit[request.body[request.body.unit + "-lesson"]]});});
+fastify.get("/",        function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: units }); });
+fastify.get("/learn",   function (request, reply) { return reply.view("/src/index.hbs", { seo: seo.index, units: units }); });
+fastify.get("/lesson",  function (request, reply) { return reply.redirect('/learn'); });
+fastify.post("/lesson",   function (request, reply) {
+  let {unit, module, lesson} = request.body;
+  let id = `u${unit}-m${module}`;
+  console.log(id);
+  console.log(lesson);
+
+  let modlen = units[unit].modules[module].lessons.length;
+  console.log(modlen);
+
+  let lessons = units[unit].modules[module].lessons[lesson];
+  console.log(lessons); 
+
+  if (lesson === "test") lessons = units[unit].modules[module].test;
+  else if (lesson === "done") lessons = units[unit].modules[module].review;
+
+  return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: modlen, lessons: lessons });
+});
 
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
 
-console.log(hoverForeign([["ai", "?"]]));
+fastify.listen({ port: process.env.PORT || 4000, host: "0.0.0.0" },
+  function (err, address) {
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    }
+    console.log(`Sprachbund is listening on ${address}`);
+  }
+);
