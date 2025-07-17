@@ -181,6 +181,12 @@
                 "sentence": "kas lá [milk].",
                 "translation": "He/she/it drinks [milk]."
               }
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "She is small.",
+              "answers": ["lá mikol"]
             }
           ]
         ],

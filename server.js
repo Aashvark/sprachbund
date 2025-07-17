@@ -194,13 +194,11 @@ fastify.post("/lesson",   function (request, reply) {
   let {unit, module, lesson} = request.body;
   let id = `u${unit}-m${module}`;
 
-  let modlen = units[unit].modules[module].lessons.length;
   let lessons = units[unit].modules[module].lessons[lesson];
-
   if (lesson === "test") lessons = units[unit].modules[module].test;
   else if (lesson === "done") lessons = units[unit].modules[module].review;
 
-  return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: modlen, lessons: lessons });
+  return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: units[unit].modules[module].lessons.length;, lessons: lessons });
 });
 
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });

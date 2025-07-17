@@ -1,6 +1,14 @@
 {
   "nóri-grammar": {
     "templates": {
+      "[adjective]": {
+        "hint": ["[adjective]"],
+        "match": ["[adjective]"]
+      },
+      "[adjective] [noun]": {
+        "hint": ["[adjective] [noun]"],
+        "match": ["a [adjective] [noun]", "[adjective] [noun]"]
+      },
       "[noun]": {
         "hint": ["(a) [noun]"],
         "match": ["[noun]", "a [noun]"]
