@@ -74,6 +74,24 @@
   </body>
   <script>
     checkScroll();
+    document.onload - () => {
+      for (let i = 0; i < {{units.length}}; i++) {
+        for (let j = 0; j < document.getElementsByClassName(`m${i}`).length; j++) {
+          let name = `u${i}-m${j}`;
+          if (localStorage.getItem(name) === undefined || localStorage.getItem(name) < 0) localStorage.setItem(name, 0);
+          document.getElementById(name).value = localStorage.getItem(name);
+          terminator = localStorage.getItem(name);
+          if (isNaN(terminator)) {
+            document.getElementsByClassName(`m${i}`)[j].getElementsByClassName("start-btn")[0].innerHTML = localStorage.getItem(name) === "test" ? "TEST" : "REVIEW";
+            terminator = document.getElementsByClassName('i-' + i + "-" + j).length;
+          }
+
+          if (localStorage.getItem(name) === "done") document.getElementsByClassName(`m${i}`)[j].classList.add("completed");
+          for (var k = 0; k < terminator; k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
+        }
+      }
+    };
+
     document.onscroll = () => { checkScroll(); };
 
     function checkScroll() {
@@ -83,22 +101,6 @@
           document.getElementById("unitno").innerHTML = i;
           document.getElementById("unitdesc").innerHTML = document.getElementById("divider" + i).getAttribute("data-description");
         }
-      }
-    } 
-
-    for (let i = 0; i < {{units.length}}; i++) {
-      for (let j = 0; j < document.getElementsByClassName(`m${i}`).length; j++) {
-        let name = `u${i}-m${j}`;
-        if (localStorage.getItem(name) === undefined || localStorage.getItem(name) < 0) localStorage.setItem(name, 0);
-        document.getElementById(name).value = localStorage.getItem(name);
-        terminator = localStorage.getItem(name);
-        if (isNaN(terminator)) {
-          document.getElementsByClassName(`m${i}`)[j].getElementsByClassName("start-btn")[0].innerHTML = localStorage.getItem(name) === "test" ? "TEST" : "REVIEW";
-          terminator = document.getElementsByClassName('i-' + i + "-" + j).length;
-        }
-
-        if (localStorage.getItem(name) === "done") document.getElementsByClassName(`m${i}`)[j].classList.add("completed");
-        for (var k = 0; k < terminator; k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
       }
     }
   </script>
