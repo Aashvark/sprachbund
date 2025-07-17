@@ -185,8 +185,31 @@
             {
               "type": "short-response",
               "direction": "native-foreign",
-              "prompt": "She is small.",
-              "answers": ["lá mikol"]
+              "prompt": "She drinks milk.",
+              "answers": ["kas lá su"]
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "Jordan exists.",
+              "answers": ["Jordan lá"]
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "It is a short woman.",
+              "answers": ["lá mikol cévo"]
+            },
+            {
+              "type": "match",
+              "foreign": ["miro", "kas", "cévo", "lá", "su"],
+              "native": ["bread", "eat/drink", "a woman", "to be", "milk"]
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "A man is bread.",
+              "answers": ["symi lá miro"]
             }
           ]
         ],
