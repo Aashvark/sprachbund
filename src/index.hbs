@@ -78,7 +78,8 @@
       for (let i = 0; i < {{units.length}}; i++) {
         for (let j = 0; j < document.getElementsByClassName(`m${i}`).length; j++) {
           let name = `u${i}-m${j}`;
-          if (localStorage.getItem(name) === undefined || localStorage.getItem(name) < 0) localStorage.setItem(name, 0);
+          if (localStorage.getItem(name) === undefined || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
+          console.log(localStorage.getItem(name));
           document.getElementById(name).value = localStorage.getItem(name);
           terminator = localStorage.getItem(name);
           if (isNaN(terminator)) {
