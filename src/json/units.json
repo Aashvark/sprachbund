@@ -23,6 +23,12 @@
               "answers": ["a man", "man"]
             },
             {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "A man.",
+              "answers": ["symi"]
+            },
+            {
               "type": "vocabulary",
               "word": "cévo",
               "example": {
@@ -33,8 +39,14 @@
             {
               "type": "short-response",
               "direction": "native-foreign",
-              "prompt": "A woman.",
+              "prompt": "Woman.",
               "answers": ["cévo"]
+            },
+            {
+              "type": "short-response",
+              "direction": "foreign-native",
+              "prompt": "cévo",
+              "answers": ["a woman", "woman"]
             },
             {
               "type": "vocabulary",
@@ -112,9 +124,34 @@
               "type": "vocabulary",
               "word": "kas",
               "example": {
-                "sentence": "i sorón ćina [kas] han i miro.",
-                "translation": "The kind person [eats] the bread."
+                "sentence": "Sophie [kas] han miro.",
+                "translation": "Sophie [eats] a loaf of bread."
               }
+            },
+            {
+              "type": "grammar",
+              "description": "Preverbs like [kas] are usually used before [han], unless otherwise mentioned.",
+              "syntax": {
+                "highlight": "[interjection]",
+                "sentences": [
+                  {
+                    "phrase": "David kas lá.",
+                    "meaning": "David eats/drinks."
+                  }
+                ]
+              }
+            },
+            {
+              "type": "short-response",
+              "direction": "foreign-native",
+              "prompt": "Kiran kas lá.",
+              "answers": ["Kiran eats", "Kiran drinks"]
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "kas lá miro.",
+              "answers": ["he eats bread", "she eats bread", "it eats bread", "he eats a loaf of bread", "she eats a loaf of bread", "it eats a loaf of bread", "he eats a bread loaf", "she eats a bread loaf", "it eats a bread loaf"]
             },
             {
               "type": "vocabulary",

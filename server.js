@@ -193,14 +193,9 @@ fastify.get("/lesson",  function (request, reply) { return reply.redirect('/lear
 fastify.post("/lesson",   function (request, reply) {
   let {unit, module, lesson} = request.body;
   let id = `u${unit}-m${module}`;
-  console.log(id);
-  console.log(lesson);
 
   let modlen = units[unit].modules[module].lessons.length;
-  console.log(modlen);
-
   let lessons = units[unit].modules[module].lessons[lesson];
-  console.log(lessons); 
 
   if (lesson === "test") lessons = units[unit].modules[module].test;
   else if (lesson === "done") lessons = units[unit].modules[module].review;
