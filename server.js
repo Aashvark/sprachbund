@@ -198,7 +198,7 @@ fastify.post("/lesson",   function (request, reply) {
   if (lesson === "test") lessons = units[unit].modules[module].test;
   else if (lesson === "done") lessons = units[unit].modules[module].review;
 
-  return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: units[unit].modules[module].lessons.length;, lessons: lessons });
+  return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: units[unit].modules[module].lessons.length, lessons: lessons });
 });
 
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
