@@ -81,6 +81,30 @@
                 "sentence": "lá [miro].",
                 "translation": "He/she/it is [(a loaf of) bread]."
               }
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "It is a bread loaf.",
+              "answers": ["lá miro"]
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "She is Sophie.",
+              "answers": ["lá Sophie"]
+            },
+            {
+              "type": "short-response",
+              "direction": "foreign-native",
+              "prompt": "David lá symi.",
+              "answers": ["David is a man"]
+            },
+            {
+              "type": "short-response",
+              "direction": "foreign-native",
+              "prompt": "lá cévo.",
+              "answers": ["he is a woman", "she is a woman", "it is a woman"]
             }
           ],
           [
