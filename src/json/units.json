@@ -149,7 +149,7 @@
             },
             {
               "type": "short-response",
-              "direction": "native-foreign",
+              "direction": "foreign-native",
               "prompt": "kas lá miro.",
               "answers": ["he eats bread", "she eats bread", "it eats bread", "he eats a loaf of bread", "she eats a loaf of bread", "it eats a loaf of bread", "he eats a bread loaf", "she eats a bread loaf", "it eats a bread loaf"]
             },
@@ -161,6 +161,18 @@
                 "translation": "David is a [short] man."
               },
               "tip": "Adjectives come before nouns."
+            },
+            {
+              "type": "short-response",
+              "direction": "foreign-native",
+              "prompt": "mikol symi.",
+              "answers": ["a short man", "short man", "a small man", "small man"]
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "She is small.",
+              "answers": ["lá mikol"]
             },
             {
               "type": "vocabulary",
