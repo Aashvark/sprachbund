@@ -199,7 +199,7 @@ fastify.post("/lesson",   function (request, reply) {
   let modlen = units[unit].modules[module].lessons.length;
   console.log(modlen);
 
-  let lessons = units[unit].modules[module].lessons[0];
+  let lessons = units[unit].modules[module].lessons[lesson];
   console.log(lessons); 
 
   if (lesson === "test") lessons = units[unit].modules[module].test;
