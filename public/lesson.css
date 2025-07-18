@@ -166,6 +166,7 @@ main .section .hint > span {
 }
 
 main .section .hint .blank {
+  display: inline-block;
   position: relative;
   top: 5px;
   width: 30px;

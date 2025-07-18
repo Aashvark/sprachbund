@@ -244,7 +244,7 @@
       },
       {
         "icon": "handshake",
-        "title": "Learn the personal pronouns!",
+        "title": "Use personal pronouns!",
         "lessons": [
           [
             {
@@ -367,7 +367,7 @@
       {
         "icon": "ban",
         "disable": true,
-        "title": "Negating sentences using 'lotá'",
+        "title": "Negate sentences!",
         "lessons": [
           []
         ],
@@ -377,7 +377,7 @@
       {
         "icon": "arrows-to-circle",
         "disable": true,
-        "title": "Negating sentences using 'lotá'",
+        "title": "Use demonstratives.",
         "lessons": [
           []
         ],
