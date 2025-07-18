@@ -70,7 +70,7 @@ header .sticky-header .flag, header .sticky-header .unit {
 
 header .sticky-header .flag {
     width: 92px;
-    text-align: left;
+    text-align: center;
 }
 
 header .sticky-header .flag svg { 
@@ -79,8 +79,16 @@ header .sticky-header .flag svg {
     aspect-ratio: 44 / 31;
 }
 header .sticky-header .flag svg image { width: 100%; }
+header .sticky-header .flag .score {
+    font-size: 20px;
+    font-weight: bold;
+}
 
-header .sticky-header .unit { width: calc(100% - 92px); }
+header .sticky-header .unit {
+    width: calc(100% - 92px);
+    padding: 0 5px;
+}
+
 header .sticky-header .unit > p {
     display: inline-block;
     width: 100%;
@@ -152,6 +160,10 @@ main .module > * {
 main .module.completed > * {
     background: rgba(from var(--red) r g b / 50%);
     border: 3px solid var(--red);
+}
+main .module.disabled > * {
+    background: rgba(from gray r g b / 50%);
+    border: 3px solid gray;
 }
 
 main .module .start {

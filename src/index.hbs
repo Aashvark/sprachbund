@@ -54,7 +54,7 @@
       {{#each modules}}
       <div class="module m{{@../index}}">
         <div class="start">
-          <form method="post" action="/lesson">
+          <form class="select-lesson" method="post" action="/lesson">
             <input name="unit" value="{{@../index}}" hidden>
             <input name="module" value="{{@index}}" hidden>
             <input name="lesson" id="u{{@../index}}-m{{@index}}" hidden>
@@ -89,6 +89,12 @@
         if (localStorage.getItem(name) === "done") document.getElementsByClassName(`m${i}`)[j].classList.add("completed");
         for (var k = 0; k < terminator; k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
       }
+    }
+
+    if (localStorage.getItem("score") === null || localStorage.getItem("score") <= 0) localStorage.setItem("score", 0);
+    for (let i = localStorage.getItem("score") + 1; i < document.getElementsByClassName(`module`).length; i++) {
+      document.getElementsByClassName(`module`)[i].classList.add("disabled");
+      document.getElementsByClassName("select-lesson")[i].disabled = true;
     }
 
     document.onscroll = () => { checkScroll(); };

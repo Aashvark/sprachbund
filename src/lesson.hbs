@@ -194,7 +194,10 @@
     function completeLesson() {
       let last = localStorage.getItem("{{id}}");
       console.log(last);
-      if (last === "test") localStorage.setItem("{{id}}", "done");
+      if (last === "test") {
+        localStorage.setItem("{{id}}", "done");
+        localStorage.setItem("score", parseInt(localStorage.getItem("score")) + 1);
+      }
       else if (last != "done") localStorage.setItem("{{id}}", parseInt(last) >= {{modlen}} - 1 ? "test" : parseInt(last) + 1);
       window.location = "/learn";
     }
