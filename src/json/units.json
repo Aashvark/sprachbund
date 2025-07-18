@@ -130,7 +130,7 @@
             },
             {
               "type": "grammar",
-              "description": "Preverbs like [kas] are usually used before [han], unless otherwise mentioned.",
+              "description": "Preverbs like [kas] are usually used before [lá], unless otherwise mentioned.",
               "syntax": {
                 "highlight": "[interjection]",
                 "sentences": [
