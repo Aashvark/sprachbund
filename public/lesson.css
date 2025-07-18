@@ -16,6 +16,7 @@ header .language-flag svg {
   width: 82px;
   height: 66px;
 }
+header .language-flag svg image { width: 100%; }
 
 header .progress-bar {
   justify-content: left;

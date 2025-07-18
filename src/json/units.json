@@ -190,6 +190,12 @@
             },
             {
               "type": "short-response",
+              "direction": "foreign-native",
+              "prompt": "lá su.",
+              "answers": ["he is milk", "she is milk", "it is milk"]
+            },
+            {
+              "type": "short-response",
               "direction": "native-foreign",
               "prompt": "Jordan exists.",
               "answers": ["Jordan lá"]
@@ -210,6 +216,12 @@
               "direction": "native-foreign",
               "prompt": "A man is bread.",
               "answers": ["symi lá miro"]
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "A short man. A short woman.",
+              "answers": ["mikol symi mikol cévo"]
             }
           ]
         ],

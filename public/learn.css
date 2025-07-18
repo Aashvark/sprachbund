@@ -78,6 +78,7 @@ header .sticky-header .flag svg {
     height: 66px;
     aspect-ratio: 44 / 31;
 }
+header .sticky-header .flag svg image { width: 100%; }
 
 header .sticky-header .unit { width: calc(100% - 92px); }
 header .sticky-header .unit > p {
