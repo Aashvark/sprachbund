@@ -14,8 +14,28 @@
         "match": ["[noun]", "a [noun]"]
       },
       "[preverb] lá": {
-        "hint": ["[preverb]", "(he/she/it) [preverb]s", "(they) [preverb]"],
-        "match": ["[preverb]", "[preverb]s", "he [preverb]s", "she [preverb]s", "it [preverb]s", "they [preverb]"]
+        "hint": ["[preverb]", "(he/she/it/they) [preverb]s"],
+        "match": ["[preverb]", "[preverb]s", "he [preverb]s", "she [preverb]s", "it [preverb]s"]
+      },
+      "[pronoun]": {
+        "hint": ["[pronoun]"],
+        "match": ["[pronoun]"]
+      },
+      "ny lá": {
+        "hint": ["I am"],
+        "match": ["I'm", "I am"]
+      },
+      "ké lá": {
+        "hint": ["you are"],
+        "match": ["you're", "you are"]
+      },
+      "ćy lá": {
+        "hint": ["we are"],
+        "match": ["we're", "we are"]
+      },
+      "vun lá": {
+        "hint": ["you are"],
+        "match": ["you're", "you are"]
       }
     }
   },
@@ -61,6 +81,46 @@
       "pos": "preverb",
       "definition": "Eating and Drinking",
       "simple": ["eat", "drink"]
+    },
+
+    "ćy": {
+      "ipa": "ˈt͡ʃə",
+      "pos": "pronoun",
+      "definition": "Used by a speaker to refer to themself and another person as the subject or object of a sentence; we",
+      "simple": ["we", "us"]
+    },
+    "ké": {
+      "ipa": "ˈke˦",
+      "pos": "pronoun",
+      "definition": "Used to informally refer to a person the speaker is addressing in the subject; you",
+      "simple": ["you"],
+      "hint": ["you (SING.)"]
+    },
+    "ny": {
+      "ipa": "ˈnə",
+      "pos": "pronoun",
+      "definition": "Used by a speaker to refer to themself as the subject or object of a sentence; I",
+      "simple": ["I", "me"]
+    },
+    "téu": {
+      "ipa": "ˈteu˦˧",
+      "pos": "pronoun",
+      "definition": "Used to refer a person or group other than the speaker or addressee as the object of a sentence; him/her/it/them",
+      "simple": ["him", "her", "it", "them"]
+    },
+    "vu": {
+      "ipa": "ˈʋu",
+      "pos": "pronoun",
+      "definition": "Used to informally refer to a person the speaker is addressing in the object; you",
+      "simple": ["you"],
+      "hint": ["you (ACC.SING.)"]
+    },
+    "vun": {
+      "ipa": "ˈʋun",
+      "pos": "pronoun",
+      "definition": "Used to informally refer to the people the speaker is addressing; y'all",
+      "simple": ["you", "you guys", "y'all", "you all"],
+      "hint": ["you (PLUR.)"]
     },
 
     "lá": {

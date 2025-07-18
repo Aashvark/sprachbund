@@ -52,7 +52,7 @@
     {{#each units}}
       <div class="divider" id="divider{{@index}}" data-description="{{description}}"><hr><p class="label">{{name}}</p><hr></div>
       {{#each modules}}
-      <div class="module m{{@../index}}">
+      <div class="module m{{@../index}} {{#if disable}}disabled{{/if}}">
         <div class="start">
           <form class="select-lesson" method="post" action="/lesson">
             <input name="unit" value="{{@../index}}" hidden>
