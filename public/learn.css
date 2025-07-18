@@ -196,7 +196,7 @@ main .module .start .start-btn {
 
     outline: 0;
     border: 0;
-    border-bottom: 5px solid rgba(from var(--contrast) r g b / 50%);
+    border-bottom: 5px solid rgba(from var(--blue) r g b / 50%);
     border-radius: 5px;
 
     color: black;
@@ -205,7 +205,7 @@ main .module .start .start-btn {
 main .module.completed .start .start-btn { border-bottom: 5px solid rgba(from var(--red) r g b / 50%); }
 main .module.disabled .start .start-btn { border-bottom: 5px solid rgba(from gray r g b / 50%); }
 
-main .module .start .start-btn:active {
+main .module:not(.disabled) .start .start-btn:active {
     transform: scaleY(0.95);
 
     border-bottom: 0;
