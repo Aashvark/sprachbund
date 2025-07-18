@@ -203,6 +203,7 @@ main .module .start .start-btn {
     mix-blend-mode: screen;
 }
 main .module.completed .start .start-btn { border-bottom: 5px solid rgba(from var(--red) r g b / 50%); }
+main .module.disabled .start .start-btn { border-bottom: 5px solid rgba(from gray r g b / 50%); }
 
 main .module .start .start-btn:active {
     transform: scaleY(0.95);
