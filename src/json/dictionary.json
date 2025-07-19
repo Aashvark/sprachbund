@@ -54,6 +54,14 @@
       "simple": ["bread", "loaf of bread", "bread loaf"],
       "hint": ["(a loaf of) bread"]
     },
+    "móu": {
+      "ipa": "ˈmou˦˧",
+      "pos": "noun",
+      "simple": ["water"],
+      "hint": ["water"],
+      "match": ["water"],
+      "definition": "water."
+    },
     "su": {
       "ipa": "ˈsu",
       "pos": "noun",

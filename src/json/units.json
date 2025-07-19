@@ -359,6 +359,92 @@
               "prompt": "ké lá.",
               "answers": ["you are", "you exist"]
             }
+          ],
+          [
+            {
+              "type": "vocabulary",
+              "word": "ćy",
+              "example": {
+                "sentence": "[ćy] lá.",
+                "translation": "[We] exist."
+              }
+            },
+            {
+              "type": "short-response",
+              "direction": "foreign-native",
+              "prompt": "ćy kas lá.",
+              "answers": ["we eat"]
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "We are short.",
+              "answers": ["ćy lá mikol"]
+            },
+            {
+              "type": "vocabulary",
+              "word": "vun",
+              "example": {
+                "sentence": "[vun] han.",
+                "translation": "[You] exist."
+              }
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "You are us.",
+              "answers": ["vun lá ćy"]
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "You all are large.",
+              "answers": ["vun lá náu"]
+            },
+            {
+              "type": "short-response",
+              "direction": "foreign-native",
+              "prompt": "vun lá mikol.",
+              "answers": ["you are small", "you all are small", "you are short", "you all are short"]
+            },
+            {
+              "type": "vocabulary",
+              "word": "móu",
+              "example": {
+                "sentence": "vun kas lá [móu].",
+                "translation": "You drink [water]."
+              }
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "I drink water.",
+              "answers": ["ny kas lá móu"]
+            },
+            {
+              "type": "short-response",
+              "direction": "foreign-native",
+              "prompt": "ćy kas lá móu",
+              "answers": ["we drink water"]
+            },
+            {
+              "type": "short-response",
+              "direction": "foreign-native",
+              "prompt": "ny lá téu.",
+              "answers": ["I am him", "I am her", "I am it"]
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "It is us.",
+              "answers": ["lá ćy"]
+            },
+            {
+              "type": "short-response",
+              "direction": "native-foreign",
+              "prompt": "We are short.",
+              "answers": ["ćy lá mikol"]
+            }
           ]
         ],
         "test": [],
