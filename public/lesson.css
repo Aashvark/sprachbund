@@ -2,7 +2,7 @@ body { overflow-y: hidden; }
 
 header { height: 12%; }
 
-header .language-flag, header .progress-bar, header .progress-count {
+header .language-flag, header .progress-bar, header .health, header .progress-count {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -31,6 +31,7 @@ header .progress-bar {
   
   border-radius: 20px;
 }
+header .progress-bar.test { width: calc(71% - 94px); }
 
 header .progress {
   display: block;
@@ -42,6 +43,14 @@ header .progress {
   border-radius: 20px;
   transition: width 1000ms;
 }
+
+header .health {
+  width: 12%;
+  font-size: 30px;
+  color: var(--accent);
+}
+header .health > .fa-solid { padding: 0 2px; }
+header .heath > .fa-heart-broken { color: var(--contrast); }
 
 header .progress-count { 
   width: 13%;
