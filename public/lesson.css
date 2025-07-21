@@ -49,8 +49,13 @@ header .health {
   font-size: 30px;
   color: var(--accent);
 }
-header .health > .fa-solid { padding: 0 2px; }
-header .heath > .fa-heart-broken { color: var(--contrast); }
+
+header .health > .fa-solid {
+  padding: 0 2px;
+  transition: color 2000ms;
+}
+
+header .health > .fa-heart-broken { color: var(--contrast); }
 
 header .progress-count { 
   width: 13%;
