@@ -92,7 +92,7 @@
         {{/ifEquals}} 
         {{#ifEquals lesson.type "short-response"}}
         <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
-        <div class="div-border scale">{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "native" "foreign")}}</div>
+        <div class="div-border scale">{{#if isTest}}{{lesson.prompt}}{{else}}{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "native" "foreign")}}{{/if}}</div>
         <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-foreign"}}Nóri{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "foreign-native"}}autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{{/ifEquals}} inputmode="search" enterkeyhint="go"></textarea></div>
         <div class="insert-buttons">
           <a class="button" onclick="caseshift()" id="shift-case">⬆</a>

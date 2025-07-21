@@ -97,7 +97,7 @@
             {
               "type": "short-response",
               "direction": "native-foreign",
-              "prompt": "It is a bread loaf.",
+              "prompt": "It's a bread loaf.",
               "answers": ["lá miro"]
             },
             {
@@ -116,7 +116,7 @@
               "type": "short-response",
               "direction": "foreign-native",
               "prompt": "lá cévo.",
-              "answers": ["he is a woman", "she is a woman", "it is a woman"]
+              "answers": ["he is a woman", "she is a woman", "it is a woman", "he's a woman", "she's a woman", "it's a woman"]
             }
           ],
           [
@@ -124,7 +124,7 @@
               "type": "vocabulary",
               "word": "kas",
               "example": {
-                "sentence": "Sophie [kas] han miro.",
+                "sentence": "Sophie [kas] lá miro.",
                 "translation": "Sophie [eats] a loaf of bread."
               }
             },
@@ -192,7 +192,7 @@
               "type": "short-response",
               "direction": "foreign-native",
               "prompt": "lá su.",
-              "answers": ["he is milk", "she is milk", "it is milk"]
+              "answers": ["he is milk", "she is milk", "it is milk", "he's milk", "she's milk", "it's milk"]
             },
             {
               "type": "short-response",
@@ -228,17 +228,59 @@
         "test": [
           {
             "type": "short-response",
-            "direction": "foreign-native",
-            "prompt": "symi.",
-            "answers": ["a man", "man"]
+            "direction": "native-foreign",
+            "prompt": "A man.",
+            "answers": ["symi"]
           }
         ],
         "review": [
           {
             "type": "short-response",
+            "direction": "native-foreign",
+            "prompt": "A man.",
+            "answers": ["symi"]
+          },
+          {
+            "type": "short-response",
+            "direction": "native-foreign",
+            "prompt": "It is a bread loaf.",
+            "answers": ["lá miro"]
+          },
+          {
+            "type": "short-response",
+            "direction": "native-foreign",
+            "prompt": "She is Sophie.",
+            "answers": ["lá Sophie"]
+          },
+          {
+            "type": "short-response",
             "direction": "foreign-native",
-            "prompt": "woman.",
+            "prompt": "cévo",
             "answers": ["a woman", "woman"]
+          },
+          {
+            "type": "short-response",
+            "direction": "native-foreign",
+            "prompt": "Jordan exists.",
+            "answers": ["Jordan lá"]
+          },
+          {
+            "type": "short-response",
+            "direction": "native-foreign",
+            "prompt": "It is a short woman.",
+            "answers": ["lá mikol cévo"]
+          },
+          {
+            "type": "short-response",
+            "direction": "native-foreign",
+            "prompt": "A man is bread.",
+            "answers": ["symi lá miro"]
+          },
+          {
+            "type": "short-response",
+            "direction": "native-foreign",
+            "prompt": "A short man. A short woman.",
+            "answers": ["mikol symi mikol cévo"]
           }
         ]
       },
@@ -280,7 +322,7 @@
               "type": "vocabulary",
               "word": "vu",
               "example": {
-                "sentence": "han [vu].",
+                "sentence": "lá [vu].",
                 "translation": "He/she/it is [you]."
               },
               "tip": "[vu] can only be used as a object (after the verb)."
@@ -385,7 +427,7 @@
               "type": "vocabulary",
               "word": "vun",
               "example": {
-                "sentence": "[vun] han.",
+                "sentence": "[vun] lá.",
                 "translation": "[You] exist."
               }
             },
