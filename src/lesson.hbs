@@ -100,8 +100,7 @@
         {{#ifEquals lesson.type "short-response"}}
         <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
         <div class="div-border scale">
-          {{#ifEquals isTest true}}{{lesson.prompt}}{{/ifEquals}}
-          {{#ifEquals isTest false}}{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "native" "foreign")}}{{/ifEquals}}
+          {{#if isTest}}{{lesson.prompt}}{{else}}{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "native" "foreign")}}{{/if}}
         </div>
         <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#ifEquals lesson.direction "native-foreign"}}Nóri{{else}}English{{/ifEquals}}" {{#ifEquals lesson.direction "foreign-native"}}autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{{/ifEquals}} inputmode="search" enterkeyhint="go"></textarea></div>
         <div class="insert-buttons">
@@ -265,13 +264,12 @@
         let change = document.getElementsByClassName("fa-heart")[0];
         change.classList.toggle("fa-heart-broken");
         change.classList.toggle("fa-heart");
-
-        if (hearts == 0) {
-          document.getElementById("continue-btn").setAttribute("href", "/");
-          setAlert("Good effort!", caption);
-        }
       }
-      else setAlert(heading, caption);
+
+      if (hearts == 0) {
+        document.getElementById("continue-btn").setAttribute("href", "/");
+        setAlert("Good effort!", caption);
+      } else setAlert(heading, caption);
     }
 
     function playCorrect() {
