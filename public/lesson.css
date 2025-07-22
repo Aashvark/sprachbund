@@ -24,14 +24,14 @@ header .progress-bar {
   background: linear-gradient(165deg, var(--contrast), var(--light-cont));
   border: 1px solid var(--light-cont);
   
-  width: calc(84% - 94px);
+  width: calc(87% - 94px);
   height: 30px;
   padding: 3px;
   text-align: left;
   
   border-radius: 20px;
 }
-header .progress-bar.test { width: calc(71% - 94px); }
+header .progress-bar.test { width: calc(74% - 94px); }
 
 header .progress {
   display: block;
@@ -58,7 +58,7 @@ header .health > .fa-solid {
 header .health > .fa-heart-broken { color: var(--contrast); }
 
 header .progress-count { 
-  width: 13%;
+  width: 10%;
   
   font-size: 20px;
   font-weight: bold;
