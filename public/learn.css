@@ -242,7 +242,7 @@ main .module .completion .fa-solid {
 }
 main .module.completed .completion .fa-solid { color: var(--red); }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
     header { padding: 0 12%; }
     main   { padding: 15px 12%; }
 }
