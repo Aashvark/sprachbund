@@ -243,6 +243,7 @@ main .module .completion .fa-solid {
 main .module.completed .completion .fa-solid { color: var(--red); }
 
 @media screen and (max-width: 1200px) {
+    header { padding: 0 12%; }
     main   { padding: 15px 12%; }
 }
 
@@ -255,6 +256,11 @@ main .module.completed .completion .fa-solid { color: var(--red); }
     header { padding: 0 10%; }
     main   { padding: 15px 10%; }
     main .module { width: calc(90% / 2 - 4px); }
+}
+
+@media screen and (max-width: 850px) {
+    header { padding: 0 7%; }
+    main   { padding: 15px 7%; }
 }
 
 @media screen and (max-width: 700px) {
