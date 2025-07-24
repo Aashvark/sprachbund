@@ -60,7 +60,7 @@
             <input name="lesson" id="u{{@../index}}-m{{@index}}" hidden>
             <i class="fa-solid fa-{{icon}}"></i>
             <p class="title">{{title}}</p>
-            <button class="start-btn">START</button>
+            <button class="start-btn">START{{lessons.length}}</button>
           </form>
         </div>
         <div class="completion">
@@ -78,6 +78,8 @@
   </body>
   <script>
     checkScroll();
+
+    document.onscroll = () => { checkScroll(); };
     
     for (let i = 0; i < {{units.length}}; i++) {
       for (let j = 0; j < document.getElementsByClassName(`m${i}`).length; j++) {
@@ -101,8 +103,6 @@
       document.getElementsByClassName("select-lesson")[i].addEventListener('submit', (event) => event.preventDefault());
       document.getElementsByClassName("start-btn")[i].innerHTML = "LOCKED";
     }
-
-    document.onscroll = () => { checkScroll(); };
 
     function checkScroll() {
       let scrollPos = window.scrollY;
