@@ -306,7 +306,7 @@
     function checkAnswer() {
       if (((lesson.type === "comprehension" || lesson.type === "conversation" || lesson.type === "fill-in-the-blank") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) || lesson.type === "match") correctAnswer("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
       else if (lesson.type === "grammar" || lesson.type === "vocabulary") correctAnswer("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
-      else if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined) incorrectAnswer("<i class=\"fas fa-circle-times\"></i> Please answer!", "Tap or click on the correct response.");
+      else if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined || document.getElementById("response-" + index).value === "") setAlert("<i class=\"fas fa-circle-times\"></i> Please answer!", "Tap or click on the correct response.");
       else incorrectAnswer("<i class=\"fas fa-circle-times\"></i> Try again!", "Hover over words you don't know if you need to.");
     }
     
