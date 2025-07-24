@@ -61,6 +61,7 @@ header .sticky-header {
     background: var(--green);
     padding: 15px;
 
+    font-size: 0;
     text-align: left;
 
     border: 3px solid rgba(0, 0, 0, 0.2);
@@ -103,7 +104,6 @@ header .sticky-header .unit .name {
     font-family: "Lato", sans-serif;
     font-style: normal;
 
-    font-size: var(--medium-font-size);
     color: rgba(from var(--white) r g b / 65%);
 }
 
