@@ -20,16 +20,3 @@ for (let i = 0; i < document.getElementsByClassName("divider").length; i++) {
         for (var k = 0; k < terminator; k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
     }
 }
-
-checkScroll();
-document.onscroll = () => { checkScroll(); }
-
-function checkScroll() {
-    let scrollPos = window.scrollY;
-    for (let i = document.getElementsByClassName("divider").length - 1; i >= 0; i--) {
-        if (scrollPos - (document.getElementById("header").offsetHeight * 1.5) <= document.getElementById("divider" + i).offsetTop) {
-            document.getElementById("unitno").innerHTML = i;
-            document.getElementById("unitdesc").innerHTML = document.getElementById("divider" + i).getAttribute("data-description");
-        }
-    }
-}
