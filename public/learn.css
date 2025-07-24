@@ -45,7 +45,7 @@ header {
     position: sticky;
     top: 10px;
 
-    padding: 0 20%;
+    padding: 0 15%;
     z-index: 1;
 }
 
@@ -247,15 +247,13 @@ main .module.completed .completion .fa-solid { color: var(--red); }
     main   { padding: 15px 12%; }
 }
 
-@media screen and (max-width: 1000px) {
-    header { padding: 0 15%; }
-    main .module { width: calc(100% / 3 - 4px); }
+@media screen and (max-width: 1100px) {
+    main .module { width: calc(100% / 2 - 4px); }
 }
 
 @media screen and (max-width: 900px) {
     header { padding: 0 10%; }
     main   { padding: 15px 10%; }
-    main .module { width: calc(90% / 2 - 4px); }
 }
 
 @media screen and (max-width: 850px) {
