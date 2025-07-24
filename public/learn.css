@@ -13,6 +13,10 @@
     --green:      #33C485;
     --red:        #C4334B;
     --white:      #FFFFFF;
+
+    --large-font-size:  24px;
+    --medium-font-size: 20px;
+    --small-font-size:  18px;
 }
 
 html, body {
@@ -79,10 +83,6 @@ header .sticky-header .flag svg {
     aspect-ratio: 44 / 31;
 }
 header .sticky-header .flag svg image { width: 100%; }
-header .sticky-header .flag .score {
-    font-size: 20px;
-    font-weight: bold;
-}
 
 header .sticky-header .unit {
     width: calc(100% - 92px);
@@ -92,7 +92,6 @@ header .sticky-header .unit {
 header .sticky-header .unit > p {
     display: inline-block;
     width: 100%;
-    font-size: 24px;
     font-weight: bold;
 }
 
@@ -100,10 +99,14 @@ header .sticky-header .unit .name {
     font-family: "Lato", sans-serif;
     font-style: normal;
 
-    font-size: 20px;
+    font-size: var(--medium-font-size);
     color: rgba(from var(--white) r g b / 65%);
 }
-header .sticky-header .unit .description { color: var(--white); }
+
+header .sticky-header .unit .description {
+    font-size: var(--large-font-size);
+    color: var(--white);
+}
 
 main {
     padding: 15px 15%;
@@ -137,15 +140,17 @@ main .divider > hr {
 
 main .divider > .label {
     padding: 0 15px;
+
+    font-size: var(--small-font-size);
     font-weight: 300;
     color: rgba(from var(--white) r g b / 55%);
 }
 
 main .module {
     display: inline-block;
+    width: calc(100% / 3 - 4px);
     margin: 0;
     padding: 6px 3px;
-    width: calc(100% / 3 - 4px);
 }
 
 main .module > * {
@@ -180,7 +185,7 @@ main .module .start .fa-solid {
 
 main .module .start .title {
     padding: 7px 0;
-    font-size: 22px;
+    font-size: var(--large-font-size);
 }
 
 main .module .start .start-btn {
@@ -192,7 +197,7 @@ main .module .start .start-btn {
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: var(--medium-font-size);
 
     outline: 0;
     border: 0;
@@ -235,7 +240,7 @@ main .module .completion .indicator.completed { background: var(--red); }
 main .module .completion .fa-solid {
     width: 10%;
     
-    font-size: 25px;
+    font-size: var(--large-font-size);
     color: var(--background);
     text-align: center;
 }
