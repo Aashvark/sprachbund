@@ -16,7 +16,7 @@
 
     --icon-size: 80px;
 
-    --large-font-size:  24px;
+    --large-font-size:  22px;
     --medium-font-size: 20px;
     --small-font-size:  18px;
 }
@@ -104,6 +104,7 @@ header .sticky-header .unit .name {
     font-family: "Lato", sans-serif;
     font-style: normal;
 
+    font-size: var(--medium-font-size);
     color: rgba(from var(--white) r g b / 65%);
 }
 
@@ -171,6 +172,8 @@ main .module.disabled > * {
 }
 
 main .module .start {
+    padding: 5px 0;
+
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom: 0;
@@ -178,8 +181,7 @@ main .module .start {
 
 main .module .start > * { width: 100%; }
 main .module .start .fa-solid {
-    padding: 5px 0 0;
-    font-size: 80px;
+    font-size: var(--icon-size);
 }
 
 main .module .start .title {
