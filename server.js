@@ -14,7 +14,7 @@ fastify.register(require("@fastify/static"), { root: path.join(__dirname, "publi
 fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
 fastify.register(require("@fastify/formbody"));
 
-handlebars.registerHelper('eq',  function (a, b)  { return a === b; });
+handlebars.registerHelper('eq',  function (a, b)  { return a == b; });
 
 handlebars.registerHelper('ifEquals',  function (a, b, options)  { return a === b ? options.fn(this) : options.inverse(this); });
 handlebars.registerHelper('ternaryEq', function (a, b, op1, op2) { return a === b ? op1 : op2; });
