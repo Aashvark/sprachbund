@@ -65,7 +65,7 @@
         </div>
         <div class="completion">
         {{#if (eq lessons.length 1) includeZero=true}}
-        <div class="indicator i-{{@../index}}-0" style="width: calc((90% - 8px) / 2);"></div>
+        <div class="indicator i-{{@../index}}-0" style="width: calc(90% - 8px);"></div>
         {{else}}
         {{#each lessons}}<div class="indicator i-{{@../../index}}-{{@../index}}" style="width: calc((88% - 8px) / {{../lessons.length}}); margin: 0 1%;"></div>{{/each}}
         {{/if}}
