@@ -21,6 +21,9 @@ for (let i = 0; i < document.getElementsByClassName("divider").length; i++) {
     }
 }
 
+checkScroll();
+document.onscroll = () => { checkScroll(); }
+
 function checkScroll() {
     let scrollPos = window.scrollY;
     for (let i = document.getElementsByClassName("divider").length - 1; i >= 0; i--) {
