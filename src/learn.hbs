@@ -80,9 +80,16 @@
     checkScroll();
 
     document.onscroll = () => { checkScroll(); };
+
+    if (localStorage.getItem("score") === null || localStorage.getItem("score") <= 0) localStorage.setItem("score", 0);
+    for (let i = parseInt(localStorage.getItem("score")) + 1; i < document.getElementsByClassName("module").length; i++) {
+      document.getElementsByClassName("module")[i].classList.add("disabled");
+      document.getElementsByClassName("select-lesson")[i].addEventListener('submit', (event) => event.preventDefault());
+      document.getElementsByClassName("start-btn")[i].innerHTML = "LOCKED";
+    }
     
     for (let i = 0; i < {{units.length}}; i++) {
-      for (let j = 0; j < document.getElementsByClassName(`m${i}`).length; j++) {
+      for (let j = 0; j < parseInt(localStorage.getItem("score")) + 1; j++) {
         let name = `u${i}-m${j}`;
         if (localStorage.getItem(name) === null || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
         document.getElementById(name).value = localStorage.getItem(name);
@@ -95,13 +102,6 @@
         if (localStorage.getItem(name) === "done") document.getElementsByClassName(`m${i}`)[j].classList.add("completed");
         for (var k = 0; k < terminator; k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
       }
-    }
-
-    if (localStorage.getItem("score") === null || localStorage.getItem("score") <= 0) localStorage.setItem("score", 0);
-    for (let i = parseInt(localStorage.getItem("score")) + 1; i < document.getElementsByClassName("module").length; i++) {
-      document.getElementsByClassName("module")[i].classList.add("disabled");
-      document.getElementsByClassName("select-lesson")[i].addEventListener('submit', (event) => event.preventDefault());
-      document.getElementsByClassName("start-btn")[i].innerHTML = "LOCKED";
     }
 
     function checkScroll() {
