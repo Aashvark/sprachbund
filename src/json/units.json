@@ -65,7 +65,7 @@
                 "sentences": [
                   {
                     "phrase": "lá cévo.",
-                    "meaning": "He/she/it is a woman"
+                    "meaning": "He/she/it's a woman"
                   },
                   {
                     "phrase": "symi lá.",
@@ -110,7 +110,7 @@
               "type": "short-response",
               "direction": "foreign-native",
               "prompt": "David lá symi.",
-              "answers": ["David is a man"]
+              "answers": ["David is a man", "David's a man"]
             },
             {
               "type": "short-response",
@@ -124,7 +124,7 @@
               "type": "vocabulary",
               "word": "kas",
               "example": {
-                "sentence": "Sophie [kas] lá miro.",
+                "sentence": "Sophie [kas lá] miro.",
                 "translation": "Sophie [eats] a loaf of bread."
               }
             },
@@ -145,7 +145,7 @@
               "type": "short-response",
               "direction": "foreign-native",
               "prompt": "Kiran kas lá.",
-              "answers": ["Kiran eats", "Kiran drinks"]
+              "answers": ["Kiran eats", "Kiran drinks", "Kiran is eating", "Kiran is eating", "Kiran's eating", "Kiran's eating"]
             },
             {
               "type": "short-response",
