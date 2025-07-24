@@ -64,7 +64,11 @@
           </form>
         </div>
         <div class="completion">
-        {{#each lessons}}<div class="indicator i-{{@../../index}}-{{@../index}}" style="width: calc(89%/{{../lessons.length}} - 1%);"></div>{{/each}}
+        {{#ifEquals lessons.length 1}}
+        <div class="indicator i-{{@../index}}-0" style="width: calc((90% - 8px) / 2);"></div>
+        {{else}}
+        {{#each lessons}}<div class="indicator i-{{@../../index}}-{{@../index}}" style="width: calc((88% - 8px) / {{../lessons.length}}); margin: 0 1%;"></div>{{/each}}
+        {{/ifEquals}}
         <i class="fa-solid fa-star"></i>
         </div>
       </div>
