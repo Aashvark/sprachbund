@@ -45,7 +45,7 @@ header {
     position: sticky;
     top: 10px;
 
-    padding: 0 12%;
+    padding: 0 15%;
     z-index: 1;
 }
 
@@ -106,7 +106,7 @@ header .sticky-header .unit .name {
 header .sticky-header .unit .description { color: var(--white); }
 
 main {
-    padding: 15px 12%;
+    padding: 15px 15%;
     font-size: 20px;
 }
 
