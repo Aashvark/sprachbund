@@ -15,7 +15,7 @@
       },
       "[preverb] lá": {
         "hint": ["[preverb]", "(he/she/it/they) [preverb]s"],
-        "match": ["[preverb]", "[preverb]s", "he [preverb]s", "she [preverb]s", "it [preverb]s"]
+        "match": ["[preverb]", "[preverb]s", "he [preverb]s", "she [preverb]s", "it [preverb]s", "he is [preverb]ing", "she is [preverb]ing", "it is [preverb]ing", "he's [preverb]ing", "she's [preverb]ing", "it's [preverb]ing"]
       },
       "[pronoun]": {
         "hint": ["[pronoun]"],
@@ -51,7 +51,7 @@
       "ipa": "ˈmiˌro",
       "pos": "noun",
       "definition": "Any given loaf of bread.",
-      "simple": ["bread", "loaf of bread", "bread loaf"],
+      "simple": ["loaf of bread", "bread loaf", "bread"],
       "hint": ["(a loaf of) bread"]
     },
     "móu": {

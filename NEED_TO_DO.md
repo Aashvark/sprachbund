@@ -1,7 +1,4 @@
-1. Back-play feature/Review
-2. Sound Effects
 3. Find a good voice synth
-4. More challenge types
 
 Accessable Dictionary
 Accessable Grammarbook
