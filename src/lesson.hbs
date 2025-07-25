@@ -205,10 +205,10 @@
       let last = localStorage.getItem("{{id}}");
       console.log(last);
       if (last === "test") {
-        localStorage.setItem("{{id}}", "done");
+        localStorage.setItem("{{id}}", "review");
         localStorage.setItem("score", parseInt(localStorage.getItem("score")) + 1);
       }
-      else if (last != "done") localStorage.setItem("{{id}}", parseInt(last) >= {{modlen}} - 1 ? "test" : parseInt(last) + 1);
+      else if (last != "review") localStorage.setItem("{{id}}", parseInt(last) >= {{modlen}} - 1 ? "test" : parseInt(last) + 1);
       window.location = "/learn";
     }
 

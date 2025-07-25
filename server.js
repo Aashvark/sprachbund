@@ -1,10 +1,11 @@
-const path = require("path");
+const fs         = require("fs");
+const path       = require("path");
 const handlebars = require("handlebars");
-const fastify = require("fastify")({ logger: false });
+const fastify    = require("fastify") ( { logger: false } );
 
-const seo = require("./src/json/seo.json");
-const dictionary = require("./src/json/dictionary.json");
-const units = require("./src/json/units.json");
+const seo        = require("./public/json/seo.json");
+const dictionary = require("./public/json/dictionary.json");
+const units      = require("./public/json/units.json");
 
 let language = "nóri";
 let dict     = dictionary[language];
@@ -196,11 +197,7 @@ fastify.post("/lesson",   function (request, reply) {
   let {unit, module, lesson} = request.body;
   let id = `u${unit}-m${module}`;
 
-  let lessons = units[unit].modules[module].lessons[lesson];
-  if (lesson === "test") lessons = units[unit].modules[module].test;
-  else if (lesson === "done") lessons = units[unit].modules[module].review;
-
-  return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: units[unit].modules[module].lessons.length, lessons: lessons, isTest: lesson === "test" });
+  return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: fs.readdirSync(`./public/json/${id}`).length, lessons: JSON.parse(require(`./public/json/${id}/${lesson}.json`)), isTest: lesson === "test" });
 });
 
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });

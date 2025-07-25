@@ -1,4 +1,5 @@
 node_modules
 src/examples
+src/json/STANDARDS.md
 test.js
 NEED_TO_DO.md
