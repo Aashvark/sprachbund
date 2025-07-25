@@ -193,14 +193,7 @@ function escape(text) { return text ? text.replaceAll("'", "&#x27;") : text; }
 fastify.get("/",        function (request, reply) { return reply.view("/src/learn.hbs", { seo: seo.index, units: units }); });
 fastify.get("/learn",   function (request, reply) { return reply.view("/src/learn.hbs", { seo: seo.index, units: units }); });
 fastify.get("/lesson",  function (request, reply) { return reply.redirect('/learn'); });
-fastify.post("/lesson",   function (request, reply) {
-  let {unit, module, lesson} = request.body;
-  let id = `u${unit}-m${module}`;
-
-  console.log(require(`./public/json/${id}/${lesson}.json`));
-
-  return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: fs.readdirSync(`./public/json/${id}`).length, lessons: require(`./public/json/${id}/${lesson}.json`), isTest: lesson === "test" });
-});
+fastify.post("/lesson",   function (request, reply) { return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: fs.readdirSync(`./public/json/u${request.body.unit}-m${request.body.module}`).length, lessons: require(`./public/json/u${request.body.unit}-m${request.body.module}/${request.body.lesson}.json`), isTest: lesson === "test" }); });
 
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
 
@@ -210,6 +203,5 @@ fastify.listen({ port: process.env.PORT || 4000, host: "0.0.0.0" },
       console.error(err);
       process.exit(1);
     }
-    console.log(`Sprachbund is listening on ${address}`);
   }
 );

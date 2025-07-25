@@ -1,0 +1,138 @@
+[
+    {
+        "type": "vocabulary",
+        "word": "ny",
+        "example": {
+            "sentence": "[ny] lá mikol symi.",
+            "translation": "[I] am a short man"
+        }
+    },
+    {
+        "type": "short-response",
+        "direction": "native-foreign",
+        "prompt": "It is me.",
+        "answers": [
+            "lá ny"
+        ]
+    },
+    {
+        "type": "short-response",
+        "direction": "native-foreign",
+        "prompt": "I am Alex.",
+        "answers": [
+            "ny lá Alex"
+        ]
+    },
+    {
+        "type": "vocabulary",
+        "word": "ké",
+        "example": {
+            "sentence": "[ké] lá cévo.",
+            "translation": "[You] are a woman."
+        },
+        "tip": "[ké] can only be used as a subject (infront of the verb)."
+    },
+    {
+        "type": "vocabulary",
+        "word": "vu",
+        "example": {
+            "sentence": "lá [vu].",
+            "translation": "He/she/it is [you]."
+        },
+        "tip": "[vu] can only be used as a object (after the verb)."
+    },
+    {
+        "type": "grammar",
+        "description": "[ké] can only be used infront of the verb. [vu] is used in all other cases.",
+        "syntax": {
+            "highlight": "[interjection]",
+            "sentences": [
+                {
+                    "phrase": "ké lá cévo.",
+                    "meaning": "You are a woman."
+                },
+                {
+                    "phrase": "Sophie lá vu.",
+                    "meaning": "Sophie is you."
+                }
+            ]
+        }
+    },
+    {
+        "type": "short-response",
+        "direction": "native-foreign",
+        "prompt": "You are short.",
+        "answers": [
+            "ké lá mikol"
+        ]
+    },
+    {
+        "type": "short-response",
+        "direction": "foreign-native",
+        "prompt": "ké lá Daniel.",
+        "answers": [
+            "you are Daniel"
+        ]
+    },
+    {
+        "type": "short-response",
+        "direction": "foreign-native",
+        "prompt": "ké lá vu.",
+        "answers": [
+            "you are you"
+        ]
+    },
+    {
+        "type": "short-response",
+        "direction": "native-foreign",
+        "prompt": "It is you.",
+        "answers": [
+            "lá vu"
+        ]
+    },
+    {
+        "type": "fill-in-the-blank",
+        "prompt": "lá vu. ___ lá mikol.",
+        "answer": "ké",
+        "choices": [
+            "ké",
+            "vu",
+            "su"
+        ]
+    },
+    {
+        "type": "vocabulary",
+        "word": "téu",
+        "example": {
+            "sentence": "lá [téu].",
+            "translation": "it is [him/her/it/them]."
+        },
+        "tip": "[téu] may not be used as a subject of a sentence."
+    },
+    {
+        "type": "short-response",
+        "direction": "native-foreign",
+        "prompt": "David is him.",
+        "answers": [
+            "David lá téu"
+        ]
+    },
+    {
+        "type": "short-response",
+        "direction": "foreign-native",
+        "prompt": "ny lá mikol.",
+        "answers": [
+            "I am short",
+            "I am small"
+        ]
+    },
+    {
+        "type": "short-response",
+        "direction": "foreign-native",
+        "prompt": "ké lá.",
+        "answers": [
+            "you are",
+            "you exist"
+        ]
+    }
+]
