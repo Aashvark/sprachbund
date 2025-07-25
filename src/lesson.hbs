@@ -54,29 +54,29 @@
     <main>
       {{#each lessons as |lesson|}}
       <div class="section">
-        {{#if (eq lesson.type "comprehension")}}
+      {{#if (eq lesson.type "comprehension")}}
         <p class="heading"><i class="fa-solid fa-magnifying-glass"></i> Read this carefully!</p>
         <div class="div-border scale">{{lesson.prompt}}</div>
         <p class="p-text">{{lesson.question}}</p>
         <br>
         <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectBtn(this)">{{this}}</a>{{/each}}</div>
-        {{else if (eq lesson.type "conversation")}}
+      {{else if (eq lesson.type "conversation")}}
         <p class="heading"><i class="fa-solid fa-phone"></i> Read this conversation!</p>
         <div class="conversations">
-          {{#each lesson.conversation}}
+        {{#each lesson.conversation}}
           <div class="conversation">{{hover-translate this "foreign"}}</div>
-          {{/each}}
+        {{/each}}
         </div> 
         <p class="p-text">{{lesson.prompt}}</p>
         <br>
         <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectBtn(this)">{{this}}</a>{{/each}}</div>
-        {{else if (eq lesson.type "fill-in-the-blank")}}
+      {{else if (eq lesson.type "fill-in-the-blank")}}
         <p class="heading"><i class="fa-solid fa-pen-to-square"></i> Fill in the blank!</p>
         <div class="div-border scale">{{hover-translate lesson.prompt "foreign"}}</div>
         <p class="p-text">Which word completes the sentence?</p>
         <br>
         <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectBtn(this)">{{this}}</a>{{/each}}</div>
-        {{else if (eq lesson.type "grammar")}}
+      {{else if (eq lesson.type "grammar")}}
         <p class="heading"><i class="fa-solid fa-shapes"></i> But first!</p>
         <p class="p-text">{{tip-format lesson.description}}</p>
         {{#if lesson.syntax}}
@@ -87,14 +87,14 @@
         </div>
         {{/each}}
         {{/if}}
-        {{else if (eq lesson.type "match")}}
+      {{else if (eq lesson.type "match")}}
         <p class="heading"><i class="fa-solid fa-motorcycle"></i> Match these terms!</p>
         <div class="btn-container half" id="foreign-{{@index}}">{{#each foreign}}<a class="answer-btn button" onclick="select(this)" id="foreign-{{@../index}}-{{@index}}">{{this}}</a>{{/each}}</div>
         <div class="btn-container half" id="native-{{@index}}">{{#each native}}<a class="answer-btn button" onclick="select(this)" id="native-{{@../index}}-{{@index}}">{{this}}</a>{{/each}}</div>
-        {{else if (eq lesson.type "short-response")}}
+      {{else if (eq lesson.type "short-response")}}
         <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
         <div class="div-border scale">
-          {{#if isTest}}{{lesson.prompt}}{{else}}{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "native" "foreign")}}{{/if}}
+        {{#if isTest}}{{lesson.prompt}}{{else}}{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "native" "foreign")}}{{/if}}
         </div>
         <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#if (eq lesson.direction "native-foreign")}}Nóri{{else}}English{{/if}}" {{#if (eq lesson.direction "foreign-native")}}autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{{/if}} inputmode="search" enterkeyhint="go"></textarea></div>
         <div class="insert-buttons">
@@ -104,7 +104,7 @@
           <a class="button letter" onclick="insert('é')">é</a>
           <a class="button letter" onclick="insert('ó')">ó</a>
         </div>
-        {{else if (eq lesson.type "vocabulary")}}
+      {{else if (eq lesson.type "vocabulary")}}
         <p class="heading"><i class="fa-solid fa-champagne-glasses"></i> Let's have a toast!</p>
         <div class="div-border">
           <p class="root merienda">{{lesson.word}}</p>
@@ -125,7 +125,7 @@
         {{/if}}
         {{/if}}
       </div>
-      {{/each}}
+    {{/each}}
       <div class="section congrats">
         <p class="heading">You did it!</p>
         <p class="p-text" id="final-text"></p>

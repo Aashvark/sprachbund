@@ -193,7 +193,7 @@ function escape(text) { return text ? text.replaceAll("'", "&#x27;") : text; }
 fastify.get("/",        function (request, reply) { return reply.view("/src/learn.hbs", { seo: seo.index, units: units }); });
 fastify.get("/learn",   function (request, reply) { return reply.view("/src/learn.hbs", { seo: seo.index, units: units }); });
 fastify.get("/lesson",  function (request, reply) { return reply.redirect('/learn'); });
-fastify.post("/lesson",   function (request, reply) { return reply.view("/src/lesson.hbs", { seo: seo.index, id: `u${request.body.unit}-m${request.body.module}`, modlen: fs.readdirSync(`./public/json/u${request.body.unit}-m${request.body.module}`).length, lessons: require(`./public/json/u${request.body.unit}-m${request.body.module}/${request.body.lesson}.json`), isTest: lesson === "test" }); });
+fastify.post("/lesson",   function (request, reply) { return reply.view("/src/lesson.hbs", { seo: seo.index, id: `u${request.body.unit}-m${request.body.module}`, modlen: fs.readdirSync(`./public/json/u${request.body.unit}-m${request.body.module}`).length, lessons: require(`./public/json/u${request.body.unit}-m${request.body.module}/${request.body.lesson}.json`), isTest: request.body.lesson === "test" }); });
 
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
 
