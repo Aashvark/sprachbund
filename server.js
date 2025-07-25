@@ -197,7 +197,9 @@ fastify.post("/lesson",   function (request, reply) {
   let {unit, module, lesson} = request.body;
   let id = `u${unit}-m${module}`;
 
-  return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: fs.readdirSync(`./public/json/${id}`).length, lessons: JSON.parse(require(`./public/json/${id}/${lesson}.json`)), isTest: lesson === "test" });
+  console.log(require(`./public/json/${id}/${lesson}.json`));
+
+  return reply.view("/src/lesson.hbs", { seo: seo.index, id: id, modlen: fs.readdirSync(`./public/json/${id}`).length, lessons: require(`./public/json/${id}/${lesson}.json`), isTest: lesson === "test" });
 });
 
 fastify.setNotFoundHandler(function(request, reply) { return reply.view("/src/error.hbs", { seo: seo.index, error: request.routeOptions.url }); });
