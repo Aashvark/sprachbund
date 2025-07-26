@@ -116,7 +116,7 @@ header .sticky-header .unit .description {
 main .divider {
     display: inline-flex;
     width: 100%;
-    padding: 15px 0;
+    padding: 20px 0;
 
     user-select: none;
     -webkit-user-select: none;
