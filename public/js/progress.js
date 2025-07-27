@@ -10,7 +10,7 @@ for (let i = 0; i < document.getElementsByClassName("divider").length; i++) {
         let name = `u${i}-m${j}`;
         if (localStorage.getItem(name) === null || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
         document.getElementById(name).value = localStorage.getItem(name);
-        terminator = localStorage.getItem(name);
+        terminator = localStorage.getItem(name) || 0;
         if (isNaN(terminator)) {
             document.getElementsByClassName(`m${i}`)[j].getElementsByClassName("start-btn")[0].innerHTML = localStorage.getItem(name) === "test" ? "TEST" : "REVIEW";
             terminator = document.getElementsByClassName('i-' + i + "-" + j).length;
