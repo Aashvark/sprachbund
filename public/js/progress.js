@@ -22,6 +22,6 @@ for (let i = 0; i < document.getElementsByClassName("divider").length; i++) {
         else terminator = parseInt(localStorage.getItem(name));
 
         if (localStorage.getItem(name) === "review") document.getElementsByClassName(`m${i}`)[j].classList.add("completed");
-        for (var k = 0; k < terminator; k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
+        if (!document.getElementsByClassName(`m${i}`)[j].classList.contains("disabled")) for (var k = 0; k < terminator; k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
     }
 }
