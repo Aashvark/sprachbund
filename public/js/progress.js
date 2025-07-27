@@ -17,11 +17,11 @@ for (let i = 0; i < document.getElementsByClassName("divider").length; i++) {
 
         if (isNaN(terminator)) {
             document.getElementsByClassName(`m${i}`)[j].getElementsByClassName("start-btn")[0].innerHTML = localStorage.getItem(name) === "test" ? "TEST" : "REVIEW";
-            terminator = document.getElementsByClassName('i-' + i + "-" + j).length;
+            terminator = document.getElementsByClassName(`i-${i}-${j}`).length;
         } else if (terminator != 0) document.getElementsByClassName(`m${i}`)[j].getElementsByClassName("start-btn")[0].innerHTML = "CONTINUE";
         else terminator = parseInt(localStorage.getItem(name));
 
         if (localStorage.getItem(name) === "review") document.getElementsByClassName(`m${i}`)[j].classList.add("completed");
-        if (!document.getElementsByClassName(`m${i}`)[j].classList.contains("disabled")) for (var k = 0; k < terminator; k++) document.getElementsByClassName('i-' + i + "-" + j)[k].classList.add("completed");
+        if (terminator < document.getElementsByClassName(`i-${i}-${j}`).length) for (var k = 0; k < terminator; k++) document.getElementsByClassName(`i-${i}-${j}`)[k].classList.add("completed");
     }
 }
