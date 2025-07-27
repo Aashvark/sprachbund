@@ -6,7 +6,7 @@ for (let i = parseInt(localStorage.getItem("score")) + 1; i < document.getElemen
 }
 
 for (let i = 0; i < document.getElementsByClassName("divider").length; i++) {
-    for (let j = 0; j < parseInt(localStorage.getItem("score")) + 1; j++) {
+    for (let j = 0; j < parseInt(localStorage.getItem("score")); j++) {
         let name = `u${i}-m${j}`;
         if (localStorage.getItem(name) === null || localStorage.getItem(name) <= 0) localStorage.setItem(name, 0);
         document.getElementById(name).value = localStorage.getItem(name);
