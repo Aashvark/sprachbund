@@ -72,7 +72,7 @@
         <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectBtn(this)">{{this}}</a>{{/each}}</div>
       {{else if (eq lesson.type "fill-in-the-blank")}}
         <p class="heading"><i class="fa-solid fa-pen-to-square"></i> Fill in the blank!</p>
-        <div class="div-border scale">{{hover-translate lesson.prompt "foreign"}}</div>
+        <div class="div-border scale">{{#if isTest}}{{lesson.prompt}}{{else}}{{hover-translate lesson.prompt "foreign"}}{{/if}}</div>
         <p class="p-text">Which word completes the sentence?</p>
         <br>
         <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectBtn(this)">{{this}}</a>{{/each}}</div>
@@ -92,9 +92,9 @@
         <div class="btn-container half" id="foreign-{{@index}}">{{#each foreign}}<a class="answer-btn button" onclick="select(this)" id="foreign-{{@../index}}-{{@index}}">{{this}}</a>{{/each}}</div>
         <div class="btn-container half" id="native-{{@index}}">{{#each native}}<a class="answer-btn button" onclick="select(this)" id="native-{{@../index}}-{{@index}}">{{this}}</a>{{/each}}</div>
       {{else if (eq lesson.type "short-response")}}
-        <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
+        <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this! {{isTest}}</p>
         <div class="div-border scale">
-        {{#if isTest}}{{lesson.prompt}}{{else}}{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "native" "foreign")}}{{/if}}
+          {{#if isTest}}{{lesson.prompt}}{{else}}{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "native" "foreign")}}{{/if}}
         </div>
         <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#if (eq lesson.direction "native-foreign")}}Nóri{{else}}English{{/if}}" {{#if (eq lesson.direction "foreign-native")}}autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{{/if}} inputmode="search" enterkeyhint="go"></textarea></div>
         <div class="insert-buttons">
@@ -197,12 +197,11 @@
 
     function completeLesson() {
       let last = localStorage.getItem("{{id}}");
-      console.log(last);
       if (last === "test") {
         localStorage.setItem("{{id}}", "review");
         localStorage.setItem("score", parseInt(localStorage.getItem("score")) + 1);
       }
-      else if (last != "review") localStorage.setItem("{{id}}", parseInt(last) >= {{modlen}} - 1 ? "test" : parseInt(last) + 1);
+      else if (last != "review") localStorage.setItem("{{id}}", parseInt(last) >= {{modlen}} - 3 ? "test" : parseInt(last) + 1);
       window.location = "/learn";
     }
 
@@ -299,7 +298,7 @@
     function checkAnswer() {
       if (((lesson.type === "comprehension" || lesson.type === "conversation" || lesson.type === "fill-in-the-blank") && selection.text === lesson.answer) || (lesson.type === "short-response" && lesson.answers.find(chance => formatAnswer(chance) === formatAnswer(document.getElementById("response-" + index).value))) || lesson.type === "match") correctAnswer("<i class=\"fas fa-circle-check\"></i> Correct!", "You did it!"); 
       else if (lesson.type === "grammar" || lesson.type === "vocabulary") correctAnswer("<i class=\"fas fa-circle-info\"></i> Keep it in mind!", "Let's see this word in action!");
-      else if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined || document.getElementById("response-" + index).value === "") setAlert("<i class=\"fas fa-circle-times\"></i> Please answer!", "Tap or click on the correct response.");
+      else if ((lesson.type === "fill-in-the-blank" || lesson.type === "comprehension") && selection === undefined || lesson.type === "short-response" && document.getElementById("response-" + index).value === "") setAlert("<i class=\"fas fa-circle-times\"></i> Please answer!", "Tap or click on the correct response.");
       else incorrectAnswer("<i class=\"fas fa-circle-times\"></i> Try again!", "Hover over words you don't know if you need to.");
     }
     

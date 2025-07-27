@@ -1,4 +1,4 @@
-[   
+[
   {
     "name": "Introduction",
     "description": "Learn basic words and grammar.",
@@ -23,17 +23,13 @@
         "icon": "ban",
         "disable": true,
         "title": "Negate sentences!",
-        "lessons": [
-          ""
-        ]
+        "lessons": []
       },
       {
         "icon": "arrows-to-circle",
         "disable": true,
-        "title": "Use demonstratives.",
-        "lessons": [
-          ""
-        ]
+        "title": "Use demonstratives!",
+        "lessons": []
       }
     ]
   }

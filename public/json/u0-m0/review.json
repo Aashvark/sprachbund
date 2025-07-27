@@ -1,92 +1,92 @@
 [
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "A man.",
-        "answers": [
-            "symi"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "It is a bread loaf.",
-        "answers": [
-            "lá miro"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "She is Sophie.",
-        "answers": [
-            "lá Sophie"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "foreign-native",
-        "prompt": "cévo",
-        "answers": [
-            "a woman",
-            "woman"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "Jordan exists.",
-        "answers": [
-            "Jordan lá"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "foreign-native",
-        "prompt": "cévo",
-        "answers": [
-            "a woman",
-            "woman"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "Alex lá mikol.",
-        "answers": [
-            "Alex is short"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "It is a short woman.",
-        "answers": [
-            "lá mikol cévo"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "A man is bread.",
-        "answers": [
-            "symi lá miro"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "Bread exists.",
-        "answers": [
-            "miro lá"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "A short man. A short woman.",
-        "answers": [
-            "mikol symi mikol cévo"
-        ]
-    }
+	{
+		"type": "short-response",
+		"direction": "native-foreign",
+		"prompt": "A man.",
+		"answers": [
+			"symi"
+		]
+	},
+	{
+		"type": "short-response",
+		"direction": "native-foreign",
+		"prompt": "It is a bread loaf.",
+		"answers": [
+			"lá miro"
+		]
+	},
+	{
+		"type": "short-response",
+		"direction": "native-foreign",
+		"prompt": "She is Sophie.",
+		"answers": [
+			"lá Sophie"
+		]
+	},
+	{
+		"type": "short-response",
+		"direction": "foreign-native",
+		"prompt": "cévo",
+		"answers": [
+			"a woman",
+			"woman"
+		]
+	},
+	{
+		"type": "short-response",
+		"direction": "native-foreign",
+		"prompt": "Jordan exists.",
+		"answers": [
+			"Jordan lá"
+		]
+	},
+	{
+		"type": "short-response",
+		"direction": "foreign-native",
+		"prompt": "cévo",
+		"answers": [
+			"a woman",
+			"woman"
+		]
+	},
+	{
+		"type": "short-response",
+		"direction": "native-foreign",
+		"prompt": "Alex lá mikol.",
+		"answers": [
+			"Alex is short"
+		]
+	},
+	{
+		"type": "short-response",
+		"direction": "native-foreign",
+		"prompt": "It is a short woman.",
+		"answers": [
+			"lá mikol cévo"
+		]
+	},
+	{
+		"type": "short-response",
+		"direction": "native-foreign",
+		"prompt": "A man is bread.",
+		"answers": [
+			"symi lá miro"
+		]
+	},
+	{
+		"type": "short-response",
+		"direction": "native-foreign",
+		"prompt": "Bread exists.",
+		"answers": [
+			"miro lá"
+		]
+	},
+	{
+		"type": "short-response",
+		"direction": "native-foreign",
+		"prompt": "A short man. A short woman.",
+		"answers": [
+			"mikol symi mikol cévo"
+		]
+	}
 ]

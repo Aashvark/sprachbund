@@ -1,158 +1,158 @@
 [
-    {
-        "type": "vocabulary",
-        "word": "kas",
-        "example": {
-            "sentence": "Sophie [kas lá] miro.",
-            "translation": "Sophie [eats] a loaf of bread."
-        }
-    },
-    {
-        "type": "grammar",
-        "description": "Preverbs like [kas] are usually used before [lá], unless otherwise mentioned.",
-        "syntax": {
-            "highlight": "[interjection]",
-            "sentences": [
-                {
-                    "phrase": "David kas lá.",
-                    "meaning": "David eats/drinks."
-                }
-            ]
-        }
-    },
-    {
-        "type": "short-response",
-        "direction": "foreign-native",
-        "prompt": "Kiran kas lá.",
-        "answers": [
-            "Kiran eats",
-            "Kiran drinks",
-            "Kiran is eating",
-            "Kiran is eating",
-            "Kiran's eating",
-            "Kiran's eating"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "foreign-native",
-        "prompt": "kas lá miro.",
-        "answers": [
-            "he eats bread",
-            "she eats bread",
-            "it eats bread",
-            "he eats a loaf of bread",
-            "she eats a loaf of bread",
-            "it eats a loaf of bread",
-            "he eats a bread loaf",
-            "she eats a bread loaf",
-            "it eats a bread loaf"
-        ]
-    },
-    {
-        "type": "vocabulary",
-        "word": "mikol",
-        "example": {
-            "sentence": "David lá [mikol] symi.",
-            "translation": "David is a [short] man."
-        },
-        "tip": "Adjectives come before nouns."
-    },
-    {
-        "type": "short-response",
-        "direction": "foreign-native",
-        "prompt": "mikol symi.",
-        "answers": [
-            "a short man",
-            "short man",
-            "a small man",
-            "small man"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "She is small.",
-        "answers": [
-            "lá mikol"
-        ]
-    },
-    {
-        "type": "vocabulary",
-        "word": "su",
-        "example": {
-            "sentence": "kas lá [milk].",
-            "translation": "He/she/it drinks [milk]."
-        }
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "She drinks milk.",
-        "answers": [
-            "kas lá su"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "foreign-native",
-        "prompt": "lá su.",
-        "answers": [
-            "he is milk",
-            "she is milk",
-            "it is milk",
-            "he's milk",
-            "she's milk",
-            "it's milk"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "Jordan exists.",
-        "answers": [
-            "Jordan lá"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "It's a short woman.",
-        "answers": [
-            "lá mikol cévo"
-        ]
-    },
-    {
-        "type": "match",
-        "foreign": [
-            "miro",
-            "kas",
-            "cévo",
-            "lá",
-            "su"
-        ],
-        "native": [
-            "bread",
-            "eat/drink",
-            "a woman",
-            "to be/exist",
-            "milk"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "A man is bread.",
-        "answers": [
-            "symi lá miro"
-        ]
-    },
-    {
-        "type": "short-response",
-        "direction": "native-foreign",
-        "prompt": "A short man. A short woman.",
-        "answers": [
-            "mikol symi mikol cévo"
-        ]
+  {
+    "type": "vocabulary",
+    "word": "kas",
+    "example": {
+      "sentence": "Sophie [kas lá] miro.",
+      "translation": "Sophie [eats] a loaf of bread."
     }
+  },
+  {
+    "type": "grammar",
+    "description": "Preverbs like [kas] are usually used before [lá], unless otherwise mentioned.",
+    "syntax": {
+      "highlight": "[interjection]",
+      "sentences": [
+        {
+          "phrase": "David kas lá.",
+          "meaning": "David eats/drinks."
+        }
+      ]
+    }
+  },
+  {
+    "type": "short-response",
+    "direction": "foreign-native",
+    "prompt": "Kiran kas lá.",
+    "answers": [
+      "Kiran eats",
+      "Kiran drinks",
+      "Kiran is eating",
+      "Kiran is eating",
+      "Kiran's eating",
+      "Kiran's eating"
+    ]
+  },
+  {
+    "type": "short-response",
+    "direction": "foreign-native",
+    "prompt": "kas lá miro.",
+    "answers": [
+      "he eats bread",
+      "she eats bread",
+      "it eats bread",
+      "he eats a loaf of bread",
+      "she eats a loaf of bread",
+      "it eats a loaf of bread",
+      "he eats a bread loaf",
+      "she eats a bread loaf",
+      "it eats a bread loaf"
+    ]
+  },
+  {
+    "type": "vocabulary",
+    "word": "mikol",
+    "example": {
+      "sentence": "David lá [mikol] symi.",
+      "translation": "David is a [short] man."
+    },
+    "tip": "Adjectives come before nouns."
+  },
+  {
+    "type": "short-response",
+    "direction": "foreign-native",
+    "prompt": "mikol symi.",
+    "answers": [
+      "a short man",
+      "short man",
+      "a small man",
+      "small man"
+    ]
+  },
+  {
+    "type": "short-response",
+    "direction": "native-foreign",
+    "prompt": "She is small.",
+    "answers": [
+      "lá mikol"
+    ]
+  },
+  {
+    "type": "vocabulary",
+    "word": "su",
+    "example": {
+      "sentence": "kas lá [milk].",
+      "translation": "He/she/it drinks [milk]."
+    }
+  },
+  {
+    "type": "short-response",
+    "direction": "native-foreign",
+    "prompt": "She drinks milk.",
+    "answers": [
+      "kas lá su"
+    ]
+  },
+  {
+    "type": "short-response",
+    "direction": "foreign-native",
+    "prompt": "lá su.",
+    "answers": [
+      "he is milk",
+      "she is milk",
+      "it is milk",
+      "he's milk",
+      "she's milk",
+      "it's milk"
+    ]
+  },
+  {
+    "type": "short-response",
+    "direction": "native-foreign",
+    "prompt": "Jordan exists.",
+    "answers": [
+      "Jordan lá"
+    ]
+  },
+  {
+    "type": "short-response",
+    "direction": "native-foreign",
+    "prompt": "It's a short woman.",
+    "answers": [
+      "lá mikol cévo"
+    ]
+  },
+  {
+    "type": "match",
+    "foreign": [
+      "miro",
+      "kas",
+      "cévo",
+      "lá",
+      "su"
+    ],
+    "native": [
+      "bread",
+      "eat/drink",
+      "a woman",
+      "to be/exist",
+      "milk"
+    ]
+  },
+  {
+    "type": "short-response",
+    "direction": "native-foreign",
+    "prompt": "A man is bread.",
+    "answers": [
+      "symi lá miro"
+    ]
+  },
+  {
+    "type": "short-response",
+    "direction": "native-foreign",
+    "prompt": "A short man. A short woman.",
+    "answers": [
+      "mikol symi mikol cévo"
+    ]
+  }
 ]
