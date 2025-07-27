@@ -8,13 +8,13 @@ for (let i = parseInt(localStorage.getItem("score")) + 1; i < document.getElemen
 let terminator;
 
 for (let i = 0; i < document.getElementsByClassName("divider").length; i++) {
-    for (let j = 0; j < parseInt(localStorage.getItem("score")); j++) {
+    for (let j = 0; j < document.getElementsByClassName("module").length; j++) {
         let name = `u${i}-m${j}`;
         console.log(name);
 
         if (localStorage.getItem(name) === null) localStorage.setItem(name, 0);
         document.getElementById(name).value = localStorage.getItem(name);
-        
+
         if (isNaN(terminator)) {
             document.getElementsByClassName(`m${i}`)[j].getElementsByClassName("start-btn")[0].innerHTML = localStorage.getItem(name) === "test" ? "TEST" : "REVIEW";
             terminator = document.getElementsByClassName('i-' + i + "-" + j).length;
