@@ -80,13 +80,5 @@
 		"answers": [
 			"miro lá"
 		]
-	},
-	{
-		"type": "short-response",
-		"direction": "native-foreign",
-		"prompt": "A short man. A short woman.",
-		"answers": [
-			"mikol symi mikol cévo"
-		]
 	}
 ]

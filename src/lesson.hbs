@@ -151,6 +151,9 @@
       <a class="button" id="next" onclick="checkAnswer()">Check</a>
     </footer>
   </body>
+  <script type="text/javascript">
+    let lessons = JSON.parse('{{{json lessons}}}');
+  </script>
   <script>
     let index = 0;
 
@@ -162,7 +165,6 @@
     let selection = undefined;
     let timerInterval;
     
-    let lessons = JSON.parse('{{{json lessons}}}');
     let lesson;
     
     let correct   = new Audio("/sfx/correct.wav");

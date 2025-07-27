@@ -13,9 +13,9 @@
     "type": "comprehension",
     "prompt": "Alex lá cévo.",
     "question": "What is Alex?",
-    "answer": "A women",
+    "answer": "A woman",
     "choices": [
-      "A women",
+      "A woman",
       "A man",
       "Short"
     ]
@@ -46,7 +46,13 @@
       "it is a short woman",
       "he's a short woman",
       "she's a short woman",
-      "it's a short woman"
+      "it's a short woman",
+      "he is a small woman",
+      "she is a small woman",
+      "it is a small woman",
+      "he's a small woman",
+      "she's a small woman",
+      "it's a small woman"
     ]
   },
   {

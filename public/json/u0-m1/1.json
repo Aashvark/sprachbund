@@ -42,9 +42,9 @@
   {
     "type": "short-response",
     "direction": "native-foreign",
-    "prompt": "You all are large.",
+    "prompt": "You all drink milk.",
     "answers": [
-      "vun lá náu"
+      "vun kas lá su"
     ]
   },
   {
