@@ -22,7 +22,9 @@
       {
         "icon": "ban",
         "title": "Negate sentences!",
-        "lessons": []
+        "lessons": [
+          "/json/u0-m2/0.json"
+        ]
       },
       {
         "icon": "arrows-to-circle",

@@ -107,5 +107,21 @@
     "answers": [
       "ćy lá mikol"
     ]
+  },
+  {
+    "type": "short-response",
+    "direction": "native-foreign",
+    "prompt": "They drink water.",
+    "answers": [
+      "kas lá móu"
+    ]
+  },
+  {
+    "type": "short-response",
+    "direction": "foreign-native",
+    "prompt": "ćy lá miro.",
+    "answers": [
+      "We are bread"
+    ]
   }
 ]

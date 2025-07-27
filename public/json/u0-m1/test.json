@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "type": "short-response",
+    "direction": "native-foreign",
+    "prompt": "They drink water.",
+    "answers": [
+      "kas lá móu"
+    ]
+  }
+]

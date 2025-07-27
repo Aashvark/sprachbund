@@ -2,40 +2,87 @@
   "nóri-grammar": {
     "templates": {
       "[adjective]": {
-        "hint": ["[adjective]"],
-        "match": ["[adjective]"]
+        "hint": [
+          "[adjective]"
+        ],
+        "match": [
+          "[adjective]"
+        ]
       },
       "[adjective] [noun]": {
-        "hint": ["[adjective] [noun]"],
-        "match": ["a [adjective] [noun]", "[adjective] [noun]"]
+        "hint": [
+          "[adjective] [noun]"
+        ],
+        "match": [
+          "a [adjective] [noun]",
+          "[adjective] [noun]"
+        ]
       },
       "[noun]": {
-        "hint": ["(a) [noun]"],
-        "match": ["[noun]", "a [noun]"]
+        "hint": [
+          "(a) [noun]"
+        ],
+        "match": [
+          "[noun]",
+          "a [noun]"
+        ]
       },
       "[preverb] lá": {
-        "hint": ["[preverb]", "(he/she/it/they) [preverb]s"],
-        "match": ["[preverb]", "[preverb]s", "he [preverb]s", "she [preverb]s", "it [preverb]s", "he is [preverb]ing", "she is [preverb]ing", "it is [preverb]ing", "he's [preverb]ing", "she's [preverb]ing", "it's [preverb]ing"]
+        "hint": [
+          "(he/she/it/they) [preverb]"
+        ],
+        "match": [
+          "[preverb]",
+          "[preverb]s",
+          "he [preverb]s",
+          "she [preverb]s",
+          "it [preverb]s",
+          "they [preverb]"
+        ]
       },
       "[pronoun]": {
-        "hint": ["[pronoun]"],
-        "match": ["[pronoun]"]
+        "hint": [
+          "[pronoun]"
+        ],
+        "match": [
+          "[pronoun]"
+        ]
       },
       "ny lá": {
-        "hint": ["I am"],
-        "match": ["I'm", "I am"]
+        "hint": [
+          "I am"
+        ],
+        "match": [
+          "I'm",
+          "I am"
+        ]
       },
       "ké lá": {
-        "hint": ["you are"],
-        "match": ["you're", "you are"]
+        "hint": [
+          "you are"
+        ],
+        "match": [
+          "you're",
+          "you are"
+        ]
       },
       "ćy lá": {
-        "hint": ["we are"],
-        "match": ["we're", "we are"]
+        "hint": [
+          "we are"
+        ],
+        "match": [
+          "we're",
+          "we are"
+        ]
       },
       "vun lá": {
-        "hint": ["you are"],
-        "match": ["you're", "you are"]
+        "hint": [
+          "you are"
+        ],
+        "match": [
+          "you're",
+          "you are"
+        ]
       }
     }
   },
@@ -43,101 +90,237 @@
     "mikol": {
       "ipa": "ˈmiˌkol",
       "pos": "adjective",
-      "simple": ["short", "small"],
+      "simple": [
+        "short",
+        "small"
+      ],
       "definition": "Short or small, especially in comparison to the subject"
     },
-    
     "miro": {
       "ipa": "ˈmiˌro",
       "pos": "noun",
       "definition": "Any given loaf of bread.",
-      "simple": ["loaf of bread", "bread loaf", "bread"],
-      "hint": ["(a loaf of) bread"]
+      "simple": [
+        "loaf of bread",
+        "bread loaf",
+        "bread"
+      ],
+      "hint": [
+        "(a loaf of) bread"
+      ]
     },
     "móu": {
       "ipa": "ˈmou˦˧",
       "pos": "noun",
-      "simple": ["water"],
-      "hint": ["water"],
-      "match": ["water"],
+      "simple": [
+        "water"
+      ],
+      "hint": [
+        "water"
+      ],
+      "match": [
+        "water"
+      ],
       "definition": "water."
     },
     "su": {
       "ipa": "ˈsu",
       "pos": "noun",
       "definition": "Milk.",
-      "simple": ["milk"],
-      "hint": ["milk"],
-      "match": ["milk"]
+      "simple": [
+        "milk"
+      ],
+      "hint": [
+        "milk"
+      ],
+      "match": [
+        "milk"
+      ]
     },
-
     "cévo": {
       "ipa": "ˈt͡se˦ˌʋo",
       "pos": "noun",
       "definition": "A female human attaining the age of adulthood; woman. When referring to children, it signifies their physical and/or emotional maturity.",
-      "simple": ["woman"]
+      "simple": [
+        "woman"
+      ]
     },
     "symi": {
       "ipa": "ˈsəˌmi",
       "pos": "noun",
       "definition": "A male human attaining the age of adulthood; man. When referring to children, it signifies their physical and/or emotional maturity.",
-      "simple": ["man"]
+      "simple": [
+        "man"
+      ]
     },
-
     "kas": {
       "ipa": "ˈkas",
       "pos": "preverb",
       "definition": "Eating and Drinking",
-      "simple": ["eat", "drink"]
+      "simple": [
+        "eat",
+        "drink"
+      ]
     },
-
+    "vé": {
+      "ipa": "ˈʋe˦",
+      "pos": "preverb",
+      "definition": "Used to describe the possession of nouns.",
+      "simple": [
+        "have"
+      ]
+    },
+    "vé lá": {
+      "hint": [
+        "(he/she/it/they) have"
+      ],
+      "match": [
+        "have",
+        "has",
+        "he has",
+        "she has",
+        "it has",
+        "they have"
+      ]
+    },
     "ćy": {
       "ipa": "ˈt͡ʃə",
       "pos": "pronoun",
       "definition": "Used by a speaker to refer to themself and another person as the subject or object of a sentence; we",
-      "simple": ["we", "us"]
+      "simple": [
+        "we",
+        "us"
+      ]
     },
     "ké": {
       "ipa": "ˈke˦",
       "pos": "pronoun",
       "definition": "Used to informally refer to a person the speaker is addressing in the subject; you",
-      "simple": ["you"],
-      "hint": ["you (SING.)"]
+      "simple": [
+        "you"
+      ],
+      "hint": [
+        "you (SING.)"
+      ]
     },
     "ny": {
       "ipa": "ˈnə",
       "pos": "pronoun",
       "definition": "Used by a speaker to refer to themself as the subject or object of a sentence; I",
-      "simple": ["I", "me"]
+      "simple": [
+        "I",
+        "me"
+      ]
     },
     "téu": {
       "ipa": "ˈteu˦˧",
       "pos": "pronoun",
       "definition": "Used to refer a person or group other than the speaker or addressee as the object of a sentence; him/her/it/them",
-      "simple": ["him", "her", "it", "them"]
+      "simple": [
+        "him",
+        "her",
+        "it",
+        "them"
+      ]
     },
     "vu": {
       "ipa": "ˈʋu",
       "pos": "pronoun",
       "definition": "Used to informally refer to a person the speaker is addressing in the object; you",
-      "simple": ["you"],
-      "hint": ["you (ACC.SING.)"]
+      "simple": [
+        "you"
+      ],
+      "hint": [
+        "you (ACC.SING.)"
+      ]
     },
     "vun": {
       "ipa": "ˈʋun",
       "pos": "pronoun",
       "definition": "Used to informally refer to the people the speaker is addressing; y'all",
-      "simple": ["you", "you guys", "y'all", "you all"],
-      "hint": ["you (PLUR.)"]
+      "simple": [
+        "you",
+        "you guys",
+        "y'all",
+        "you all"
+      ],
+      "hint": [
+        "you (PLUR.)"
+      ]
     },
-
     "lá": {
       "ipa": "ˈla˦",
       "pos": "verb",
       "definition": "Correlating the relation between nouns or the existence of a noun.",
-      "simple": ["be", "exist"],
-      "hint": ["be", "exist", "(he/she/it) is", "(he/she/it) exists"],
-      "match": ["be", "am", "are", "is", "he is", "she is", "it is", "they are", "he's", "she's", "it's", "they're", "exist", "exists", "he exists", "she exists", "it exists", "they exist"]
+      "simple": [
+        "be",
+        "exist"
+      ],
+      "hint": [
+        "(he/she/it/they) are",
+        "(he/she/it/they) exist"
+      ],
+      "match": [
+        "be",
+        "am",
+        "are",
+        "is",
+        "he is",
+        "she is",
+        "it is",
+        "they are",
+        "he's",
+        "she's",
+        "it's",
+        "they're",
+        "exist",
+        "exists",
+        "he exists",
+        "she exists",
+        "it exists",
+        "they exist"
+      ]
+    },
+    "tá": {
+      "ipa": "ˈta˦",
+      "pos": "verb",
+      "definition": "Correlating the irrelation between nouns or the existence of a noun.",
+      "simple": [
+        "not be",
+        "not exist"
+      ],
+      "hint": [
+        "not",
+        "(he/she/it/they) are not",
+        "(he/she/it/they) don't exist"
+      ],
+      "match": [
+        "not be",
+        "not",
+        "am not",
+        "are not",
+        "is not",
+        "he is not",
+        "she is not",
+        "it is not",
+        "they are not",
+        "aren't",
+        "isn't",
+        "he isn't",
+        "she isn't",
+        "it isn't",
+        "they aren't",
+        "do not exist",
+        "he does not exist",
+        "she does not exist",
+        "it does not exist",
+        "they do not exist",
+        "don't exist",
+        "he doesn't exist",
+        "she doesn't exist",
+        "it doesn't exist",
+        "they don't exist"
+      ]
     }
   }
 }

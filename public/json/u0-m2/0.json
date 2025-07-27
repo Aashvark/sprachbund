@@ -1,0 +1,18 @@
+[
+  {
+    "type": "vocabulary",
+    "word": "vé",
+    "example": {
+      "sentence": "cévo [vé lá] miro.",
+      "translation": "The woman [has] a loaf of bread."
+    }
+  },
+  {
+    "type": "vocabulary",
+    "word": "tá",
+    "example": {
+      "sentence": "cévo [kas tá] miro.",
+      "translation": "The woman [doesn't eat] bread."
+    }
+  }
+]
