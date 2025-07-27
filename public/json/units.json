@@ -5,7 +5,7 @@
     "modules": [
       {
         "icon": "child-dress",
-        "title": "The verb 'lá'.",
+        "title": "Use the verb 'lá'.",
         "lessons": [
           "/json/u0-m0/0.json",
           "/json/u0-m0/1.json"
@@ -21,13 +21,11 @@
       },
       {
         "icon": "ban",
-        "disable": true,
         "title": "Negate sentences!",
         "lessons": []
       },
       {
         "icon": "arrows-to-circle",
-        "disable": true,
         "title": "Use demonstratives!",
         "lessons": []
       }

@@ -230,7 +230,8 @@
     function alert() {
       selectBtn(selection);
       document.getElementById("alert").classList.remove("block");
-      if (lessons[index] !== lesson) nextLesson();
+      if ({{isTest}} && hearts <= 0) window.location = "/learn";
+      else if (lessons[index] !== lesson) nextLesson();
     }
     
     function setAlert(heading, caption) {
@@ -259,7 +260,8 @@
       }
 
       if (hearts == 0) {
-        document.getElementById("continue-btn").setAttribute("href", "/");
+        document.getElementById("continue-btn").innerText = "Exit";
+        document.getElementById("continue-btn").setAttribute("href", "/learn");
         setAlert("Good effort!", caption);
       } else setAlert(heading, caption);
     }
