@@ -194,10 +194,13 @@ fastify.get("/lesson",  function (request, reply) { return reply.redirect('/lear
 fastify.post("/lesson",   function (request, reply) { return reply.view("/src/lesson.hbs", { seo: seo.index, id: `u${request.body.unit}-m${request.body.module}`, modlen: fs.readdirSync(`./public/json/u${request.body.unit}-m${request.body.module}`).length, lessons: require(`./public/json/u${request.body.unit}-m${request.body.module}/${request.body.lesson}.json`), isTest: request.body.lesson === "test" }); });
 
 let folders = fs.readdirSync("./public/json").filter(item => fs.statSync(path.join("./public/json", item)).isDirectory());
-console.log(folders);
 for (let i = 0; i < folders.length; i++) {
   fastify.get(`/${folders[i]}`, (request, reply) => {
-    try { reply.send({ content: fs.readdirSync(`./public/json/${folders[i]}`) }); } 
+    console.log(`/${folders[i]}`);
+    try {
+      console.log(fs.readdirSync(`./public/json/${folders[i]}`));
+      reply.send({ content: fs.readdirSync(`./public/json/${folders[i]}`) });
+    } 
     catch (err) { reply.status(500).send({ error: 'Failed to read file' }); }
   });
 }
