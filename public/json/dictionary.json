@@ -90,11 +90,39 @@
     "mikol": {
       "ipa": "ˈmiˌkol",
       "pos": "adjective",
+      "definition": "Short or small, especially in comparison to the subject",
       "simple": [
         "short",
         "small"
-      ],
-      "definition": "Short or small, especially in comparison to the subject"
+      ]
+    },
+    "náu": {
+      "ipa": "ˈnau˦˧",
+      "pos": "adjective",
+      "definition": "Tall or large, especially in comparison to the subject",
+      "simple": [
+        "tall",
+        "large",
+        "big"
+      ]
+    },
+    "eu": {
+      "ipa": "ˈeu",
+      "pos": "adjective",
+      "definition": "Bad or Evil, especially in the views of the speaker",
+      "simple": ["bad"]
+    },
+    "méi": {
+      "ipa": "ˈmei˦˧",
+      "pos": "adjective",
+      "definition": "new or young.",
+      "simple": ["new", "young"]
+    },
+    "nitte": {
+      "ipa": "ˈnitˌte",
+      "pos": "adjective",
+      "definition": "old.",
+      "simple": ["old"]
     },
     "miro": {
       "ipa": "ˈmiˌro",
@@ -112,6 +140,7 @@
     "móu": {
       "ipa": "ˈmou˦˧",
       "pos": "noun",
+      "definition": "water.",
       "simple": [
         "water"
       ],
@@ -120,8 +149,7 @@
       ],
       "match": [
         "water"
-      ],
-      "definition": "water."
+      ]
     },
     "su": {
       "ipa": "ˈsu",
@@ -138,11 +166,28 @@
       ]
     },
     "cévo": {
-      "ipa": "ˈt͡se˦ˌʋo",
+      "ipa": "ˈt͡se˦ˌwo",
       "pos": "noun",
       "definition": "A female human attaining the age of adulthood; woman. When referring to children, it signifies their physical and/or emotional maturity.",
       "simple": [
         "woman"
+      ]
+    },
+    "mérsi": {
+      "ipa": "ˈmer˦ˌsi",
+      "pos": "noun",
+      "definition": "A young human; child, kid",
+      "simple": [
+        "child",
+        "kid"
+      ]
+    },
+    "nórsi": {
+      "ipa": "ˈnor˦ˌsi",
+      "pos": "noun",
+      "definition": "A young male human; boy",
+      "simple": [
+        "boy"
       ]
     },
     "symi": {
@@ -151,6 +196,22 @@
       "definition": "A male human attaining the age of adulthood; man. When referring to children, it signifies their physical and/or emotional maturity.",
       "simple": [
         "man"
+      ]
+    },
+    "vokó": {
+      "ipa": "ˈwoˌko˦",
+      "pos": "noun",
+      "definition": "A young female human; girl",
+      "simple": [
+        "girl"
+      ]
+    },
+    "ćina": {
+      "ipa": "ˈt͡ʃiˌna",
+      "pos": "noun",
+      "definition": "A person.",
+      "simple": [
+        "person"
       ]
     },
     "kas": {
@@ -163,7 +224,7 @@
       ]
     },
     "vé": {
-      "ipa": "ˈʋe˦",
+      "ipa": "ˈwe˦",
       "pos": "preverb",
       "definition": "Used to describe the possession of nouns.",
       "simple": [
@@ -224,7 +285,7 @@
       ]
     },
     "vu": {
-      "ipa": "ˈʋu",
+      "ipa": "ˈwu",
       "pos": "pronoun",
       "definition": "Used to informally refer to a person the speaker is addressing in the object; you",
       "simple": [
@@ -235,7 +296,7 @@
       ]
     },
     "vun": {
-      "ipa": "ˈʋun",
+      "ipa": "ˈwun",
       "pos": "pronoun",
       "definition": "Used to informally refer to the people the speaker is addressing; y'all",
       "simple": [

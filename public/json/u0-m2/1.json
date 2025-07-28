@@ -1,7 +1,7 @@
 [
   {
     "type": "vocabulary",
-    "word": "vé",
+    "word": "nórsi",
     "example": {
       "sentence": "cévo [vé lá] miro.",
       "translation": "The woman [has] a loaf of bread."
@@ -9,7 +9,7 @@
   },
   {
     "type": "vocabulary",
-    "word": "tá",
+    "word": "vokó",
     "example": {
       "sentence": "cévo [kas tá] miro.",
       "translation": "The woman [doesn't eat] bread."
@@ -17,7 +17,15 @@
   },
   {
     "type": "vocabulary",
-    "word": "náu",
+    "word": "ćina",
+    "example": {
+      "sentence": "Zak tá [náu].",
+      "translation": "Zak isn't [tall]."
+    }
+  },
+  {
+    "type": "vocabulary",
+    "word": "eu",
     "example": {
       "sentence": "Zak tá [náu].",
       "translation": "Zak isn't [tall]."
