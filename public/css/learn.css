@@ -153,7 +153,7 @@ main .module {
     padding: 6px 3px;
 }
 
-main .module > * {
+main .module form > * {
     display: inline-block;
     background: rgba(from var(--blue) r g b / 50%);
     
@@ -162,11 +162,11 @@ main .module > * {
     
     border: 3px solid var(--blue);
 }
-main .module.completed > * {
+main .module.completed form > * {
     background: rgba(from var(--red) r g b / 50%);
     border: 3px solid var(--red);
 }
-main .module.disabled > * {
+main .module.disabled form > * {
     background: rgba(from gray r g b / 50%);
     border: 3px solid gray;
 }
