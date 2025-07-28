@@ -31,7 +31,10 @@
       {
         "icon": "arrows-to-circle",
         "title": "Use demonstratives!",
-        "lessons": []
+        "lessons": [
+          "/json/u0-m3/0.json",
+          "/json/u0-m3/1.json"
+        ]
       }
     ]
   }
