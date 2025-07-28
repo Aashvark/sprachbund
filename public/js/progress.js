@@ -12,7 +12,10 @@ if (localStorage.getItem(module_id) === null) localStorage.setItem(module_id, 0)
 document.getElementsByName("lesson")[module_no].value = localStorage.getItem(module_id);
 
 let terminator = parseInt(localStorage.getItem(module_id));
-if (terminator != 0) document.getElementsByClassName("start-btn")[module_no].innerText = "CONTINUE";
+if (isNaN(terminator)) {
+    document.getElementsByClassName("start-btn")[module_no].innerText = "TEST";
+    terminator = document.getElementsByClassName("module")[module_no].getElementsByClassName("indicator").length;
+} else if (terminator != 0) document.getElementsByClassName("start-btn")[module_no].innerText = "CONTINUE";
 
 for (var k = 0; k < terminator; k++) document.getElementsByClassName("module")[module_no].getElementsByClassName("indicator")[k].classList.add("completed");
 
