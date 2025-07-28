@@ -23,7 +23,9 @@
         "icon": "ban",
         "title": "Negate sentences!",
         "lessons": [
-          "/json/u0-m2/0.json"
+          "/json/u0-m2/0.json",
+          "/json/u0-m2/1.json",
+          "/json/u0-m2/2.json"
         ]
       },
       {
