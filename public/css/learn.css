@@ -153,7 +153,7 @@ main .module {
     padding: 6px 3px;
 }
 
-main .module form > * {
+main .module form > *:not(input) {
     display: inline-block;
     background: rgba(from var(--blue) r g b / 50%);
     
@@ -162,11 +162,11 @@ main .module form > * {
     
     border: 3px solid var(--blue);
 }
-main .module.completed form > * {
+main .module.completed form > *:not(input) {
     background: rgba(from var(--red) r g b / 50%);
     border: 3px solid var(--red);
 }
-main .module.disabled form > * {
+main .module.disabled form > *:not(input) {
     background: rgba(from gray r g b / 50%);
     border: 3px solid gray;
 }
@@ -178,6 +178,8 @@ main .module .start {
     border-top-right-radius: 10px;
     border-bottom: 0;
 }
+main .module.completed .start { border-bottom: 0; }
+main .module.disabled .start { border-bottom: 0; }
 
 main .module .start > * { width: 100%; }
 main .module .start .fa-solid {
