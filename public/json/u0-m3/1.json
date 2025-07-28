@@ -1,0 +1,26 @@
+[
+  {
+    "type": "vocabulary",
+    "word": "myra",
+    "example": {
+      "sentence": "cévo [vé lá] miro.",
+      "translation": "The woman [has] a loaf of bread."
+    }
+  },
+  {
+    "type": "vocabulary",
+    "word": "myhvé",
+    "example": {
+      "sentence": "cévo [vé lá] miro.",
+      "translation": "The woman [has] a loaf of bread."
+    }
+  },
+  {
+    "type": "vocabulary",
+    "word": "sóron",
+    "example": {
+      "sentence": "cévo [vé lá] miro.",
+      "translation": "The woman [has] a loaf of bread."
+    }
+  }
+]

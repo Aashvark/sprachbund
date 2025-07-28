@@ -1,4 +1,5 @@
 examples
 node_modules
+public/json/example
 public/md
 test.js

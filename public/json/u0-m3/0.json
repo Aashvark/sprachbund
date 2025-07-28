@@ -1,0 +1,34 @@
+[
+  {
+    "type": "vocabulary",
+    "word": "i",
+    "example": {
+      "sentence": "cévo [vé lá] miro.",
+      "translation": "The woman [has] a loaf of bread."
+    }
+  },
+  {
+    "type": "vocabulary",
+    "word": "na",
+    "example": {
+      "sentence": "cévo [vé lá] miro.",
+      "translation": "The woman [has] a loaf of bread."
+    }
+  },
+  {
+    "type": "vocabulary",
+    "word": "mu",
+    "example": {
+      "sentence": "cévo [vé lá] miro.",
+      "translation": "The woman [has] a loaf of bread."
+    }
+  },
+  {
+    "type": "vocabulary",
+    "word": "sa",
+    "example": {
+      "sentence": "cévo [vé lá] miro.",
+      "translation": "The woman [has] a loaf of bread."
+    }
+  }
+]

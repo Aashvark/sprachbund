@@ -18,6 +18,18 @@
           "[adjective] [noun]"
         ]
       },
+      "[demonstrative]": {
+        "hint": ["[demonstrative]"],
+        "match": ["[demonstrative]"]
+      },
+      "i [adjective]": {
+        "hint": ["the [adjective] (one/thing)"],
+        "match": ["the [adjective] one", "the [adjective] thing", "the [adjective] ones", "the [adjective] things"]
+      },
+      "i [noun]": {
+        "hint": ["the [noun]"],
+        "match": ["the [noun]"]
+      },
       "[noun]": {
         "hint": [
           "(a) [noun]"
@@ -124,6 +136,38 @@
       "definition": "old.",
       "simple": ["old"]
     },
+    "sa": {
+      "ipa": "ˈsa",
+      "pos": "adjective",
+      "definition": "Good, well, or favorable, especially in the views of the speaker",
+      "simple": ["good", "well"]
+    },
+    "sóron": {
+      "ipa": "ˈso˦ˌron",
+      "pos": "adjective",
+      "definition": "Kind or nice",
+      "simple": ["kind", "nice"]
+    },
+    "i": {
+      "ipa": "ˈi",
+      "pos": "article",
+      "definition": "denoting one or more people or things already mentioned or assumed to be common knowledge.",
+      "simple": ["the"],
+      "hint": ["the"],
+      "match": ["the"]
+    },
+    "na": {
+      "ipa": "ˈna",
+      "pos": "demonstrative",
+      "definition": "This",
+      "simple": ["this"]
+    },
+    "mu": {
+      "ipa": "ˈmu",
+      "pos": "demonstrative",
+      "definition": "That",
+      "simple": ["that"]
+    },
     "miro": {
       "ipa": "ˈmiˌro",
       "pos": "noun",
@@ -221,6 +265,14 @@
       "simple": [
         "eat",
         "drink"
+      ]
+    },
+    "myhvé": {
+      "ipa": "məˌfe˦",
+      "pos": "preverb",
+      "definition": "to like",
+      "simple": [
+        "like"
       ]
     },
     "vé": {
