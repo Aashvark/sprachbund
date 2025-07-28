@@ -1,7 +1,7 @@
 async function update() {
     for (let i = 0; i < document.getElementsByClassName("module"); i++) {
         let module_id = document.getElementsByClassName("module")[i].getAttribute("data-id");
-        let length = await (await fetch(`/${module_id}`)).json().length;
+        let length = await (await fetch(`/${module_id}`)).json().content.length;
         console.log(module_id);
         console.log(length);
 
