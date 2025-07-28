@@ -40,7 +40,6 @@
     <meta name="format-detection" content="telephone=no">
 
     <script src="/js/scroll.js" type="text/javascript" defer></script>
-    <script src="/js/indicators.js" type="text/javascript" defer></script>
     <script src="/js/progress.js" type="text/javascript" defer></script>
   </head>
   <body>
@@ -67,7 +66,14 @@
             <p class="title">{{title}}</p>
             <button class="start-btn">START</button>
           </div>
-          <div class="completion"></div>
+          <div class="completion">
+          {{#if (eq lessons.length 1) includeZero=true}}
+            <div class="indicator" style="width: calc(89.5% - 8px);"></div>
+          {{else}}
+            {{#each lessons}}<div class="indicator" style="width: calc(88% / {{../lessons.length}} - 8px); margin: 0 1%;"></div>{{/each}}
+          {{/if}}
+          <i class="fa-solid fa-star"></i>
+          </div>
         </form>
       </div>
       {{/each}}
