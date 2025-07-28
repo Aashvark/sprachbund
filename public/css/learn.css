@@ -237,6 +237,7 @@ main .module .completion .indicator {
     border-radius: 5px;
 }
 main .module.completed .completion .indicator { background: var(--red); }
+main .module .completion .indicator.completed { background: var(--red); }
 
 main .module .completion .fa-solid {
     width: 10%;
