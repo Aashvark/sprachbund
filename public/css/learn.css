@@ -58,7 +58,7 @@ header {
 }
 
 header .sticky-header {
-    background: color(from var(--background) srgb r g b), color(from var(--green) srgb r g b / 50%);
+    background: linear-gradient(var(--background)), linear-gradient(rgba(from var(--green) r g b / 50%));
     background-blend-mode: screen;
     padding: 15px;
 
