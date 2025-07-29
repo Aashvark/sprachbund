@@ -114,7 +114,10 @@ header .sticky-header .unit .description, header .sticky-header .score .number {
     color: var(--white);
 }
 
-header .sticky-header .score { width: 20%; }
+header .sticky-header .score {
+    width: 20%;
+    text-align: center;
+}
 header .sticky-header .score .label { font-size: var(--small-font-size); }
 
 main { margin-bottom: 300px; }
