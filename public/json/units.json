@@ -40,7 +40,7 @@
   },
   {
     "name": "Greetings",
-    "description": "Use common phrases!",
+    "description": "Use common phrases and ask questions!",
     "modules": [
       {
         "icon": "child-dress",
@@ -48,6 +48,11 @@
         "lessons": [
           "/json/u1-m0/0.json"
         ]
+      },
+      {
+        "icon": "child-dress",
+        "title": "Show possession!",
+        "lessons": []
       },
       {
         "icon": "child-dress",
