@@ -1,5 +1,5 @@
 checkScroll();
-document.onscroll = () => { checkScroll(); }
+document.onscroll = () => checkScroll();
 
 function checkScroll() {
     let scrollPos = window.scrollY;
