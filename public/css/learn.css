@@ -252,6 +252,8 @@ main .module .completion .fa-solid {
 }
 main .module.completed .completion .fa-solid { color: var(--red); }
 
+footer p { font-size: var(--small-font-size); }
+
 @media screen and (max-width: 1400px) {
     header, main { padding: 0 15%; }
 }
