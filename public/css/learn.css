@@ -73,7 +73,7 @@ header .sticky-header {
     -ms-user-select: none;
 }
 
-header .sticky-header .flag, header .sticky-header .unit {
+header .sticky-header > * {
     display: inline-block;
     vertical-align: middle;
 }
@@ -91,17 +91,17 @@ header .sticky-header .flag svg {
 header .sticky-header .flag svg image { width: 100%; }
 
 header .sticky-header .unit {
-    width: calc(100% - 92px);
+    width: calc(80% - 92px);
     padding: 0 5px;
 }
 
-header .sticky-header .unit > p {
+header .sticky-header .unit > p, header .sticky-header .score > p {
     display: inline-block;
     width: 100%;
     font-weight: bold;
 }
 
-header .sticky-header .unit .name {
+header .sticky-header .unit .name, header .sticky-header .score .label {
     font-family: "Lato", sans-serif;
     font-style: normal;
 
@@ -109,10 +109,13 @@ header .sticky-header .unit .name {
     color: rgba(from var(--white) r g b / 75%);
 }
 
-header .sticky-header .unit .description {
+header .sticky-header .unit .description, header .sticky-header .score .number {
     font-size: var(--large-font-size);
     color: var(--white);
 }
+
+header .sticky-header .score { width: 20%; }
+header .sticky-header .score .label { font-size: var(--small-font-size); }
 
 main { margin-bottom: 300px; }
 

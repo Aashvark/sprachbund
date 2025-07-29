@@ -1,4 +1,5 @@
 if (localStorage.getItem("score") === null || localStorage.getItem("score") <= 0) localStorage.setItem("score", 0);
+document.getElementById("scoreno").innerText = localStorage.getItem("score");
 
 for (let i = 0; i < parseInt(localStorage.getItem("score")); i++) {
     document.getElementsByClassName("module")[i].classList.add("completed");
