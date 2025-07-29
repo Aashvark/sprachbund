@@ -113,7 +113,7 @@ header .sticky-header .unit .description {
     color: var(--white);
 }
 
-main { padding-bottom: 500px; }
+main { margin-bottom: 350px; }
 
 main .divider {
     display: inline-flex;
