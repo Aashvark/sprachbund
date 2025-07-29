@@ -38,7 +38,7 @@ body {
     font-size: 0px;
 }
 
-header, main {
+header, main, footer {
     display: inline-block;
     width: 100%;
     
@@ -259,7 +259,7 @@ footer p {
 }
 
 @media screen and (max-width: 1400px) {
-    header, main { padding: 0 15%; }
+    header, main, footer { padding: 0 15%; }
 }
 
 @media screen and (max-width: 1320px) {
@@ -267,11 +267,11 @@ footer p {
 }
 
 @media screen and (max-width: 900px) {
-    header, main { padding: 0 7%; }
+    header, main, footer { padding: 0 7%; }
 }
 
 @media screen and (max-width: 700px) {
-    header, main { padding: 0 5%; }
+    header, main, footer { padding: 0 5%; }
     main .module { width: 80%; }
 }
 
