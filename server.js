@@ -108,8 +108,9 @@ function generateNativeKeys(phrase) {
       let matching = findmatchingsimple(slot);
       entry[0] = entry[0].replace('[' + matching[1].pos + ']', matching[0]);
     }
+    submeaning = undefined;
   }
-  return [entry, phrase.length == 1 || match.length > 1 && (!match[1].match(/\[/g) || match[1].match(/\[/g).length <= 1) ? undefined : submeaning];
+  return [entry, phrase.length == 1 ? undefined : submeaning];
 }
 
 function hoverForeign(tokens) {
