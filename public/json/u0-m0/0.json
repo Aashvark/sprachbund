@@ -11,18 +11,13 @@
     "type": "short-response",
     "direction": "foreign-native",
     "prompt": "symi.",
-    "answers": [
-      "a man",
-      "man"
-    ]
+    "answers": ["a man", "man"]
   },
   {
     "type": "short-response",
     "direction": "native-foreign",
     "prompt": "A man.",
-    "answers": [
-      "symi"
-    ]
+    "answers": ["symi"]
   },
   {
     "type": "vocabulary",
@@ -35,32 +30,27 @@
   {
     "type": "short-response",
     "direction": "native-foreign",
-    "prompt": "Woman.",
-    "answers": [
-      "cévo"
-    ]
+    "prompt": "A woman.",
+    "answers": ["cévo"]
   },
   {
     "type": "short-response",
     "direction": "foreign-native",
     "prompt": "cévo",
-    "answers": [
-      "a woman",
-      "woman"
-    ]
+    "answers": ["a woman", "woman"]
   },
   {
     "type": "vocabulary",
     "word": "lá",
     "example": {
       "sentence": "[lá].",
-      "translation": "[He/she/it is]."
+      "translation": "[He/she/it/they exist]."
     },
     "tip": "[He/she/it] is the implied subject. If context demands it, [they] may be the implied subject."
   },
   {
     "type": "grammar",
-    "description": "The verb 'lá' is at the center of most sentences in Nóri.",
+    "description": "The verb 'lá' is at the center of most sentences in Nóri. Without an object, 'lá' may signify 'existance'.",
     "syntax": {
       "highlight": "[interjection]",
       "sentences": [
@@ -93,24 +83,14 @@
       "he exists",
       "she exists",
       "it exists",
-      "they exist",
-      "he is existing",
-      "she is existing",
-      "it is existing",
-      "they are existing",
-      "he's existing",
-      "she's existing",
-      "it's existing",
-      "they're existing"
+      "they exist"
     ]
   },
   {
     "type": "short-response",
     "direction": "native-foreign",
-    "prompt": "He exists.",
-    "answers": [
-      "lá"
-    ]
+    "prompt": "They exist.",
+    "answers": ["lá"]
   },
   {
     "type": "vocabulary",
@@ -124,26 +104,19 @@
     "type": "short-response",
     "direction": "native-foreign",
     "prompt": "It's a bread loaf.",
-    "answers": [
-      "lá miro"
-    ]
+    "answers": ["lá miro"]
   },
   {
     "type": "short-response",
     "direction": "native-foreign",
     "prompt": "She is Sophie.",
-    "answers": [
-      "lá Sophie"
-    ]
+    "answers": ["lá Sophie"]
   },
   {
     "type": "short-response",
     "direction": "foreign-native",
     "prompt": "David lá symi.",
-    "answers": [
-      "David is a man",
-      "David's a man"
-    ]
+    "answers": ["David is a man", "David's a man"]
   },
   {
     "type": "short-response",

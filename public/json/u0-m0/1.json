@@ -24,14 +24,7 @@
     "type": "short-response",
     "direction": "foreign-native",
     "prompt": "Kiran kas lá.",
-    "answers": [
-      "Kiran eats",
-      "Kiran drinks",
-      "Kiran is eating",
-      "Kiran is eating",
-      "Kiran's eating",
-      "Kiran's eating"
-    ]
+    "answers": ["Kiran eats", "Kiran drinks"]
   },
   {
     "type": "short-response",
@@ -73,25 +66,21 @@
     "type": "short-response",
     "direction": "native-foreign",
     "prompt": "She is small.",
-    "answers": [
-      "lá mikol"
-    ]
+    "answers": ["lá mikol"]
   },
   {
     "type": "vocabulary",
     "word": "su",
     "example": {
       "sentence": "kas lá [milk].",
-      "translation": "He/she/it drinks [milk]."
+      "translation": "He/she/it/they drink [milk]."
     }
   },
   {
     "type": "short-response",
     "direction": "native-foreign",
-    "prompt": "She drinks milk.",
-    "answers": [
-      "kas lá su"
-    ]
+    "prompt": "They drink milk.",
+    "answers": ["kas lá su"]
   },
   {
     "type": "short-response",
@@ -110,9 +99,7 @@
     "type": "short-response",
     "direction": "native-foreign",
     "prompt": "Jordan exists.",
-    "answers": [
-      "Jordan lá"
-    ]
+    "answers": ["Jordan lá"]
   },
   {
     "type": "short-response",
