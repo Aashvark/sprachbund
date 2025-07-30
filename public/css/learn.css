@@ -91,7 +91,7 @@ header .sticky-header .flag svg {
 header .sticky-header .flag svg image { width: 100%; }
 
 header .sticky-header .unit {
-    width: calc(80% - 92px);
+    width: calc(85% - 92px);
     padding: 0 5px;
 }
 
@@ -115,10 +115,10 @@ header .sticky-header .unit .description, header .sticky-header .score .number {
 }
 
 header .sticky-header .score {
-    width: 20%;
+    width: 15%;
+    border-left: 3px solid var(--green);
     text-align: center;
 }
-header .sticky-header .score .label { font-size: var(--small-font-size); }
 
 main { margin-bottom: 300px; }
 
