@@ -280,6 +280,8 @@ footer p {
 
 @media screen and (max-width: 700px) {
     header, main, footer { padding: 0 5%; }
+    header .sticky-header .unit { width: calc(80% - 92px); }
+    header .sticky-header .score { width: 20%; }
     main .module { width: 80%; }
 }
 
