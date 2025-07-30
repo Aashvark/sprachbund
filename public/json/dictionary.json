@@ -2,17 +2,11 @@
   "nóri-grammar": {
     "templates": {
       "[adjective]": {
-        "hint": [
-          "[adjective]"
-        ],
-        "match": [
-          "[adjective]"
-        ]
+        "hint": [ "[adjective]" ],
+        "match": [ "[adjective]" ]
       },
       "[adjective] [noun]": {
-        "hint": [
-          "[adjective] [noun]"
-        ],
+        "hint": [ "[adjective] [noun]" ],
         "match": [
           "a [adjective] [noun]",
           "[adjective] [noun]"
@@ -31,13 +25,8 @@
         "match": ["the [noun]"]
       },
       "[noun]": {
-        "hint": [
-          "(a) [noun]"
-        ],
-        "match": [
-          "[noun]",
-          "a [noun]"
-        ]
+        "hint": [ "(a) [noun]" ],
+        "match": [ "[noun]", "a [noun]" ]
       },
       "[preverb] lá": {
         "hint": [

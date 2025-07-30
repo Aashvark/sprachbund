@@ -36,68 +36,72 @@ handlebars.registerHelper('hover-translate', function(prompt, lang) {
 
 function hoverNative(tokens) {
   let string = "";
-  let stored = "";
 
-  for (var index in tokens) {
-    let token = tokens[index];
-    let next = parseInt(index) + 1;
-    stored += token[0];
+  let toks = [];
+  let sorted = "";
+  for (let token of tokens) {
+    sorted += " " + token[0];
+    if (token.length == 2 || findmatchingsimple(sorted).includes(undefined)) {
+      toks.push(token.length == 2 ? [sorted.trimStart(), token[1]] : [sorted.trimStart()]);
+      sorted = "";
+    }
+  }
 
-    if ((index < tokens.length - 1 && matchSelector(stored + " " + tokens[next][0]) || index < tokens.length - 2 && matchSelector(stored + " " + tokens[next][0] + " " + tokens[next + 1][0]) || index < tokens.length - 3 && matchSelector(stored + " " + tokens[next][0] + " " + tokens[next + 1][0] + " " + tokens[next + 2][0])) && token.length === 1) stored += " ";
-    else {
-      let generated = generateN(stored.toLowerCase());
-      string += formHints(token.length > 1 ? [stored, token[1]] : [stored], generated[0], generated[1]);
-      stored = "";
+  let temp;
+  let stored = [];
+  for (let index in toks) {
+    let token = toks[index];
+    stored.push(token[0]);
+
+    if (matchSelector(stored).length == 0 && index != 0 || token.length == 2 || index == toks.length - 1) {
+      if (token.length != 2 || index < toks.length - 1) temp = stored.pop();
+      let generated = generateNativeKeys(stored);
+      string += formHints(token.length > 1 ? [stored.join(" "), token[1]] : [stored.join(" ")], generated[0], generated[1]);
+      stored = token.length == 2 || index == toks.length - 1 ? [] : [temp];
     }
   }
   return new handlebars.SafeString(string);
 }
 
-function isInDictionary(match) { return Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(match.toLowerCase())).length !== 0; }
+function filterBy(by, match) { return Object.keys(dict).filter(key => by in dict[key] && dict[key][by].includes(match.trim())) }
 function findmatchingsimple(match) {
-    let val = Object.keys(dict).filter(key => "simple" in dict[key] && dict[key].simple.includes(match))[0];
+    let val = filterBy("simple", match)[0];
     return [val, dict[val]];
 }
 
 function matchSelector(phrase) {
-  if (isInDictionary(phrase.toLowerCase())) { return Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(phrase)); }
-  let words = phrase.toLowerCase().split(" ");
-
   for (template of Object.keys(grammar["templates"])) {
     for (let temp of grammar["templates"][template].match) {
-      if (words.length === temp.split(" ").length && temp.toLowerCase().split(" ").filter((word, index) => {
-        if (word.at(0) != "[" && word === words[index]) return true;
+      if (phrase.length === temp.split(" ").length && temp.toLowerCase().split(" ").filter((word, index) => {
+        if (word.at(0) != "[" && word === phrase[index]) return true;
         else if (word.at(0) === "[") {
-          let find = findmatchingsimple(words[index].substring(0, words[index].length - (word[word.length - 1] === "s" ? 1 : 0)));
-          if (find[0] === undefined) return false;
-          return word.substring(1, word.indexOf("]")) === find[1].pos; 
+          let find = findmatchingsimple(phrase[index].substring(0, phrase[index].length - (word.length - word.indexOf("]"))));
+          return find[0] === undefined ? false : word.substring(1, word.indexOf("]")) === find[1].pos; 
         }
       }).length === temp.split(" ").length) return [template, temp];
     }
   }
-  return undefined; 
+  return filterBy("match", phrase.join(" ")); 
 }
 
-function generateN(phrase) {
+function generateNativeKeys(phrase) {
   let match = matchSelector(phrase);
-  let submeaning;
-  if (phrase.includes(" ")) submeaning = phrase.split(" ").map(v => Object.keys(dict).filter(key => 'simple' in dict[key] && dict[key].simple.includes(v)));
-  if (submeaning != undefined && (submeaning.length === 0 || submeaning.every(i => i.length === 0))) submeaning = undefined;
-  if (!isInDictionary(phrase) && match) {
-    let slots = phrase.toLowerCase().split(" ").map((word, index) => {
-        if (match[1].split(" ")[index].at(0) != "[") return false;
-        let section = match[1].split(" ")[index];
-        return word.substring(0, word.length - (section[section.length - 1] === "s" ? 1 : 0));
+  let submeaning = phrase.length == 1 ? undefined : phrase.map(v => filterBy("simple", v));
+  let entry = filterBy("match", phrase.join(" "));
+  
+  if (!entry && match) {
+    let slots = phrase.map((word, index) => {
+      if (match[1].split(" ")[index].at(0) != "[") return false;
+      let section = match[1].split(" ")[index];
+      return word.substring(0, word.length - (section.length - section.indexOf("]")));
     }).filter(word => word);
-    let hint = match[0];
+    entry = [match[0]];
     for (let slot of slots) {
-        let matching = findmatchingsimple(slot);
-        hint = hint.replace('[' + matching[1].pos + ']', matching[0]);
+      let matching = findmatchingsimple(slot);
+      entry[0] = entry[0].replace('[' + matching[1].pos + ']', matching[0]);
     }
-    return [[hint], submeaning];
   }
-  let ret = isInDictionary(phrase) ? Object.keys(dict).filter(key => "match" in dict[key] && dict[key].match.includes(phrase)) : undefined;
-  return [ret, ret != undefined && ret.length === 1 ? undefined : submeaning];
+  return [entry, submeaning];
 }
 
 function hoverForeign(tokens) {
