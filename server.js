@@ -54,17 +54,17 @@ function hoverNative(tokens) {
     stored.push(token[0]);
 
     if (index != 0 && matchSelector(stored).length === 0 || token.length === 2 || index === toks.length - 1) {
-      if ((token.length != 2 || index < toks.length - 1)) temp = stored.pop();
-      if (index == 1 && stored.length == 2 && token.length === 2 && matchSelector(stored).length === 0) {
-        string += hint([stored[0]], toks[0]);
-        string += hint([stored[1]], token);
+      if (token.length != 2 || parseInt(index) != toks.length - 1) temp = stored.pop();
+      if (stored.length === parseInt(index) + 1 && token.length === 2 && matchSelector([token[0]]).length === 0) {
+        string += hint(stored.slice(0, stored.length - 1), toks[0]);
+        string += hint([stored[stored.length - 1]], token);
         temp = undefined;
       } else string += hint(stored, token);
       stored = token.length === 2 || index === toks.length - 1 || temp === undefined ? [] : [temp];
     }
   }
   return new handlebars.SafeString(string);
-} 
+}
 
 function hint(stored, token) {
   let generated = generateNativeKeys(stored);
