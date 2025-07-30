@@ -174,11 +174,11 @@ function generateKeys(phrase) {
 function formHints(word, keys, submeaning) {
   let construction = "";
   
-  if (keys === undefined) construction = `<div class="hint">${escape(word.slice(0, word.length - 1).join(" ") + word[word.length - 1])}</div>`;
+  if (keys === undefined || keys.length === 0) construction = `<div class="hint">${escape(word.slice(0, word.length - 1).join(" ") + word[word.length - 1])}</div>`;
   else {
     construction = `<div class="hint"><span>${escape(word[0])}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
     for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${escape(key)}</td></tr>`; }
-    if (submeaning != undefined) {
+    if (submeaning != undefined || submeaning.length === 0) {
        for (let i = 0; i < getLongestList(submeaning).length; i++) {
          construction += `<tr>`;
          for (var sub of submeaning) construction += `<td>${sub && sub.length > i ? escape(sub[i]) : ""}</td>`;
