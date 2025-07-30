@@ -167,7 +167,7 @@ function generateKeys(phrase) {
       }
       hints = hints.concat(hint);
     }
-    return [hints, submeaning];
+    return [hints, undefined];
   }
   return [phrase in dict && "hint" in dict[phrase] ? dict[phrase].hint : undefined, submeaning];
 }
