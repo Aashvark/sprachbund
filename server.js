@@ -40,7 +40,7 @@ function hoverNative(tokens) {
   let toks = [];
   let sorted = "";
   for (let token of tokens) {
-    sorted += " " + token[0];
+    sorted += " " + token[0].toLowerCase();
     if (token.length == 2 || findmatchingsimple(sorted).includes(undefined)) {
       toks.push(token.length == 2 ? [sorted.trimStart(), token[1]] : [sorted.trimStart()]);
       sorted = "";
@@ -88,7 +88,7 @@ function generateNativeKeys(phrase) {
   let match = matchSelector(phrase);
   let submeaning = phrase.length == 1 ? undefined : phrase.map(v => filterBy("simple", v));
   let entry = filterBy("match", phrase.join(" "));
-  
+
   if (!entry && match) {
     let slots = phrase.map((word, index) => {
       if (match[1].split(" ")[index].at(0) != "[") return false;
