@@ -9,7 +9,7 @@ const units      = require("./public/json/units.json");
 
 let language = "nóri";
 let dict     = dictionary[language];
-let grammar  = dictionary[`${language}-grammar`]; 
+let grammar  = dictionary[`${language}-grammar`];
 
 fastify.register(require("@fastify/static"), { root: path.join(__dirname, "public"), prefix: "/" });
 fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
