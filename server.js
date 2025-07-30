@@ -40,7 +40,7 @@ function hoverNative(tokens) {
   let toks = [];
   let sorted = "";
   for (let token of tokens) {
-    sorted += " " + token[0].toLowerCase();
+    sorted += " " + token[0];
     if (token.length == 2 || findmatchingsimple(sorted).includes(undefined)) {
       toks.push(token.length == 2 ? [sorted.trimStart(), token[1]] : [sorted.trimStart()]);
       sorted = "";
@@ -71,7 +71,7 @@ function hint(stored, token) {
   return formHints(token.length > 1 ? [stored.join(" "), token[1]] : [stored.join(" ")], generated[0], generated[1]);
 }
 
-function filterBy(by, match) { return Object.keys(dict).filter(key => by in dict[key] && dict[key][by].includes(match.trim())) }
+function filterBy(by, match) { return Object.keys(dict).filter(key => by in dict[key] && dict[key][by].includes(match.toLowerCase().trim())) }
 function findmatchingsimple(match) {
     let val = filterBy("simple", match)[0];
     return [val, dict[val]];
