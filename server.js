@@ -53,14 +53,22 @@ function hoverNative(tokens) {
     let token = toks[index];
     stored.push(token[0]);
 
-    if (matchSelector(stored).length == 0 && index != 0 || token.length == 2 || index == toks.length - 1) {
-      if (token.length != 2 || index < toks.length - 1) temp = stored.pop();
-      let generated = generateNativeKeys(stored);
-      string += formHints(token.length > 1 ? [stored.join(" "), token[1]] : [stored.join(" ")], generated[0], generated[1]);
-      stored = token.length == 2 || index == toks.length - 1 ? [] : [temp];
+    if (index != 0 && matchSelector(stored).length === 0 || token.length === 2 || index === toks.length - 1) {
+      if ((token.length != 2 || index < toks.length - 1)) temp = stored.pop();
+      if (index == 1 && stored.length == 2 && token.length === 2) {
+        string += hint([stored[0]], toks[0]);
+        string += hint([stored[1]], token);
+        temp = undefined;
+      } else string += hint(stored, token);
+      stored = token.length === 2 || index === toks.length - 1 || temp === undefined ? [] : [temp];
     }
   }
   return new handlebars.SafeString(string);
+}
+
+function hint(stored, token) {
+  let generated = generateNativeKeys(stored);
+  return formHints(token.length > 1 ? [stored.join(" "), token[1]] : [stored.join(" ")], generated[0], generated[1]);
 }
 
 function filterBy(by, match) { return Object.keys(dict).filter(key => by in dict[key] && dict[key][by].includes(match.trim())) }
