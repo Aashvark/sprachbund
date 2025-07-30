@@ -70,12 +70,12 @@ function findmatchingsimple(match) {
 }
 
 function matchSelector(phrase) {
-  for (template of Object.keys(grammar["templates"])) {
-    for (let temp of grammar["templates"][template].match) {
+  for (template of Object.keys(grammar.templates)) {
+    for (let temp of grammar.templates[template].match) {
       if (phrase.length === temp.split(" ").length && temp.toLowerCase().split(" ").filter((word, index) => {
         if (word.at(0) != "[" && word === phrase[index]) return true;
         else if (word.at(0) === "[") {
-          let find = findmatchingsimple(phrase[index].substring(0, phrase[index].length - (word.length - word.indexOf("]"))));
+          let find = findmatchingsimple(phrase[index].substring(0, phrase[index].length - (word.length - word.indexOf("]" - 1))));
           return find[0] === undefined ? false : word.substring(1, word.indexOf("]")) === find[1].pos; 
         }
       }).length === temp.split(" ").length) return [template, temp];
@@ -85,15 +85,14 @@ function matchSelector(phrase) {
 }
 
 function generateNativeKeys(phrase) {
-  let match = matchSelector(phrase);
-  let submeaning = phrase.length == 1 ? undefined : phrase.map(v => filterBy("simple", v));
+  let match = matchSelector(phrase);  
   let entry = filterBy("match", phrase.join(" "));
-
+  
   if (!entry && match) {
     let slots = phrase.map((word, index) => {
       if (match[1].split(" ")[index].at(0) != "[") return false;
       let section = match[1].split(" ")[index];
-      return word.substring(0, word.length - (section.length - section.indexOf("]")));
+      return word.substring(0, word.length - (section.length - section.indexOf("]" - 1)));
     }).filter(word => word);
     entry = [match[0]];
     for (let slot of slots) {
@@ -101,7 +100,7 @@ function generateNativeKeys(phrase) {
       entry[0] = entry[0].replace('[' + matching[1].pos + ']', matching[0]);
     }
   }
-  return [entry, submeaning];
+  return [entry, phrase.length == 1 ? undefined : phrase.map(v => filterBy("simple", v))];
 }
 
 function hoverForeign(tokens) {
