@@ -4,7 +4,7 @@ const fastify    = require("fastify") ( { logger: false } );
 
 const seo        = require("./public/json/seo.json");
 const units      = require("./public/json/units.json");
-let { handlebars, hoverNative, hoverForeign, escape, dict } = require("hover.js");
+let { handlebars, hoverNative, hoverForeign, escape, dict } = require("./hover.js");
 
 fastify.register(require("@fastify/static"), { root: path.join(__dirname, "public"), prefix: "/" });
 fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
