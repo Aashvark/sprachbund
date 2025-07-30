@@ -97,7 +97,7 @@ function generateNativeKeys(phrase) {
   let entry = filterBy("match", phrase.join(" "));
   let submeaning = phrase.map(v => filterBy("simple", v));
 
-  if (entry.length == 0 && match) {
+  if (entry.length == 0 && match.length != 0) {
     let slots = phrase.map((word, index) => {
       if (match[1].split(" ")[index].at(0) != "[") return false;
       let section = match[1].split(" ")[index];
@@ -109,7 +109,7 @@ function generateNativeKeys(phrase) {
       entry[0] = entry[0].replace('[' + matching[1].pos + ']', matching[0]);
     }
   }
-  return [entry, phrase.length == 1 || match && (!match[1].match(/\[/g) || match[1].match(/\[/g).length <= 1) ? undefined : submeaning];
+  return [entry, phrase.length == 1 || match.length > 1 && (!match[1].match(/\[/g) || match[1].match(/\[/g).length <= 1) ? undefined : submeaning];
 }
 
 function hoverForeign(tokens) {
