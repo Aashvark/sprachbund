@@ -64,7 +64,7 @@ function hoverNative(tokens) {
     }
   }
   return new handlebars.SafeString(string);
-}
+} 
 
 function hint(stored, token) {
   let generated = generateNativeKeys(stored);
