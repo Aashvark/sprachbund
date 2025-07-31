@@ -78,7 +78,7 @@ function hint(stored, token) {
   return formHints(token.length > 1 ? [stored.join(" "), token[1]] : [stored.join(" ")], generated[0], generated[1]);
 }
 
-function filterBy(by, match) { return Object.keys(dict).filter(key => by in dict[key] && dict[key][by].includes(match.toLowerCase().trim())) }
+function filterBy(by, match) { return Object.keys(dict).filter(key => by in dict[key] && dict[key][by].map(i => i.toLowerCase()).includes(match.toLowerCase().trim())) }
 function findmatchingsimple(match) {
     let val = filterBy("simple", match)[0];
     return [val, dict[val]];
