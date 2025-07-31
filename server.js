@@ -83,9 +83,10 @@ function findmatchingsimple(match) {
     let val = filterBy("simple", match)[0];
     return [val, dict[val]];
 }
-
 function matchSelector(phrase) {
-  for (template of Object.keys(grammar.templates)) {
+  let templates = [];
+  let temps = [];
+  for (let template of Object.keys(grammar.templates)) {
     for (let temp of grammar.templates[template].match) {
       if (phrase.length === temp.split(" ").length && temp.toLowerCase().split(" ").filter((word, index) => {
         if (word.at(0) != "[" && word === phrase[index].toLowerCase()) return true;
@@ -93,10 +94,13 @@ function matchSelector(phrase) {
           let find = findmatchingsimple(phrase[index].substring(0, phrase[index].length - (word.length - word.indexOf("]") - 1)));
           return find[0] === undefined ? false : word.substring(1, word.indexOf("]")) === find[1].pos; 
         }
-      }).length === temp.split(" ").length) return [template, temp];
+      }).length === temp.split(" ").length) {
+        templates.push(template);
+        temps.push(temp);
+      }
     }
   }
-  return filterBy("match", phrase.join(" ")); 
+  return templates.length != 0 ? [templates, temps[0]] : filterBy("match", phrase.join(" ")); 
 }
 
 function generateNativeKeys(phrase) {
@@ -110,10 +114,10 @@ function generateNativeKeys(phrase) {
       let section = match[1].split(" ")[index];
       return word.substring(0, word.length - (section.length - section.indexOf("]") - 1));
     }).filter(word => word);
-    entry = [match[0]];
+    entry = match[0];
     for (let slot of slots) {
       let matching = findmatchingsimple(slot);
-      entry[0] = entry[0].replace('[' + matching[1].pos + ']', matching[0]);
+      for (let i in entry) entry[i] = entry[i].replace('[' + matching[1].pos + ']', matching[0]);
     }
     submeaning = undefined;
   }
