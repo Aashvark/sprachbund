@@ -12,7 +12,8 @@
     "direction": "foreign-native",
     "prompt": "ćy kas lá.",
     "answers": [
-      "we eat"
+      "we eat",
+      "we drink"
     ]
   },
   {
@@ -28,7 +29,7 @@
     "word": "vun",
     "example": {
       "sentence": "[vun] lá.",
-      "translation": "[You] exist."
+      "translation": "[Y'all] exist."
     }
   },
   {
@@ -55,7 +56,11 @@
       "you are small",
       "you all are small",
       "you are short",
-      "you all are short"
+      "you all are short",
+      "you're small",
+      "y'all are small",
+      "you're short",
+      "y'all are short"
     ]
   },
   {
@@ -70,17 +75,13 @@
     "type": "short-response",
     "direction": "native-foreign",
     "prompt": "I drink water.",
-    "answers": [
-      "ny kas lá móu"
-    ]
+    "answers": [ "ny kas lá móu" ]
   },
   {
     "type": "short-response",
     "direction": "foreign-native",
     "prompt": "ćy kas lá móu",
-    "answers": [
-      "we drink water"
-    ]
+    "answers": [ "we drink water" ]
   },
   {
     "type": "short-response",

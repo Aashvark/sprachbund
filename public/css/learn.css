@@ -247,7 +247,10 @@ main .module .completion .indicator {
 
     border-radius: 5px;
 }
-main .module.completed .completion .indicator { background: var(--red); }
+main .module.completed .completion .indicator { 
+    background: var(--red);
+    outline: 2px solid rgba(from var(--red) r g b / 35%);
+}
 main .module .completion .indicator.completed { background: var(--red); }
 
 main .module .completion .fa-solid {
@@ -257,7 +260,10 @@ main .module .completion .fa-solid {
     color: var(--background);
     text-align: center;
 }
-main .module.completed .completion .fa-solid { color: var(--red); }
+main .module.completed .completion .fa-solid {
+    outline: 2px solid rgba(from var(--red) r g b / 35%);
+    color: var(--red);
+}
 
 footer p {
     padding: 20px 10px;
