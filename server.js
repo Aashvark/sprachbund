@@ -53,14 +53,14 @@ function hoverNative(tokens) {
     let token = toks[index];
     stored.push(token[0]);
 
-    if (index != 0 && matchSelector(stored).length === 0 || token.length === 2 || index === toks.length - 1) {
-      if (token.length != 2 || parseInt(index) != toks.length - 1) temp = stored.pop();
-      if (stored.length === parseInt(index) + 1 && token.length === 2 && matchSelector([token[0]]).length === 0) {
-        string += hint(stored.slice(0, stored.length - 1), toks[0]);
-        string += hint([stored[stored.length - 1]], token);
-        temp = undefined;
-      } else string += hint(stored, token);
-      stored = token.length === 2 || index === toks.length - 1 || temp === undefined ? [] : [temp];
+    if (index != 0 && matchSelector(stored).length === 0) {
+      temp = stored.pop();
+      string += hint(stored, token);
+      stored = [temp];
+    }
+    if (token.length === 2 || parseInt(index) === toks.length - 1) {
+      string += hint(stored, token);
+      stored = [];
     }
   }
   return new handlebars.SafeString(string);
@@ -167,7 +167,7 @@ function generateKeys(phrase) {
       }
       hints = hints.concat(hint);
     }
-    return [hints, undefined];
+    return [hints, submeaning];
   }
   return [phrase in dict && "hint" in dict[phrase] ? dict[phrase].hint : undefined, submeaning];
 }
@@ -179,7 +179,7 @@ function formHints(word, keys, submeaning) {
   else {
     construction = `<div class="hint"><span>${escape(word[0])}</span>${word.length > 1 ? word[1] : ""}<table><tbody>`;
     for (var key of keys) { construction += `<tr class="row"><td colspan="${submeaning != undefined && submeaning.length > 0 ? submeaning.length : 1}">${escape(key)}</td></tr>`; }
-    if (submeaning != undefined || typeof submeaning === "object" && submeaning.length === 0) {
+    if (submeaning != undefined && submeaning.length != 0) {
        for (let i = 0; i < getLongestList(submeaning).length; i++) {
          construction += `<tr>`;
          for (var sub of submeaning) construction += `<td>${sub && sub.length > i ? escape(sub[i]) : ""}</td>`;
