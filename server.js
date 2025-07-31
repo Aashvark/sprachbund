@@ -37,14 +37,15 @@ handlebars.registerHelper('hover-translate', function(prompt, lang) {
 function hoverNative(tokens) {
   let string = "";
 
-  let toks = [];
-  let sorted = "";
-  for (let token of tokens) {
-    sorted += " " + token[0];
-    if (token.length == 2 || findmatchingsimple(sorted).includes(undefined)) {
-      toks.push(token.length == 2 ? [sorted.trimStart(), token[1]] : [sorted.trimStart()]);
-      sorted = "";
-    }
+  let toks = tokens;
+  let index = 0;
+  while (index < toks.length) {
+    if (toks[index].length === 2) { index++; continue; }
+
+    if (index < toks.length - 2 && toks[index + 1].length != 2 && !findmatchingsimple(toks.slice(index, index + 3).map(e => e[0]).join(" ")).includes(undefined)) toks = leftMerge(toks, index, 2);
+    else if (!findmatchingsimple(toks.slice(index, index + 2).map(e => e[0]).join(" ")).includes(undefined)) toks = leftMerge(toks, index, 1);
+    else index++;
+    if (index === toks.length - 1) break;
   }
 
   let temp;
@@ -64,6 +65,12 @@ function hoverNative(tokens) {
     }
   }
   return new handlebars.SafeString(string);
+}
+
+function leftMerge(list, index, count) {
+  for (let i = 0; i < count; i++) list[index][0] += " " + list[index + i + 1][0];
+  list.splice(index + 1, count);
+  return list;
 }
 
 function hint(stored, token) {
