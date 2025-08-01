@@ -219,10 +219,7 @@
     }
     function stopTimer() { clearInterval(timerInterval); }
 
-    function formatAnswer(text) {
-      console.log(text);
-      return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`\?~()]/g, "").replace(/\s{2,}/g, " ").trimEnd().trimStart();
-    }
+    function formatAnswer(text) { return text.toLowerCase().replaceAll("&#x27;", "\'").replace(/[.,\/#!$%\^&\*;:{}=\-_`\?~()]/g, "").replace(/\s{2,}/g, " ").trimEnd().trimStart();}
     
     function caseshift() {
       document.getElementById("shift-case").innerHTML = document.getElementById("shift-case").innerHTML == "⬇" ? "⬆" : "⬇";
