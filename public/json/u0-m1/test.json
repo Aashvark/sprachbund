@@ -45,7 +45,7 @@
   },
   {
     "type": "fill-in-the-blank",
-    "prompt": "lá ___. ké la mikol.",
+    "prompt": "lá ___. ké lá mikol.",
     "answer": "vu",
     "choices": ["ké", "vu", "su"]
   },
