@@ -25,6 +25,7 @@ handlebars.registerHelper('json',      function (a)    { return escape(JSON.stri
 
 handlebars.registerHelper('get-attribute', function (word, attribute) { return dict[word.trimEnd()][attribute]; });
 handlebars.registerHelper('tip-format',    function (arg)             { return new handlebars.SafeString(replaceClass(arg, "merienda accent")); });
+handlebars.registerHelper('decorate',    function (arg)               { return new handlebars.SafeString(arg.replace("___", `<div class="hint"><span class="blank"></span></div>`)); });
 
 handlebars.registerHelper('hover-translate', function(prompt, lang) {
   let tokens = [];

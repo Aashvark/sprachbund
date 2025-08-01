@@ -72,7 +72,7 @@
         <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectBtn(this)">{{this}}</a>{{/each}}</div>
       {{else if (eq lesson.type "fill-in-the-blank")}}
         <p class="heading"><i class="fa-solid fa-pen-to-square"></i> Fill in the blank!</p>
-        <div class="div-border scale">{{#if ../isTest}}{{lesson.prompt}}{{else}}{{hover-translate lesson.prompt "foreign"}}{{/if}}</div>
+        <div class="div-border scale">{{#if ../isTest}}{{decorate lesson.prompt}}{{else}}{{hover-translate lesson.prompt "foreign"}}{{/if}}</div>
         <p class="p-text">Which word completes the sentence?</p>
         <br>
         <div class="btn-container" id="buttons-{{@index}}">{{#each choices}}<a class="answer-btn button" onclick="selectBtn(this)">{{this}}</a>{{/each}}</div>
@@ -94,7 +94,6 @@
       {{else if (eq lesson.type "short-response")}}
         <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
         <div class="div-border scale">
-          {{log ../isTest}}=
           {{#if ../isTest}}
           {{lesson.prompt}}
           {{else}}
