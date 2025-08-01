@@ -36,6 +36,23 @@
           "they [preverb]"
         ]
       },
+      "[preverb] tá": {
+        "hint": [ "(he/she/it/they) don't [preverb]" ],
+        "match": [
+          "do not [preverb]",
+          "does not [preverb]",
+          "he does not [preverb]",
+          "she does not [preverb]",
+          "it does not [preverb]",
+          "they do not [preverb]",
+          "don't [preverb]",
+          "doesn't [preverb]",
+          "he doesn't [preverb]",
+          "she doesn't [preverb]",
+          "it doesn't [preverb]",
+          "they don't [preverb]"
+        ]
+      },
       "[pronoun]": {
         "hint": [ "[pronoun]" ],
         "match": [ "[pronoun]" ]
@@ -54,7 +71,23 @@
       },
       "vun lá": {
         "hint": [ "you are" ],
-        "match": [ "you're", "you are" ]
+        "match": [ "you're", "you are", "you all are", "y'all are" ]
+      },
+      "ny tá": {
+        "hint": [ "I am" ],
+        "match": [ "I'm not", "I am not" ]
+      },
+      "ké tá": {
+        "hint": [ "you are" ],
+        "match": [ "you're not", "you are not", "you aren't" ]
+      },
+      "ćy tá": {
+        "hint": [ "we are" ],
+        "match": [ "we're not ", "we are not", "we aren't" ]
+      },
+      "vun tá": {
+        "hint": [ "you are not" ],
+        "match": [ "you're not", "you are not", "you aren't", "you all are not", "y'all are not", "you all aren't", "y'all aren't" ]
       }
     }
   },
