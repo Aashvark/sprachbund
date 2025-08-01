@@ -94,7 +94,8 @@
       {{else if (eq lesson.type "short-response")}}
         <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this! {{isTest}}</p>
         <div class="div-border scale">
-          {{#if isTest}}{{lesson.prompt}}{{else}}{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "native" "foreign")}}{{/if}}
+          {{#if isTest}}{{lesson.prompt}}{{/if}}
+          {{#unless isTest}}{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "native" "foreign")}}{{/unless}}
         </div>
         <div class="response"><textarea class="textbox" id="response-{{@index}}" placeholder="Type in {{#if (eq lesson.direction "native-foreign")}}Nóri{{else}}English{{/if}}" {{#if (eq lesson.direction "foreign-native")}}autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{{/if}} inputmode="search" enterkeyhint="go"></textarea></div>
         <div class="insert-buttons">
