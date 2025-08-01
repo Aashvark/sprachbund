@@ -58,7 +58,7 @@ function hoverNative(tokens) {
 
     if (index != 0 && matchSelector(stored).length === 0) {
       temp = stored.length != 1 ? stored.pop() : undefined;
-      string += hint(stored, toks[stored.length != 1 ? index - 1 : index]);
+      string += hint(stored, toks[temp != undefined ? index - 1 : index]);
       stored = temp != undefined ? [temp] : [];
     }
     if (token.length === 2 || parseInt(index) === toks.length - 1) {
