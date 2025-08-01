@@ -4,37 +4,26 @@
     "prompt": "lá David. David lá symi. lá mikol.",
     "question": "What is David's gender?",
     "answer": "Male",
-    "choices": [
-      "Male",
-      "Female"
-    ]
+    "choices": [ "Male", "Female" ]
   },
   {
     "type": "comprehension",
     "prompt": "Alex lá cévo.",
     "question": "What is Alex?",
     "answer": "A woman",
-    "choices": [
-      "A woman",
-      "A man",
-      "Short"
-    ]
+    "choices": [ "A woman", "A man", "Short" ]
   },
   {
     "type": "short-response",
     "direction": "native-foreign",
     "prompt": "It is a woman.",
-    "answers": [
-      "lá cévo"
-    ]
+    "answers": [ "lá cévo" ]
   },
   {
     "type": "short-response",
     "direction": "native-foreign",
     "prompt": "A man is existing.",
-    "answers": [
-      "symi lá."
-    ]
+    "answers": [ "symi lá" ]
   },
   {
     "type": "short-response",
@@ -60,36 +49,26 @@
     "prompt": "lá miro. Sophie kas lá miro.",
     "question": "What did Sophie injest?",
     "answer": "bread",
-    "choices": [
-      "bread",
-      "milk"
-    ]
+    "choices": [ "bread", "milk" ]
   },
   {
     "type": "comprehension",
     "prompt": "kas lá su.",
     "question": "What is the verb?",
     "answer": "to eat/drink",
-    "choices": [
-      "to be",
-      "to eat/drink"
-    ]
+    "choices": [ "to be", "to eat/drink" ]
   },
   {
     "type": "short-response",
     "direction": "native-foreign",
     "prompt": "It is eating bread.",
-    "answers": [
-      "kas lá miro"
-    ]
+    "answers": [ "kas lá miro" ]
   },
   {
     "type": "short-response",
     "direction": "native-foreign",
     "prompt": "David drinks milk.",
-    "answers": [
-      "David kas lá su"
-    ]
+    "answers": [ "David kas lá su" ]
   },
   {
     "type": "short-response",

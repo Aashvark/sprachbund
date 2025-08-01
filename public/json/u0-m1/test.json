@@ -1,10 +1,77 @@
 [
   {
+    "type": "comprehension",
+    "prompt": "ké lá Patty. ny lá Logan. ké kas lá miro. ny kas lá móu.",
+    "question": "Who eats bread?",
+    "answer": "Patty",
+    "choices": [ "Patty", "Logan" ]
+  },
+  {
+    "type": "comprehension",
+    "prompt": "ké lá Patty. ny lá Logan. ké kas lá miro. ny kas lá móu.",
+    "question": "What does Logan consume?",
+    "answer": "Water",
+    "choices": [ "Bread", "Water", "Milk" ]
+  },
+  {
     "type": "short-response",
     "direction": "native-foreign",
-    "prompt": "They drink water.",
+    "prompt": "It's them. They eat bread!",
+    "answers": [ "lá téu kas lá miro" ]
+  },
+  {
+    "type": "short-response",
+    "direction": "foreign-native",
+    "prompt": "ny kas lá su.",
+    "answers": [ "I drink milk" ]
+  },
+  {
+    "type": "short-response",
+    "direction": "foreign-native",
+    "prompt": "ké lá mikol symi.",
     "answers": [
-      "kas lá móu"
+      "you are a short man",
+      "you are a small man",
+      "you're a short man",
+      "you're a small man"
     ]
+  },
+  {
+    "type": "comprehension",
+    "prompt": "ćy lá mikol. ćy kas lá móu",
+    "question": "What is an appropriate pronoun to address the speaker(s)?",
+    "answer": "Patty",
+    "choices": [ "vun", "ké", "" ]
+  },
+  {
+    "type": "fill-in-the-blank",
+    "prompt": "lá ___. ké la mikol.",
+    "answer": "vu",
+    "choices": ["ké", "vu", "su"]
+  },
+  {
+    "type": "short-response",
+    "direction": "foreign-native",
+    "prompt": "vun lá.",
+    "answers": [
+      "you are",
+      "you all are",
+      "y'all are",
+      "you exist",
+      "you all exist",
+      "y'all exist"
+    ]
+  },
+  {
+    "type": "short-response",
+    "direction": "foreign-native",
+    "prompt": "ćy lá miro.",
+    "answers": [ "We are bread" ]
+  },
+  {
+    "type": "short-response",
+    "direction": "native-foreign",
+    "prompt": "It is us.",
+    "answers": [ "lá ćy" ]
   }
 ]
