@@ -1,6 +1,6 @@
 const fs         = require("fs");
 const path       = require("path");
-const fastify    = require("fastify");
+const fastify    = require("fastify") ( { logger: false } );
 
 const seo        = require("./public/json/seo.json");
 const units      = require("./public/json/units.json");
