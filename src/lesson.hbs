@@ -42,6 +42,7 @@
     <header>
       <div class="language-flag"><svg><image href="/svg/flag.svg" xlink:href="/svg/flag.svg"></image></svg></div>
       <div class="progress-bar {{#if isTest}}test{{/if}}"><div class="progress" id="progress"></div></div>
+      {{log isTest}}
       {{#if isTest}}
       <div class="health">
         <i class="fa-solid fa-heart"></i>
@@ -92,7 +93,7 @@
         <div class="btn-container half" id="foreign-{{@index}}">{{#each foreign}}<a class="answer-btn button" onclick="select(this)" id="foreign-{{@../index}}-{{@index}}">{{this}}</a>{{/each}}</div>
         <div class="btn-container half" id="native-{{@index}}">{{#each native}}<a class="answer-btn button" onclick="select(this)" id="native-{{@../index}}-{{@index}}">{{this}}</a>{{/each}}</div>
       {{else if (eq lesson.type "short-response")}}
-        <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this! {{isTest}}</p>
+        <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this!</p>
         <div class="div-border scale">
           {{lesson.prompt}}
         </div>
