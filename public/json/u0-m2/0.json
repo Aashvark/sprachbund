@@ -4,8 +4,20 @@
     "word": "vé",
     "example": {
       "sentence": "cévo [vé lá] miro.",
-      "translation": "The woman [has] a loaf of bread."
+      "translation": "A woman [has] a loaf of bread."
     }
+  },
+  {
+    "type": "short-response",
+    "direction": "foreign-native",
+    "prompt": "ny vé lá móu.",
+    "answers": [ "I have water", "y'all" ]
+  },
+  {
+    "type": "short-response",
+    "direction": "native-foreign",
+    "prompt": "We have a loaf of bread.",
+    "answers": [ "ćy vé lá miro" ]
   },
   {
     "type": "vocabulary",
@@ -14,6 +26,28 @@
       "sentence": "cévo kas [tá] miro.",
       "translation": "The woman [doesn't] eat bread."
     }
+  },
+  {
+    "type": "short-response",
+    "direction": "native-foreign",
+    "prompt": "You are not a bread loaf.",
+    "answers": [
+      "ké tá miro",
+      "vun tá miro"
+    ]
+  },
+  {
+    "type": "short-response",
+    "direction": "foreign-native",
+    "prompt": "vun kas tá su.",
+    "answers": [
+      "you do not drink milk",
+      "you all do not drink milk",
+      "y'all do not drink milk",
+      "you don't drink milk",
+      "you all don't drink milk",
+      "y'all don't drink milk"
+    ]
   },
   {
     "type": "vocabulary",
