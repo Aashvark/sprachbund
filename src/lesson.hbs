@@ -94,6 +94,7 @@
       {{else if (eq lesson.type "short-response")}}
         <p class="heading"><i class="fa-solid fa-pen-nib"></i> Try this! {{isTest}}</p>
         <div class="div-border scale">
+          {{log isTest}}
           {{#if isTest}}{{lesson.prompt}}{{/if}}
           {{#unless isTest}}{{hover-translate lesson.prompt (ternaryEq lesson.direction "native-foreign" "native" "foreign")}}{{/unless}}
         </div>

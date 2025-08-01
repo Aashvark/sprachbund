@@ -40,8 +40,8 @@
     "type": "comprehension",
     "prompt": "ćy lá mikol. ćy kas lá móu",
     "question": "What is an appropriate pronoun to address the speaker(s)?",
-    "answer": "Patty",
-    "choices": [ "vun", "ké", "" ]
+    "answer": "vun",
+    "choices": [ "vun", "ké", "ny" ]
   },
   {
     "type": "fill-in-the-blank",

@@ -1,6 +1,6 @@
 const fs         = require("fs");
 const path       = require("path");
-const fastify    = require("fastify") ( { logger: false } );
+const fastify    = require("fastify");
 
 const seo        = require("./public/json/seo.json");
 const units      = require("./public/json/units.json");
@@ -14,6 +14,8 @@ let grammar  = dictionary[`${language}-grammar`];
 fastify.register(require("@fastify/static"), { root: path.join(__dirname, "public"), prefix: "/" });
 fastify.register(require("@fastify/view"), { engine: { handlebars: handlebars } });
 fastify.register(require("@fastify/formbody"));
+
+handlebars.logger.level = "debug";
 
 handlebars.registerHelper('eq',  function (a, b)  { return a == b; });
 handlebars.registerHelper('ternaryEq', function (a, b, op1, op2) { return a === b ? op1 : op2; });
