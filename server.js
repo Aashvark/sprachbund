@@ -2,10 +2,11 @@ const fs         = require("fs");
 const path       = require("path");
 const fastify    = require("fastify") ( { logger: false } );
 
-const seo        = require("./public/json/seo.json");
-const units      = require("./public/json/units.json");
 const handlebars = require("handlebars");
-const dictionary = require("./public/json/dictionary.json");
+
+const seo        = require("./private/json/seo.json");
+const units      = require("./private/json/units.json");
+const dictionary = require("./private/json/dictionary.json");
 
 let language = "nóri";
 let dict     = dictionary[language];

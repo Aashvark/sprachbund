@@ -11,7 +11,7 @@
     "type": "short-response",
     "direction": "foreign-native",
     "prompt": "ny vé lá móu.",
-    "answers": [ "I have water", "y'all" ]
+    "answers": [ "I have water" ]
   },
   {
     "type": "short-response",
