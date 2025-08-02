@@ -56,5 +56,17 @@
       "sentence": "Zak tá [náu].",
       "translation": "Zak isn't [tall]."
     }
+  },
+  {
+    "type": "short-response",
+    "direction": "native-foreign",
+    "prompt": "I am a tall man",
+    "answers": [ "ny lá náu symi" ]
+  },
+  {
+    "type": "short-response",
+    "direction": "foreign-native",
+    "prompt": "A tall woman does not eat bread.",
+    "answers": [ "náu cévo kas lá miro" ]
   }
 ]
